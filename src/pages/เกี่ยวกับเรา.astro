@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTAButton from '../components/CTAButton.astro';
+import { SITE } from '../config/site';
+import { aboutPage, areasIndex, pricingPage, servicePath, updatesIndex } from '../config/urls';
+import { buildBreadcrumbSchema } from '../lib/breadcrumbs';
+
+const pageTitle = 'เกี่ยวกับเรา | รับซื้ออุบล.com';
+const pageDescription =
+  'รับซื้ออุบล.com บริการรับซื้อ-รับเทิร์นสินค้าไอทีในอุบลราชธานี ประเมินราคาฟรีผ่าน LINE @buyhub จ่ายเงินสดทันที โปร่งใส ไม่กดราคา';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'เกี่ยวกับเรา' },
+];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={aboutPage()} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">เกี่ยวกับ {SITE.name}</h1>
+      <p class="mt-4 text-lg text-muted">{pageDescription}</p>
+
+      <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
+        <h2>เราคือใคร?</h2>
+        <p>
+          <strong>{SITE.name}</strong> เป็นบริการรับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในจังหวัดอุบลราชธานี
+          เราให้บริการครอบคลุมโทรศัพท์มือถือ โน้ตบุ๊ก กล้อง แท็บเล็ต และอุปกรณ์ไอทีอื่นๆ
+          ด้วยกระบวนการที่โปร่งใส รวดเร็ว และจ่ายเงินสดทันที
+        </p>
+        <p>
+          เราเข้าใจว่าคนที่ต้องการขายของด่วนไม่อยากโพสต์ขายเอง ไม่อยากเจอผู้ซื้อที่ต่อราคา หรือรอนานหลายวัน
+          จึงออกแบบบริการให้จบผ่าน LINE <strong>@buyhub</strong> — ส่งรูป รับราคา นัดรับ รับเงินสด
+        </p>
+
+        <h2>ทำไมลูกค้าในอุบลเลือกเรา</h2>
+        <ul>
+          <li><strong>ให้ราคายุติธรรม</strong> — ตีราคาตามสภาพจริงและตลาดอุบลราชธานี ไม่กดราคาหลังนัดรับ</li>
+          <li><strong>ประเมินราคาฟรี</strong> — ส่งรูปมาที่ LINE รับใบเสนอราคาภายใน 5 นาที ไม่มีข้อผูกมัด</li>
+          <li><strong>จ่ายเงินสดทันที</strong> — เมื่อตกลงราคาและรับสินค้าแล้ว จ่ายเงินสดทันที ไม่มีค่าธรรมเนียมแอบแฝง</li>
+          <li><strong>ครอบคลุมทุกอำเภอ</strong> — นัดรับถึงที่ใน <a href={areasIndex()}>10 อำเภอหลัก</a> ทั่วจังหวัดอุบลราชธานี</li>
+          <li><strong>รับซื้อหลายชิ้นจบในที่เดียว</strong> — มือถือ โน้ตบุ๊ก กล้อง พร้อมกันได้</li>
+        </ul>
+
+        <h2>บริการที่เราให้</h2>
+        <ul>
+          <li><a href={servicePath('smartphone-ubon')}>รับซื้อโทรศัพท์มือถือ / แท็บเล็ต</a> — iPhone, Samsung, OPPO, vivo ทุกรุ่น</li>
+          <li><a href={servicePath('notebook-ubon')}>รับซื้อโน้ตบุ๊ก / คอมพิวเตอร์</a> — MacBook, ASUS, Dell, HP, Lenovo</li>
+          <li><a href={servicePath('camera-ubon')}>รับซื้อกล้องและเลนส์</a> — Canon, Nikon, Sony, Fujifilm</li>
+          <li><a href={servicePath('trade-in-ubon')}>รับเทิร์นสินค้าไอที</a> — เทิร์นหลายชิ้นพร้อมกัน</li>
+        </ul>
+
+        <h2>วิธีทำงานของเรา</h2>
+        <ol>
+          <li>ลูกค้าแอด LINE <strong>@buyhub</strong> และส่งรูปสินค้าพร้อมรายละเอียด</li>
+          <li>ทีมงานประเมินราคาตามสภาพจริงและแจ้งใบเสนอราคาภายใน 5 นาที</li>
+          <li>เมื่อตกลงราคา นัดรับสินค้าตามจุดที่สะดวกทั้งสองฝ่าย</li>
+          <li>ตรวจสอบสินค้าตามที่ตกลง จ่ายเงินสดทันที</li>
+        </ol>
+        <p>
+          อ่านรายละเอียดเพิ่มเติมได้ที่ <a href={pricingPage()}>วิธีประเมินราคา</a>
+          หรือดู <a href={updatesIndex()}>ผลงานรับซื้อล่าสุด</a> จากลูกค้าจริงในอุบลราชธานี
+        </p>
+
+        <h2>พื้นที่ให้บริการ</h2>
+        <p>
+          เราให้บริการรับซื้อและรับเทิร์นไอทีในอุบลราชธานี ครอบคลุมเมืองอุบลราชธานี วารินชำราบ เดชอุดม
+          พิบูลมังสาหาร ตระการพืชผล ม่วงสามสิบ สำโรง ขุนหาญ นาจะหลวง และสิรินธร
+          ดูรายละเอียดทุกอำเภอได้ที่ <a href={areasIndex()}>พื้นที่ให้บริการ</a>
+        </p>
+      </article>
+
+      <div class="mt-10 text-center">
+        <CTAButton label="แอด LINE ประเมินราคาฟรีทันที" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

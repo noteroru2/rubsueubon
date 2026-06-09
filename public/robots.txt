@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://รับซื้ออุบล.com/sitemap-index.xml

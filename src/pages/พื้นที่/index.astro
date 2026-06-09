@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { districts } from '../../lib/districts';
+import { areaPath, servicePath, servicesIndex } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+
+const pageTitle = 'พื้นที่ให้บริการรับซื้อไอที อุบลราชธานี | รับซื้ออุบล.com';
+const pageDescription =
+  'รับซื้อ-รับเทิร์นไอทีครอบคลุมทุกอำเภอในอุบลราชธานี นัดรับถึงที่ จ่ายเงินสดทันที เมืองอุบล วารินชำราบ เดชอุดม และอื่นๆ';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'พื้นที่ให้บริการ' },
+];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">
+        พื้นที่ให้บริการรับซื้อไอที อุบลราชธานี
+      </h1>
+      <p class="mt-4 text-lg text-muted">{pageDescription}</p>
+
+      <div class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
+        <p>
+          รับซื้ออุบล.com ให้บริการรับซื้อและรับเทิร์นโทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอที
+          ในทุกอำเภอของจังหวัดอุบลราชธานี ส่งรูปประเมินราคาฟรีผ่าน LINE <strong>@buyhub</strong>
+          นัดรับสินค้าถึงที่ จ่ายเงินสดทันที
+        </p>
+        <p>
+          เลือกอำเภอของคุณด้านล่างเพื่อดูรายละเอียดบริการเฉพาะพื้นที่
+          หรือดู <a href={servicesIndex()}>บริการรับซื้อ</a> ตามประเภทสินค้า
+        </p>
+
+        <h2>พื้นที่ให้บริการหลักในอุบลราชธานี</h2>
+        <p>
+          เราให้ความสำคัญกับการบริการลูกค้าในทุกอำเภอ โดยเฉพาะเมืองอุบลราชธานี วารินชำราบ และเดชอุดม
+          ที่มีความต้องการขาย-เทิร์นไอทีสูง รวมถึงพิบูลมังสาหาร ตระการพืชผล และม่วงสามสิบ
+          ทุกพื้นที่สามารถส่งรูปประเมินราคาออนไลน์ก่อนได้ แล้วนัดรับตามจุดที่สะดวก
+        </p>
+
+        <h2>สินค้าที่รับซื้อในทุกอำเภอ</h2>
+        <ul>
+          <li>โทรศัพท์มือถือ iPhone, Samsung, OPPO, vivo และแท็บเล็ต</li>
+          <li>โน้ตบุ๊กทุกยี่ห้อ รวม MacBook และเครื่องเกมมิ่ง</li>
+          <li>กล้อง DSLR, Mirrorless, เลนส์ และ Action Cam</li>
+          <li>บริการเทิร์นหลายชิ้นพร้อมกัน — ดูรายละเอียดที่ <a href={servicePath('trade-in-ubon')}>รับเทิร์นไอที</a></li>
+        </ul>
+
+        <h2>วิธีเริ่มต้นขายของในอำเภอของคุณ</h2>
+        <ol>
+          <li>เลือกอำเภอด้านล่างเพื่อดูข้อมูลเฉพาะพื้นที่</li>
+          <li>แอด LINE <strong>@buyhub</strong> ส่งรูปสินค้าเพื่อรับราคาประเมินฟรี</li>
+          <li>ตกลงราคา นัดรับ จ่ายเงินสดทันที — ไม่มีข้อผูกมัด</li>
+        </ol>
+      </div>
+
+      <ul class="mt-10 grid gap-4 sm:grid-cols-2">
+        {
+          districts.map((district) => (
+            <li>
+              <a
+                href={areaPath(district.slug)}
+                class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
+              >
+                <span>
+                  <span class="block font-bold text-ink group-hover:text-brand">
+                    อำเภอ{district.name}
+                  </span>
+                  <span class="mt-0.5 block text-sm text-muted">
+                    รับซื้อโน้ตบุ๊ก มือถือ ไอที
+                  </span>
+                </span>
+                <span class="text-brand" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-10 text-center">
+        <CTAButton label="แอด LINE ประเมินราคาฟรีทันที" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

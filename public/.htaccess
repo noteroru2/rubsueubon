@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect URLs without trailing slash to trailing slash (except files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.+)$ $1/ [L,R=301]

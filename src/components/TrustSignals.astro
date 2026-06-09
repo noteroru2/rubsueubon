@@ -1,0 +1,41 @@
+---
+interface Props {
+  brands: string[];
+  statLabel?: string;
+  statValue?: string;
+}
+
+const {
+  brands,
+  statLabel = 'ประเมินราคาแล้วกว่า',
+  statValue = '1,000+ เครื่องในอุบล',
+} = Astro.props;
+---
+
+<section class="border-y border-line bg-surface-alt py-10 sm:py-12" aria-label="ความน่าเชื่อถือ">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
+      <div class="text-center lg:text-left">
+        <p class="text-3xl font-extrabold text-brand sm:text-4xl">{statValue}</p>
+        <p class="mt-1 text-sm text-muted">{statLabel}</p>
+      </div>
+
+      {
+        brands.length > 0 && (
+          <div class="w-full lg:max-w-xl">
+            <p class="mb-3 text-center text-xs font-semibold uppercase tracking-wide text-muted lg:text-right">
+              แบรนด์ที่รับซื้อ
+            </p>
+            <ul class="flex flex-wrap justify-center gap-2 lg:justify-end">
+              {brands.map((brand) => (
+                <li class="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm font-semibold text-ink">
+                  {brand}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

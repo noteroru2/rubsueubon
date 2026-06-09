@@ -1,0 +1,141 @@
+import { districts } from '../lib/districts';
+
+import {
+
+  aboutPage,
+
+  areaPath,
+
+  areasIndex,
+
+  conditionsPage,
+
+  contactPage,
+
+  faqPage,
+
+  pricingPage,
+
+  privacyPage,
+
+  servicePath,
+
+  servicesIndex,
+
+  updatesIndex,
+
+} from './urls';
+
+
+
+export const serviceNav = [
+
+  {
+
+    label: 'รับซื้อโทรศัพท์มือถือ / แท็บเล็ต',
+
+    href: servicePath('smartphone-ubon'),
+
+  },
+
+  {
+
+    label: 'รับซื้อโน้ตบุ๊ก / คอมพิวเตอร์',
+
+    href: servicePath('notebook-ubon'),
+
+  },
+
+  {
+
+    label: 'รับซื้อกล้องและเลนส์',
+
+    href: servicePath('camera-ubon'),
+
+  },
+
+  {
+
+    label: 'รับเทิร์นสินค้าไอที',
+
+    href: servicePath('trade-in-ubon'),
+
+  },
+
+] as const;
+
+
+
+export const brandServiceNav = [
+
+  { label: 'รับซื้อ iPhone อุบล', href: servicePath('iphone-ubon') },
+
+  { label: 'รับซื้อ Samsung อุบล', href: servicePath('samsung-ubon') },
+
+  { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
+
+  { label: 'รับซื้อกล้อง Sony อุบล', href: servicePath('sony-camera-ubon') },
+
+] as const;
+
+
+
+export const areaNav = districts.map((d) => ({
+
+  label: `อ.${d.name}`,
+
+  href: areaPath(d.slug),
+
+}));
+
+
+
+export const mainNav = [
+
+  { label: 'หน้าแรก', href: '/' },
+
+  { label: 'ผลงานรับซื้อล่าสุด', href: updatesIndex() },
+
+  { label: 'ติดต่อเรา', href: contactPage() },
+
+] as const;
+
+
+
+export const infoNav = [
+
+  { label: 'เกี่ยวกับเรา', href: aboutPage() },
+
+  { label: 'วิธีประเมินราคา', href: pricingPage() },
+
+  { label: 'เงื่อนไขรับซื้อ', href: conditionsPage() },
+
+  { label: 'คำถามที่พบบ่อย', href: faqPage() },
+
+] as const;
+
+
+
+export {
+
+  aboutPage,
+
+  areasIndex,
+
+  conditionsPage,
+
+  contactPage,
+
+  faqPage,
+
+  pricingPage,
+
+  privacyPage,
+
+  servicesIndex,
+
+  updatesIndex,
+
+};
+
+

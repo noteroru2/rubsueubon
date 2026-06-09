@@ -1,0 +1,51 @@
+---
+import CTAButton from './CTAButton.astro';
+import { getLineOALink } from '../config/site';
+
+const lineLink = getLineOALink();
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-ink text-white">
+  <div class="pointer-events-none absolute inset-0 opacity-20" aria-hidden="true">
+    <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/20 blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-line/30 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+    <div class="max-w-2xl">
+      <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium ring-1 ring-white/20">
+        รับซื้อ-รับเทิร์นไอที อุบลราชธานี
+      </p>
+      <h1 class="mt-5 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+        ขายไอทีมือสอง<br />
+        <span class="text-line-light">อุบลราชธานี</span> ราคาดี จ่ายเงินทันที
+      </h1>
+      <p class="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">
+        รับซื้อโทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอทีมือหนึ่ง-มือสอง
+        ประเมินราคาฟรีผ่าน LINE ภายในไม่กี่นาที ไม่ต้องเดินทางไกล
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <CTAButton href={lineLink} label="ประเมินราคาฟรีทันที" class="w-full sm:w-auto" />
+        <a
+          href="#how-it-works"
+          class="inline-flex w-full items-center justify-center rounded-full border border-white/30 px-6 py-3.5 text-base font-semibold text-white transition hover:bg-white/10 sm:w-auto"
+        >
+          ดูขั้นตอนการขาย
+        </a>
+      </div>
+
+      <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75" aria-label="จุดเด่น">
+        <li class="flex items-center gap-2">
+          <span class="text-line-light" aria-hidden="true">✓</span> ประเมินฟรี ไม่มีค่าใช้จ่าย
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-line-light" aria-hidden="true">✓</span> จ่ายเงินสดทันที
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-line-light" aria-hidden="true">✓</span> ราคายุติธรรม
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

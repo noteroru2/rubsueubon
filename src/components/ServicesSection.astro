@@ -1,0 +1,65 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { servicePath } from '../config/urls';
+
+interface Props {
+  services: CollectionEntry<'services'>[];
+}
+
+const { services } = Astro.props;
+const sorted = [...services].sort((a, b) => a.data.order - b.data.order);
+
+const categoryImages: Record<string, string> = {
+  smartphone: '/images/services/smartphone.svg',
+  notebook: '/images/services/notebook.svg',
+  camera: '/images/services/camera.svg',
+};
+---
+
+<section id="services" class="bg-surface-alt py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">บริการรับซื้อ-รับเทิร์นไอที</h2>
+      <p class="mt-3 text-muted">เลือกหมวดสินค้าที่ต้องการขาย เรารับซื้อทุกยี่ห้อในอุบลราชธานี</p>
+    </div>
+
+    <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        sorted.map((service) => {
+          const image =
+            service.data.featuredImage ?? categoryImages[service.data.category] ?? '/favicon.svg';
+          const primaryKeyword = service.data.keywords[0] ?? service.data.category;
+
+          return (
+            <li>
+              <a
+                href={servicePath(service.data.slug)}
+                class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-sm transition hover:border-brand/30 hover:shadow-md"
+              >
+                <div class="flex h-40 items-center justify-center bg-gradient-to-br from-brand/5 to-brand/10">
+                  <img
+                    src={image}
+                    alt={`ไอคอน${service.data.navLabel}`}
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-20 w-20 opacity-90 transition group-hover:scale-105"
+                  />
+                </div>
+                <div class="flex flex-1 flex-col p-5">
+                  <h3 class="text-lg font-bold text-ink group-hover:text-brand">{service.data.title}</h3>
+                  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                    {service.data.description}
+                  </p>
+                  <p class="mt-3 text-xs font-medium text-brand">{primaryKeyword}</p>
+                  <span class="mt-3 text-sm font-semibold text-brand">ดูรายละเอียด →</span>
+                </div>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

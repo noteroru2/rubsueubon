@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Sarabun", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #1e40af;
+  --color-brand-dark: #1e3a8a;
+  --color-line: #06c755;
+  --color-line-dark: #05a847;
+  --color-line-light: #86efac;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-line-border: #e2e8f0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@utility bg-surface-alt {
+  background-color: var(--color-surface-alt);
+}
+
+@utility text-muted {
+  color: var(--color-muted);
+}
+
+@utility border-line {
+  border-color: var(--color-line-border);
+}
+
+@utility bg-brand {
+  background-color: var(--color-brand);
+}
+
+@utility bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+@utility text-brand {
+  color: var(--color-brand);
+}
+
+@utility bg-line {
+  background-color: var(--color-line);
+}
+
+@utility bg-line-dark {
+  background-color: var(--color-line-dark);
+}
+
+@utility text-line-light {
+  color: var(--color-line-light);
+}
+
+@utility bg-ink {
+  background-color: var(--color-ink);
+}
+
+@utility text-ink {
+  color: var(--color-ink);
+}
+
+@utility bg-surface {
+  background-color: var(--color-surface);
+}

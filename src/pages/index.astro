@@ -1,17 +1,45 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import HubContent from '../components/HubContent.astro';
+import AreasSection from '../components/AreasSection.astro';
+import TrustSection from '../components/TrustSection.astro';
+import RecentUpdatesSection from '../components/RecentUpdatesSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+import { districts } from '../lib/districts';
+import {
+  buildLocalBusinessSchema,
+  buildFAQPageSchema,
+  buildWebSiteSchema,
+  homepageFAQs,
+} from '../lib/schema';
 
+const services = await getCollection('services');
+const allUpdates = (await getCollection('updates'))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+
+const pageTitle = 'รับซื้อ-รับเทิร์นไอที อุบลราชธานี | รับซื้ออุบล.com';
+const pageDescription =
+  'รับซื้อโทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอทีมือหนึ่ง-มือสองในอุบลราชธานี ประเมินราคาฟรีผ่าน LINE @buyhub จ่ายเงินสดทันที ราคายุติธรรม';
+
+const jsonLd = [
+  buildWebSiteSchema(),
+  buildLocalBusinessSchema(),
+  buildFAQPageSchema(homepageFAQs),
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={jsonLd} showMobileCTA>
+  <Hero />
+  <ServicesSection services={services} />
+  <HowItWorks />
+  <HubContent />
+  <AreasSection districts={districts} />
+  <TrustSection />
+  <RecentUpdatesSection updates={allUpdates} />
+  <FAQSection faqs={homepageFAQs} />
+</BaseLayout>

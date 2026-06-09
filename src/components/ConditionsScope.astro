@@ -1,0 +1,42 @@
+---
+interface Props {
+  accepted: string[];
+  rejected: string[];
+}
+
+const { accepted, rejected } = Astro.props;
+---
+
+<section class="py-12 sm:py-14" aria-labelledby="conditions-heading">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <h2 id="conditions-heading" class="text-xl font-bold text-ink sm:text-2xl">
+      สภาพแบบไหนที่รับ / ไม่รับ
+    </h2>
+    <p class="mt-2 text-muted">แจ้งรายละเอียดตรงๆ ก่อนตกลงราคา โปร่งใส ไม่กดราคาทีหลัง</p>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      <div class="rounded-2xl border border-line bg-brand/5 p-6">
+        <h3 class="font-bold text-brand">✓ รับซื้อ / รับเทิร์น</h3>
+        <ul class="mt-4 space-y-2 text-sm text-muted">
+          {accepted.map((item) => (
+            <li class="flex gap-2">
+              <span class="text-brand" aria-hidden="true">•</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-line bg-red-50 p-6">
+        <h3 class="font-bold text-red-700">✕ ไม่รับ</h3>
+        <ul class="mt-4 space-y-2 text-sm text-muted">
+          {rejected.map((item) => (
+            <li class="flex gap-2">
+              <span class="text-red-500" aria-hidden="true">•</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+const steps = [
+  { number: '1', title: 'ส่งรูป', description: 'ถ่ายรูปสินค้า แจ้งรุ่นและสภาพ ส่งมาที่ LINE @buyhub' },
+  { number: '2', title: 'ตีราคา', description: 'รับใบเสนอราคาฟรีภายใน 5 นาที ไม่มีข้อผูกมัด' },
+  { number: '3', title: 'นัดรับของ / โอนเงิน', description: 'ตกลงราคาแล้วนัดรับสินค้า จ่ายเงินสดทันที' },
+];
+---
+
+<section class="py-12 sm:py-14" aria-labelledby="service-steps-heading">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <h2 id="service-steps-heading" class="text-xl font-bold text-ink sm:text-2xl">
+      ขั้นตอนง่ายๆ 1-2-3
+    </h2>
+    <ol class="mt-8 grid gap-4 sm:grid-cols-3">
+      {
+        steps.map((step) => (
+          <li class="rounded-2xl border border-line bg-surface p-5 shadow-sm">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand">
+              {step.number}
+            </span>
+            <h3 class="mt-3 font-bold text-ink">{step.title}</h3>
+            <p class="mt-2 text-sm text-muted">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

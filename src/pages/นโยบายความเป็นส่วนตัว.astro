@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../config/site';
+import { privacyPage } from '../config/urls';
+import { buildBreadcrumbSchema } from '../lib/breadcrumbs';
+
+const pageTitle = 'นโยบายความเป็นส่วนตัว | รับซื้ออุบล.com';
+const pageDescription =
+  'นโยบายความเป็นส่วนตัวของรับซื้ออุบล.com การเก็บรวบรวม ใช้ และปกป้องข้อมูลส่วนบุคคลของลูกค้า';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'นโยบายความเป็นส่วนตัว' },
+];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
+const updatedDate = '9 มิถุนายน 2026';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={privacyPage()} jsonLd={jsonLd}>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">นโยบายความเป็นส่วนตัว</h1>
+      <p class="mt-2 text-sm text-muted">อัปเดตล่าสุด: {updatedDate}</p>
+
+      <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-headings:text-ink prose-li:text-muted">
+        <h2>บทนำ</h2>
+        <p>
+          {SITE.name} ("เรา") ให้ความสำคัญกับความเป็นส่วนตัวของลูกค้า
+          นโยบายนี้อธิบายว่าเราเก็บรวบรวม ใช้ และปกป้องข้อมูลของคุณอย่างไร
+          เมื่อใช้บริการรับซื้อ-รับเทิร์นสินค้าไอทีผ่านเว็บไซต์หรือ LINE @buyhub
+        </p>
+
+        <h2>ข้อมูลที่เราเก็บรวบรวม</h2>
+        <ul>
+          <li><strong>ข้อมูลที่คุณให้โดยตรง</strong> — ชื่อ หมายเลขโทรศัพท์ รูปสินค้า รายละเอียดสินค้า ผ่าน LINE หรือช่องทางติดต่อ</li>
+          <li><strong>ข้อมูลการใช้งานเว็บไซต์</strong> — ข้อมูลทางเทคนิค เช่น IP address, ประเภทเบราว์เซอร์ (ผ่านเครื่องมือวิเคราะห์มาตรฐาน ถ้ามี)</li>
+          <li><strong>ข้อมูลการทำธุรกรรม</strong> — รายละเอียดสินค้าที่ขาย ราคาที่ตกลง (เพื่อบันทึกการทำธุรกรรม)</li>
+        </ul>
+
+        <h2>การใช้ข้อมูล</h2>
+        <p>เราใช้ข้อมูลเพื่อ:</p>
+        <ul>
+          <li>ประเมินราคาและให้บริการรับซื้อ-รับเทิร์นสินค้าไอที</li>
+          <li>ติดต่อและนัดหมายรับสินค้า</li>
+          <li>ยืนยันตัวตนและป้องกันการฉ้อโกง</li>
+          <li>ปรับปรุงบริการและประสบการณ์ลูกค้า</li>
+        </ul>
+
+        <h2>การเก็บรักษาข้อมูล</h2>
+        <p>
+          เราเก็บรักษาข้อมูลเฉพาะเท่าที่จำเป็นสำหรับการให้บริการและปฏิบัติตามกฎหมาย
+          รูปสินค้าที่ส่งมาประเมินราคาจะใช้เพื่อการประเมินเท่านั้น ไม่เผยแพร่ต่อสาธารณะโดยไม่ได้รับอนุญาต
+        </p>
+
+        <h2>การแบ่งปันข้อมูล</h2>
+        <p>
+          เราไม่ขายหรือให้เช่าข้อมูลส่วนบุคคลของคุณแก่บุคคลที่สาม
+          อาจเปิดเผยข้อมูลเมื่อกฎหมายกำหนด หรือเพื่อป้องกันการฉ้อโกง
+        </p>
+
+        <h2>สิทธิของคุณ</h2>
+        <p>คุณมีสิทธิขอเข้าถึง แก้ไข หรือลบข้อมูลส่วนบุคคลของคุณ โดยติดต่อเราผ่าน LINE {SITE.lineOA}</p>
+
+        <h2>ติดต่อเรา</h2>
+        <p>
+          หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว ติดต่อได้ที่ LINE {SITE.lineOA}
+          หรืออีเมล {SITE.email}
+        </p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

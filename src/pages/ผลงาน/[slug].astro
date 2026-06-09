@@ -1,0 +1,105 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { SITE } from '../../config/site';
+import { areaPath, servicePath, updatePath, updatesIndex } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+
+export async function getStaticPaths() {
+  const updates = await getCollection('updates');
+  return updates.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate, relatedServiceSlug, relatedServiceLabel, relatedAreaSlug, relatedAreaLabel } =
+  entry.data;
+
+const canonical = updatePath(entry.data.slug);
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'ผลงานรับซื้อล่าสุด', href: updatesIndex() },
+  { label: title },
+];
+
+const jsonLd = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    datePublished: pubDate.toISOString(),
+    url: `${SITE.url}${canonical}`,
+    inLanguage: 'th-TH',
+    publisher: { '@id': `${SITE.url}/#localbusiness` },
+  },
+];
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogType="article"
+  jsonLd={jsonLd}
+  showMobileCTA
+>
+  <article class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <time datetime={pubDate.toISOString()} class="mt-6 block text-sm font-medium text-brand">
+        {formatDate(pubDate)}
+      </time>
+      <h1 class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">{title}</h1>
+
+      <div class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <Content />
+      </div>
+
+      {
+        (relatedServiceSlug || relatedAreaSlug) && (
+          <aside class="mt-10 rounded-2xl border border-line bg-surface-alt p-5">
+            <p class="text-sm font-semibold text-ink">ลิงก์ที่เกี่ยวข้อง</p>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              {relatedServiceSlug && relatedServiceLabel && (
+                <li>
+                  <a
+                    href={servicePath(relatedServiceSlug)}
+                    class="inline-block rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-brand hover:border-brand/30"
+                  >
+                    {relatedServiceLabel}
+                  </a>
+                </li>
+              )}
+              {relatedAreaSlug && relatedAreaLabel && (
+                <li>
+                  <a
+                    href={areaPath(relatedAreaSlug)}
+                    class="inline-block rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-brand hover:border-brand/30"
+                  >
+                    อ.{relatedAreaLabel}
+                  </a>
+                </li>
+              )}
+            </ul>
+          </aside>
+        )
+      }
+
+      <div class="mt-10 text-center">
+        <CTAButton label="ประเมินราคาฟรีทันที" />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

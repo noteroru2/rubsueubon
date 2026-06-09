@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTAButton from '../components/CTAButton.astro';
+import { faqPage, pricingPage, conditionsPage } from '../config/urls';
+import { buildBreadcrumbSchema } from '../lib/breadcrumbs';
+import { buildFAQPageSchema } from '../lib/schema';
+import { allFAQGroups, getAllFAQs } from '../lib/faqs';
+
+const pageTitle = 'คำถามที่พบบ่อย (FAQ) รับซื้อไอที อุบล | รับซื้ออุบล.com';
+const pageDescription =
+  'คำถามที่พบบ่อยเกี่ยวกับการรับซื้อ-รับเทิร์นไอทีในอุบลราชธานี ราคา เงื่อนไข วิธีประเมิน และขั้นตอนรับเงินสด';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'คำถามที่พบบ่อย' },
+];
+
+const allFaqs = getAllFAQs();
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(allFaqs)];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={faqPage()} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">คำถามที่พบบ่อย</h1>
+      <p class="mt-4 text-lg text-muted">{pageDescription}</p>
+
+      <p class="mt-6 text-sm text-muted">
+        อ่านเพิ่มเติม: <a href={pricingPage()} class="text-brand hover:underline">วิธีประเมินราคา</a>
+        · <a href={conditionsPage()} class="text-brand hover:underline">เงื่อนไขรับซื้อ</a>
+      </p>
+
+      {
+        allFAQGroups.map((group) => (
+          <section class="mt-10">
+            <h2 class="text-xl font-bold text-ink">{group.title}</h2>
+            <div class="mt-4 space-y-3">
+              {group.faqs.map((faq) => (
+                <details class="group rounded-2xl border border-line bg-surface open:border-brand/30">
+                  <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center justify-between gap-4">
+                      {faq.question}
+                      <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">▼</span>
+                    </span>
+                  </summary>
+                  <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
+                </details>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+
+      <div class="mt-10 text-center">
+        <CTAButton label="ยังมีคำถาม? แชท LINE ได้เลย" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

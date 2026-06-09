@@ -1,0 +1,197 @@
+---
+
+import { SITE, getLineOALink } from '../config/site';
+
+import { infoNav, serviceNav, brandServiceNav, areaNav } from '../config/navigation';
+
+import { contactPage, privacyPage, updatesIndex } from '../config/urls';
+
+
+
+const lineLink = getLineOALink();
+
+const year = new Date().getFullYear();
+
+---
+
+
+
+<footer class="border-t border-line/60 bg-ink text-white">
+
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+
+      <div class="lg:col-span-1">
+
+        <p class="text-lg font-bold">{SITE.name}</p>
+
+        <p class="mt-2 text-sm text-white/70">{SITE.tagline}</p>
+
+        <a
+
+          href={contactPage()}
+
+          class="mt-4 inline-block text-sm font-semibold text-line-light hover:underline"
+
+        >
+
+          ติดต่อเรา →
+
+        </a>
+
+      </div>
+
+      <div>
+
+        <p class="font-semibold">บริการรับซื้อ</p>
+
+        <ul class="mt-3 space-y-2 text-sm text-white/70">
+
+          {
+
+            serviceNav.map((item) => (
+
+              <li>
+
+                <a href={item.href} class="transition hover:text-white">
+
+                  {item.label}
+
+                </a>
+
+              </li>
+
+            ))
+
+          }
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <p class="font-semibold">แบรนด์ยอดนิยม</p>
+
+        <ul class="mt-3 space-y-2 text-sm text-white/70">
+
+          {
+
+            brandServiceNav.map((item) => (
+
+              <li>
+
+                <a href={item.href} class="transition hover:text-white">
+
+                  {item.label}
+
+                </a>
+
+              </li>
+
+            ))
+
+          }
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <p class="font-semibold">พื้นที่ให้บริการ</p>
+
+        <ul class="mt-3 space-y-2 text-sm text-white/70">
+
+          {
+
+            areaNav.map((item) => (
+
+              <li>
+
+                <a href={item.href} class="transition hover:text-white">
+
+                  {item.label}
+
+                </a>
+
+              </li>
+
+            ))
+
+          }
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <p class="font-semibold">ข้อมูลเว็บไซต์</p>
+
+        <ul class="mt-3 space-y-2 text-sm text-white/70">
+
+          {
+
+            infoNav.map((item) => (
+
+              <li>
+
+                <a href={item.href} class="transition hover:text-white">
+
+                  {item.label}
+
+                </a>
+
+              </li>
+
+            ))
+
+          }
+
+          <li>
+
+            <a href={updatesIndex()} class="transition hover:text-white">ผลงานรับซื้อล่าสุด</a>
+
+          </li>
+
+          <li>
+
+            <a href={privacyPage()} class="transition hover:text-white">นโยบายความเป็นส่วนตัว</a>
+
+          </li>
+
+        </ul>
+
+        <a
+
+          href={lineLink}
+
+          target="_blank"
+
+          rel="noopener noreferrer"
+
+          class="mt-4 inline-flex items-center gap-2 rounded-full bg-line px-4 py-2 text-sm font-semibold text-white transition hover:bg-line-dark"
+
+        >
+
+          แชท LINE ประเมินราคา
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <p class="mt-8 border-t border-white/10 pt-6 text-center text-xs text-white/50">
+
+      © {year} {SITE.name} — รับซื้อ-รับเทิร์นไอที อุบลราชธานี
+
+    </p>
+
+  </div>
+
+</footer>
+
+

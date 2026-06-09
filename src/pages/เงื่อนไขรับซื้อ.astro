@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { conditionsPage, pricingPage } from '../config/urls';
+import { buildBreadcrumbSchema } from '../lib/breadcrumbs';
+import { buildFAQPageSchema } from '../lib/schema';
+import { conditionFAQs } from '../lib/faqs';
+
+const pageTitle = 'เงื่อนไขรับซื้อ สินค้าไอที อุบลราชธานี | รับซื้ออุบล.com';
+const pageDescription =
+  'เงื่อนไขการรับซื้อ-รับเทิร์นสินค้าไอทีในอุบลราชธานี สินค้าที่รับซื้อ สินค้าที่ไม่รับ เอกสารที่ต้องใช้ และข้อควรทราบก่อนขาย';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'เงื่อนไขรับซื้อ' },
+];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(conditionFAQs)];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={conditionsPage()} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">เงื่อนไขการรับซื้อสินค้าไอที</h1>
+      <p class="mt-4 text-lg text-muted">{pageDescription}</p>
+
+      <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink prose-li:text-muted">
+        <h2>สินค้าที่เรารับซื้อ</h2>
+        <ul>
+          <li>โทรศัพท์มือถือและแท็บเล็ต — iPhone, Samsung, OPPO, vivo, Xiaomi, Realme ทุกรุ่น</li>
+          <li>โน้ตบุ๊กและคอมพิวเตอร์ — MacBook, ASUS, Dell, HP, Lenovo, MSI, Acer</li>
+          <li>กล้อง DSLR, Mirrorless, Action Cam และเลนส์ทุก mount</li>
+          <li>อุปกรณ์เสริมไอที — หูฟัง, สมาร์ทวอทช์, คีย์บอร์ด, เมาส์ (บางรุ่น)</li>
+        </ul>
+
+        <h2>สภาพสินค้าที่รับซื้อ</h2>
+        <ul>
+          <li>มือหนึ่งและมือสองสภาพดี ใช้งานปกติ</li>
+          <li>เครื่องมีรอยใช้งาน หน้าจอมีรอยเล็กน้อย</li>
+          <li>แบตเตอรี่เสื่อม แต่เครื่องยังทำงานได้</li>
+          <li>โน้ตบุ๊กเปิดไม่ติด จอแตก (ประเมินราคาตามชิ้นส่วนที่มีมูลค่า)</li>
+          <li>เลนส์มีรอยขีดข่วนเล็กน้อย แต่ถ่ายภาพได้ปกติ</li>
+        </ul>
+
+        <h2>สินค้าที่เราไม่รับซื้อ</h2>
+        <ul>
+          <li>เครื่องติดโปรโมชั่นเครือข่ายที่ยังผ่อนไม่ครบ</li>
+          <li>เครื่องติด iCloud หรือ Google Account ที่ปลดล็อคไม่ได้</li>
+          <li>เครื่องที่มีหลักฐานว่าเป็นของโจรกรรม</li>
+          <li>อุปกรณ์ที่เสียหายจนใช้งานไม่ได้เลยและไม่มีมูลค่าชิ้นส่วน</li>
+        </ul>
+
+        <h2>เอกสารและข้อมูลที่ควรมี</h2>
+        <ul>
+          <li>บัตรประชาชนของผู้ขาย (สำหรับยืนยันตัวตนเมื่อนัดรับ)</li>
+          <li>กล่องและใบเสร็จ (ถ้ามี — อาจได้ราคาดีขึ้นเล็กน้อย แต่ไม่บังคับ)</li>
+          <li>อุปกรณ์ที่มาพร้อมเครื่อง — สายชาร์จ อะแดปเตอร์ หูฟัง</li>
+        </ul>
+
+        <h2>กระบวนการรับซื้อ</h2>
+        <ol>
+          <li>ลูกค้าส่งรูปและรายละเอียดมาที่ LINE @buyhub</li>
+          <li>เราประเมินราคาและแจ้งใบเสนอราคาชัดเจน</li>
+          <li>เมื่อตกลงราคา นัดรับสินค้าตามจุดที่สะดวก</li>
+          <li>ตรวจสอบสินค้าตามที่ตกลง — หากสภาพตรงตามที่แจ้ง จ่ายเงินสดทันที</li>
+          <li>หากสภาพแตกต่างจากที่แจ้งมาก อาจปรับราคาตามสภาพจริง (แจ้งล่วงหน้าเสมอ)</li>
+        </ol>
+
+        <p>
+          อ่านรายละเอียดวิธีประเมินราคาได้ที่ <a href={pricingPage()}>วิธีประเมินราคา</a>
+        </p>
+      </article>
+
+      <div class="mt-12">
+        <FAQSection faqs={conditionFAQs} title="คำถามเกี่ยวกับเงื่อนไข" />
+      </div>
+
+      <div class="mt-10 text-center">
+        <CTAButton label="สอบถามเงื่อนไขผ่าน LINE" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

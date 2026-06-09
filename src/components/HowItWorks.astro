@@ -1,0 +1,48 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'เพิ่ม LINE',
+    description: 'แอด LINE OA @buyhub หรือกดปุ่มด้านบนเพื่อเริ่มแชททันที',
+    icon: 'chat',
+  },
+  {
+    number: '2',
+    title: 'ส่งรูปประเมินราคา',
+    description: 'ถ่ายรูปสินค้าและแจ้งรุ่น/สภาพ เราตอบราคาให้ภายในไม่กี่นาที',
+    icon: 'camera',
+  },
+  {
+    number: '3',
+    title: 'รับเงินสดทันที',
+    description: 'ตกลงราคาแล้วนัดรับสินค้า จ่ายเงินสดทันที ไม่มีค่าธรรมเนียมแอบแฝง',
+    icon: 'cash',
+  },
+];
+---
+
+<section id="how-it-works" class="bg-surface-alt py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">ขายไอทีง่ายๆ 3 ขั้นตอน</h2>
+      <p class="mt-3 text-muted">รวดเร็ว โปร่งใส เหมาะสำหรับผู้ที่ต้องการขายด่วนในอุบลราชธานี</p>
+    </div>
+
+    <ol class="mt-12 grid gap-6 sm:grid-cols-3">
+      {
+        steps.map((step) => (
+          <li class="relative rounded-2xl border border-line bg-surface p-6 shadow-sm">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-lg font-bold text-brand"
+              aria-hidden="true"
+            >
+              {step.number}
+            </span>
+            <h3 class="mt-4 text-lg font-bold text-ink">{step.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

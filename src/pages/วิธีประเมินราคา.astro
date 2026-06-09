@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { conditionsPage, pricingPage } from '../config/urls';
+import { buildBreadcrumbSchema } from '../lib/breadcrumbs';
+import { buildFAQPageSchema } from '../lib/schema';
+import { pricingFAQs } from '../lib/faqs';
+
+const pageTitle = 'วิธีประเมินราคา รับซื้อไอที อุบลราชธานี | รับซื้ออุบล.com';
+const pageDescription =
+  'วิธีประเมินราคารับซื้อไอทีในอุบลราชธานี ปัจจัยที่กำหนดราคา สิ่งที่ต้องเตรียมก่อนส่งรูป และขั้นตอนรับเงินสดทันทีผ่าน LINE @buyhub';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'วิธีประเมินราคา' },
+];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(pricingFAQs)];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={pricingPage()} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">วิธีประเมินราคารับซื้อไอที</h1>
+      <p class="mt-4 text-lg text-muted">{pageDescription}</p>
+
+      <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink prose-li:text-muted">
+        <h2>ขั้นตอนการประเมินราคา</h2>
+        <ol>
+          <li><strong>ถ่ายรูปสินค้า</strong> — หน้าจอเปิดอยู่ ตัวเครื่องรอบด้าน รอยตำหนิ (ถ้ามี)</li>
+          <li><strong>แจ้งรายละเอียด</strong> — รุ่น สเปค ความจุ สภาพแบตเตอรี่ อุปกรณ์ที่มาพร้อม</li>
+          <li><strong>แอด LINE @buyhub</strong> — ส่งรูปและรายละเอียดมาในแชท</li>
+          <li><strong>รับใบเสนอราคา</strong> — ภายใน 5 นาที ฟรี ไม่มีข้อผูกมัด</li>
+          <li><strong>นัดรับและรับเงิน</strong> — ตกลงราคาแล้วนัดรับ จ่ายเงินสดทันที</li>
+        </ol>
+
+        <h2>ปัจจัยที่กำหนดราคารับซื้อ</h2>
+        <h3>โทรศัพท์มือถือ</h3>
+        <ul>
+          <li>รุ่นและความจุ — รุ่นใหม่กว่าและความจุมากกว่า ราคาสูงกว่า</li>
+          <li>สภาพหน้าจอและตัวเครื่อง — รอยขีดข่วน จอแตก กระทบราคา</li>
+          <li>สุขภาพแบตเตอรี่ — แบตเสื่อมลดราคาบ้าง แต่ยังรับได้</li>
+          <li>อุปกรณ์ที่มาพร้อม — กล่อง สายชาร์จ หูฟัง อาจเพิ่มราคาเล็กน้อย</li>
+          <li>สถานะล็อค — เครื่องติด iCloud/Google Account ที่ปลดไม่ได้ ไม่รับซื้อ</li>
+        </ul>
+
+        <h3>โน้ตบุ๊ก</h3>
+        <ul>
+          <li>ยี่ห้อ รุ่น และสเปค — CPU, RAM, SSD, การ์ดจอ</li>
+          <li>สภาพการใช้งาน — เปิดปิดได้ปกติ จอแตก คีย์บอร์ดเสีย</li>
+          <li>อายุเครื่องและแบตเตอรี่</li>
+          <li>อะแดปเตอร์และกล่อง</li>
+        </ul>
+
+        <h3>กล้องและเลนส์</h3>
+        <ul>
+          <li>ยี่ห้อ รุ่น และ mount เลนส์</li>
+          <li>จำนวนชัตเตอร์ (shutter count) ถ้าทราบ</li>
+          <li>สภาพแก้วเลนส์ ช่องวิวเฟอร์ ตัวเครื่อง</li>
+          <li>อุปกรณ์เสริม — กระเป๋า ฟิลเตอร์ แบตเตอรี่สำรอง</li>
+        </ul>
+
+        <h2>สิ่งที่ต้องเตรียมก่อนส่งรูป</h2>
+        <ul>
+          <li>ถ่ายรูปในที่แสงเพียงพอ ให้เห็นรายละเอียดชัดเจน</li>
+          <li>เปิดหน้าจอแสดงรุ่นและสเปค (Settings → About)</li>
+          <li>ถ่ายรอยตำหนิทุกจุดที่สำคัญ ไม่ซ่อน</li>
+          <li>แจ้งอุปกรณ์ที่มาพร้อมครบถ้วน</li>
+        </ul>
+
+        <h2>ทำไมราคารับซื้อต่างจากราคาขาย?</h2>
+        <p>
+          ราคารับซื้อจะต่ำกว่าราคาขายปลีก เพราะร้านต้องมีต้นทุนในการตรวจสอบ ซ่อมแซม (ถ้ามี) และขายต่อ
+          เราให้ราคาที่ยุติธรรมตามสภาพจริงและตลาดอุบลราชธานี ไม่กดราคาหลังนัดรับ
+          อ่าน <a href={conditionsPage()}>เงื่อนไขรับซื้อ</a> เพิ่มเติมได้
+        </p>
+      </article>
+
+      <div class="mt-12">
+        <FAQSection faqs={pricingFAQs} title="คำถามเกี่ยวกับราคา" />
+      </div>
+
+      <div class="mt-10 text-center">
+        <CTAButton label="ส่งรูปประเมินราคาฟรีทันที" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

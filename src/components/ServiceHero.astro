@@ -1,0 +1,36 @@
+---
+import CTAButton from './CTAButton.astro';
+
+interface Props {
+  title: string;
+  subheadline: string;
+}
+
+const { title, subheadline } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-ink text-white">
+  <div class="pointer-events-none absolute inset-0 opacity-20" aria-hidden="true">
+    <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/20 blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-line/30 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+    <slot name="breadcrumb" />
+
+    <div class="max-w-3xl">
+      <h1 class="text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+        {title}
+      </h1>
+      <p class="mt-4 text-base leading-relaxed text-white/85 sm:text-lg">{subheadline}</p>
+      <div class="mt-8">
+        <CTAButton label="แอด LINE ประเมินราคาฟรี" class="w-full sm:w-auto" />
+      </div>
+      <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75">
+        <li>✓ ตีราคาใน 5 นาที</li>
+        <li>✓ จ่ายเงินสดทันที</li>
+        <li>✓ รับเทิร์นทุกสภาพ</li>
+      </ul>
+    </div>
+  </div>
+</section>
