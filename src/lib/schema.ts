@@ -10,16 +10,26 @@ type FAQItem = {
 export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': `${SITE.url}/#localbusiness`,
     name: SITE.name,
+    alternateName: SITE.businessName,
+    legalName: SITE.companyName,
     description:
       'รับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในอุบลราชธานี โทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอทีอื่นๆ ประเมินราคาฟรี จ่ายเงินสดทันที',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE.url}/og-default.svg`,
+    image: `${SITE.url}/images/logo.webp`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/images/logo.webp`,
+      width: 400,
+      height: 114,
+    },
     priceRange: SITE.priceRange,
+    currenciesAccepted: 'THB',
+    paymentAccepted: 'Cash, Bank Transfer',
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.streetAddress,
@@ -33,6 +43,7 @@ export function buildLocalBusinessSchema() {
       latitude: SITE.geo.latitude,
       longitude: SITE.geo.longitude,
     },
+    hasMap: 'https://maps.app.goo.gl/uJmRP43ZzN4hEceW9',
     areaServed: {
       '@type': 'City',
       name: 'อุบลราชธานี',
@@ -45,6 +56,21 @@ export function buildLocalBusinessSchema() {
         closes: '19:30',
       },
     ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: SITE.phone,
+      contactType: 'customer service',
+      areaServed: 'TH',
+      availableLanguage: 'Thai',
+      contactOption: 'TollFree',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '3',
+      bestRating: '5',
+      worstRating: '1',
+    },
     sameAs: SITE.sameAs,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -74,6 +100,30 @@ export function buildLocalBusinessSchema() {
             areaServed: 'อุบลราชธานี',
           },
         },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'รับซื้อแท็บเล็ต iPad มือสอง',
+            areaServed: 'อุบลราชธานี',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'รับซื้อ MacBook iMac Apple',
+            areaServed: 'อุบลราชธานี',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'รับเทิร์นสินค้าไอที อุบลราชธานี',
+            areaServed: 'อุบลราชธานี',
+          },
+        },
       ],
     },
   };
@@ -84,15 +134,23 @@ export function buildDistrictLocalBusinessSchema(district: District) {
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': `${pageUrl}#localbusiness`,
     name: `${SITE.name} — อำเภอ${district.name}`,
     description: `รับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในอำเภอ${district.name} อุบลราชธานี โทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอที ประเมินราคาฟรี จ่ายเงินสดทันที`,
     url: pageUrl,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE.url}/og-default.svg`,
+    image: `${SITE.url}/images/logo.webp`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/images/logo.webp`,
+      width: 400,
+      height: 114,
+    },
     priceRange: SITE.priceRange,
+    currenciesAccepted: 'THB',
+    paymentAccepted: 'Cash, Bank Transfer',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `อำเภอ${district.name}`,
@@ -118,6 +176,20 @@ export function buildDistrictLocalBusinessSchema(district: District) {
         closes: '19:30',
       },
     ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: SITE.phone,
+      contactType: 'customer service',
+      areaServed: 'TH',
+      availableLanguage: 'Thai',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '3',
+      bestRating: '5',
+      worstRating: '1',
+    },
     sameAs: SITE.sameAs,
     parentOrganization: {
       '@id': `${SITE.url}/#localbusiness`,
@@ -178,8 +250,51 @@ export function buildWebSiteSchema() {
     name: SITE.name,
     url: SITE.url,
     inLanguage: 'th-TH',
+    description: SITE.tagline,
     publisher: {
       '@id': `${SITE.url}/#localbusiness`,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE.url}/บริการ/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+export function buildOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.businessName,
+    legalName: SITE.companyName,
+    url: SITE.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/images/logo.webp`,
+      width: 400,
+      height: 114,
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: SITE.phone,
+        contactType: 'customer service',
+        areaServed: 'TH',
+        availableLanguage: 'Thai',
+      },
+    ],
+    sameAs: SITE.sameAs,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'อุบลราชธานี',
+      addressRegion: 'อุบลราชธานี',
+      postalCode: SITE.address.postalCode,
+      addressCountry: 'TH',
     },
   };
 }

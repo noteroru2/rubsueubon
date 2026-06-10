@@ -14,6 +14,7 @@ import {
   buildLocalBusinessSchema,
   buildFAQPageSchema,
   buildWebSiteSchema,
+  buildOrganizationSchema,
   homepageFAQs,
 } from '../lib/schema';
 
@@ -29,6 +30,7 @@ const pageDescription =
 const jsonLd = [
   buildWebSiteSchema(),
   buildLocalBusinessSchema(),
+  buildOrganizationSchema(),
   buildFAQPageSchema(homepageFAQs),
 ];
 ---
