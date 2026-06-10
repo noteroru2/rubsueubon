@@ -1,12 +1,12 @@
 ---
-title: "รับซื้อกล้อง Sony A7III ที่เดชอุดม — พร้อมเลนส์ 24-70"
-description: "รับซื้อกล้อง Mirrorless Sony A7III พร้อมเลนส์ในอำเภอเดชอุดม ประเมินราคาฟรี จ่ายเงินสดทันที"
+title: 'รับซื้อกล้อง Sony A7III ที่เดชอุดม — พร้อมเลนส์ 24-70'
+description: 'รับซื้อกล้อง Mirrorless Sony A7III พร้อมเลนส์ในอำเภอเดชอุดม ประเมินราคาฟรี จ่ายเงินสดทันที'
 pubDate: 2026-02-28
-relatedServiceSlug: "camera-ubon"
-relatedServiceLabel: "รับซื้อกล้อง"
-relatedAreaSlug: "det-udom"
-relatedAreaLabel: "เดชอุดม"
-slug: "รับซื้อกล้อง-sony-a7iii-เดชอุดม"
+relatedServiceSlug: 'camera-ubon'
+relatedServiceLabel: 'รับซื้อกล้อง'
+relatedAreaSlug: 'det-udom'
+relatedAreaLabel: 'เดชอุดม'
+slug: 'รับซื้อกล้อง-sony-a7iii-เดชอุดม'
 ---
 
 รับซื้อ **Sony A7III** พร้อมเลนส์ 24-70mm จากลูกค้าใน **เดชอุดม** ลูกค้าส่งรูปช่องวิวเตอร์ ตัวกล้อง และเลนส์มาประเมิน เราให้ราคาตามสภาพจริง นัดรับที่เดชอุดม จ่ายเงินสดทันที

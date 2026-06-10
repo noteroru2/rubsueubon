@@ -115,9 +115,7 @@ const currentPath = Astro.url.pathname;
               href={item.href}
               class:list={[
                 'rounded-lg px-3 py-2 text-sm font-medium transition hover:bg-brand/5 hover:text-brand',
-                currentPath === item.href || currentPath.startsWith(item.href + '/')
-                  ? 'text-brand'
-                  : 'text-muted',
+                currentPath === item.href || currentPath.startsWith(item.href + '/') ? 'text-brand' : 'text-muted',
               ]}
             >
               {item.label}
@@ -157,17 +155,21 @@ const currentPath = Astro.url.pathname;
         >
           <a href="/" class="block px-4 py-2.5 text-sm font-medium text-ink hover:bg-brand/5">หน้าแรก</a>
           <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">บริการรับซื้อ</p>
-          {serviceNav.map((item) => (
-            <a href={item.href} class="block px-4 py-2 text-sm text-muted hover:bg-brand/5 hover:text-brand">
-              {item.label}
-            </a>
-          ))}
+          {
+            serviceNav.map((item) => (
+              <a href={item.href} class="block px-4 py-2 text-sm text-muted hover:bg-brand/5 hover:text-brand">
+                {item.label}
+              </a>
+            ))
+          }
           <p class="px-4 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">พื้นที่ให้บริการ</p>
-          {areaNav.map((item) => (
-            <a href={item.href} class="block px-4 py-2 text-sm text-muted hover:bg-brand/5 hover:text-brand">
-              {item.label}
-            </a>
-          ))}
+          {
+            areaNav.map((item) => (
+              <a href={item.href} class="block px-4 py-2 text-sm text-muted hover:bg-brand/5 hover:text-brand">
+                {item.label}
+              </a>
+            ))
+          }
           <div class="my-2 border-t border-line"></div>
           <a href={updatesIndex()} class="block px-4 py-2.5 text-sm text-ink hover:bg-brand/5">ผลงานรับซื้อล่าสุด</a>
           <a href={contactPage()} class="block px-4 py-2.5 text-sm text-ink hover:bg-brand/5">ติดต่อเรา</a>

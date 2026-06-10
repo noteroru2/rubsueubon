@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import { blogPath } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+
+const allBlogs = (await getCollection('blog')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const pageTitle = 'บทความให้ความรู้เกี่ยวกับสินค้าไอที | รับซื้ออุบล.com';
+const pageDescription =
+  'รวมบทความและเทคนิคดีๆ เกี่ยวกับการขาย การเช็คสภาพ และการดูแลรักษาโทรศัพท์ โน้ตบุ๊ก และอุปกรณ์ไอที';
+
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บทความ' }];
+
+const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={jsonLd}>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">บทความและสาระน่ารู้</h1>
+      <p class="mt-3 text-muted">{pageDescription}</p>
+
+      <ul class="mt-10 space-y-6">
+        {
+          allBlogs.map((post) => (
+            <li class="rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:border-brand/30">
+              <time datetime={post.data.pubDate.toISOString()} class="text-xs font-medium text-brand">
+                {formatDate(post.data.pubDate)}
+              </time>
+              <h2 class="mt-2 text-lg font-bold text-ink">
+                <a href={blogPath(post.data.slug)} class="hover:text-brand">
+                  {post.data.title}
+                </a>
+              </h2>
+              <p class="mt-2 text-sm text-muted">{post.data.description}</p>
+              <a
+                href={blogPath(post.data.slug)}
+                class="mt-3 inline-block text-sm font-semibold text-brand hover:underline"
+              >
+                อ่านต่อ →
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      {
+        allBlogs.length === 0 && (
+          <div class="mt-10 rounded-2xl border border-dashed border-line p-10 text-center text-muted">
+            ยังไม่มีบทความในขณะนี้ โปรดติดตามเร็วๆ นี้
+          </div>
+        )
+      }
+    </div>
+  </div>
+</BaseLayout>

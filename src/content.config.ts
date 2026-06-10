@@ -46,4 +46,16 @@ const updates = defineCollection({
   }),
 });
 
-export const collections = { services, updates };
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    image: z.string().optional(),
+    keywords: z.array(z.string()).default([]),
+    slug: z.string(),
+  }),
+});
+
+export const collections = { services, updates, blog };

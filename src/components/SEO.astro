@@ -34,7 +34,12 @@ const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 <meta name="description" content={description} />
 {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
 <link rel="canonical" href={canonicalURL} />
-<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+<meta
+  name="robots"
+  content={noindex
+    ? 'noindex, nofollow'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+/>
 <meta name="language" content="Thai" />
 <meta name="geo.region" content="TH-34" />
 <meta name="geo.placename" content="อุบลราชธานี" />
@@ -59,14 +64,9 @@ const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
 
-
 <link rel="icon" type="image/png" href="/images/icon.png" />
 <link rel="apple-touch-icon" href="/images/icon.png" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- JSON-LD Structured Data -->
-{
-  jsonLd.map((schema) => (
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-  ))
-}
+{jsonLd.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)} />)}

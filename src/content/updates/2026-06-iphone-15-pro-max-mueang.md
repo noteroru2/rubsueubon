@@ -1,10 +1,10 @@
 ---
-title: "รับซื้อ iPhone 15 Pro Max เครื่องศูนย์ไทย นัดรับเซ็นทรัลอุบล"
-description: "ลูกค้าเปลี่ยนใจไปใช้ S24 Ultra นำ iPhone 15 Pro Max 256GB สี Natural Titanium มาขาย ได้ราคาดี จ่ายเงินสดทันทีที่เซ็นทรัลอุบลราชธานี"
+title: 'รับซื้อ iPhone 15 Pro Max เครื่องศูนย์ไทย นัดรับเซ็นทรัลอุบล'
+description: 'ลูกค้าเปลี่ยนใจไปใช้ S24 Ultra นำ iPhone 15 Pro Max 256GB สี Natural Titanium มาขาย ได้ราคาดี จ่ายเงินสดทันทีที่เซ็นทรัลอุบลราชธานี'
 pubDate: 2026-06-09
-relatedServiceSlug: "รับซื้อโทรศัพท์-อุบล"
-relatedAreaSlug: "mueang-ubon"
-slug: "รับซื้อ-iphone-15-pro-max-อุบล-เซ็นทรัล"
+relatedServiceSlug: 'รับซื้อโทรศัพท์-อุบล'
+relatedAreaSlug: 'mueang-ubon'
+slug: 'รับซื้อ-iphone-15-pro-max-อุบล-เซ็นทรัล'
 ---
 
 วันนี้ทีมงาน **รับซื้ออุบล.com** ได้รับแจ้งจากลูกค้าทาง LINE **@buyhub** ว่าต้องการขาย **iPhone 15 Pro Max ความจุ 256GB สี Natural Titanium** เนื่องจากลูกค้าเพิ่งย้ายค่ายไปใช้ Samsung Galaxy S24 Ultra และไม่อยากเก็บเครื่องเก่าไว้ให้ราคาตก

@@ -1,12 +1,12 @@
 ---
-title: "รับซื้อ iPhone 13 128GB ที่เมืองอุบล — จ่ายเงินสดทันที"
-description: "ลูกค้าเมืองอุบลขาย iPhone 13 สภาพดี ส่งรูปประเมินผ่าน LINE นัดรับหน้า ม.อุบล จ่ายเงินสดทันที"
+title: 'รับซื้อ iPhone 13 128GB ที่เมืองอุบล — จ่ายเงินสดทันที'
+description: 'ลูกค้าเมืองอุบลขาย iPhone 13 สภาพดี ส่งรูปประเมินผ่าน LINE นัดรับหน้า ม.อุบล จ่ายเงินสดทันที'
 pubDate: 2025-11-15
-relatedServiceSlug: "iphone-ubon"
-relatedServiceLabel: "รับซื้อ iPhone"
-relatedAreaSlug: "mueang-ubon"
-relatedAreaLabel: "เมืองอุบลราชธานี"
-slug: "รับซื้อ-iphone-13-เมืองอุบล"
+relatedServiceSlug: 'iphone-ubon'
+relatedServiceLabel: 'รับซื้อ iPhone'
+relatedAreaSlug: 'mueang-ubon'
+relatedAreaLabel: 'เมืองอุบลราชธานี'
+slug: 'รับซื้อ-iphone-13-เมืองอุบล'
 ---
 
 ลูกค้าจาก**เมืองอุบลราชธานี** ต้องการขาย iPhone 13 ความจุ 128GB สภาพดี ส่งรูปมาที่ LINE @buyhub เราตีราคาภายใน 5 นาที นัดรับหน้ามหาวิทยาลัยอุบลราชธานี จ่ายเงินสดทันที

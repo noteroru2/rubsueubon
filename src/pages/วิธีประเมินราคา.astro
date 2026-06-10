@@ -12,10 +12,7 @@ const pageTitle = 'วิธีประเมินราคา รับซื
 const pageDescription =
   'วิธีประเมินราคารับซื้อไอทีในอุบลราชธานี ปัจจัยที่กำหนดราคา สิ่งที่ต้องเตรียมก่อนส่งรูป และขั้นตอนรับเงินสดทันทีผ่าน LINE @buyhub';
 
-const breadcrumbItems = [
-  { label: 'หน้าแรก', href: '/' },
-  { label: 'วิธีประเมินราคา' },
-];
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'วิธีประเมินราคา' }];
 
 const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(pricingFAQs)];
 ---
@@ -39,7 +36,9 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
         />
       </div>
 
-      <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink prose-li:text-muted">
+      <article
+        class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink prose-li:text-muted"
+      >
         <h2>ขั้นตอนการประเมินราคาไอทีมือสอง</h2>
         <p>
           กระบวนการประเมินราคาทั้งหมดออกแบบให้ทำผ่านออนไลน์ ไม่ต้องเดินทางมาร้าน ไม่ต้องรอคิว
@@ -63,7 +62,9 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
             decoding="async"
             class="w-full object-cover"
           />
-          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">รับซื้อ iPhone, Samsung, OPPO และสมาร์ทโฟนทุกยี่ห้อในอุบลราชธานี</figcaption>
+          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">
+            รับซื้อ iPhone, Samsung, OPPO และสมาร์ทโฟนทุกยี่ห้อในอุบลราชธานี
+          </figcaption>
         </figure>
 
         <h2>ปัจจัยที่กำหนดราคารับซื้อโทรศัพท์มือถือ</h2>
@@ -95,13 +96,15 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
             decoding="async"
             class="w-full object-cover"
           />
-          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">รับซื้อโน้ตบุ๊กทุกยี่ห้อ MacBook, ASUS, Dell, HP, Lenovo ในอุบลราชธานี</figcaption>
+          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">
+            รับซื้อโน้ตบุ๊กทุกยี่ห้อ MacBook, ASUS, Dell, HP, Lenovo ในอุบลราชธานี
+          </figcaption>
         </figure>
 
         <h2>ปัจจัยที่กำหนดราคารับซื้อโน้ตบุ๊ก</h2>
         <p>
-          ราคารับซื้อโน้ตบุ๊กมือสองซับซ้อนกว่าสมาร์ทโฟน เพราะมีองค์ประกอบมากกว่า
-          ยิ่งแจ้งรายละเอียดสเปคครบ ยิ่งได้ราคาประเมินที่แม่นยำขึ้น
+          ราคารับซื้อโน้ตบุ๊กมือสองซับซ้อนกว่าสมาร์ทโฟน เพราะมีองค์ประกอบมากกว่า ยิ่งแจ้งรายละเอียดสเปคครบ
+          ยิ่งได้ราคาประเมินที่แม่นยำขึ้น
         </p>
         <ul>
           <li>ยี่ห้อและซีรีส์ — MacBook M3 ได้ราคาดีกว่า Windows สเปคใกล้เคียง</li>
@@ -121,7 +124,9 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
             decoding="async"
             class="w-full object-cover"
           />
-          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">รับซื้อกล้อง Mirrorless, DSLR และเลนส์ทุก Mount ในอุบลราชธานี</figcaption>
+          <figcaption class="bg-surface px-4 py-2 text-sm text-muted">
+            รับซื้อกล้อง Mirrorless, DSLR และเลนส์ทุก Mount ในอุบลราชธานี
+          </figcaption>
         </figure>
 
         <h2>ปัจจัยที่กำหนดราคารับซื้อกล้องและเลนส์</h2>
@@ -158,13 +163,12 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
 
         <h2>ทำไมราคารับซื้อต่างจากราคาขายปลีก?</h2>
         <p>
-          ราคารับซื้อจะต่ำกว่าราคาขายปลีกเสมอ เพราะผู้รับซื้อต้องมีต้นทุนในการตรวจสอบคุณภาพ
-          จัดเก็บ และขายต่อในตลาดมือสอง ซึ่งต้องใช้เวลาและต้นทุน
+          ราคารับซื้อจะต่ำกว่าราคาขายปลีกเสมอ เพราะผู้รับซื้อต้องมีต้นทุนในการตรวจสอบคุณภาพ จัดเก็บ
+          และขายต่อในตลาดมือสอง ซึ่งต้องใช้เวลาและต้นทุน
         </p>
         <p>
-          เราให้ราคาที่ยุติธรรมตามสภาพจริงและราคาตลาดอุบลราชธานีปัจจุบัน
-          ไม่กดราคาหลังนัดรับ ราคาที่แจ้งผ่าน LINE คือราคาที่ได้รับจริงเมื่อส่งสินค้า
-          อ่าน <a href={conditionsPage()}>เงื่อนไขรับซื้อ</a> เพิ่มเติมได้
+          เราให้ราคาที่ยุติธรรมตามสภาพจริงและราคาตลาดอุบลราชธานีปัจจุบัน ไม่กดราคาหลังนัดรับ ราคาที่แจ้งผ่าน LINE
+          คือราคาที่ได้รับจริงเมื่อส่งสินค้า อ่าน <a href={conditionsPage()}>เงื่อนไขรับซื้อ</a> เพิ่มเติมได้
         </p>
 
         <h2>วิธีเตรียม iPhone และ Android ก่อนขาย</h2>
@@ -174,15 +178,13 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
         </p>
         <h3>iPhone</h3>
         <p>
-          Sign Out จาก iCloud: Settings → [ชื่อ] → Sign Out จากนั้นทำ Factory Reset:
-          Settings → General → Transfer or Reset iPhone → Erase All Content and Settings
-          ตรวจสอบว่า Find My iPhone ปิดแล้ว ก่อนส่งมอบ
+          Sign Out จาก iCloud: Settings → [ชื่อ] → Sign Out จากนั้นทำ Factory Reset: Settings → General → Transfer or
+          Reset iPhone → Erase All Content and Settings ตรวจสอบว่า Find My iPhone ปิดแล้ว ก่อนส่งมอบ
         </p>
         <h3>Android</h3>
         <p>
-          Sign Out จาก Google Account และ Samsung Account (ถ้าใช้ Samsung)
-          จากนั้นทำ Factory Reset จาก Settings → General Management → Reset
-          ตรวจสอบว่าปิด Google FRP (Factory Reset Protection) แล้วก่อนส่งมอบ
+          Sign Out จาก Google Account และ Samsung Account (ถ้าใช้ Samsung) จากนั้นทำ Factory Reset จาก Settings →
+          General Management → Reset ตรวจสอบว่าปิด Google FRP (Factory Reset Protection) แล้วก่อนส่งมอบ
         </p>
 
         <h2>ราคาประเมินผ่าน LINE ถูกต้องแน่นอนไหม?</h2>
@@ -192,21 +194,28 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(prici
         </p>
         <p>
           กรณีที่ราคาอาจถูกปรับ คือเมื่อสภาพจริงแตกต่างจากที่แจ้งมาอย่างมีนัยสำคัญ เช่น
-          แจ้งว่าจอปกติแต่พบรอยแตกเมื่อนัดรับ หรือแจ้งสุขภาพแบตผิด
-          เราจะแจ้งเหตุผลและราคาที่ปรับชัดเจน ไม่มีการปรับโดยไม่มีเหตุผล
+          แจ้งว่าจอปกติแต่พบรอยแตกเมื่อนัดรับ หรือแจ้งสุขภาพแบตผิด เราจะแจ้งเหตุผลและราคาที่ปรับชัดเจน
+          ไม่มีการปรับโดยไม่มีเหตุผล
         </p>
 
         <h2>การประเมินราคาไอทีมือสองอื่นๆ</h2>
         <p>
-          นอกจากสมาร์ทโฟน โน้ตบุ๊ก และกล้อง เรายังรับซื้อไอทีหลายประเภทในอุบลราชธานี
-          แต่ละประเภทมีวิธีประเมินเฉพาะทาง
+          นอกจากสมาร์ทโฟน โน้ตบุ๊ก และกล้อง เรายังรับซื้อไอทีหลายประเภทในอุบลราชธานี แต่ละประเภทมีวิธีประเมินเฉพาะทาง
         </p>
         <h4>Apple Watch และ Smart Watch</h4>
-        <p>ดูจาก Battery Health ใน Watch app, Shutter Count ไม่มีผล แต่สภาพตัวเรือนและกระจกสำคัญมาก Unpair จาก iPhone ก่อนส่งมอบ</p>
+        <p>
+          ดูจาก Battery Health ใน Watch app, Shutter Count ไม่มีผล แต่สภาพตัวเรือนและกระจกสำคัญมาก Unpair จาก iPhone
+          ก่อนส่งมอบ
+        </p>
         <h4>PC Gaming และการ์ดจอ</h4>
-        <p>ส่งรายการสเปคครบ GPU CPU RAM SSD และรูปเครื่อง ราคาขึ้นอยู่กับสเปคและสภาพการใช้งาน การ์ดที่เคยขุดเหมืองต้องแจ้งล่วงหน้า</p>
+        <p>
+          ส่งรายการสเปคครบ GPU CPU RAM SSD และรูปเครื่อง ราคาขึ้นอยู่กับสเปคและสภาพการใช้งาน
+          การ์ดที่เคยขุดเหมืองต้องแจ้งล่วงหน้า
+        </p>
         <h4>กล้อง Mirrorless</h4>
-        <p>ตรวจสอบ Shutter Count จาก camerashuttercount.com ก่อน และถ่ายรูปทดสอบ f/16 เพื่อดูฝุ่นบนเซนเซอร์ส่งมาพร้อมด้วย</p>
+        <p>
+          ตรวจสอบ Shutter Count จาก camerashuttercount.com ก่อน และถ่ายรูปทดสอบ f/16 เพื่อดูฝุ่นบนเซนเซอร์ส่งมาพร้อมด้วย
+        </p>
       </article>
 
       <div class="mt-12">

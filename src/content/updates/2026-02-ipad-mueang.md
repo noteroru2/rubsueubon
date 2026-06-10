@@ -1,12 +1,12 @@
 ---
-title: "รับซื้อ iPad Pro ที่เมืองอุบล — นักเรียนเทิร์นเป็นเงินสด"
-description: "นักเรียนเมืองอุบลขาย iPad Pro 11 ส่งรูปประเมิน นัดรับเซ็นทรัลอุบล จ่ายเงินสด"
+title: 'รับซื้อ iPad Pro ที่เมืองอุบล — นักเรียนเทิร์นเป็นเงินสด'
+description: 'นักเรียนเมืองอุบลขาย iPad Pro 11 ส่งรูปประเมิน นัดรับเซ็นทรัลอุบล จ่ายเงินสด'
 pubDate: 2026-02-05
-relatedServiceSlug: "iphone-ubon"
-relatedServiceLabel: "รับซื้อ iPhone / iPad"
-relatedAreaSlug: "mueang-ubon"
-relatedAreaLabel: "เมืองอุบลราชธานี"
-slug: "รับซื้อ-ipad-pro-เมืองอุบล"
+relatedServiceSlug: 'iphone-ubon'
+relatedServiceLabel: 'รับซื้อ iPhone / iPad'
+relatedAreaSlug: 'mueang-ubon'
+relatedAreaLabel: 'เมืองอุบลราชธานี'
+slug: 'รับซื้อ-ipad-pro-เมืองอุบล'
 ---
 
 นักเรียนจาก**เมืองอุบล** ขาย iPad Pro 11 อัปเกรดเป็นรุ่นใหม่ นัดรับที่เซ็นทรัลอุบลราชธานี จ่ายเงินสดทันที

@@ -3,9 +3,7 @@ import fs from 'fs';
 
 async function trimImage(inputPath, outputPath) {
   try {
-    await sharp(inputPath)
-      .trim({ threshold: 25 })
-      .toFile(outputPath);
+    await sharp(inputPath).trim({ threshold: 25 }).toFile(outputPath);
     console.log(`Trimmed ${inputPath} to ${outputPath} successfully.`);
     // Overwrite the original with the trimmed version
     fs.copyFileSync(outputPath, inputPath);

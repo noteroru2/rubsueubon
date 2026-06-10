@@ -35,9 +35,7 @@ const {
 } = entry.data;
 
 const canonical = servicePath(entry.data.slug);
-const ogImage = featuredImage
-  ? new URL(featuredImage, SITE.url).href
-  : `${SITE.url}/og-default.svg`;
+const ogImage = featuredImage ? new URL(featuredImage, SITE.url).href : `${SITE.url}/og-default.svg`;
 
 const relatedUpdates = (await getCollection('updates'))
   .filter((u) => u.data.relatedServiceSlug === entry.id)
@@ -52,11 +50,7 @@ const breadcrumbItems =
         { label: parentLabel, href: servicePath(parentSlug) },
         { label: navLabel },
       ]
-    : [
-        { label: 'หน้าแรก', href: '/' },
-        { label: 'บริการรับซื้อ', href: servicesIndex() },
-        { label: navLabel },
-      ];
+    : [{ label: 'หน้าแรก', href: '/' }, { label: 'บริการรับซื้อ', href: servicesIndex() }, { label: navLabel }];
 
 const jsonLd = [
   buildBreadcrumbSchema(breadcrumbItems),

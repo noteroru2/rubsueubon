@@ -5,11 +5,7 @@ interface Props {
   statValue?: string;
 }
 
-const {
-  brands,
-  statLabel = 'ประเมินราคาแล้วกว่า',
-  statValue = '1,000+ เครื่องในอุบล',
-} = Astro.props;
+const { brands, statLabel = 'ประเมินราคาแล้วกว่า', statValue = '1,000+ เครื่องในอุบล' } = Astro.props;
 ---
 
 <section class="border-y border-line bg-surface-alt py-10 sm:py-12" aria-label="ความน่าเชื่อถือ">

@@ -18,20 +18,15 @@ const categoryImages: Record<string, string> = {
 const imageAltText: Record<string, string> = {
   '/images/services/smartphone-iphone-android.webp':
     'รับซื้อโทรศัพท์ iPhone Android อุบลราชธานี ตรวจเช็คเครื่องโดยมืออาชีพ',
-  '/images/services/notebook-ubon.webp':
-    'รับซื้อโน้ตบุ๊ก อุบลราชธานี ประเมินราคาโน้ตบุ๊กมือสองทุกยี่ห้อ',
+  '/images/services/notebook-ubon.webp': 'รับซื้อโน้ตบุ๊ก อุบลราชธานี ประเมินราคาโน้ตบุ๊กมือสองทุกยี่ห้อ',
   '/images/services/camera-sony-canon-fujifilm.webp':
     'รับซื้อกล้อง Sony Canon Fujifilm อุบลราชธานี กล้องและเลนส์มือสอง',
-  '/images/services/pc-gaming-desktop.webp':
-    'รับซื้อคอมพิวเตอร์ตั้งโต๊ะ PC Gaming อุบลราชธานี ให้ราคาสูง',
+  '/images/services/pc-gaming-desktop.webp': 'รับซื้อคอมพิวเตอร์ตั้งโต๊ะ PC Gaming อุบลราชธานี ให้ราคาสูง',
   '/images/services/apple-devices-macbook-imac.webp':
     'รับซื้อ MacBook iMac อุปกรณ์ Apple อุบลราชธานี สภาพดี ให้ราคาสูง',
-  '/images/services/ipad-tablet.webp':
-    'รับซื้อ iPad Tablet มือสอง อุบลราชธานี ตรวจเช็คสภาพโดยมืออาชีพ',
-  '/images/services/apple-watch-smartwatch.webp':
-    'รับซื้อ Apple Watch Smart Watch อุบลราชธานี ทุกรุ่น ให้ราคาสูง',
-  '/images/services/pc-parts-gpu-cpu.webp':
-    'รับซื้อการ์ดจอ CPU อะไหล่คอม อุบลราชธานี ให้ราคาตามตลาด',
+  '/images/services/ipad-tablet.webp': 'รับซื้อ iPad Tablet มือสอง อุบลราชธานี ตรวจเช็คสภาพโดยมืออาชีพ',
+  '/images/services/apple-watch-smartwatch.webp': 'รับซื้อ Apple Watch Smart Watch อุบลราชธานี ทุกรุ่น ให้ราคาสูง',
+  '/images/services/pc-parts-gpu-cpu.webp': 'รับซื้อการ์ดจอ CPU อะไหล่คอม อุบลราชธานี ให้ราคาตามตลาด',
   '/images/services/game-console-playstation.webp':
     'รับซื้อ PlayStation Nintendo เครื่องเกม อุบลราชธานี จ่ายเงินสดทันที',
   '/images/services/speaker-jbl-marshall.webp':
@@ -49,8 +44,7 @@ const imageAltText: Record<string, string> = {
     <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         sorted.map((service) => {
-          const image =
-            service.data.featuredImage ?? categoryImages[service.data.category] ?? '/favicon.svg';
+          const image = service.data.featuredImage ?? categoryImages[service.data.category] ?? '/favicon.svg';
           const primaryKeyword = service.data.keywords[0] ?? service.data.category;
 
           return (
@@ -67,14 +61,16 @@ const imageAltText: Record<string, string> = {
                     height="450"
                     loading="lazy"
                     decoding="async"
-                    class={image.endsWith('.svg') ? "h-20 w-20 opacity-90 transition group-hover:scale-105" : "h-full w-full object-cover transition group-hover:scale-105"}
+                    class={
+                      image.endsWith('.svg')
+                        ? 'h-20 w-20 opacity-90 transition group-hover:scale-105'
+                        : 'h-full w-full object-cover transition group-hover:scale-105'
+                    }
                   />
                 </div>
                 <div class="flex flex-1 flex-col p-5">
                   <h3 class="text-lg font-bold text-ink group-hover:text-brand">{service.data.title}</h3>
-                  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                    {service.data.description}
-                  </p>
+                  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{service.data.description}</p>
                   <p class="mt-3 text-xs font-medium text-brand">{primaryKeyword}</p>
                   <span class="mt-3 text-sm font-semibold text-brand">ดูรายละเอียด →</span>
                 </div>

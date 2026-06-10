@@ -1,0 +1,75 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { SITE } from '../../config/site';
+import { blogIndex, blogPath } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+
+export async function getStaticPaths() {
+  const blogs = await getCollection('blog');
+  return blogs.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate, keywords } = entry.data;
+
+const canonical = blogPath(entry.data.slug);
+
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บทความ', href: blogIndex() }, { label: title }];
+
+const jsonLd = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    datePublished: pubDate.toISOString(),
+    url: `${SITE.url}${canonical}`,
+    inLanguage: 'th-TH',
+    publisher: { '@id': `${SITE.url}/#localbusiness` },
+    keywords: keywords.join(', '),
+  },
+];
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  keywords={keywords}
+  ogType="article"
+  jsonLd={jsonLd}
+  showMobileCTA
+>
+  <article class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      <time datetime={pubDate.toISOString()} class="mt-6 block text-sm font-medium text-brand">
+        {formatDate(pubDate)}
+      </time>
+      <h1 class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">{title}</h1>
+
+      <div
+        class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-a:no-underline hover:prose-a:underline"
+      >
+        <Content />
+      </div>
+
+      <div class="mt-10 rounded-2xl bg-surface-alt p-6 text-center shadow-sm">
+        <h2 class="mb-4 text-lg font-bold text-ink">สนใจขายสินค้าไอที หรือสอบถามราคา?</h2>
+        <CTAButton label="ประเมินราคาฟรีทันที" />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

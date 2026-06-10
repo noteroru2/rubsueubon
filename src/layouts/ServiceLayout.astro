@@ -61,7 +61,9 @@ const steps = [
     <div class="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
       <div class={`grid gap-8 items-center ${featuredImage ? 'lg:grid-cols-2' : ''}`}>
         <div class={featuredImage ? 'max-w-xl' : 'max-w-2xl'}>
-          <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium ring-1 ring-white/20">
+          <p
+            class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium ring-1 ring-white/20"
+          >
             อุบลราชธานี · รับซื้อ-รับเทิร์นไอที
           </p>
           <h1 id="service-hero-heading" class="mt-5 text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
@@ -110,7 +112,9 @@ const steps = [
         {
           trustSignals.map((signal) => (
             <li class="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 shadow-sm">
-              <span class="text-xl" aria-hidden="true">{signal.icon}</span>
+              <span class="text-xl" aria-hidden="true">
+                {signal.icon}
+              </span>
               <span class="text-sm font-semibold text-ink">{signal.label}</span>
             </li>
           ))
@@ -122,9 +126,7 @@ const steps = [
   <!-- How It Works -->
   <section class="py-12 sm:py-14" aria-labelledby="how-it-works-heading">
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
-      <h2 id="how-it-works-heading" class="text-xl font-bold text-ink sm:text-2xl">
-        ขั้นตอนการขายง่ายๆ
-      </h2>
+      <h2 id="how-it-works-heading" class="text-xl font-bold text-ink sm:text-2xl">ขั้นตอนการขายง่ายๆ</h2>
       <p class="mt-2 text-sm text-muted">รับซื้อและรับเทิร์นไอทีในอุบลราชธานี — จบใน 3 ขั้นตอน</p>
       <ol class="mt-8 grid gap-4 sm:grid-cols-3">
         {
@@ -171,6 +173,40 @@ const steps = [
     </div>
   </section>
 
+  <!-- Map Section -->
+  <section class="border-t border-line bg-surface py-12 sm:py-14" aria-labelledby="map-heading">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <h2 id="map-heading" class="text-center text-xl font-bold text-ink sm:text-2xl">
+        พิกัดร้านรับซื้อในจังหวัดอุบลราชธานี
+      </h2>
+      <p class="mt-2 text-center text-sm text-muted">
+        เดินทางสะดวก มีหน้าร้านชัดเจน หรือจะเรียกใช้บริการรับถึงที่ก็ยินดีครับ
+      </p>
+      <div class="mt-8 overflow-hidden rounded-2xl border border-line shadow-sm">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.025200608903!2d104.844358!3d15.266421499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311687b7ef0583c9%3A0x90ad9a37b84af3a!2z4Lit4Liz4Lie4LilIOC5gOC4l-C4o-C4lOC4lOC4tOC5ieC4hyAtIOC4o-C4seC4muC4i-C4t-C5ieC4rSDguILguLLguKIg4LiL4LmI4Lit4LihIOC4hOC4reC4oeC4nuC4tOC4p-C5gOC4leC4reC4o-C5jCDguKHguLfguK3guJbguLfguK0g4LiB4Lil4LmJ4Lit4LiHIOC4peC4s-C5guC4nuC4hyDguKrguLTguJnguITguYnguLLguYTguK3guJfguLXguJfguLjguIHguIrguJnguLTguJQ!5e0!3m2!1sth!2sth!4v1781084191572!5m2!1sth!2sth"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+        <div class="border-t border-line bg-surface-alt p-4 text-center">
+          <a
+            href="https://maps.app.goo.gl/uuwGbjpMeedTC1ik8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
+          >
+            📍 นำทางไปหน้าร้าน (Google Maps)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   {
     faqs && faqs.length > 0 && (
@@ -185,17 +221,12 @@ const steps = [
                 <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
                   <span class="flex items-center justify-between gap-4">
                     {faq.question}
-                    <span
-                      class="shrink-0 text-brand transition group-open:rotate-180"
-                      aria-hidden="true"
-                    >
+                    <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">
                       ▼
                     </span>
                   </span>
                 </summary>
-                <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">
-                  {faq.answer}
-                </div>
+                <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
               </details>
             ))}
           </div>

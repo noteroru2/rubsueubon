@@ -29,17 +29,12 @@ const { faqs, title = 'คำถามที่พบบ่อย', subtitle = '
             <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
               <span class="flex items-center justify-between gap-4">
                 {faq.question}
-                <span
-                  class="shrink-0 text-brand transition group-open:rotate-180"
-                  aria-hidden="true"
-                >
+                <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">
                   ▼
                 </span>
               </span>
             </summary>
-            <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">
-              {faq.answer}
-            </div>
+            <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
           </details>
         ))
       }

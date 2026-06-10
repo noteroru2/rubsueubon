@@ -11,10 +11,7 @@ const pageTitle = 'คำถามที่พบบ่อย (FAQ) รับซ
 const pageDescription =
   'คำถามที่พบบ่อยเกี่ยวกับการรับซื้อ-รับเทิร์นไอทีในอุบลราชธานี ราคา เงื่อนไข วิธีประเมิน และขั้นตอนรับเงินสด';
 
-const breadcrumbItems = [
-  { label: 'หน้าแรก', href: '/' },
-  { label: 'คำถามที่พบบ่อย' },
-];
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'คำถามที่พบบ่อย' }];
 
 const allFaqs = getAllFAQs();
 const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(allFaqs)];
@@ -28,7 +25,11 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(allFa
       <p class="mt-4 text-lg text-muted">{pageDescription}</p>
 
       <div class="mt-8 rounded-3xl overflow-hidden border border-line bg-[#0a0a0a]">
-        <img src="/images/faq-3d.webp" alt="คำถามที่พบบ่อย FAQ" class="w-full h-48 sm:h-72 object-cover object-center" />
+        <img
+          src="/images/faq-3d.webp"
+          alt="คำถามที่พบบ่อย FAQ"
+          class="w-full h-48 sm:h-72 object-cover object-center"
+        />
       </div>
 
       <p class="mt-8 text-sm text-muted">
@@ -46,7 +47,9 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(allFa
                   <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center justify-between gap-4">
                       {faq.question}
-                      <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">▼</span>
+                      <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">
+                        ▼
+                      </span>
                     </span>
                   </summary>
                   <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>

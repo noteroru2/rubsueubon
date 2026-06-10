@@ -1,12 +1,12 @@
 ---
-title: "รับเทิร์น iPad และ iPhone ที่เมืองอุบล — ลูกค้าได้เงินก้อน"
-description: "รับเทิร์น iPad กับ iPhone มือสองในเมืองอุบลราชธานี ประเมินราคาฟรี นัดรับสะดวก จ่ายเงินสดทันที"
+title: 'รับเทิร์น iPad และ iPhone ที่เมืองอุบล — ลูกค้าได้เงินก้อน'
+description: 'รับเทิร์น iPad กับ iPhone มือสองในเมืองอุบลราชธานี ประเมินราคาฟรี นัดรับสะดวก จ่ายเงินสดทันที'
 pubDate: 2026-03-08
-relatedServiceSlug: "trade-in-ubon"
-relatedServiceLabel: "รับเทิร์นสินค้าไอที"
-relatedAreaSlug: "mueang-ubon"
-relatedAreaLabel: "เมืองอุบลราชธานี"
-slug: "รับเทิร์นไอที-เมืองอุบล"
+relatedServiceSlug: 'trade-in-ubon'
+relatedServiceLabel: 'รับเทิร์นสินค้าไอที'
+relatedAreaSlug: 'mueang-ubon'
+relatedAreaLabel: 'เมืองอุบลราชธานี'
+slug: 'รับเทิร์นไอที-เมืองอุบล'
 ---
 
 ลูกค้าใน**เมืองอุบลราชธานี** นำ iPad และ iPhone มา **เทิร์น** เป็นเงินสด ส่งรูปมาที่ LINE @buyhub เราแจ้งราคาชัดเจนทั้งสองเครื่อง นัดรับที่สะดวก จ่ายเงินสดทันทีเมื่อรับสินค้า

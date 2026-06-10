@@ -1,12 +1,12 @@
 ---
-title: "รับเทิร์น iPhone 14 Pro ที่วารินชำราบ — ลูกค้าพอใจราคา"
-description: "รับเทิร์น iPhone 14 Pro มือสองในอำเภอวารินชำราบ ตีราคาผ่าน LINE นัดรับถึงที่ จ่ายเงินสดทันที"
+title: 'รับเทิร์น iPhone 14 Pro ที่วารินชำราบ — ลูกค้าพอใจราคา'
+description: 'รับเทิร์น iPhone 14 Pro มือสองในอำเภอวารินชำราบ ตีราคาผ่าน LINE นัดรับถึงที่ จ่ายเงินสดทันที'
 pubDate: 2026-03-02
-relatedServiceSlug: "smartphone-ubon"
-relatedServiceLabel: "รับซื้อโทรศัพท์มือถือ"
-relatedAreaSlug: "warin-chamrap"
-relatedAreaLabel: "วารินชำราบ"
-slug: "รับเทิร์น-iphone-14-วารินชำราบ"
+relatedServiceSlug: 'smartphone-ubon'
+relatedServiceLabel: 'รับซื้อโทรศัพท์มือถือ'
+relatedAreaSlug: 'warin-chamrap'
+relatedAreaLabel: 'วารินชำราบ'
+slug: 'รับเทิร์น-iphone-14-วารินชำราบ'
 ---
 
 ลูกค้าจาก **วารินชำราบ** ต้องการเทิร์น iPhone 14 Pro เป็นเงินสด ส่งรูปมาที่ LINE @buyhub เราแจ้งราคาชัดเจน ไม่กดราคาทีหลัง นัดรับที่ตัวเมืองวารินชำราบ จ่ายเงินสดทันทีเมื่อรับเครื่อง

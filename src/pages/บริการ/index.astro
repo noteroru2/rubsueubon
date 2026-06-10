@@ -14,10 +14,7 @@ const pageTitle = 'บริการรับซื้อ-รับเทิร
 const pageDescription =
   'บริการรับซื้อโทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และรับเทิร์นสินค้าไอทีในอุบลราชธานี ประเมินราคาฟรี จ่ายเงินสดทันที';
 
-const breadcrumbItems = [
-  { label: 'หน้าแรก', href: '/' },
-  { label: 'บริการรับซื้อ' },
-];
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บริการรับซื้อ' }];
 
 const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
 ---
@@ -26,9 +23,7 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
   <div class="py-12 sm:py-16">
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
       <Breadcrumbs items={breadcrumbItems} />
-      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">
-        บริการรับซื้อ-รับเทิร์นไอที อุบลราชธานี
-      </h1>
+      <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">บริการรับซื้อ-รับเทิร์นไอที อุบลราชธานี</h1>
       <p class="mt-4 text-lg text-muted">{pageDescription}</p>
 
       <div class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
@@ -37,16 +32,17 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
           ประเมินราคาฟรีผ่าน LINE <strong>@buyhub</strong> จ่ายเงินสดทันที ไม่มีค่าธรรมเนียมแอบแฝง
         </p>
         <p>
-          ไม่ว่าคุณจะอยู่เมืองอุบล วารินชำราบ เดชอุดม หรืออำเภออื่น เรานัดรับถึงที่ได้
-          ดู <a href={areasIndex()}>พื้นที่ให้บริการ</a> ทั้งหมด อ่าน <a href={aboutPage()}>เกี่ยวกับเรา</a>,
+          ไม่ว่าคุณจะอยู่เมืองอุบล วารินชำราบ เดชอุดม หรืออำเภออื่น เรานัดรับถึงที่ได้ ดู <a href={areasIndex()}
+            >พื้นที่ให้บริการ</a
+          > ทั้งหมด อ่าน <a href={aboutPage()}>เกี่ยวกับเรา</a>,
           <a href={pricingPage()}>วิธีประเมินราคา</a> หรือ <a href={updatesIndex()}>ผลงานรับซื้อล่าสุด</a>
         </p>
 
         <h2>บริการรับซื้อไอทีที่เราให้บริการ</h2>
         <p>
-          รับซื้ออุบล.com เป็นศูนย์รวมการรับซื้อและรับเทิร์นสินค้าไอทีในจังหวัดอุบลราชธานี
-          ครอบคลุมทั้งโทรศัพท์มือถือ โน้ตบุ๊ก กล้องถ่ายภาพ และบริการเทิร์นหลายชิ้นพร้อมกัน
-          เราตีราคาตามสภาพจริงและราคาตลาดปัจจุบัน ไม่กดราคาหลังนัดรับ
+          รับซื้ออุบล.com เป็นศูนย์รวมการรับซื้อและรับเทิร์นสินค้าไอทีในจังหวัดอุบลราชธานี ครอบคลุมทั้งโทรศัพท์มือถือ
+          โน้ตบุ๊ก กล้องถ่ายภาพ และบริการเทิร์นหลายชิ้นพร้อมกัน เราตีราคาตามสภาพจริงและราคาตลาดปัจจุบัน
+          ไม่กดราคาหลังนัดรับ
         </p>
 
         <h2>ขั้นตอนการขาย-เทิร์นกับเรา</h2>

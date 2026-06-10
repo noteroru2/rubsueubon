@@ -42,7 +42,7 @@ const breadcrumbItems = [
   { label: `อำเภอ${name}` },
 ];
 
-const contentSections = buildDistrictSections(name, id);
+const contentSections = buildDistrictSections(name, id, latitude, longitude);
 
 const districtUpdates = (await getCollection('updates'))
   .filter((u) => u.data.relatedAreaSlug === id)
@@ -114,9 +114,8 @@ const jsonLd = [
         <div>
           <h2 class="text-xl font-bold text-ink">พื้นที่ให้บริการ อำเภอ{name}</h2>
           <p class="mt-3 text-sm leading-relaxed text-muted">
-            เราให้บริการรับซื้อและรับเทิร์นสินค้าไอทีในอำเภอ{name} อุบลราชธานี
-            สามารถนัดรับสินค้าถึงที่หรือตกลงจุดนัดพบที่สะดวก ประเมินราคาฟรีผ่าน LINE @buyhub
-            ก่อนนัดรับเพื่อความรวดเร็วและโปร่งใส
+            เราให้บริการรับซื้อและรับเทิร์นสินค้าไอทีในอำเภอ{name} อุบลราชธานี สามารถนัดรับสินค้าถึงที่หรือตกลงจุดนัดพบที่สะดวก
+            ประเมินราคาฟรีผ่าน LINE @buyhub ก่อนนัดรับเพื่อความรวดเร็วและโปร่งใส
           </p>
           <a
             href={mapUrl}
@@ -132,7 +131,13 @@ const jsonLd = [
           review && (
             <blockquote class="rounded-2xl border border-line bg-brand/5 p-6">
               <div class="flex gap-0.5 text-amber-400" aria-hidden="true">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </>
               </div>
               <p class="mt-3 text-sm leading-relaxed text-ink">"{review.text}"</p>
               <footer class="mt-4 text-sm">
@@ -187,21 +192,14 @@ const jsonLd = [
         </figure>
       </div>
 
-      <article class="prose prose-lg max-w-none prose-headings:text-ink prose-p:text-muted prose-a:text-brand prose-li:text-muted">
+      <article
+        class="prose prose-lg max-w-none prose-headings:text-ink prose-p:text-muted prose-a:text-brand prose-li:text-muted"
+      >
         {
           contentSections.map((section, i) => (
             <>
               <h2>{section.heading}</h2>
-              {section.paragraphs.map((p) => (
-                <p>{p}</p>
-              ))}
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-              )}
+              <div set:html={section.htmlContent} class="space-y-4" />
               {i === 2 && (
                 <figure class="not-prose my-8 overflow-hidden rounded-xl shadow-sm">
                   <img
@@ -280,17 +278,26 @@ const jsonLd = [
       <h2 class="text-xl font-bold text-ink sm:text-2xl">ขายไอทีในอำเภอ{name} ง่ายๆ 3 ขั้นตอน</h2>
       <ol class="mt-8 grid gap-4 sm:grid-cols-3">
         <li class="rounded-2xl border border-line bg-surface p-5">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand">1</span>
+          <span
+            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
+            >1</span
+          >
           <h3 class="mt-3 font-bold text-ink">แอด LINE @buyhub</h3>
           <p class="mt-2 text-sm text-muted">เพิ่มเพื่อน LINE OA เพื่อเริ่มแชทและประเมินราคาทันที</p>
         </li>
         <li class="rounded-2xl border border-line bg-surface p-5">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand">2</span>
+          <span
+            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
+            >2</span
+          >
           <h3 class="mt-3 font-bold text-ink">ส่งรูปประเมินราคา</h3>
           <p class="mt-2 text-sm text-muted">ถ่ายรูปสินค้า แจ้งรุ่นและสภาพ รับใบเสนอราคาภายในไม่กี่นาที</p>
         </li>
         <li class="rounded-2xl border border-line bg-surface p-5">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand">3</span>
+          <span
+            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
+            >3</span
+          >
           <h3 class="mt-3 font-bold text-ink">นัดรับ-จ่ายเงินสด</h3>
           <p class="mt-2 text-sm text-muted">ตกลงราคาแล้วนัดรับในอำเภอ{name} จ่ายเงินสดทันที ไม่มีค่าแอบแฝง</p>
         </li>
@@ -318,9 +325,13 @@ const jsonLd = [
             ))}
           </ul>
           <p class="mt-4 text-sm">
-            <a href={updatesIndex()} class="font-semibold text-brand hover:underline">ดูผลงานทั้งหมด →</a>
+            <a href={updatesIndex()} class="font-semibold text-brand hover:underline">
+              ดูผลงานทั้งหมด →
+            </a>
             {' · '}
-            <a href={pricingPage()} class="font-semibold text-brand hover:underline">วิธีประเมินราคา →</a>
+            <a href={pricingPage()} class="font-semibold text-brand hover:underline">
+              วิธีประเมินราคา →
+            </a>
           </p>
         </div>
       </section>
@@ -337,7 +348,9 @@ const jsonLd = [
               <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
                 <span class="flex items-center justify-between gap-4">
                   {faq.question}
-                  <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">▼</span>
+                  <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">
+                    ▼
+                  </span>
                 </span>
               </summary>
               <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
@@ -369,5 +382,4 @@ const jsonLd = [
       </ul>
     </div>
   </section>
-
 </BaseLayout>
