@@ -11,9 +11,13 @@ const currentPath = Astro.url.pathname;
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
     <a href="/" class="group flex min-w-0 items-center">
       <img
-        src="/images/logo.png"
+        src="/images/logo.webp"
         alt={`${SITE.name} โลโก้`}
+        width="578"
+        height="165"
         class="h-12 w-auto sm:h-14"
+        fetchpriority="high"
+        decoding="async"
       />
     </a>
 

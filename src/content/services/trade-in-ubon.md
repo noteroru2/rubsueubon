@@ -11,7 +11,7 @@ keywords:
   - "เทิร์นโน้ตบุ๊ก อุบล"
   - "รับเทิร์นสินค้าไอที"
 category: "trade-in"
-featuredImage: "/images/laptop-3d.png"
+featuredImage: "/images/laptop-3d.webp"
 brands: ["Apple", "Samsung", "ASUS", "Canon", "Sony", "Dell", "HP"]
 acceptedConditions:
   - "เทิร์นโทรศัพท์มือถือ แท็บเล็ต ทุกยี่ห้อ"

@@ -10,7 +10,7 @@ keywords:
   - "รับซื้อจอคอมพิวเตอร์ อุบล"
   - "ร้านรับซื้อเครื่องใช้ไฟฟ้ามือสอง อุบล"
 category: "notebook"
-featuredImage: "/images/tv-3d.jpg"
+featuredImage: "/images/tv-3d.webp"
 brands: ["Samsung", "LG", "Sony", "TCL", "Hisense", "Dell", "AOC"]
 acceptedConditions:
   - "Smart TV มือสอง สภาพใช้งานได้ปกติ จอไม่แตก"

@@ -17,7 +17,7 @@ const { accepted, rejected } = Astro.props;
     <div class="mt-8 grid gap-6 sm:grid-cols-2">
       <div class="rounded-2xl border border-line bg-brand/5 p-6">
         <h3 class="font-bold text-brand">✓ รับซื้อ / รับเทิร์น</h3>
-        <ul class="mt-4 space-y-2 text-sm text-muted">
+        <ul class="mt-4 space-y-2 text-sm text-ink/80">
           {accepted.map((item) => (
             <li class="flex gap-2">
               <span class="text-brand" aria-hidden="true">•</span>
@@ -28,7 +28,7 @@ const { accepted, rejected } = Astro.props;
       </div>
       <div class="rounded-2xl border border-line bg-red-50 p-6">
         <h3 class="font-bold text-red-700">✕ ไม่รับ</h3>
-        <ul class="mt-4 space-y-2 text-sm text-muted">
+        <ul class="mt-4 space-y-2 text-sm text-ink/80">
           {rejected.map((item) => (
             <li class="flex gap-2">
               <span class="text-red-500" aria-hidden="true">•</span>

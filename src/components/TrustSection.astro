@@ -51,7 +51,7 @@ const guarantees = [
         guarantees.map((item) => (
           <div class="rounded-2xl border border-line bg-brand/5 p-5">
             <h3 class="font-bold text-brand">{item.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink/80">{item.description}</p>
           </div>
         ))
       }
@@ -71,7 +71,7 @@ const guarantees = [
               />
             )}
             <div class="flex flex-1 flex-col p-6">
-              <div class="flex gap-0.5 text-amber-400" aria-label={`คะแนน ${item.rating} จาก 5`}>
+              <div role="img" aria-label={`คะแนน ${item.rating} จาก 5`} class="flex gap-0.5 text-amber-400">
                 {Array.from({ length: item.rating }).map(() => (
                   <span aria-hidden="true">★</span>
                 ))}
