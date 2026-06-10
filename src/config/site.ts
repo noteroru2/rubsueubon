@@ -6,8 +6,10 @@ export const SITE = {
   language: 'th',
   lineOA: '@buyhub',
   lineMessage: 'ประเมินราคาฟรีทันที',
-  phone: '000-000-0000',
-  email: 'contact@รับซื้ออุบล.com',
+  phone: '095-547-9408',
+  email: 'amphontrading@gmail.com',
+  businessName: 'WINNER IT',
+  companyName: 'บริษัท อำพล เทรดดิ้ง จำกัด',
   address: {
     streetAddress: 'อุบลราชธานี',
     addressLocality: 'อุบลราชธานี',
@@ -16,14 +18,14 @@ export const SITE = {
     addressCountry: 'TH',
   },
   geo: {
-    latitude: 15.228685,
-    longitude: 104.856423,
+    latitude: 15.266427,
+    longitude: 104.841778,
   },
-  openingHours: ['Mo-Sa 09:00-18:00'],
+  openingHours: ['Mo-Su 09:00-19:30'],
   priceRange: '฿฿',
   sameAs: ['https://line.me/R/ti/p/@buyhub'],
 } as const;
 
-export function getLineOALink(message = SITE.lineMessage): string {
-  return `https://line.me/R/oaMessage/${SITE.lineOA}/?${encodeURIComponent(message)}`;
+export function getLineOALink(): string {
+  return `https://line.me/R/ti/p/${SITE.lineOA}`;
 }

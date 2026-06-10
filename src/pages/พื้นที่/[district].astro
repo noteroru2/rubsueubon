@@ -148,9 +148,48 @@ const jsonLd = [
 
   <section class="py-14 sm:py-16">
     <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <div class="not-prose mb-10 grid grid-cols-3 gap-3 sm:grid-cols-3">
+        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
+          <img
+            src="/images/services/smartphone-iphone-android.webp"
+            alt={`รับซื้อโทรศัพท์มือถือ iPhone Samsung อำเภอ${name}`}
+            width="320"
+            height="213"
+            loading="lazy"
+            decoding="async"
+            class="h-28 w-full object-cover sm:h-36"
+          />
+          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อโทรศัพท์มือถือ</figcaption>
+        </figure>
+        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
+          <img
+            src="/images/services/notebook-ubon.webp"
+            alt={`รับซื้อโน้ตบุ๊ก MacBook อำเภอ${name}`}
+            width="320"
+            height="213"
+            loading="lazy"
+            decoding="async"
+            class="h-28 w-full object-cover sm:h-36"
+          />
+          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อโน้ตบุ๊ก</figcaption>
+        </figure>
+        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
+          <img
+            src="/images/services/camera-sony-canon-fujifilm.webp"
+            alt={`รับซื้อกล้อง Sony Canon อำเภอ${name}`}
+            width="320"
+            height="213"
+            loading="lazy"
+            decoding="async"
+            class="h-28 w-full object-cover sm:h-36"
+          />
+          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อกล้อง</figcaption>
+        </figure>
+      </div>
+
       <article class="prose prose-lg max-w-none prose-headings:text-ink prose-p:text-muted prose-a:text-brand prose-li:text-muted">
         {
-          contentSections.map((section) => (
+          contentSections.map((section, i) => (
             <>
               <h2>{section.heading}</h2>
               {section.paragraphs.map((p) => (
@@ -162,6 +201,32 @@ const jsonLd = [
                     <li>{item}</li>
                   ))}
                 </ul>
+              )}
+              {i === 2 && (
+                <figure class="not-prose my-8 overflow-hidden rounded-xl shadow-sm">
+                  <img
+                    src="/images/cash-3d.jpg"
+                    alt={`รับเงินสดทันทีขายไอที อำเภอ${name}`}
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full object-cover"
+                  />
+                </figure>
+              )}
+              {i === 5 && (
+                <figure class="not-prose my-8 overflow-hidden rounded-xl shadow-sm">
+                  <img
+                    src="/images/services/apple-devices-macbook-imac.webp"
+                    alt={`รับซื้อ Apple MacBook iPad อำเภอ${name}`}
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full object-cover"
+                  />
+                </figure>
               )}
             </>
           ))

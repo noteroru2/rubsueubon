@@ -5,13 +5,22 @@ import { getLineOALink } from '../config/site';
 const lineLink = getLineOALink();
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-ink text-white">
-  <div class="pointer-events-none absolute inset-0 opacity-20" aria-hidden="true">
-    <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/20 blur-3xl"></div>
-    <div class="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-line/30 blur-3xl"></div>
+<section class="relative overflow-hidden bg-[#0a0a0a] text-white">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/hero/home-hero-buy-it-ubon.webp"
+      alt="รับซื้อไอที อุบลราชธานี มือถือ โน้ตบุ๊ค กล้อง แท็บเล็ตมือสอง ประเมินราคาฟรี จ่ายเงินทันที"
+      width="1600"
+      height="900"
+      fetchpriority="high"
+      decoding="async"
+      class="h-full w-full object-cover object-right"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent sm:via-[#0a0a0a]/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent sm:hidden"></div>
   </div>
 
-  <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+  <div class="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
     <div class="max-w-2xl">
       <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium ring-1 ring-white/20">
         รับซื้อ-รับเทิร์นไอที อุบลราชธานี

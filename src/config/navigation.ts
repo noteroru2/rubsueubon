@@ -29,39 +29,54 @@ import {
 
 
 export const serviceNav = [
-
   {
-
-    label: 'รับซื้อโทรศัพท์มือถือ / แท็บเล็ต',
-
+    label: 'รับซื้อโทรศัพท์มือถือ',
     href: servicePath('smartphone-ubon'),
-
   },
-
   {
-
+    label: 'รับซื้อ MacBook/iMac/Apple',
+    href: servicePath('apple-ubon'),
+  },
+  {
+    label: 'รับซื้อแท็บเล็ต / iPad',
+    href: servicePath('tablet-ubon'),
+  },
+  {
+    label: 'รับซื้อ Apple Watch / Smart Watch',
+    href: servicePath('smartwatch-ubon'),
+  },
+  {
+    label: 'รับซื้อเครื่องเสียง JBL/Marshall',
+    href: servicePath('speaker-ubon'),
+  },
+  {
     label: 'รับซื้อโน้ตบุ๊ก / คอมพิวเตอร์',
-
     href: servicePath('notebook-ubon'),
-
   },
-
   {
-
+    label: 'รับซื้อ PC Gaming / คอมตั้งโต๊ะ',
+    href: servicePath('pc-gaming-ubon'),
+  },
+  {
+    label: 'รับซื้อการ์ดจอ / อะไหล่คอม',
+    href: servicePath('pc-parts-ubon'),
+  },
+  {
+    label: 'รับซื้อ PlayStation / Nintendo',
+    href: servicePath('game-console-ubon'),
+  },
+  {
     label: 'รับซื้อกล้องและเลนส์',
-
     href: servicePath('camera-ubon'),
-
   },
-
   {
-
-    label: 'รับเทิร์นสินค้าไอที',
-
-    href: servicePath('trade-in-ubon'),
-
+    label: 'รับซื้อทีวี / จอคอม',
+    href: servicePath('tv-electronics-ubon'),
   },
-
+  {
+    label: 'รับเทิร์นสินค้าไอที',
+    href: servicePath('trade-in-ubon'),
+  },
 ] as const;
 
 
@@ -73,6 +88,8 @@ export const brandServiceNav = [
   { label: 'รับซื้อ Samsung อุบล', href: servicePath('samsung-ubon') },
 
   { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
+
+  { label: 'รับซื้อ iPad อุบล', href: servicePath('tablet-ubon') },
 
   { label: 'รับซื้อกล้อง Sony อุบล', href: servicePath('sony-camera-ubon') },
 

@@ -1,56 +1,349 @@
 ---
 import { serviceNav } from '../config/navigation';
-import { areasIndex, updatesIndex } from '../config/urls';
+import { areasIndex, updatesIndex, servicePath, areaPath } from '../config/urls';
 ---
 
-<section class="py-14 sm:py-16" aria-labelledby="hub-content-heading">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6">
-    <h2 id="hub-content-heading" class="text-2xl font-bold text-ink sm:text-3xl">
-      รับซื้อ-รับเทิร์นไอที อุบลราชธานี — ศูนย์กลางครบวงจร
-    </h2>
+<div class="divide-y divide-line">
 
-    <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
-      <p>
-        <strong>รับซื้ออุบล.com</strong> คือแพลตฟอร์มรับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่ง-มือสองในจังหวัดอุบลราชธานี
-        ออกแบบมาเพื่อผู้ที่ต้องการขายของด่วน ได้เงินสดทันที โดยไม่ต้องโพสต์ขายเองหรือเจอผู้ซื้อที่กดราคา
-        เราให้บริการครอบคลุมทั้ง <strong>โทรศัพท์มือถือ โน้ตบุ๊ก กล้อง แท็บเล็ต</strong> และอุปกรณ์ไอทีอื่นๆ
-      </p>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §1 — ภาพรวมบริการ                                  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-overview">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-overview" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้อ-รับเทิร์นไอที อุบลราชธานี — ศูนย์กลางครบวงจร
+      </h2>
 
-      <h3>บริการรับซื้อที่เราให้</h3>
-      <ul>
-        {
-          serviceNav.map((item) => (
-            <li>
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))
-        }
-      </ul>
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          <strong>รับซื้ออุบล.com</strong> คือแพลตฟอร์มรับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่ง-มือสองในจังหวัดอุบลราชธานี
+          ออกแบบมาเพื่อผู้ที่ต้องการขายของได้เงินสดทันที โดยไม่ต้องโพสต์ขายเองหรือเสี่ยงเจอผู้ซื้อที่กดราคาหน้างาน
+          เราให้บริการครอบคลุมทั้ง <strong>โทรศัพท์มือถือ โน้ตบุ๊ก กล้อง แท็บเล็ต อุปกรณ์ Apple เครื่องเกม</strong> และอุปกรณ์ไอทีอื่นๆ
+          ทุกขั้นตอนโปร่งใส ประเมินราคาฟรีผ่าน LINE @buyhub ภายใน 5 นาที
+        </p>
 
-      <p>
-        ไม่ว่าคุณจะอยู่ <strong>เมืองอุบลราชธานี วารินชำราบ เดชอุดม พิบูลมังสาหาร ตระการพืชผล หรือม่วงสามสิบ</strong>
-        เราสามารถนัดรับสินค้าถึงที่หรือตกลงจุดนัดพบที่สะดวก กระบวนการโปร่งใส เริ่มต้นด้วยการส่งรูปมาที่ LINE
-        <strong>@buyhub</strong> เพื่อรับใบเสนอราคาฟรีภายใน 5 นาที
-      </p>
+        <h3>บริการรับซื้อที่เราให้บริการ</h3>
+        <p>
+          เรารองรับสินค้าไอทีหลากหลายประเภท ตั้งแต่สมาร์ทโฟนราคาหลักพันจนถึง MacBook หรือกล้อง Mirrorless ราคาหลักแสน
+          แต่ละหมวดมีทีมที่เข้าใจมูลค่าตลาดโดยตรง ทำให้ประเมินราคาได้แม่นยำและยุติธรรม
+        </p>
+        <ul>
+          {serviceNav.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
 
-      <h3>ทำไมลูกค้าในอุบลเลือกเรา?</h3>
-      <p>
-        เราเข้าใจตลาดไอทีในอุบลราชธานีโดยตรง ไม่ผ่านคนกลาง ทำให้ให้ราคารับซื้อที่ยุติธรรมกว่า
-        ไม่ว่าจะเป็น iPhone มือสอง โน้ตบุ๊กเกมมิ่ง หรือกล้อง Mirrorless เราประเมินตามสภาพจริงและราคาตลาดปัจจุบัน
-        เมื่อตกลงราคาแล้ว <strong>จ่ายเงินสดทันที</strong> ไม่มีค่าธรรมเนียมแอบแฝง
-      </p>
-
-      <h3>Hub and Spoke — โครงสร้างที่ Google เข้าใจ</h3>
-      <p>
-        เว็บไซต์ของเราออกแบบตามหลัก Hub and Spoke: หน้าแรกเป็นศูนย์กลางที่เชื่อมไปยังหน้าบริการแต่ละประเภท
-        และหน้าพื้นที่ (Geo-SEO) ในแต่ละอำเภอ ช่วยกระจายพลัง SEO ภายในเว็บและดันอันดับคีย์เวิร์ดระยะยาว
-        เช่น "รับซื้อโน้ตบุ๊ก วารินชำราบ" หรือ "ร้านรับเทิร์นมือถือ เดชอุดม"
-      </p>
-
-      <p>
-        พร้อมขายแล้ว? แอด LINE <strong>@buyhub</strong> ส่งรูปสินค้า รับราคาประเมินฟรีทันที
-        หรือดู <a href={updatesIndex()}>ผลงานรับซื้อล่าสุด</a> และ <a href={areasIndex()}>พื้นที่ให้บริการ</a> ก่อนตัดสินใจ
-      </p>
+        <h4>วิธีเริ่มต้นขายสินค้าไอที</h4>
+        <p>
+          เพียงแอด LINE <strong>@buyhub</strong> ถ่ายรูปสินค้าพร้อมแจ้งรุ่นและสภาพ
+          เราจะตอบกลับพร้อมใบเสนอราคาภายไม่กี่นาที ไม่มีข้อผูกมัด ไม่ต้องตัดสินใจทันที
+          เมื่อตกลงราคาแล้วค่อยนัดรับสินค้าในอุบลราชธานีเพื่อรับเงินสดทันที
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §2 — รับซื้อโทรศัพท์มือถือ                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-smartphone">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-smartphone" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้อโทรศัพท์มือถือ อุบลราชธานี ราคาสูงสุด
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          สมาร์ทโฟนเป็นสินค้าไอทีที่มีผู้ขายมากที่สุดในอุบลราชธานี
+          ไม่ว่าจะเป็น iPhone รุ่นใหม่ที่ต้องการอัปเกรด, Samsung ที่ใช้มาสักพัก หรือ OPPO/vivo ที่ซื้อมือสองมา
+          เราประเมินราคาตามสภาพจริงและราคาตลาดปัจจุบันทุกวัน ไม่กดราคาหลังนัดรับ
+        </p>
+
+        <h3>รับซื้อ iPhone ทุกรุ่น อุบลราชธานี</h3>
+        <p>
+          iPhone เป็นสมาร์ทโฟนที่มีราคาตลาดมือสองสูงและเสถียรที่สุด เราเชี่ยวชาญในการประเมินราคา iPhone
+          ตั้งแต่ iPhone 11 จนถึงรุ่น Pro Max ล่าสุด โดยพิจารณาจากความจุ สภาพแบตเตอรี่
+          สภาพตัวเครื่อง และอุปกรณ์ที่มาพร้อมกัน ดูรายละเอียดที่ <a href={servicePath('iphone-ubon')}>รับซื้อ iPhone อุบล</a>
+        </p>
+
+        <h4>ปัจจัยที่กำหนดราคา iPhone มือสอง</h4>
+        <p>
+          ราคา iPhone มือสองแปรผันตามรุ่น (Pro Max มักได้ราคาดีสุด), ความจุ (512GB ต่างจาก 128GB ชัดเจน),
+          สุขภาพแบตเตอรี่ (Battery Health ต่ำกว่า 80% จะกระทบราคา) และการมีกล่องพร้อมใบเสร็จ
+          ส่งรูปหน้าตั้งค่า &gt; ทั่วไป &gt; ข้อมูล มาด้วยจะช่วยให้ตีราคาได้รวดเร็วและแม่นยำกว่า
+        </p>
+
+        <h3>รับซื้อ Samsung Android ทุกซีรีส์</h3>
+        <p>
+          นอกจาก iPhone เรายังรับซื้อ <a href={servicePath('samsung-ubon')}>Samsung Galaxy</a> ครอบคลุม
+          Galaxy S series, Z Fold/Flip, A series และแท็บเล็ต Tab S รวมถึงมือถือยี่ห้ออื่นอย่าง OPPO, vivo, Xiaomi และ Realme
+          ดูบริการรับซื้อโทรศัพท์มือถือทุกยี่ห้อได้ที่ <a href={servicePath('smartphone-ubon')}>รับซื้อโทรศัพท์ อุบล</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §3 — รับซื้อโน้ตบุ๊กและคอมพิวเตอร์               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-notebook">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-notebook" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้อโน้ตบุ๊ก คอมพิวเตอร์ และ PC Gaming อุบลราชธานี
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          โน้ตบุ๊กและคอมพิวเตอร์มีมูลค่ารับซื้อหลากหลายตามสเปค เราเป็นหนึ่งในไม่กี่เจ้าในอุบลราชธานีที่เข้าใจมูลค่า
+          ทั้งโน้ตบุ๊กสำหรับงานออฟฟิศทั่วไปจนถึง PC Gaming สเปคสูงที่มีการ์ดจอ RTX และ CPU รุ่นล่าสุด
+          เราไม่ตีราคาแบบเหมาๆ แต่ประเมินตามชิ้นส่วนและราคาตลาดจริง
+        </p>
+
+        <h3>รับซื้อ MacBook และโน้ตบุ๊กทุกยี่ห้อ</h3>
+        <p>
+          <a href={servicePath('macbook-ubon')}>MacBook Air และ Pro</a> ทุกรุ่นทั้ง Apple Silicon (M1/M2/M3) และ Intel
+          รวมถึงโน้ตบุ๊กยี่ห้ออื่นๆ เช่น ASUS, Acer, Dell, HP, Lenovo, MSI ทั้งรุ่นออฟฟิศและเกมมิ่ง
+          แม้เครื่องแบตเตอรี่เสื่อม จอมีรอย หรือเปิดไม่ติด เราก็รับซื้อและประเมินตามสภาพอะไหล่
+        </p>
+
+        <h3>รับซื้อ PC Gaming และคอมประกอบ</h3>
+        <p>
+          <a href={servicePath('pc-gaming-ubon')}>PC Gaming</a> คอมประกอบและคอมสำเร็จรูป ทุกสเปคตั้งแต่เครื่องใช้งานทั่วไปจนถึงสเปคสูง
+          เราเข้าใจมูลค่าของ GPU, CPU และอุปกรณ์แต่ละชิ้น ทำให้ให้ราคาได้ดีกว่าร้านทั่วไปที่ตีราคาเหมา
+        </p>
+
+        <h4>รับซื้อการ์ดจอ CPU และอะไหล่คอม</h4>
+        <p>
+          หากต้องการขายแยกชิ้น เรารับซื้อ <a href={servicePath('pc-parts-ubon')}>การ์ดจอ RTX/RX, CPU Intel/AMD, RAM, SSD</a>
+          และเมนบอร์ดแยกได้เลย ไม่ต้องขายทั้งเครื่อง ส่งรุ่นและสเปคมาที่ LINE @buyhub รับราคาทันที
+        </p>
+
+        <h5>เริ่มต้นขายโน้ตบุ๊กหรือ PC</h5>
+        <p>
+          ถ่ายรูปตัวเครื่อง สติกเกอร์สเปค (ใต้เครื่อง) และรอยตำหนิถ้ามี แล้วส่งมาที่ LINE <strong>@buyhub</strong>
+          เราตอบกลับพร้อมราคาประเมินภายใน 5 นาที ไม่ต้องรอนาน ไม่มีข้อผูกมัด
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §4 — รับซื้ออุปกรณ์ Apple                         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-apple">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-apple" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้ออุปกรณ์ Apple ทุกชนิด อุบลราชธานี
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          สินค้าในระบบ Apple Ecosystem มีมูลค่ามือสองสูงและดึงดูดผู้ซื้อได้ดี ทำให้เราสามารถให้ราคารับซื้อที่น่าพอใจ
+          ครอบคลุมทั้ง MacBook, iMac, iPad, iPhone, Apple Watch และ AirPods
+          สิ่งสำคัญก่อนขายคือ Sign Out จาก iCloud และปิด Find My เพื่อให้เครื่องพร้อมส่งต่อและได้ราคาเต็ม
+        </p>
+
+        <h3>รับซื้อ MacBook และ iMac</h3>
+        <p>
+          <a href={servicePath('apple-ubon')}>MacBook Air, MacBook Pro, iMac</a> ทุกรุ่นรวม iMac Pro และ Mac mini
+          เราประเมินตามชิปและ RAM/SSD จริง ไม่ตีราคาเหมาตามอายุเครื่อง
+          MacBook M3 ยังมีราคาตลาดสูง และเราพร้อมให้ราคาที่แข่งขันได้
+        </p>
+
+        <h3>รับซื้อ iPad และแท็บเล็ต</h3>
+        <p>
+          <a href={servicePath('tablet-ubon')}>iPad ทุกรุ่น</a> ตั้งแต่ iPad Gen 9/10, iPad Air, iPad mini จนถึง iPad Pro M4
+          รวมถึง Samsung Galaxy Tab S series และแท็บเล็ต Android ยี่ห้อชั้นนำ
+          มี Apple Pencil หรือ Magic Keyboard ก็สามารถขายรวมหรือแยกชิ้นได้
+        </p>
+
+        <h4>รับซื้อ Apple Watch และ AirPods</h4>
+        <p>
+          <a href={servicePath('smartwatch-ubon')}>Apple Watch</a> ทุกซีรีส์ รวม SE และ Ultra
+          และ AirPods ทุกรุ่นรวม AirPods Pro/Max กรุณา Unpair และเอาออกจาก Find My ก่อนส่งรูปมาประเมิน
+          เพื่อให้กระบวนการรวดเร็วและได้ราคาดีที่สุด
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §5 — รับซื้อกล้อง                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-camera">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-camera" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้อกล้องและเลนส์มือสอง อุบลราชธานี
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          กล้อง Mirrorless และ DSLR มือสองมีตลาดที่กว้างและราคายังดีในปัจจุบัน
+          เราเชี่ยวชาญในการประเมินกล้องทุกยี่ห้อ ทั้งตัวกล้องและเลนส์แยกชิ้น
+          ไม่ว่าจะมีรอยใช้งาน ช่องวิวเตอร์มีจุด หรืออุปกรณ์ไม่ครบชุด เราประเมินตามสภาพจริงและให้ราคาอย่างตรงไปตรงมา
+        </p>
+
+        <h3>รับซื้อกล้อง Sony Mirrorless อุบลราชธานี</h3>
+        <p>
+          <a href={servicePath('sony-camera-ubon')}>กล้อง Sony Alpha</a> ครอบคลุม A7III, A7IV, A7C, A6xxx และ ZV series
+          รวมถึงเลนส์ FE/E mount ทุกรุ่น ทั้ง G Master และ kit lens ตีราคาตามสภาพเซนเซอร์และจำนวน shutter count
+        </p>
+
+        <h3>รับซื้อกล้อง Canon Nikon Fujifilm</h3>
+        <p>
+          <a href={servicePath('camera-ubon')}>กล้องทุกยี่ห้อ</a> รวม Canon EOS R series, Nikon Z series, Fujifilm X series
+          และ Olympus, Panasonic, GoPro เลนส์ทุก mount ทั้ง Canon EF/RF, Nikon F/Z, Sigma, Tamron
+          รับซื้อเลนส์แยกจากตัวกล้องได้เช่นกัน
+        </p>
+
+        <h4>เลนส์และอุปกรณ์เสริมกล้อง</h4>
+        <p>
+          ไม่ต้องขายเป็นชุด เราประเมินเลนส์แยกชิ้นได้ ทั้ง kit lens ทั่วไปจนถึงเลนส์ prime L-series
+          Flash Speedlite, กระเป๋ากล้องพรีเมียม, ขาตั้งกล้อง ก็รับประเมินได้ผ่าน LINE @buyhub
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §6 — รับซื้อเครื่องเกมและแก็ดเจ็ต                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-gaming">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-gaming" class="text-2xl font-bold text-ink sm:text-3xl">
+        รับซื้อเครื่องเกม สมาร์ทวอทช์ และเครื่องเสียง อุบลราชธานี
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          นอกจากสินค้าไอทีหลัก เรายังรับซื้อสินค้าในหมวด Lifestyle Tech ที่หลายคนไม่รู้ว่ายังขายได้ราคาดี
+          ไม่ว่าจะเป็นเครื่องเกม PlayStation 5, Nintendo Switch, สมาร์ทวอทช์ Apple Watch, Garmin
+          หรือลำโพงพรีเมียม JBL, Marshall ที่เก็บไว้โดยไม่ได้ใช้
+        </p>
+
+        <h3>รับซื้อ PlayStation Nintendo Switch Xbox</h3>
+        <p>
+          <a href={servicePath('game-console-ubon')}>เครื่องเกม</a> ทั้ง PS5 (Disc/Digital/Slim), PS4 Pro, Nintendo Switch OLED,
+          Switch Lite และ Xbox Series X/S ยิ่งมีจอยคอนโทรลเลอร์และเกมแผ่นมาด้วยยิ่งได้ราคาดี
+          ตีราคาจากรุ่นเครื่อง สภาพ และอุปกรณ์ที่มี
+        </p>
+
+        <h3>รับซื้อ Apple Watch สมาร์ทวอทช์ และลำโพงพรีเมียม</h3>
+        <p>
+          <a href={servicePath('smartwatch-ubon')}>Apple Watch</a>, Samsung Galaxy Watch, Garmin และ
+          <a href={servicePath('speaker-ubon')}>ลำโพง JBL, Marshall, Bose</a> รวมถึง AirPods และ Sony WH/WF series
+          เปลี่ยนของเล่นไอทีชิ้นเก่าให้เป็นเงินสดได้ง่ายๆ ผ่าน LINE @buyhub
+        </p>
+
+        <h4>รับซื้อแก็ดเจ็ตและอุปกรณ์ไอที</h4>
+        <p>
+          ดู <a href={servicePath('gadget-ubon')}>หมวดสมาร์ทวอทช์/แก็ดเจ็ต</a> สำหรับรายการสินค้าทั้งหมดที่รับซื้อ
+          รวมถึง Nintendo Switch พกพา, หูฟัง Noise-cancelling และอุปกรณ์ IoT ต่างๆ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §7 — พื้นที่ให้บริการ                             -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-areas">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-areas" class="text-2xl font-bold text-ink sm:text-3xl">
+        พื้นที่รับซื้อไอที ครอบคลุมทั่วอุบลราชธานี
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          เราให้บริการรับซื้อและรับเทิร์นสินค้าไอทีครอบคลุมทั้งจังหวัดอุบลราชธานี
+          ไม่ว่าจะอยู่อำเภอใด สามารถส่งรูปมาประเมินราคาผ่าน LINE ได้ก่อน
+          แล้วนัดรับที่จุดสะดวกหรือนัดให้เราไปรับถึงที่ได้โดยตรง
+        </p>
+
+        <h3>อำเภอหลักที่ให้บริการรับซื้อไอที</h3>
+        <ul>
+          <li><a href={areaPath('เมืองอุบลราชธานี')}>เมืองอุบลราชธานี</a> — ครอบคลุมตัวเมือง ม.อุบล เซ็นทรัล ถ.ชยางกูร</li>
+          <li><a href={areaPath('วารินชำราบ')}>วารินชำราบ</a> — วารินชำราบ ถ.บูรพานอก ตลาดวาริน</li>
+          <li><a href={areaPath('เดชอุดม')}>เดชอุดม</a> — เดชอุดม นาจะหลวง บุณฑริก</li>
+          <li><a href={areaPath('พิบูลมังสาหาร')}>พิบูลมังสาหาร</a> — พิบูล สิรินธร โขงเจียม</li>
+          <li><a href={areaPath('ตระการพืชผล')}>ตระการพืชผล</a> — ตระการ เขมราฐ กุดข้าวปุ้น</li>
+          <li><a href={areaPath('ม่วงสามสิบ')}>ม่วงสามสิบ</a> — ม่วงสามสิบ สว่างวีระวงศ์</li>
+          <li><a href={areaPath('วารินชำราบ')}>สำโรง นาเยีย</a> — อำเภอรอบนอกทิศเหนือ</li>
+          <li><a href={areaPath('ขุนหาญ')}>ขุนหาญ</a> — ขุนหาญ ศรีรัตนะ ภูสิงห์</li>
+        </ul>
+
+        <h4>วิธีนัดรับสินค้าต่างอำเภอ</h4>
+        <p>
+          ส่งรูปมาที่ LINE <strong>@buyhub</strong> ก่อนเสมอเพื่อตกลงราคา จากนั้นแจ้งอำเภอที่อยู่และจุดนัดที่สะดวก
+          เราจะประสานงานเพื่อนัดรับสินค้าและจ่ายเงินสดทันทีเมื่อรับเครื่อง
+          ดูพื้นที่ให้บริการทั้งหมดได้ที่ <a href={areasIndex()}>หน้าพื้นที่</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- H2 §8 — ทำไมต้องเลือกรับซื้ออุบล.com                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="py-14 sm:py-16" aria-labelledby="hub-why">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="hub-why" class="text-2xl font-bold text-ink sm:text-3xl">
+        ทำไมต้องขายไอทีกับ รับซื้ออุบล.com?
+      </h2>
+
+      <div class="prose prose-lg mt-6 max-w-none prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
+        <p>
+          การขายสินค้าไอทีมือสองมีหลายช่องทาง ไม่ว่าจะโพสต์ขายในกลุ่ม Facebook, ใช้แอปมือถือ หรือไปร้านรับซื้อ
+          แต่แต่ละช่องทางมีข้อเสีย เช่น รอนาน โดนต่อราคา หรือเสี่ยงโดนโกง
+          <strong>รับซื้ออุบล.com</strong> ออกแบบมาเพื่อแก้ปัญหาเหล่านี้โดยตรง
+        </p>
+
+        <h3>ราคายุติธรรม ไม่กดราคาหลังนัดรับ</h3>
+        <p>
+          เรายึดหลัก <strong>ราคาที่ประเมินผ่าน LINE คือราคาที่จ่ายจริง</strong>
+          ไม่มีการกดราคาหน้างาน ไม่มีข้ออ้างว่าเครื่องมีตำหนิที่ไม่เห็นจากรูป (หากแจ้งตรงตั้งแต่ต้น)
+          เราเข้าใจตลาดไอทีในอุบลราชธานีโดยตรง ทำให้ให้ราคาได้ดีกว่าพ่อค้าคนกลาง
+        </p>
+
+        <h4>ประเมินตามสภาพจริงจากรูปที่ส่งมา</h4>
+        <p>
+          ยิ่งส่งรูปมาครบและแจ้งรอยตำหนิชัดเจน ยิ่งได้ราคาที่แน่นอนและตรงกับการนัดรับจริง
+          เราไม่ลดราคาซ้ำหน้างานหากข้อมูลที่แจ้งมาตรงกับสภาพจริง
+        </p>
+
+        <h3>จ่ายเงินสดทันที ไม่ต้องรอโอน</h3>
+        <p>
+          เมื่อตกลงราคาและนัดรับสินค้าแล้ว เราจ่ายเงินสดหรือโอนทันทีเมื่อรับเครื่อง
+          ไม่ต้องรอวันรุ่งขึ้น ไม่ต้องรอยืนยันจากฝ่ายการเงิน กระบวนการจบใน 5–15 นาที
+        </p>
+
+        <h4>ไม่มีค่าธรรมเนียม ไม่มีค่านายหน้า</h4>
+        <p>
+          เราซื้อตรงจากผู้ขาย ไม่ผ่านคนกลาง ทุกบาทที่ตกลงไว้คือเงินที่ผู้ขายได้รับเต็มๆ
+          ไม่มีค่าตรวจสอบ ไม่มีค่าบริการ ไม่มีค่าจัดส่ง
+        </p>
+
+        <h3>สะดวก ไม่ต้องเดินทางไกล นัดรับถึงที่</h3>
+        <p>
+          เริ่มต้นด้วยการส่งรูปผ่าน LINE @buyhub จากบ้านหรือออฟฟิศ รับใบเสนอราคาภายใน 5 นาที
+          เมื่อตกลงราคาแล้วเลือกได้ว่าจะนัดรับที่จุดสะดวกในอุบลราชธานี หรือให้เราไปรับถึงที่
+          ไม่ต้องเสียเวลาเดินทางไปร้านหลายเจ้าเพื่อเปรียบเทียบราคา
+        </p>
+
+        <h4>บริการรับซื้อออนไลน์ครบวงจร</h4>
+        <p>
+          ดู <a href={updatesIndex()}>ผลงานรับซื้อล่าสุด</a> จากลูกค้าจริงในอุบลราชธานีและพื้นที่ใกล้เคียง
+          เพื่อประเมินความน่าเชื่อถือและเปรียบเทียบราคาที่เคยรับซื้อไปก่อนตัดสินใจขาย
+        </p>
+
+        <h5>เริ่มต้นขายวันนี้ผ่าน LINE @buyhub</h5>
+        <p>
+          แอด LINE <strong>@buyhub</strong> ส่งรูปสินค้าพร้อมแจ้งรุ่นและสภาพ
+          รับใบเสนอราคาฟรีภายใน 5 นาที ไม่มีข้อผูกมัด ไม่ต้องตัดสินใจทันที
+          พร้อมขายเมื่อไหร่ก็ทักมาได้เลยครับ
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -27,7 +27,11 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems), buildFAQPageSchema(allFa
       <h1 class="mt-6 text-2xl font-extrabold text-ink sm:text-3xl">คำถามที่พบบ่อย</h1>
       <p class="mt-4 text-lg text-muted">{pageDescription}</p>
 
-      <p class="mt-6 text-sm text-muted">
+      <div class="mt-8 rounded-3xl overflow-hidden border border-line bg-[#0a0a0a]">
+        <img src="/images/faq-3d.png" alt="คำถามที่พบบ่อย FAQ" class="w-full h-48 sm:h-72 object-cover object-center" />
+      </div>
+
+      <p class="mt-8 text-sm text-muted">
         อ่านเพิ่มเติม: <a href={pricingPage()} class="text-brand hover:underline">วิธีประเมินราคา</a>
         · <a href={conditionsPage()} class="text-brand hover:underline">เงื่อนไขรับซื้อ</a>
       </p>

@@ -5,18 +5,21 @@ const testimonials = [
     location: 'เมืองอุบลราชธานี',
     text: 'ขาย iPhone มือสองได้ราคาดีกว่าร้านอื่น ตอบไวมาก จ่ายเงินสดทันทีเลย ประทับใจครับ',
     rating: 5,
+    image: '/images/reviews/review_1.png',
   },
   {
     name: 'คุณมิ้นท์',
     location: 'วารินชำราบ',
     text: 'เทิร์นโน้ตบุ๊กเก่าแล้วได้เงินก้อน ใช้ต่อซื้อเครื่องใหม่ สะดวกมาก ไม่ต้องโพสต์ขายเอง',
     rating: 5,
+    image: '/images/reviews/review_2.png',
   },
   {
     name: 'คุณต้น',
     location: 'อุบลราชธานี',
     text: 'ขายกล้อง Mirrorless ผ่าน LINE ส่งรูปไป ได้ราคาชัดเจน ไม่มีกดราคาทีหลัง แนะนำเลย',
     rating: 5,
+    image: '/images/reviews/review_3.png',
   },
 ];
 
@@ -57,17 +60,28 @@ const guarantees = [
     <div class="mt-10 grid gap-6 sm:grid-cols-3">
       {
         testimonials.map((item) => (
-          <blockquote class="rounded-2xl border border-line bg-surface p-6 shadow-sm">
-            <div class="flex gap-0.5 text-amber-400" aria-label={`คะแนน ${item.rating} จาก 5`}>
-              {Array.from({ length: item.rating }).map(() => (
-                <span aria-hidden="true">★</span>
-              ))}
+          <blockquote class="flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-sm">
+            {item.image && (
+              <img
+                src={item.image}
+                alt={`รีวิวรับซื้อจาก${item.name}`}
+                loading="lazy"
+                decoding="async"
+                class="h-48 w-full object-cover"
+              />
+            )}
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex gap-0.5 text-amber-400" aria-label={`คะแนน ${item.rating} จาก 5`}>
+                {Array.from({ length: item.rating }).map(() => (
+                  <span aria-hidden="true">★</span>
+                ))}
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink">"{item.text}"</p>
+              <footer class="mt-4 text-sm">
+                <cite class="not-italic font-semibold text-ink">{item.name}</cite>
+                <span class="text-muted"> — {item.location}</span>
+              </footer>
             </div>
-            <p class="mt-3 text-sm leading-relaxed text-ink">"{item.text}"</p>
-            <footer class="mt-4 text-sm">
-              <cite class="not-italic font-semibold text-ink">{item.name}</cite>
-              <span class="text-muted"> — {item.location}</span>
-            </footer>
           </blockquote>
         ))
       }

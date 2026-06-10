@@ -10,9 +10,32 @@ const { services } = Astro.props;
 const sorted = [...services].sort((a, b) => a.data.order - b.data.order);
 
 const categoryImages: Record<string, string> = {
-  smartphone: '/images/services/smartphone.svg',
-  notebook: '/images/services/notebook.svg',
-  camera: '/images/services/camera.svg',
+  smartphone: '/images/services/smartphone-iphone-android.webp',
+  notebook: '/images/services/notebook-ubon.webp',
+  camera: '/images/services/camera-sony-canon-fujifilm.webp',
+};
+
+const imageAltText: Record<string, string> = {
+  '/images/services/smartphone-iphone-android.webp':
+    'รับซื้อโทรศัพท์ iPhone Android อุบลราชธานี ตรวจเช็คเครื่องโดยมืออาชีพ',
+  '/images/services/notebook-ubon.webp':
+    'รับซื้อโน้ตบุ๊ก อุบลราชธานี ประเมินราคาโน้ตบุ๊กมือสองทุกยี่ห้อ',
+  '/images/services/camera-sony-canon-fujifilm.webp':
+    'รับซื้อกล้อง Sony Canon Fujifilm อุบลราชธานี กล้องและเลนส์มือสอง',
+  '/images/services/pc-gaming-desktop.webp':
+    'รับซื้อคอมพิวเตอร์ตั้งโต๊ะ PC Gaming อุบลราชธานี ให้ราคาสูง',
+  '/images/services/apple-devices-macbook-imac.webp':
+    'รับซื้อ MacBook iMac อุปกรณ์ Apple อุบลราชธานี สภาพดี ให้ราคาสูง',
+  '/images/services/ipad-tablet.webp':
+    'รับซื้อ iPad Tablet มือสอง อุบลราชธานี ตรวจเช็คสภาพโดยมืออาชีพ',
+  '/images/services/apple-watch-smartwatch.webp':
+    'รับซื้อ Apple Watch Smart Watch อุบลราชธานี ทุกรุ่น ให้ราคาสูง',
+  '/images/services/pc-parts-gpu-cpu.webp':
+    'รับซื้อการ์ดจอ CPU อะไหล่คอม อุบลราชธานี ให้ราคาตามตลาด',
+  '/images/services/game-console-playstation.webp':
+    'รับซื้อ PlayStation Nintendo เครื่องเกม อุบลราชธานี จ่ายเงินสดทันที',
+  '/images/services/speaker-jbl-marshall.webp':
+    'รับซื้อลำโพง JBL Marshall และเครื่องเสียงมือสอง อุบลราชธานี ให้ราคาสูง',
 };
 ---
 
@@ -39,12 +62,12 @@ const categoryImages: Record<string, string> = {
                 <div class="flex h-40 items-center justify-center bg-gradient-to-br from-brand/5 to-brand/10">
                   <img
                     src={image}
-                    alt={`ไอคอน${service.data.navLabel}`}
-                    width="80"
-                    height="80"
+                    alt={imageAltText[image] ?? `${service.data.navLabel} อุบลราชธานี`}
+                    width="800"
+                    height="450"
                     loading="lazy"
                     decoding="async"
-                    class="h-20 w-20 opacity-90 transition group-hover:scale-105"
+                    class={image.endsWith('.svg') ? "h-20 w-20 opacity-90 transition group-hover:scale-105" : "h-full w-full object-cover transition group-hover:scale-105"}
                   />
                 </div>
                 <div class="flex flex-1 flex-col p-5">

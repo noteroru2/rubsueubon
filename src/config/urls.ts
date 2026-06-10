@@ -34,6 +34,18 @@ export const SERVICE_SLUGS: Record<string, string> = {
 
   'camera-ubon': 'รับซื้อกล้อง-อุบล',
 
+  'pc-gaming-ubon': 'รับซื้อ-pc-gaming-อุบล',
+
+  'apple-ubon': 'รับซื้อ-apple-อุบล',
+
+  'smartwatch-ubon': 'รับซื้อ-apple-watch-อุบล',
+
+  'speaker-ubon': 'รับซื้อ-เครื่องเสียง-อุบล',
+
+  'pc-parts-ubon': 'รับซื้อ-อะไหล่คอม-อุบล',
+
+  'game-console-ubon': 'รับซื้อ-เครื่องเกม-อุบล',
+
   'trade-in-ubon': 'รับเทิร์นไอที-อุบล',
 
   'iphone-ubon': 'รับซื้อ-iphone-อุบล',
@@ -43,6 +55,12 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'macbook-ubon': 'รับซื้อ-macbook-อุบล',
 
   'sony-camera-ubon': 'รับซื้อ-กล้อง-sony-อุบล',
+
+  'tablet-ubon': 'รับซื้อแท็บเล็ต-ไอแพด-อุบล',
+
+  'tv-electronics-ubon': 'รับซื้อทีวี-จอคอม-อุบล',
+
+  'gadget-ubon': 'รับซื้อสมาร์ทวอทช์-แก็ดเจ็ต-อุบล',
 
 };
 

@@ -37,12 +37,14 @@ export function buildLocalBusinessSchema() {
       '@type': 'City',
       name: 'อุบลราชธานี',
     },
-    openingHoursSpecification: SITE.openingHours.map((hours) => ({
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '09:00',
-      closes: '18:00',
-    })),
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '09:00',
+        closes: '19:30',
+      },
+    ],
     sameAs: SITE.sameAs,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -111,9 +113,9 @@ export function buildDistrictLocalBusinessSchema(district: District) {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         opens: '09:00',
-        closes: '18:00',
+        closes: '19:30',
       },
     ],
     sameAs: SITE.sameAs,
