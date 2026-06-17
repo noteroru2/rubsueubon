@@ -25,7 +25,15 @@ export const serviceNav = [
     href: servicePath('apple-ubon'),
   },
   {
-    label: 'รับซื้อแท็บเล็ต / iPad',
+    label: 'รับซื้อ iPad',
+    href: servicePath('ipad-ubon'),
+  },
+  {
+    label: 'รับซื้อ MacBook/iMac/Apple',
+    href: servicePath('apple-ubon'),
+  },
+  {
+    label: 'รับซื้อแท็บเล็ต (Android)',
     href: servicePath('tablet-ubon'),
   },
   {
@@ -73,12 +81,12 @@ export const brandServiceNav = [
 
   { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
 
-  { label: 'รับซื้อ iPad อุบล', href: servicePath('tablet-ubon') },
+  { label: 'รับซื้อ iPad อุบล', href: servicePath('ipad-ubon') },
 
   { label: 'รับซื้อกล้อง Sony อุบล', href: servicePath('sony-camera-ubon') },
 ] as const;
 
-export const areaNav = districts.map((d) => ({
+export const areaNav = districts.filter(d => d.active).map((d) => ({
   label: `อ.${d.name}`,
 
   href: areaPath(d.slug),

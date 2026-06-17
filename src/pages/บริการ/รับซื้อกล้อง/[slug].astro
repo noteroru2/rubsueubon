@@ -1,0 +1,107 @@
+---
+import { getCollection, render } from 'astro:content';
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { SITE } from '../../../config/site';
+import { servicePath, servicesIndex } from '../../../config/urls';
+import { buildBreadcrumbSchema } from '../../../lib/breadcrumbs';
+
+export async function getStaticPaths() {
+  const models = await getCollection('cameraModels');
+  return models.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const {
+  title,
+  description,
+  category,
+  brand,
+  modelName,
+  productType,
+  serviceType,
+  areaServed,
+  ctaText,
+  faqs,
+} = entry.data;
+
+const canonical = `/บริการ/รับซื้อกล้อง/${entry.data.slug}/`;
+const ogImage = `${SITE.url}/images/services/camera-sony-canon-fujifilm.webp`;
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'บริการรับซื้อ', href: servicesIndex() },
+  { label: 'รับซื้อกล้อง', href: servicePath('camera-ubon') },
+  { label: modelName },
+];
+
+const jsonLd = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}${canonical}#webpage`,
+    url: `${SITE.url}${canonical}`,
+    name: title,
+    description,
+    inLanguage: 'th-TH',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}/#localbusiness` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE.url}${canonical}#service`,
+    name: `${serviceType} ${modelName}`,
+    description,
+    provider: {
+      '@id': `${SITE.url}/#localbusiness`,
+    },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: areaServed,
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'THB',
+      price: '0', // No fixed price
+      description: 'ประเมินราคาตามสภาพจริงและราคาตลาดช่วงนั้น',
+    },
+  },
+];
+---
+
+<ServiceLayout
+  frontmatter={{ title, description, category, faqs }}
+  canonical={canonical}
+  ogImage={ogImage}
+  featuredImage="/images/services/camera-sony-canon-fujifilm.webp"
+  jsonLd={jsonLd}
+>
+  <div class="not-prose mb-8">
+    <Breadcrumbs items={breadcrumbItems} />
+  </div>
+
+  <div class="prose prose-lg mx-auto max-w-none">
+    <Content />
+  </div>
+
+  <div slot="after-content" class="mt-12 border-t border-line pt-8">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <div class="rounded-2xl border border-line bg-surface p-6 shadow-sm">
+        <h3 class="text-lg font-bold text-ink">การเชื่อมโยงภายในอื่น ๆ ที่เป็นประโยชน์</h3>
+        <ul class="mt-4 space-y-2 text-sm text-brand">
+          <li>👉 <a href={servicePath('camera-ubon')} class="hover:underline">หน้าหลักบริการรับซื้อกล้องถ่ายรูป อุบลราชธานี</a></li>
+          <li>👉 <a href="/บริการ/camera-lens-ubon/" class="hover:underline">บริการรับซื้อเลนส์กล้องมือสอง</a></li>
+          <li>👉 <a href="/บริการ/" class="hover:underline">บริการรับซื้อสินค้าไอทีทั้งหมดของเรา</a></li>
+          <li>👉 <a href="/พื้นที่/" class="hover:underline">พื้นที่ให้บริการทั้งหมดในอุบลราชธานี</a></li>
+          <li>👉 <a href="/พื้นที่/mueang-ubon-ratchathani/" class="hover:underline">จุดบริการหลักอำเภอเมืองอุบลราชธานี</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ServiceLayout>

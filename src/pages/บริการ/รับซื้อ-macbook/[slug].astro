@@ -1,0 +1,101 @@
+---
+import { getCollection, render } from 'astro:content';
+import ServiceLayout from '../../../layouts/ServiceLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { SITE } from '../../../config/site';
+import { servicePath, servicesIndex } from '../../../config/urls';
+import { buildBreadcrumbSchema } from '../../../lib/breadcrumbs';
+
+export async function getStaticPaths() {
+  const models = await getCollection('modelServices');
+  return models
+    .filter((entry) => entry.data.parentService === 'macbook-ubon')
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const {
+  title,
+  description,
+  category,
+  brand,
+  modelName,
+  productType,
+  serviceType,
+  areaServed,
+  ctaText,
+  faqs,
+} = entry.data;
+
+const canonical = `/บริการ/รับซื้อ-macbook/${entry.data.slug}/`;
+const ogImage = `${SITE.url}/images/services/macbook-devices.webp`;
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'บริการรับซื้อ', href: servicesIndex() },
+  { label: 'รับซื้อ MacBook', href: servicePath('macbook-ubon') },
+  { label: modelName },
+];
+
+const jsonLd = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}${canonical}#webpage`,
+    url: `${SITE.url}${canonical}`,
+    name: title,
+    description,
+    inLanguage: 'th-TH',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}/#localbusiness` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE.url}${canonical}#service`,
+    name: `${serviceType} ${modelName}`,
+    description,
+    provider: {
+      '@id': `${SITE.url}/#localbusiness`,
+    },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: areaServed,
+    },
+  },
+];
+---
+
+<ServiceLayout
+  frontmatter={{ title, description, category, faqs }}
+  canonical={canonical}
+  ogImage={ogImage}
+  featuredImage="/images/services/macbook-ubon.webp"
+  jsonLd={jsonLd}
+>
+  <div class="not-prose mb-8">
+    <Breadcrumbs items={breadcrumbItems} />
+  </div>
+
+  <div class="prose prose-lg mx-auto max-w-none">
+    <Content />
+  </div>
+
+  <div slot="after-content" class="mt-12 border-t border-line pt-8">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <div class="rounded-2xl border border-line bg-surface p-6 shadow-sm">
+        <h3 class="text-lg font-bold text-ink">ลิงก์ข้อมูลเพิ่มเติม</h3>
+        <ul class="mt-4 space-y-2 text-sm text-brand">
+          <li>👉 <a href={servicePath('macbook-ubon')} class="hover:underline">หน้าหลักบริการรับซื้อ MacBook อุบลราชธานี</a></li>
+          <li>👉 <a href="/บริการ/" class="hover:underline">บริการรับซื้อสินค้าไอทีทั้งหมด</a></li>
+          <li>👉 <a href="/พื้นที่/" class="hover:underline">พื้นที่ให้บริการในอุบลราชธานี</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ServiceLayout>

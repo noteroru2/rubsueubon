@@ -65,6 +65,19 @@ const jsonLd = [
     isPartOf: { '@id': `${SITE.url}/#website` },
     about: { '@id': `${SITE.url}/#localbusiness` },
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE.url}${canonical}#service`,
+    name: title,
+    description: description,
+    url: `${SITE.url}${canonical}`,
+    provider: { '@id': `${SITE.url}/#localbusiness` },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'อุบลราชธานี',
+    },
+  },
 ];
 ---
 

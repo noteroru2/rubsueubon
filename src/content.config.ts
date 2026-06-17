@@ -87,4 +87,55 @@ const examples = defineCollection({
   }),
 });
 
-export const collections = { services, updates, blog, areas, examples };
+const cameraModels = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/camera-models' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    category: z.literal('camera-model'),
+    brand: z.string().default('Sony'),
+    modelName: z.string(),
+    productType: z.string().default('กล้อง Mirrorless'),
+    serviceType: z.string().default('รับซื้อกล้องมือสอง'),
+    areaServed: z.string().default('อุบลราชธานี'),
+    isModelPage: z.boolean().default(true),
+    ctaText: z.string().default('ส่งรูปประเมินราคาทาง LINE'),
+    faqs: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        }),
+      )
+      .optional(),
+  }),
+});
+
+const modelServices = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/model-services' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    category: z.literal('model-service'),
+    brand: z.string(),
+    modelName: z.string(),
+    productType: z.string(),
+    serviceType: z.string(),
+    areaServed: z.string().default('อุบลราชธานี'),
+    parentService: z.string(),
+    isModelPage: z.boolean().default(true),
+    ctaText: z.string().default('ส่งรูปประเมินราคาทาง LINE'),
+    faqs: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        }),
+      )
+      .optional(),
+  }),
+});
+
+export const collections = { services, updates, blog, areas, examples, cameraModels, modelServices };

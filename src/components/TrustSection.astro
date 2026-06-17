@@ -1,25 +1,25 @@
 ---
 const testimonials = [
   {
-    name: 'คุณก้อง',
-    location: 'เมืองอุบลราชธานี',
-    text: 'ขาย iPhone มือสองได้ราคาดีกว่าร้านอื่น ตอบไวมาก จ่ายเงินสดทันทีเลย ประทับใจครับ',
+    name: 'ลูกค้าในอุบลราชธานี',
+    location: 'ตัวเมือง',
+    text: 'เพราะเราประเมินตามสภาพจริงและราคาตลาดปัจจุบัน ไม่กดราคา ทำให้ได้ราคาที่สะท้อนคุณภาพสินค้ามากที่สุด',
     rating: 5,
-    image: '/images/reviews/review_1.webp',
+    image: '',
   },
   {
-    name: 'คุณมิ้นท์',
-    location: 'วารินชำราบ',
-    text: 'เทิร์นโน้ตบุ๊กเก่าแล้วได้เงินก้อน ใช้ต่อซื้อเครื่องใหม่ สะดวกมาก ไม่ต้องโพสต์ขายเอง',
+    name: 'ลูกค้าในวารินชำราบ',
+    location: 'ย่านมหาวิทยาลัย',
+    text: 'การประเมินราคาที่โปร่งใส แจ้งเหตุผลและราคาอย่างชัดเจนก่อนตัดสินใจ ทำให้ได้รับความไว้วางใจในการใช้บริการ',
     rating: 5,
-    image: '/images/reviews/review_2.webp',
+    image: '',
   },
   {
-    name: 'คุณต้น',
-    location: 'อุบลราชธานี',
-    text: 'ขายกล้อง Mirrorless ผ่าน LINE ส่งรูปไป ได้ราคาชัดเจน ไม่มีกดราคาทีหลัง แนะนำเลย',
+    name: 'ลูกค้าโซนอำเภอรอบนอก',
+    location: 'เดชอุดม และอื่นๆ',
+    text: 'มีบริการส่งรูปประเมินราคาผ่าน LINE ก่อน ทำให้ทราบราคาเบื้องต้นได้ทันที ไม่ต้องเสียเวลาเดินทางไกลหากราคายังไม่ตรงใจ',
     rating: 5,
-    image: '/images/reviews/review_3.webp',
+    image: '',
   },
 ];
 
@@ -43,7 +43,7 @@ const guarantees = [
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-2xl font-bold text-ink sm:text-3xl">ลูกค้าไว้วางใจ รับซื้ออุบล.com</h2>
-      <p class="mt-3 text-muted">รีวิวจริงจากผู้ขายในอุบลราชธานีและพื้นที่ใกล้เคียง</p>
+      <p class="mt-3 text-muted">เหตุผลที่ลูกค้ามักสอบถามราคากับเรา</p>
     </div>
 
     <div class="mt-10 grid gap-4 sm:grid-cols-3">
@@ -77,10 +77,6 @@ const guarantees = [
                 ))}
               </div>
               <p class="mt-3 flex-1 text-sm leading-relaxed text-ink">"{item.text}"</p>
-              <footer class="mt-4 text-sm">
-                <cite class="not-italic font-semibold text-ink">{item.name}</cite>
-                <span class="text-muted"> — {item.location}</span>
-              </footer>
             </div>
           </blockquote>
         ))

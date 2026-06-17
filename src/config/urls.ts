@@ -45,7 +45,8 @@ export const SERVICE_SLUGS: Record<string, string> = {
 
   'sony-camera-ubon': 'รับซื้อ-กล้อง-sony-อุบล',
 
-  'tablet-ubon': 'รับซื้อแท็บเล็ต-ไอแพด-อุบล',
+  'tablet-ubon': 'รับซื้อแท็บเล็ต-อุบล',
+  'ipad-ubon': 'ipad-ubon',
 
   'tv-electronics-ubon': 'รับซื้อทีวี-จอคอม-อุบล',
 
@@ -54,7 +55,31 @@ export const SERVICE_SLUGS: Record<string, string> = {
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */
 
-export const AREA_SLUGS: Record<string, string> = {};
+export const AREA_SLUGS: Record<string, string> = {
+  // Active districts mapping (IDs, Thai names, and slugs to English slugs)
+  'mueang-ubon': 'mueang-ubon-ratchathani',
+  'mueang-ubon-ratchathani': 'mueang-ubon-ratchathani',
+  'เมืองอุบล': 'mueang-ubon-ratchathani',
+  'เมืองอุบลราชธานี': 'mueang-ubon-ratchathani',
+  'warin-chamrap': 'warin-chamrap',
+  'วารินชำราบ': 'warin-chamrap',
+  'det-udom': 'det-udom',
+  'เดชอุดม': 'det-udom',
+  'phibun-mangsahan': 'phibun-mangsahan',
+  'พิบูลมังสาหาร': 'phibun-mangsahan',
+  'trakan-phuet-phon': 'trakan-phuet-phon',
+  'ตระการพืชผล': 'trakan-phuet-phon',
+  'muang-sam-sip': 'muang-sam-sip',
+  'ม่วงสามสิบ': 'muang-sam-sip',
+  'khueang-nai': 'khueang-nai',
+  'เขื่องใน': 'khueang-nai',
+  'khong-chiam': 'khong-chiam',
+  'โขงเจียม': 'khong-chiam',
+  'nam-yuen': 'nam-yuen',
+  'น้ำยืน': 'nam-yuen',
+  'buntharik': 'buntharik',
+  'บุณฑริก': 'buntharik',
+};
 
 export function servicesIndex(): string {
   return `${PATHS.services}/`;

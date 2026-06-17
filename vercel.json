@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/บริการ/รับซื้อแท็บเล็ต-ไอแพด-อุบล/:path*",
+      "destination": "/บริการ/รับซื้อแท็บเล็ต-อุบล/:path*",
+      "permanent": true
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true

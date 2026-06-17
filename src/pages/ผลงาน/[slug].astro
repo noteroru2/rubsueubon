@@ -6,6 +6,7 @@ import CTAButton from '../../components/CTAButton.astro';
 import { SITE } from '../../config/site';
 import { areaPath, servicePath, updatePath, updatesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import { districts } from '../../lib/districts';
 
 export async function getStaticPaths() {
   const updates = await getCollection('updates');
@@ -86,12 +87,25 @@ function formatDate(date: Date): string {
               )}
               {relatedAreaSlug && relatedAreaLabel && (
                 <li>
-                  <a
-                    href={areaPath(relatedAreaSlug)}
-                    class="inline-block rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-brand hover:border-brand/30"
-                  >
-                    อ.{relatedAreaLabel}
-                  </a>
+                  {(() => {
+                    const isAreaActive = districts.some(d => (d.id === relatedAreaSlug || d.slug === relatedAreaSlug) && d.active);
+                    if (isAreaActive) {
+                      return (
+                        <a
+                          href={areaPath(relatedAreaSlug)}
+                          class="inline-block rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-brand hover:border-brand/30"
+                        >
+                          อ.{relatedAreaLabel}
+                        </a>
+                      );
+                    } else {
+                      return (
+                        <span class="inline-block rounded-full border border-line/50 bg-surface/50 px-3 py-1.5 text-sm text-muted">
+                          อ.{relatedAreaLabel}
+                        </span>
+                      );
+                    }
+                  })()}
                 </li>
               )}
             </ul>

@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { areaPath, servicePath, servicesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import { districts } from '../../lib/districts';
 
 const areas = await getCollection('areas');
 
@@ -61,20 +62,29 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
 
       <ul class="mt-10 grid gap-4 sm:grid-cols-2">
         {
-          areas.map((area) => (
+          districts.map((district) => (
             <li>
-              <a
-                href={areaPath(area.data.slug)}
-                class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
-              >
-                <span>
-                  <span class="block font-bold text-ink group-hover:text-brand">{area.data.areaName}</span>
-                  <span class="mt-0.5 block text-sm text-muted">รับซื้อโน้ตบุ๊ก มือถือ ไอที</span>
-                </span>
-                <span class="text-brand" aria-hidden="true">
-                  →
-                </span>
-              </a>
+              {district.active ? (
+                <a
+                  href={areaPath(district.slug)}
+                  class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
+                >
+                  <span>
+                    <span class="block font-bold text-ink group-hover:text-brand">อำเภอ{district.name}</span>
+                    <span class="mt-0.5 block text-sm text-muted">รับซื้อโน้ตบุ๊ก มือถือ ไอที</span>
+                  </span>
+                  <span class="text-brand" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+              ) : (
+                <div class="flex items-center justify-between rounded-2xl border border-line/50 bg-surface/50 px-5 py-4 opacity-60">
+                  <span>
+                    <span class="block font-bold text-ink">อำเภอ{district.name}</span>
+                    <span class="mt-0.5 block text-sm text-muted">กำลังเตรียมเนื้อหาเพิ่มเติม</span>
+                  </span>
+                </div>
+              )}
             </li>
           ))
         }

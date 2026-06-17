@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { SITE } from '../../config/site';
+
+const allExamples = await getCollection('examples');
+
+const pageTitle = 'ตัวอย่างเคสประเมินราคา รับซื้อสินค้าไอที อุบลราชธานี | รับซื้ออุบล.com';
+const pageDescription =
+  'ดูตัวอย่างเคสการประเมินราคารับซื้อสินค้าไอทีต่างๆ ในอุบลราชธานี เพื่อเป็นแนวทางในการเตรียมข้อมูลก่อนสอบถามราคาจริง';
+
+const canonical = '/ตัวอย่างเคสประเมิน/';
+
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'ตัวอย่างเคสประเมินราคา' },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: item.href ? `${SITE.url}${item.href}` : undefined,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE.url}${canonical}#webpage`,
+    url: `${SITE.url}${canonical}`,
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: 'th-TH',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonical={canonical} jsonLd={jsonLd} showMobileCTA>
+  <div class="py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <Breadcrumbs items={breadcrumbItems} />
+      
+      <div class="mt-6">
+        <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">ตัวอย่างเคสประเมินราคา</h1>
+        <p class="mt-4 text-lg text-muted">
+          รวมตัวอย่างสถานการณ์การประเมินราคาสินค้าไอทีในพื้นที่อุบลราชธานี เพื่อให้เห็นภาพรวมของปัจจัยที่ส่งผลต่อราคาประเมิน
+        </p>
+      </div>
+
+      <div class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+        <p class="text-sm font-semibold text-amber-800">
+          ⚠️ หมายเหตุ: หน้านี้เป็นตัวอย่างเคสประเมินราคา ไม่ใช่ผลงานรับซื้อจริง ราคาที่แสดงในตัวอย่างอาจไม่ตรงกับราคาตลาดปัจจุบัน ขึ้นอยู่กับสภาพสินค้า อุปกรณ์ และความต้องการของตลาดในช่วงเวลานั้น
+        </p>
+      </div>
+
+      {
+        allExamples.length > 0 ? (
+          <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {allExamples.map((example) => (
+              <li>
+                <article class="flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-sm transition hover:border-brand/30 hover:shadow-md relative overflow-hidden">
+                  <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs px-2 py-1 font-semibold rounded-bl-lg">
+                    ตัวอย่างเคส
+                  </div>
+                  <h2 class="mt-4 text-xl font-bold text-ink">
+                    <a href={`/ตัวอย่างเคสประเมิน/${example.data.slug}/`} class="transition hover:text-brand">
+                      {example.data.title}
+                    </a>
+                  </h2>
+                  <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{example.data.description}</p>
+                  <a
+                    href={`/ตัวอย่างเคสประเมิน/${example.data.slug}/`}
+                    class="mt-4 text-sm font-semibold text-brand hover:underline"
+                  >
+                    อ่านรายละเอียด →
+                  </a>
+                </article>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="mt-10 text-center text-muted">
+            <p>ยังไม่มีข้อมูลตัวอย่างเคส</p>
+          </div>
+        )
+      }
+
+      <div class="mt-16 text-center">
+        <h3 class="text-xl font-bold text-ink">ต้องการประเมินราคาสินค้าจริง?</h3>
+        <p class="mt-2 text-muted">ส่งรูปถ่ายและรายละเอียดให้เราผ่าน LINE เพื่อรับราคาประเมินฟรี</p>
+        <div class="mt-6">
+          <CTAButton label="ประเมินราคาฟรีผ่าน LINE" />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

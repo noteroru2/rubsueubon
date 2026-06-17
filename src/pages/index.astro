@@ -19,9 +19,7 @@ import {
 } from '../lib/schema';
 
 const services = await getCollection('services');
-const allUpdates = (await getCollection('updates'))
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 3);
+const allExamples = await getCollection('examples');
 
 const pageTitle = 'รับซื้อ-รับเทิร์นไอที อุบลราชธานี | รับซื้ออุบล.com';
 const pageDescription =
@@ -40,8 +38,8 @@ const jsonLd = [
   <ServicesSection services={services} />
   <HowItWorks />
   <HubContent />
-  <AreasSection districts={districts} />
+  <AreasSection districts={districts.filter((d: any) => d.active)} />
   <TrustSection />
-  <RecentUpdatesSection updates={allUpdates} />
+  <RecentUpdatesSection examples={allExamples} />
   <FAQSection faqs={homepageFAQs} />
 </BaseLayout>

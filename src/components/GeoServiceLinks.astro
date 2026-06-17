@@ -17,7 +17,7 @@ const { serviceLabel } = Astro.props;
     <p class="mt-2 text-muted">นัดรับถึงที่ในอำเภอต่างๆ ทั่วอุบลราชธานี — เลือกพื้นที่ของคุณเพื่อดูรายละเอียด</p>
     <ul class="mt-6 flex flex-wrap gap-2">
       {
-        districts.map((district) => (
+        districts.filter(d => d.active).map((district) => (
           <li>
             <a
               href={areaPath(district.slug)}
