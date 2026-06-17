@@ -1,51 +1,44 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { SITE } from '../../config/site';
 import { areaPath, areasIndex, pricingPage, servicePath, updatePath, updatesIndex } from '../../config/urls';
-import {
-  districts,
-  buildDistrictH1,
-  buildDistrictPageTitle,
-  buildDistrictDescription,
-  buildDistrictKeywords,
-  buildDistrictFAQs,
-} from '../../lib/districts';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
-import { buildDistrictLocalBusinessSchema, buildFAQPageSchema } from '../../lib/schema';
-import { buildDistrictSections } from '../../lib/district-content';
 
-export function getStaticPaths() {
-  return districts.map((district) => ({
-    params: { district: district.slug },
-    props: { district },
+export async function getStaticPaths() {
+  const areas = await getCollection('areas');
+  return areas.map((area) => ({
+    params: { district: area.data.slug },
+    props: { area },
   }));
 }
 
-const { district } = Astro.props;
-const { id, name, slug, latitude, longitude, review } = district;
+const { area } = Astro.props;
+const { Content } = await render(area);
+const { data } = area;
+const {
+  title: pageTitle,
+  description,
+  heroTitle,
+  heroSubtitle,
+  areaName,
+  slug,
+  keywords,
+} = data;
 
-const h1 = buildDistrictH1(name);
-const pageTitle = buildDistrictPageTitle(name);
-const description = buildDistrictDescription(name);
-const keywords = buildDistrictKeywords(name);
-const faqs = buildDistrictFAQs(name);
+const h1 = heroTitle;
 const canonical = areaPath(slug);
-
-const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
 const breadcrumbItems = [
   { label: 'หน้าแรก', href: '/' },
   { label: 'พื้นที่ให้บริการ', href: areasIndex() },
-  { label: `อำเภอ${name}` },
+  { label: areaName },
 ];
 
-const contentSections = buildDistrictSections(name, id, latitude, longitude);
-
 const districtUpdates = (await getCollection('updates'))
-  .filter((u) => u.data.relatedAreaSlug === id)
+  .filter((u) => u.data.relatedAreaSlug === slug)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   .slice(0, 3);
 
@@ -58,8 +51,6 @@ const serviceLinks = [
 
 const jsonLd = [
   buildBreadcrumbSchema(breadcrumbItems),
-  buildDistrictLocalBusinessSchema(district),
-  buildFAQPageSchema(faqs),
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -69,11 +60,9 @@ const jsonLd = [
     description,
     inLanguage: 'th-TH',
     isPartOf: { '@id': `${SITE.url}/#website` },
-    about: { '@id': `${SITE.url}${canonical}#localbusiness` },
   },
 ];
 ---
-
 <BaseLayout
   title={pageTitle}
   description={description}
@@ -95,12 +84,12 @@ const jsonLd = [
 
       <div class="max-w-3xl">
         <p class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium ring-1 ring-white/20">
-          อำเภอ{name} · อุบลราชธานี
+          {areaName} · อุบลราชธานี
         </p>
         <h1 class="mt-5 text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
           {h1}
         </h1>
-        <p class="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">{description}</p>
+        <p class="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">{heroSubtitle}</p>
         <div class="mt-8">
           <CTAButton label="ประเมินราคาฟรีทันที" class="w-full sm:w-auto" />
         </div>
@@ -108,143 +97,21 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="border-b border-line py-10 sm:py-12">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <div>
-          <h2 class="text-xl font-bold text-ink">พื้นที่ให้บริการ อำเภอ{name}</h2>
-          <p class="mt-3 text-sm leading-relaxed text-muted">
-            เราให้บริการรับซื้อและรับเทิร์นสินค้าไอทีในอำเภอ{name} อุบลราชธานี สามารถนัดรับสินค้าถึงที่หรือตกลงจุดนัดพบที่สะดวก
-            ประเมินราคาฟรีผ่าน LINE @buyhub ก่อนนัดรับเพื่อความรวดเร็วและโปร่งใส
-          </p>
-          <a
-            href={mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline"
-          >
-            ดูแผนที่อำเภอ{name} บน Google Maps →
-          </a>
-        </div>
-
-        {
-          review && (
-            <blockquote class="rounded-2xl border border-line bg-brand/5 p-6">
-              <div class="flex gap-0.5 text-amber-400" aria-hidden="true">
-                <>
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                </>
-              </div>
-              <p class="mt-3 text-sm leading-relaxed text-ink">"{review.text}"</p>
-              <footer class="mt-4 text-sm">
-                <cite class="not-italic font-semibold">{review.author}</cite>
-                <span class="text-muted"> — {review.location}</span>
-              </footer>
-            </blockquote>
-          )
-        }
-      </div>
-    </div>
-  </section>
-
   <section class="py-14 sm:py-16">
     <div class="mx-auto max-w-3xl px-4 sm:px-6">
-      <div class="not-prose mb-10 grid grid-cols-3 gap-3 sm:grid-cols-3">
-        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
-          <img
-            src="/images/services/smartphone-iphone-android.webp"
-            alt={`รับซื้อโทรศัพท์มือถือ iPhone Samsung อำเภอ${name}`}
-            width="320"
-            height="213"
-            loading="lazy"
-            decoding="async"
-            class="h-28 w-full object-cover sm:h-36"
-          />
-          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อโทรศัพท์มือถือ</figcaption>
-        </figure>
-        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
-          <img
-            src="/images/services/notebook-ubon.webp"
-            alt={`รับซื้อโน้ตบุ๊ก MacBook อำเภอ${name}`}
-            width="320"
-            height="213"
-            loading="lazy"
-            decoding="async"
-            class="h-28 w-full object-cover sm:h-36"
-          />
-          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อโน้ตบุ๊ก</figcaption>
-        </figure>
-        <figure class="m-0 overflow-hidden rounded-xl shadow-sm">
-          <img
-            src="/images/services/camera-sony-canon-fujifilm.webp"
-            alt={`รับซื้อกล้อง Sony Canon อำเภอ${name}`}
-            width="320"
-            height="213"
-            loading="lazy"
-            decoding="async"
-            class="h-28 w-full object-cover sm:h-36"
-          />
-          <figcaption class="bg-surface px-2 py-1 text-center text-xs text-muted">รับซื้อกล้อง</figcaption>
-        </figure>
-      </div>
-
       <article
         class="prose prose-lg max-w-none prose-headings:text-ink prose-p:text-muted prose-a:text-brand prose-li:text-muted"
       >
-        {
-          contentSections.map((section, i) => (
-            <>
-              <h2>{section.heading}</h2>
-              <div set:html={section.htmlContent} class="space-y-4" />
-              {i === 2 && (
-                <figure class="not-prose my-8 overflow-hidden rounded-xl shadow-sm">
-                  <img
-                    src="/images/cash-3d.webp"
-                    alt={`รับเงินสดทันทีขายไอที อำเภอ${name}`}
-                    width="800"
-                    height="450"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full object-cover"
-                  />
-                </figure>
-              )}
-              {i === 5 && (
-                <figure class="not-prose my-8 overflow-hidden rounded-xl shadow-sm">
-                  <img
-                    src="/images/services/apple-devices-macbook-imac.webp"
-                    alt={`รับซื้อ Apple MacBook iPad อำเภอ${name}`}
-                    width="800"
-                    height="450"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full object-cover"
-                  />
-                </figure>
-              )}
-            </>
-          ))
-        }
-        <p>
-          ดูบริการเฉพาะทาง:{' '}
-          <a href={servicePath('smartphone-ubon')}>รับซื้อโทรศัพท์มือถือ</a>,{' '}
-          <a href={servicePath('notebook-ubon')}>รับซื้อโน้ตบุ๊ก</a>,{' '}
-          <a href={servicePath('camera-ubon')}>รับซื้อกล้อง</a>,{' '}
-          <a href={servicePath('trade-in-ubon')}>รับเทิร์นไอที</a>
-        </p>
+        <Content />
       </article>
     </div>
   </section>
 
   <section class="bg-surface-alt py-14 sm:py-16">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 class="text-xl font-bold text-ink sm:text-2xl">บริการรับซื้อ-รับเทิร์นในอำเภอ{name}</h2>
+      <h2 class="text-xl font-bold text-ink sm:text-2xl">บริการรับซื้อ-รับเทิร์นใน{areaName}</h2>
       <p class="mt-3 max-w-2xl text-muted">
-        เลือกประเภทสินค้าที่ต้องการขายหรือเทิร์นในอำเภอ{name}
+        เลือกประเภทสินค้าที่ต้องการขายหรือเทิร์น
       </p>
 
       <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -268,116 +135,6 @@ const jsonLd = [
               </a>
             </li>
           ))
-        }
-      </ul>
-    </div>
-  </section>
-
-  <section class="py-14 sm:py-16">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 class="text-xl font-bold text-ink sm:text-2xl">ขายไอทีในอำเภอ{name} ง่ายๆ 3 ขั้นตอน</h2>
-      <ol class="mt-8 grid gap-4 sm:grid-cols-3">
-        <li class="rounded-2xl border border-line bg-surface p-5">
-          <span
-            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
-            >1</span
-          >
-          <h3 class="mt-3 font-bold text-ink">แอด LINE @buyhub</h3>
-          <p class="mt-2 text-sm text-muted">เพิ่มเพื่อน LINE OA เพื่อเริ่มแชทและประเมินราคาทันที</p>
-        </li>
-        <li class="rounded-2xl border border-line bg-surface p-5">
-          <span
-            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
-            >2</span
-          >
-          <h3 class="mt-3 font-bold text-ink">ส่งรูปประเมินราคา</h3>
-          <p class="mt-2 text-sm text-muted">ถ่ายรูปสินค้า แจ้งรุ่นและสภาพ รับใบเสนอราคาภายในไม่กี่นาที</p>
-        </li>
-        <li class="rounded-2xl border border-line bg-surface p-5">
-          <span
-            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-sm font-bold text-brand"
-            >3</span
-          >
-          <h3 class="mt-3 font-bold text-ink">นัดรับ-จ่ายเงินสด</h3>
-          <p class="mt-2 text-sm text-muted">ตกลงราคาแล้วนัดรับในอำเภอ{name} จ่ายเงินสดทันที ไม่มีค่าแอบแฝง</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  {
-    districtUpdates.length > 0 && (
-      <section class="bg-surface-alt py-14 sm:py-16">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 class="text-xl font-bold text-ink sm:text-2xl">ผลงานรับซื้อในอำเภอ{name}</h2>
-          <p class="mt-2 text-muted">เคสจริงจากลูกค้าในอำเภอ{name} — ราคาโปร่งใส จ่ายเงินสดทันที</p>
-          <ul class="mt-6 grid gap-4 sm:grid-cols-3">
-            {districtUpdates.map((post) => (
-              <li>
-                <a
-                  href={updatePath(post.data.slug)}
-                  class="block h-full rounded-2xl border border-line bg-surface p-5 transition hover:border-brand/30 hover:shadow-md"
-                >
-                  <p class="font-semibold text-ink hover:text-brand">{post.data.title}</p>
-                  <p class="mt-2 text-sm text-muted line-clamp-2">{post.data.description}</p>
-                </a>
-              </li>
-            ))}
-          </ul>
-          <p class="mt-4 text-sm">
-            <a href={updatesIndex()} class="font-semibold text-brand hover:underline">
-              ดูผลงานทั้งหมด →
-            </a>
-            {' · '}
-            <a href={pricingPage()} class="font-semibold text-brand hover:underline">
-              วิธีประเมินราคา →
-            </a>
-          </p>
-        </div>
-      </section>
-    )
-  }
-
-  <section class="py-14 sm:py-16">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6">
-      <h2 class="text-xl font-bold text-ink sm:text-2xl">คำถามที่พบบ่อย — อำเภอ{name}</h2>
-      <div class="mt-6 space-y-3">
-        {
-          faqs.map((faq) => (
-            <details class="group rounded-2xl border border-line bg-surface open:border-brand/30">
-              <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
-                <span class="flex items-center justify-between gap-4">
-                  {faq.question}
-                  <span class="shrink-0 text-brand transition group-open:rotate-180" aria-hidden="true">
-                    ▼
-                  </span>
-                </span>
-              </summary>
-              <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="py-14 sm:py-16">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 class="text-lg font-bold text-ink">พื้นที่ให้บริการอื่นในอุบลราชธานี</h2>
-      <ul class="mt-4 flex flex-wrap gap-2">
-        {
-          districts
-            .filter((d) => d.slug !== slug)
-            .map((d) => (
-              <li>
-                <a
-                  href={areaPath(d.slug)}
-                  class="inline-block rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-muted transition hover:border-brand/30 hover:text-brand"
-                >
-                  อำเภอ{d.name}
-                </a>
-              </li>
-            ))
         }
       </ul>
     </div>

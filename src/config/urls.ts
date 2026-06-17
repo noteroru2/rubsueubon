@@ -2,23 +2,15 @@
 
 export const PATHS = {
   services: '/บริการ',
-
   areas: '/พื้นที่',
-
   updates: '/ผลงาน',
-
+  examples: '/ตัวอย่างเคสประเมิน',
   contact: '/ติดต่อ',
-
   about: '/เกี่ยวกับเรา',
-
   pricing: '/วิธีประเมินราคา',
-
   conditions: '/เงื่อนไขรับซื้อ',
-
   faq: '/คำถามที่พบบ่อย',
-
   privacy: '/นโยบายความเป็นส่วนตัว',
-
   blog: '/บทความ',
 } as const;
 
@@ -62,27 +54,7 @@ export const SERVICE_SLUGS: Record<string, string> = {
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */
 
-export const AREA_SLUGS: Record<string, string> = {
-  'mueang-ubon': 'เมืองอุบลราชธานี',
-
-  'warin-chamrap': 'วารินชำราบ',
-
-  'det-udom': 'เดชอุดม',
-
-  'phibun-mangsahan': 'พิบูลมังสาหาร',
-
-  'trakan-phuet-phon': 'ตระการพืชผล',
-
-  'muang-sam-sip': 'ม่วงสามสิบ',
-
-  samrong: 'สำโรง',
-
-  khunhan: 'ขุนหาญ',
-
-  'na-chaluai': 'นาจะหลวง',
-
-  sirindhorn: 'สิรินธร',
-};
+export const AREA_SLUGS: Record<string, string> = {};
 
 export function servicesIndex(): string {
   return `${PATHS.services}/`;
@@ -142,4 +114,12 @@ export function blogIndex(): string {
 
 export function blogPath(slug: string): string {
   return `${PATHS.blog}/${slug}/`;
+}
+
+export function examplesIndex(): string {
+  return `${PATHS.examples}/`;
+}
+
+export function examplePath(slug: string): string {
+  return `${PATHS.examples}/${slug}/`;
 }

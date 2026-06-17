@@ -4,6 +4,56 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เมืองอุบลราชธานี/:path*",
+      "destination": "/พื้นที่/mueang-ubon-ratchathani/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/วารินชำราบ/:path*",
+      "destination": "/พื้นที่/warin-chamrap/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เดชอุดม/:path*",
+      "destination": "/พื้นที่/det-udom/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/พิบูลมังสาหาร/:path*",
+      "destination": "/พื้นที่/phibun-mangsahan/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ตระการพืชผล/:path*",
+      "destination": "/พื้นที่/trakan-phuet-phon/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ม่วงสามสิบ/:path*",
+      "destination": "/พื้นที่/muang-sam-sip/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เขื่องใน/:path*",
+      "destination": "/พื้นที่/khueang-nai/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/โขงเจียม/:path*",
+      "destination": "/พื้นที่/khong-chiam/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/น้ำยืน/:path*",
+      "destination": "/พื้นที่/nam-yuen/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/บุณฑริก/:path*",
+      "destination": "/พื้นที่/buntharik/:path*",
+      "permanent": true
     }
   ]
 }

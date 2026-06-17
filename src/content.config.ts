@@ -58,4 +58,33 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { services, updates, blog };
+const areas = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/areas' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    category: z.string(),
+    areaName: z.string(),
+    areaServed: z.string(),
+    heroTitle: z.string(),
+    heroSubtitle: z.string(),
+    ctaText: z.string(),
+    keywords: z.array(z.string()).default([]),
+  }),
+});
+
+const examples = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/examples' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    caseType: z.literal('example'),
+    proofStatus: z.literal('example_only'),
+    disclaimer: z.string(),
+    keywords: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { services, updates, blog, areas, examples };

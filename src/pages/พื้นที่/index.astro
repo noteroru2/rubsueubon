@@ -1,10 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
-import { districts } from '../../lib/districts';
 import { areaPath, servicePath, servicesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+
+const areas = await getCollection('areas');
 
 const pageTitle = 'พื้นที่ให้บริการรับซื้อไอที อุบลราชธานี | รับซื้ออุบล.com';
 const pageDescription =
@@ -59,14 +61,14 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
 
       <ul class="mt-10 grid gap-4 sm:grid-cols-2">
         {
-          districts.map((district) => (
+          areas.map((area) => (
             <li>
               <a
-                href={areaPath(district.slug)}
+                href={areaPath(area.data.slug)}
                 class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
               >
                 <span>
-                  <span class="block font-bold text-ink group-hover:text-brand">อำเภอ{district.name}</span>
+                  <span class="block font-bold text-ink group-hover:text-brand">{area.data.areaName}</span>
                   <span class="mt-0.5 block text-sm text-muted">รับซื้อโน้ตบุ๊ก มือถือ ไอที</span>
                 </span>
                 <span class="text-brand" aria-hidden="true">
