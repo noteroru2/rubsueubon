@@ -1,6 +1,6 @@
 ---
 import CTAButton from './CTAButton.astro';
-import { WHY_LINE_ROWS, SERVICE_LINKS } from '../config/home-content';
+import { WHY_LINE_ROWS } from '../config/home-content';
 ---
 
 <section id="why-line" class="border-b border-line bg-surface-alt py-14 sm:py-16" aria-labelledby="why-line-heading">
@@ -14,7 +14,6 @@ import { WHY_LINE_ROWS, SERVICE_LINKS } from '../config/home-content';
       โดยให้ลูกค้าส่งรูปและข้อมูลสินค้ามาประเมินราคาเบื้องต้นก่อนตัดสินใจ
     </p>
 
-    <!-- Desktop table -->
     <div class="mt-8 hidden overflow-hidden rounded-2xl border border-line bg-surface shadow-sm md:block">
       <table class="w-full text-left text-sm">
         <thead>
@@ -36,8 +35,7 @@ import { WHY_LINE_ROWS, SERVICE_LINKS } from '../config/home-content';
       </table>
     </div>
 
-    <!-- Mobile cards -->
-    <ul class="mt-8 space-y-3 md:hidden">
+    <ul class="mt-8 space-y-3 md:hidden" aria-label="ปัญหาที่พบบ่อยและวิธีแก้ไข">
       {
         WHY_LINE_ROWS.map((row) => (
           <li class="rounded-2xl border border-line bg-surface p-4 shadow-sm">
@@ -54,20 +52,9 @@ import { WHY_LINE_ROWS, SERVICE_LINKS } from '../config/home-content';
       ร้านประเมินตามข้อมูลที่ได้รับ และยืนยันราคาอีกครั้งหลังตรวจเครื่องจริง
       หากสภาพตรงตามที่แจ้งไว้ สามารถรับเงินสดหรือโอนเข้าบัญชีได้ตามที่ตกลง
     </p>
-    <p class="mt-4 max-w-3xl text-base leading-relaxed text-muted">
-      ต้องการขาย{' '}
-      <a href={SERVICE_LINKS.iphone} class="font-medium text-brand hover:underline">iPhone</a>,{' '}
-      <a href={SERVICE_LINKS.ipad} class="font-medium text-brand hover:underline">iPad</a>,{' '}
-      <a href={SERVICE_LINKS.macbook} class="font-medium text-brand hover:underline">MacBook</a>,{' '}
-      <a href={SERVICE_LINKS.notebook} class="font-medium text-brand hover:underline">โน้ตบุ๊ก</a>,{' '}
-      <a href={SERVICE_LINKS.pcGaming} class="font-medium text-brand hover:underline">คอมพิวเตอร์</a>,{' '}
-      <a href={SERVICE_LINKS.pcGaming} class="font-medium text-brand hover:underline">PC Gaming</a>,{' '}
-      <a href={SERVICE_LINKS.camera} class="font-medium text-brand hover:underline">กล้อง</a>{' '}
-      หรือสินค้าไอทีอื่น ๆ ในอุบลราชธานี สามารถแอด LINE @buyhub เพื่อส่งรูปประเมินราคาเบื้องต้นได้ในเวลาทำการ
-    </p>
 
     <div class="mt-8 text-center">
-      <CTAButton label="แอด LINE @buyhub ส่งรูปประเมินราคา" />
+      <CTAButton label="ส่งรูปประเมินราคาทาง LINE @buyhub" />
     </div>
   </div>
 </section>

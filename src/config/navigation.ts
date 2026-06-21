@@ -29,10 +29,6 @@ export const serviceNav = [
     href: servicePath('ipad-ubon'),
   },
   {
-    label: 'รับซื้อ MacBook/iMac/Apple',
-    href: servicePath('apple-ubon'),
-  },
-  {
     label: 'รับซื้อแท็บเล็ต (Android)',
     href: servicePath('tablet-ubon'),
   },
@@ -78,8 +74,6 @@ export const brandServiceNav = [
   { label: 'รับซื้อ iPhone อุบล', href: servicePath('iphone-ubon') },
 
   { label: 'รับซื้อ Samsung อุบล', href: servicePath('samsung-ubon') },
-
-  { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
 
   { label: 'รับซื้อ iPad อุบล', href: servicePath('ipad-ubon') },
 

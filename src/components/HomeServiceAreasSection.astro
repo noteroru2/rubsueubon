@@ -1,6 +1,5 @@
 ---
-import { HOME_SERVICE_DISTRICTS } from '../config/home-content';
-import { areaPath } from '../config/urls';
+import { areasIndex } from '../config/urls';
 ---
 
 <section id="service-areas" class="border-b border-line bg-surface py-14 sm:py-16" aria-labelledby="service-areas-heading">
@@ -9,22 +8,11 @@ import { areaPath } from '../config/urls';
       พื้นที่รับซื้ออุปกรณ์ไอทีในจังหวัดอุบลราชธานี
     </h2>
     <p class="mt-4 text-base leading-relaxed text-muted">
-      รับซื้ออุบล.com ให้บริการลูกค้าในจังหวัดอุบลราชธานีและอำเภอใกล้เคียง ครอบคลุมพื้นที่หลัก เช่น
-      {
-        HOME_SERVICE_DISTRICTS.map((d, i) => {
-          const isLast = i === HOME_SERVICE_DISTRICTS.length - 1;
-          const isFirst = i === 0;
-          const prefix = isFirst ? ' ' : isLast ? ' และ ' : ', ';
-          return (
-            <>
-              {prefix}
-              <a href={areaPath(d.slug)} class="font-medium text-brand hover:underline">
-                {d.label}
-              </a>
-            </>
-          );
-        })
-      }
+      รับซื้ออุบล.com ให้บริการลูกค้าในจังหวัดอุบลราชธานีและอำเภอใกล้เคียง ครอบคลุมอำเภอหลัก 10 อำเภอ
+      รายละเอียดแต่ละพื้นที่ดูได้จาก{' '}
+      <a href="#areas" class="font-medium text-brand hover:underline">การ์ดพื้นที่รับซื้อด้านบน</a>
+      {' '}หรือ{' '}
+      <a href={areasIndex()} class="font-medium text-brand hover:underline">หน้ารวมพื้นที่ให้บริการ</a>
     </p>
     <p class="mt-4 text-base leading-relaxed text-muted">
       ลูกค้าในอำเภอรอบนอกสามารถส่งรูปประเมินราคาผ่าน LINE ก่อนได้ เพื่อเช็กความคุ้มค่าก่อนเดินทาง
