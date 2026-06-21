@@ -1,6 +1,9 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AnswerBox from '../components/AnswerBox.astro';
+import LocalAuthorityBar from '../components/LocalAuthorityBar.astro';
 import { buildFAQPageSchema } from '../lib/schema';
+import { BUSINESS } from '../data/business';
 
 export interface Props {
   frontmatter: {
@@ -14,11 +17,12 @@ export interface Props {
   featuredImage?: string;
   keywords?: string[];
   jsonLd?: Record<string, unknown>[];
+  quickAnswer?: { question: string; answer: string };
 }
 
 const LINE_URL = 'https://line.me/R/ti/p/@buyhub';
 
-const { frontmatter, canonical, ogImage, featuredImage, keywords, jsonLd = [] } = Astro.props;
+const { frontmatter, canonical, ogImage, featuredImage, keywords, jsonLd = [], quickAnswer } = Astro.props;
 const { title, description, faqs } = frontmatter;
 
 const schemaScripts: Record<string, unknown>[] = [...jsonLd];
@@ -105,6 +109,12 @@ const steps = [
     </div>
   </section>
 
+  {
+    quickAnswer && (
+      <AnswerBox question={quickAnswer.question} answer={quickAnswer.answer} />
+    )
+  }
+
   <!-- Trust Signals -->
   <section class="border-b border-line bg-surface-alt py-8 sm:py-10" aria-label="จุดเด่นที่ลูกค้าไว้วางใจ">
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
@@ -184,7 +194,7 @@ const steps = [
       </p>
       <div class="mt-8 overflow-hidden rounded-2xl border border-line shadow-sm">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.025200608903!2d104.844358!3d15.266421499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311687b7ef0583c9%3A0x90ad9a37b84af3a!2z4Lit4Liz4Lie4LilIOC5gOC4l-C4o-C4lOC4lOC4tOC5ieC4hyAtIOC4o-C4seC4muC4i-C4t-C5ieC4rSDguILguLLguKIg4LiL4LmI4Lit4LihIOC4hOC4reC4oeC4nuC4tOC4p-C5gOC4leC4reC4o-C5jCDguKHguLfguK3guJbguLfguK0g4LiB4Lil4LmJ4Lit4LiHIOC4peC4s-C5guC4nuC4hyDguKrguLTguJnguITguYnguLLguYTguK3guJfguLXguJfguLjguIHguIrguJnguLTguJQ!5e0!3m2!1sth!2sth!4v1781084191572!5m2!1sth!2sth"
+          src={BUSINESS.mapEmbed}
           width="100%"
           height="450"
           style="border:0;"
@@ -195,7 +205,7 @@ const steps = [
         </iframe>
         <div class="border-t border-line bg-surface-alt p-4 text-center">
           <a
-            href="https://maps.app.goo.gl/uuwGbjpMeedTC1ik8"
+            href={BUSINESS.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
@@ -234,6 +244,8 @@ const steps = [
       </section>
     )
   }
+
+  <LocalAuthorityBar compact />
 
   <slot name="after-content" />
 

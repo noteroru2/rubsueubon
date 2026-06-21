@@ -8,7 +8,8 @@ import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 const allUpdates = (await getCollection('updates')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const pageTitle = 'ผลงานรับซื้อล่าสุด | รับซื้ออุบล.com';
-const pageDescription = 'อัปเดตผลงานรับซื้อ-รับเทิร์นไอทีล่าสุดในอุบลราชธานี รูปจริง ราคาจริง สร้างความน่าเชื่อถือ';
+const pageDescription =
+  'รวบรวมเคสรับซื้อ-รับเทิร์นจริงในอุบลราชธานี มีรายละเอียดสินค้า อำเภอ วันที่ และขั้นตอนการรับซื้อ — ไม่ใช่ตัวอย่างสมมติ';
 
 const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'ผลงานรับซื้อล่าสุด' }];
 
@@ -28,9 +29,13 @@ function formatDate(date: Date): string {
 
       <div class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
         <p>
-          หน้านี้รวบรวมเคสรับซื้อ-รับเทิร์นจริงในอุบลราชธานี เพื่อให้ลูกค้าใหม่เห็นขั้นตอนการทำงาน ราคาที่โปร่งใส
+          หน้านี้รวบรวม<strong>เคสรับซื้อ-รับเทิร์นจริง</strong>ในอุบลราชธานี เพื่อให้ลูกค้าใหม่เห็นขั้นตอนการทำงาน รายละเอียดสินค้า
           และพื้นที่ที่เราให้บริการ ทุกเคสเริ่มจากการส่งรูปมาที่ LINE <strong>@buyhub</strong>
           ประเมินราคาฟรี แล้วนัดรับจ่ายเงินสดทันที
+        </p>
+        <p>
+          หากต้องการดู<strong>ตัวอย่างสถานการณ์ประเมิน</strong> (case study สมมติเพื่อให้ความรู้) ไปที่
+          <a href="/ตัวอย่างเคสประเมิน/">ตัวอย่างเคสประเมินราคา</a> แทน
         </p>
         <p>
           หากคุณสนใจขายสินค้าเดียวกัน ดูรายละเอียดบริการที่ <a href={servicesIndex()}>หน้าบริการรับซื้อ</a>

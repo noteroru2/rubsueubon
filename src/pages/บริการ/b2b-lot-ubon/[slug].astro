@@ -2,9 +2,11 @@
 import { getCollection, render } from 'astro:content';
 import ServiceLayout from '../../../layouts/ServiceLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import ModelPageAfterContent from '../../../components/ModelPageAfterContent.astro';
 import { SITE } from '../../../config/site';
 import { servicePath, servicesIndex } from '../../../config/urls';
 import { buildBreadcrumbSchema } from '../../../lib/breadcrumbs';
+import { resolveModelPageContext } from '../../../lib/model-pages';
 
 export async function getStaticPaths() {
   const models = await getCollection('modelServices');
@@ -18,18 +20,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const {
-  title,
-  description,
-  category,
-  brand,
-  modelName,
-  productType,
-  serviceType,
-  areaServed,
-  ctaText,
-  faqs,
-} = entry.data;
+const { title, description, category, modelName, areaServed } = entry.data;
+
+const { quickAnswer, acceptedConditions, rejectedConditions, displayFaqs } =
+  resolveModelPageContext(entry.data);
 
 const canonical = `/บริการ/b2b-lot-ubon/${entry.data.slug}/`;
 const ogImage = `${SITE.url}/images/services/b2b-lot-pc.webp`;
@@ -58,25 +52,21 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${SITE.url}${canonical}#service`,
-    name: `${serviceType} ${modelName}`,
+    name: title,
     description,
-    provider: {
-      '@id': `${SITE.url}/#localbusiness`,
-    },
-    areaServed: {
-      '@type': 'AdministrativeArea',
-      name: areaServed,
-    },
+    provider: { '@id': `${SITE.url}/#localbusiness` },
+    areaServed: { '@type': 'AdministrativeArea', name: areaServed },
   },
 ];
 ---
 
 <ServiceLayout
-  frontmatter={{ title, description, category, faqs }}
+  frontmatter={{ title, description, category, faqs: displayFaqs }}
   canonical={canonical}
   ogImage={ogImage}
   featuredImage="/images/services/pc-gaming-ubon.webp"
   jsonLd={jsonLd}
+  quickAnswer={quickAnswer}
 >
   <div class="not-prose mb-8">
     <Breadcrumbs items={breadcrumbItems} />
@@ -86,16 +76,14 @@ const jsonLd = [
     <Content />
   </div>
 
-  <div slot="after-content" class="mt-12 border-t border-line pt-8">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6">
-      <div class="rounded-2xl border border-line bg-surface p-6 shadow-sm">
-        <h3 class="text-lg font-bold text-ink">ลิงก์ข้อมูลเพิ่มเติม</h3>
-        <ul class="mt-4 space-y-2 text-sm text-brand">
-          <li>👉 <a href={servicePath('b2b-lot-ubon')} class="hover:underline">หน้าหลักบริการรับซื้อคอมบริษัท/ยกล็อต</a></li>
-          <li>👉 <a href="/บริการ/" class="hover:underline">บริการรับซื้อสินค้าไอทีทั้งหมด</a></li>
-          <li>👉 <a href="/พื้นที่/" class="hover:underline">พื้นที่ให้บริการในอุบลราชธานี</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <ModelPageAfterContent
+    slot="after-content"
+    accepted={acceptedConditions}
+    rejected={rejectedConditions}
+    parentHref={servicePath('b2b-lot-ubon')}
+    parentLabel="หน้าหลักบริการรับซื้อคอมบริษัท/ยกล็อต"
+    extraLinks={[
+      { href: servicePath('pc-corporate-ubon'), label: 'รับซื้อคอมบริษัท อุบล' },
+    ]}
+  />
 </ServiceLayout>

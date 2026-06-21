@@ -7,6 +7,7 @@ import GeoServiceLinks from '../../components/GeoServiceLinks.astro';
 import { SITE } from '../../config/site';
 import { servicePath, servicesIndex, updatePath, updatesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import { getQuickAnswer, mergeFaqs } from '../../lib/service-aeo';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -36,6 +37,8 @@ const {
 
 const canonical = servicePath(entry.data.slug);
 const ogImage = featuredImage ? new URL(featuredImage, SITE.url).href : `${SITE.url}/og-default.svg`;
+const quickAnswer = entry.data.quickAnswer ?? getQuickAnswer(category, entry.id);
+const displayFaqs = mergeFaqs(faqs);
 
 const relatedUpdates = (await getCollection('updates'))
   .filter((u) => u.data.relatedServiceSlug === entry.id)
@@ -82,12 +85,13 @@ const jsonLd = [
 ---
 
 <ServiceLayout
-  frontmatter={{ title, description, category, faqs }}
+  frontmatter={{ title, description, category, faqs: displayFaqs }}
   canonical={canonical}
   ogImage={ogImage}
   featuredImage={featuredImage}
   keywords={keywords}
   jsonLd={jsonLd}
+  quickAnswer={quickAnswer}
 >
   <div class="not-prose mb-8">
     <Breadcrumbs items={breadcrumbItems} />

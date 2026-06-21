@@ -1,0 +1,70 @@
+---
+import { BUSINESS } from '../data/business';
+import StorefrontPhoto from './StorefrontPhoto.astro';
+
+export interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<section
+  class="border-t border-line bg-surface py-8 sm:py-10"
+  aria-label="ข้อมูลร้านในอุบลราชธานี"
+>
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <h2 class="text-center text-lg font-bold text-ink sm:text-xl">
+      {compact ? 'ติดต่อร้านในอุบลราชธานี' : 'ร้านรับซื้อไอทีในอุบลราชธานี — ข้อมูลติดต่อ'}
+    </h2>
+    <dl class="mt-6 grid gap-3 text-sm sm:grid-cols-2">
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3">
+        <dt class="font-semibold text-ink">แบรนด์</dt>
+        <dd class="mt-1 text-muted">{BUSINESS.brand}</dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3">
+        <dt class="font-semibold text-ink">ผู้ดำเนินการ</dt>
+        <dd class="mt-1 text-muted">{BUSINESS.operator} · {BUSINESS.company}</dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3">
+        <dt class="font-semibold text-ink">LINE</dt>
+        <dd class="mt-1">
+          <a href={BUSINESS.lineUrl} class="font-medium text-brand hover:underline" target="_blank" rel="noopener noreferrer">
+            {BUSINESS.lineOA}
+          </a>
+        </dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3">
+        <dt class="font-semibold text-ink">โทรศัพท์</dt>
+        <dd class="mt-1">
+          <a href={`tel:${BUSINESS.phone.replace(/-/g, '')}`} class="font-medium text-brand hover:underline">
+            {BUSINESS.phone}
+          </a>
+        </dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
+        <dt class="font-semibold text-ink">เวลาให้บริการ</dt>
+        <dd class="mt-1 text-muted">{BUSINESS.hours}</dd>
+      </div>
+      {
+        !compact && (
+          <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
+            <dt class="font-semibold text-ink">พื้นที่ให้บริการ</dt>
+            <dd class="mt-1 text-muted">{BUSINESS.serviceDistricts.join(' · ')}</dd>
+          </div>
+        )
+      }
+    </dl>
+    <StorefrontPhoto compact />
+    <p class="mt-5 text-center">
+      <a
+        href={BUSINESS.mapUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
+      >
+        📍 เปิด Google Maps นำทางไปหน้าร้าน
+      </a>
+    </p>
+  </div>
+</section>

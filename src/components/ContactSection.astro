@@ -1,0 +1,80 @@
+---
+import CTAButton from './CTAButton.astro';
+import StorefrontPhoto from './StorefrontPhoto.astro';
+import { SITE, getLineOALink } from '../config/site';
+import { MAP_EMBED, MAP_URL } from '../config/home-hub';
+import { contactPage } from '../config/urls';
+
+const lineLink = getLineOALink();
+---
+
+<section id="contact" class="py-14 sm:py-16">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">ติดต่อเรา / ประเมินราคาด่วน</h2>
+      <p class="mt-3 text-muted">ส่งรูปสินค้าผ่าน LINE รับราคาเบื้องต้นฟรี หรือโทรสอบถามได้ทุกวัน 09:00–19:30 น.</p>
+    </div>
+
+    <div class="mt-10 rounded-2xl bg-gradient-to-r from-brand to-brand-dark p-8 text-center text-white">
+      <h3 class="text-xl font-bold">ช่องทางที่เร็วที่สุด — LINE</h3>
+      <p class="mt-2 text-white/85">ส่งรูปสินค้า รับราคาเบื้องต้นฟรีภายในไม่กี่นาที</p>
+      <div class="mt-5">
+        <CTAButton href={lineLink} label="แอด LINE @buyhub ประเมินราคาฟรี" />
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      <div class="rounded-2xl border border-line bg-surface p-6 shadow-sm">
+        <h3 class="font-bold text-ink">หน้าร้านจริงในอุบลราชธานี</h3>
+        <StorefrontPhoto compact />
+        <h3 class="mt-6 font-bold text-ink">ข้อมูลติดต่อ</h3>
+        <ul class="mt-4 space-y-3 text-sm text-muted">
+          <li>
+            <strong class="text-ink">LINE OA:</strong>{' '}
+            <a href={lineLink} target="_blank" rel="noopener noreferrer" class="font-semibold text-brand hover:underline">
+              {SITE.lineOA}
+            </a>
+          </li>
+          <li>
+            <strong class="text-ink">โทรศัพท์:</strong>{' '}
+            <a href={`tel:${SITE.phone.replace(/-/g, '')}`} class="font-semibold text-brand hover:underline">
+              {SITE.phone}
+            </a>
+          </li>
+          <li><strong class="text-ink">ดำเนินการโดย:</strong> {SITE.businessName}</li>
+          <li><strong class="text-ink">พื้นที่ให้บริการ:</strong> อุบลราชธานี (10 อำเภอหลัก)</li>
+          <li><strong class="text-ink">เวลาให้บริการ:</strong> เปิดทุกวัน 09:00–19:30 น.</li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a
+            href={MAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex rounded-full border border-brand px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white"
+          >
+            เปิด Google Maps
+          </a>
+          <a
+            href={contactPage()}
+            class="inline-flex rounded-full border border-line px-4 py-2 text-sm font-semibold text-ink transition hover:border-brand/30"
+          >
+            หน้าติดต่อเต็ม →
+          </a>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-2xl border border-line shadow-sm">
+        <iframe
+          src={MAP_EMBED}
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="แผนที่ WINNER IT รับซื้ออุบล.com อุบลราชธานี"
+          class="block w-full min-h-[320px]"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

@@ -28,6 +28,12 @@ const services = defineCollection({
     tier: z.enum(['main', 'brand']).default('main'),
     parentSlug: z.string().optional(),
     parentLabel: z.string().optional(),
+    quickAnswer: z
+      .object({
+        question: z.string(),
+        answer: z.string(),
+      })
+      .optional(),
   }),
 });
 
@@ -71,6 +77,28 @@ const areas = defineCollection({
     heroSubtitle: z.string(),
     ctaText: z.string(),
     keywords: z.array(z.string()).default([]),
+    quickAnswer: z
+      .object({
+        question: z.string(),
+        answer: z.string(),
+      })
+      .optional(),
+    faqs: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        }),
+      )
+      .optional(),
+    relatedServices: z
+      .array(
+        z.object({
+          label: z.string(),
+          href: z.string(),
+        }),
+      )
+      .optional(),
   }),
 });
 
@@ -109,6 +137,14 @@ const cameraModels = defineCollection({
         }),
       )
       .optional(),
+    quickAnswer: z
+      .object({
+        question: z.string(),
+        answer: z.string(),
+      })
+      .optional(),
+    acceptedConditions: z.array(z.string()).optional(),
+    rejectedConditions: z.array(z.string()).optional(),
   }),
 });
 
@@ -135,6 +171,14 @@ const modelServices = defineCollection({
         }),
       )
       .optional(),
+    quickAnswer: z
+      .object({
+        question: z.string(),
+        answer: z.string(),
+      })
+      .optional(),
+    acceptedConditions: z.array(z.string()).optional(),
+    rejectedConditions: z.array(z.string()).optional(),
   }),
 });
 

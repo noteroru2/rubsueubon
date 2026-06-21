@@ -1,0 +1,35 @@
+---
+import { HOME_SERVICE_DISTRICTS } from '../config/home-content';
+import { areaPath } from '../config/urls';
+---
+
+<section id="service-areas" class="border-b border-line bg-surface py-14 sm:py-16" aria-labelledby="service-areas-heading">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h2 id="service-areas-heading" class="text-xl font-bold text-ink sm:text-2xl">
+      พื้นที่รับซื้ออุปกรณ์ไอทีในจังหวัดอุบลราชธานี
+    </h2>
+    <p class="mt-4 text-base leading-relaxed text-muted">
+      รับซื้ออุบล.com ให้บริการลูกค้าในจังหวัดอุบลราชธานีและอำเภอใกล้เคียง ครอบคลุมพื้นที่หลัก เช่น
+      {
+        HOME_SERVICE_DISTRICTS.map((d, i) => {
+          const isLast = i === HOME_SERVICE_DISTRICTS.length - 1;
+          const isFirst = i === 0;
+          const prefix = isFirst ? ' ' : isLast ? ' และ ' : ', ';
+          return (
+            <>
+              {prefix}
+              <a href={areaPath(d.slug)} class="font-medium text-brand hover:underline">
+                {d.label}
+              </a>
+            </>
+          );
+        })
+      }
+    </p>
+    <p class="mt-4 text-base leading-relaxed text-muted">
+      ลูกค้าในอำเภอรอบนอกสามารถส่งรูปประเมินราคาผ่าน LINE ก่อนได้ เพื่อเช็กความคุ้มค่าก่อนเดินทาง
+      หรือนัดจุดรับสินค้าที่สะดวกร่วมกัน วิธีนี้ช่วยลดการเสียเวลา ลดความไม่แน่นอนเรื่องราคา
+      และทำให้การขายสินค้าไอทีมือสองในอุบลจบง่ายขึ้น
+    </p>
+  </div>
+</section>

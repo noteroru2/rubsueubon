@@ -1,13 +1,17 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { servicePath } from '../config/urls';
+import { MAIN_HUB_SERVICE_SLUGS } from '../config/home-hub';
 
 interface Props {
   services: CollectionEntry<'services'>[];
 }
 
 const { services } = Astro.props;
-const sorted = [...services].sort((a, b) => a.data.order - b.data.order);
+const slugOrder = new Map(MAIN_HUB_SERVICE_SLUGS.map((slug, index) => [slug, index]));
+const sorted = [...services]
+  .filter((s) => slugOrder.has(s.data.slug as (typeof MAIN_HUB_SERVICE_SLUGS)[number]))
+  .sort((a, b) => (slugOrder.get(a.data.slug as (typeof MAIN_HUB_SERVICE_SLUGS)[number]) ?? 99) - (slugOrder.get(b.data.slug as (typeof MAIN_HUB_SERVICE_SLUGS)[number]) ?? 99));
 
 const categoryImages: Record<string, string> = {
   smartphone: '/images/services/smartphone-iphone-android.webp',
@@ -21,27 +25,27 @@ const imageAltText: Record<string, string> = {
   '/images/services/notebook-ubon.webp': 'รับซื้อโน้ตบุ๊ก อุบลราชธานี ประเมินราคาโน้ตบุ๊กมือสองทุกยี่ห้อ',
   '/images/services/camera-sony-canon-fujifilm.webp':
     'รับซื้อกล้อง Sony Canon Fujifilm อุบลราชธานี กล้องและเลนส์มือสอง',
-  '/images/services/pc-gaming-desktop.webp': 'รับซื้อคอมพิวเตอร์ตั้งโต๊ะ PC Gaming อุบลราชธานี ให้ราคาสูง',
+  '/images/services/pc-gaming-desktop.webp': 'รับซื้อคอมพิวเตอร์ตั้งโต๊ะ PC Gaming อุบลราชธานี ประเมินตามสภาพและราคาตลาด',
   '/images/services/apple-devices-macbook-imac.webp':
-    'รับซื้อ MacBook iMac อุปกรณ์ Apple อุบลราชธานี สภาพดี ให้ราคาสูง',
+    'รับซื้อ MacBook iMac อุปกรณ์ Apple อุบลราชธานี สภาพดี ประเมินตามรุ่นและสภาพ',
   '/images/services/ipad-tablet.webp': 'รับซื้อ iPad Tablet มือสอง อุบลราชธานี ตรวจเช็คสภาพโดยมืออาชีพ',
-  '/images/services/apple-watch-smartwatch.webp': 'รับซื้อ Apple Watch Smart Watch อุบลราชธานี ทุกรุ่น ให้ราคาสูง',
+  '/images/services/apple-watch-smartwatch.webp': 'รับซื้อ Apple Watch Smart Watch อุบลราชธานี ทุกรุ่น ประเมินตามสภาพ',
   '/images/services/pc-parts-gpu-cpu.webp': 'รับซื้อการ์ดจอ CPU อะไหล่คอม อุบลราชธานี ให้ราคาตามตลาด',
   '/images/services/game-console-playstation.webp':
     'รับซื้อ PlayStation Nintendo เครื่องเกม อุบลราชธานี จ่ายเงินสดทันที',
   '/images/services/speaker-jbl-marshall.webp':
-    'รับซื้อลำโพง JBL Marshall และเครื่องเสียงมือสอง อุบลราชธานี ให้ราคาสูง',
+    'รับซื้อลำโพง JBL Marshall และเครื่องเสียงมือสอง อุบลราชธานี ประเมินตามรุ่นและสภาพ',
 };
 ---
 
 <section id="services" class="bg-surface-alt py-16 sm:py-20">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-2xl font-bold text-ink sm:text-3xl">บริการรับซื้อ-รับเทิร์นไอที</h2>
-      <p class="mt-3 text-muted">เลือกหมวดสินค้าที่ต้องการขาย เรารับซื้อทุกยี่ห้อในอุบลราชธานี</p>
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">บริการหลัก 8 หมวด</h2>
+      <p class="mt-3 text-muted">เลือกหมวดสินค้าที่ต้องการขาย ประเมินราคาฟรีผ่าน LINE @buyhub</p>
     </div>
 
-    <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {
         sorted.map((service) => {
           const image = service.data.featuredImage ?? categoryImages[service.data.category] ?? '/favicon.svg';

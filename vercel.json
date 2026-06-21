@@ -1,6 +1,26 @@
 {
   "redirects": [
     {
+      "source": "/บริการ/b2b-lot-ubon",
+      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/b2b-lot-ubon/",
+      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/b2b-lot-ubon/corporate-pc/:path*",
+      "destination": "/บริการ/รับซื้อคอมบริษัท-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/camera-lens-ubon/:path*",
+      "destination": "/บริการ/รับซื้อเลนส์กล้อง-อุบล/:path*",
+      "permanent": true
+    },
+    {
       "source": "/บริการ/รับซื้อแท็บเล็ต-ไอแพด-อุบล/:path*",
       "destination": "/บริการ/รับซื้อแท็บเล็ต-อุบล/:path*",
       "permanent": true

@@ -51,6 +51,12 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'tv-electronics-ubon': 'รับซื้อทีวี-จอคอม-อุบล',
 
   'gadget-ubon': 'รับซื้อสมาร์ทวอทช์-แก็ดเจ็ต-อุบล',
+
+  'b2b-lot-ubon': 'รับซื้อคอมยกล็อต-อุบล',
+
+  'camera-lens-ubon': 'รับซื้อเลนส์กล้อง-อุบล',
+
+  'imac-ubon': 'รับซื้อ-imac-อุบล',
 };
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */

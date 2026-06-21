@@ -3,9 +3,19 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
+import AnswerBox from '../../components/AnswerBox.astro';
+import LocalAuthorityBar from '../../components/LocalAuthorityBar.astro';
 import { SITE } from '../../config/site';
-import { areaPath, areasIndex, pricingPage, servicePath, updatePath, updatesIndex } from '../../config/urls';
+import { getDistrictBySlug } from '../../lib/districts';
+import { areaPath, areasIndex, servicePath } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import {
+  buildDistrictLocalBusinessSchema,
+  buildFAQPageSchema,
+  buildItemListSchema,
+  buildLocalBusinessSchema,
+  buildPlaceSchema,
+} from '../../lib/schema';
 
 export async function getStaticPaths() {
   const areas = await getCollection('areas');
@@ -26,10 +36,15 @@ const {
   areaName,
   slug,
   keywords,
+  quickAnswer,
+  faqs = [],
+  relatedServices = [],
 } = data;
 
 const h1 = heroTitle;
 const canonical = areaPath(slug);
+const district = getDistrictBySlug(slug);
+const pageUrl = `${SITE.url}${canonical}`;
 
 const breadcrumbItems = [
   { label: 'หน้าแรก', href: '/' },
@@ -37,31 +52,64 @@ const breadcrumbItems = [
   { label: areaName },
 ];
 
-const districtUpdates = (await getCollection('updates'))
-  .filter((u) => u.data.relatedAreaSlug === slug)
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 3);
-
-const serviceLinks = [
+const defaultServiceLinks = [
   { href: servicePath('smartphone-ubon'), label: 'รับซื้อโทรศัพท์มือถือ', icon: '/images/services/smartphone.svg' },
   { href: servicePath('notebook-ubon'), label: 'รับซื้อโน้ตบุ๊ก', icon: '/images/services/notebook.svg' },
   { href: servicePath('camera-ubon'), label: 'รับซื้อกล้อง', icon: '/images/services/camera.svg' },
   { href: servicePath('trade-in-ubon'), label: 'รับเทิร์นสินค้าไอที', icon: '/images/services/smartphone.svg' },
 ];
 
-const jsonLd = [
+const serviceLinksFromContent = relatedServices.map((s) => ({
+  href: s.href,
+  label: s.label,
+  icon: '/images/services/smartphone.svg',
+}));
+
+const serviceLinks = serviceLinksFromContent.length > 0 ? serviceLinksFromContent : defaultServiceLinks;
+
+const jsonLd: Record<string, unknown>[] = [
   buildBreadcrumbSchema(breadcrumbItems),
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${SITE.url}${canonical}#webpage`,
-    url: `${SITE.url}${canonical}`,
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
     name: h1,
     description,
     inLanguage: 'th-TH',
     isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${pageUrl}#place` },
+  },
+  buildLocalBusinessSchema(),
+  buildPlaceSchema(areaName, pageUrl),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    name: h1,
+    description,
+    url: pageUrl,
+    provider: { '@id': `${SITE.url}/#localbusiness` },
+    areaServed: { '@id': `${pageUrl}#place` },
   },
 ];
+
+if (district) {
+  jsonLd.push(buildDistrictLocalBusinessSchema(district));
+}
+
+if (serviceLinks.length > 0) {
+  jsonLd.push(
+    buildItemListSchema(
+      `บริการรับซื้อใน${areaName}`,
+      serviceLinks.map((s) => ({ name: s.label, url: `${SITE.url}${s.href}` })),
+    ),
+  );
+}
+
+if (faqs.length > 0) {
+  jsonLd.push(buildFAQPageSchema(faqs));
+}
 ---
 <BaseLayout
   title={pageTitle}
@@ -97,6 +145,8 @@ const jsonLd = [
     </div>
   </section>
 
+  {quickAnswer && <AnswerBox question={quickAnswer.question} answer={quickAnswer.answer} />}
+
   <section class="py-14 sm:py-16">
     <div class="mx-auto max-w-3xl px-4 sm:px-6">
       <article
@@ -107,12 +157,12 @@ const jsonLd = [
     </div>
   </section>
 
+  <LocalAuthorityBar compact />
+
   <section class="bg-surface-alt py-14 sm:py-16">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 class="text-xl font-bold text-ink sm:text-2xl">บริการรับซื้อ-รับเทิร์นใน{areaName}</h2>
-      <p class="mt-3 max-w-2xl text-muted">
-        เลือกประเภทสินค้าที่ต้องการขายหรือเทิร์น
-      </p>
+      <p class="mt-3 max-w-2xl text-muted">เลือกประเภทสินค้าที่ต้องการขายหรือเทิร์น</p>
 
       <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {

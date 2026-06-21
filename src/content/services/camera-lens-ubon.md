@@ -2,7 +2,7 @@
 title: "รับซื้อเลนส์กล้อง อุบล – ประเมินราคาตามสภาพจริง Sony, Canon, Fujifilm, Nikon"
 description: "รับซื้อเลนส์กล้องมือสองในอุบลราชธานี Sony E, Canon RF/EF, Fujifilm X, Nikon Z/F ประเมินราคาตามสภาพ ฝุ่น รา ฝ้า ส่งรูปทาง LINE ได้เลย มีหน้าร้านในอุบล"
 subheadline: "รับซื้อเลนส์ Sony, Canon, Fujifilm, Nikon ประเมินตามสภาพจริง ส่งรูปทาง LINE ได้เลย"
-slug: "camera-lens-ubon"
+slug: "รับซื้อเลนส์กล้อง-อุบล"
 category: "camera"
 navLabel: "รับซื้อเลนส์กล้อง"
 geoLinkLabel: "รับซื้อเลนส์กล้อง"

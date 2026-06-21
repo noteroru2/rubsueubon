@@ -1,0 +1,30 @@
+---
+import { BUSINESS } from '../data/business';
+
+export interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+const src = BUSINESS.storefrontImage;
+const alt =
+  'ป้ายหน้าร้าน อำพล เทรดดิ้ง WINNER IT รับซื้อ ขาย ซ่อม อุปกรณ์ไอที โน้ตบุ๊ก มือถือ กล้อง อุบลราชธานี';
+---
+
+<figure class={compact ? 'mt-5' : 'mt-6'}>
+  <img
+    src={src}
+    alt={alt}
+    width="800"
+    height="600"
+    loading="lazy"
+    decoding="async"
+    class:list={[
+      'w-full rounded-xl border border-line object-cover shadow-sm',
+      compact ? 'max-h-48' : 'max-h-80',
+    ]}
+  />
+  <figcaption class="mt-2 text-center text-xs text-muted">
+    หน้าร้าน {BUSINESS.operator} · {BUSINESS.company} · {BUSINESS.province}
+  </figcaption>
+</figure>

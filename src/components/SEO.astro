@@ -69,4 +69,6 @@ const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 <meta name="generator" content={Astro.generator} />
 
 <!-- JSON-LD Structured Data -->
-{jsonLd.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+{jsonLd.map((schema) => (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

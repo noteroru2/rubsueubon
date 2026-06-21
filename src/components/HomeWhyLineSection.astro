@@ -1,0 +1,73 @@
+---
+import CTAButton from './CTAButton.astro';
+import { WHY_LINE_ROWS, SERVICE_LINKS } from '../config/home-content';
+---
+
+<section id="why-line" class="border-b border-line bg-surface-alt py-14 sm:py-16" aria-labelledby="why-line-heading">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <h2 id="why-line-heading" class="text-xl font-bold text-ink sm:text-2xl">
+      ทำไมควรส่งรูปประเมินราคาก่อนขาย?
+    </h2>
+    <p class="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+      การขายอุปกรณ์ไอทีมือสองทั่วไปมักเสียเวลาหลายขั้นตอน ตั้งแต่โพสต์ขายเอง รอคนสนใจ นัดหลายรอบ
+      ไปจนถึงต่อรองราคาหน้างาน รับซื้ออุบล.com จึงออกแบบขั้นตอนให้สั้นลง
+      โดยให้ลูกค้าส่งรูปและข้อมูลสินค้ามาประเมินราคาเบื้องต้นก่อนตัดสินใจ
+    </p>
+
+    <!-- Desktop table -->
+    <div class="mt-8 hidden overflow-hidden rounded-2xl border border-line bg-surface shadow-sm md:block">
+      <table class="w-full text-left text-sm">
+        <thead>
+          <tr class="border-b border-line bg-surface-alt">
+            <th scope="col" class="px-5 py-4 font-semibold text-ink">ปัญหาที่พบบ่อย</th>
+            <th scope="col" class="px-5 py-4 font-semibold text-ink">วิธีที่เราแก้ไข</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            WHY_LINE_ROWS.map((row, i) => (
+              <tr class:list={[i < WHY_LINE_ROWS.length - 1 && 'border-b border-line']}>
+                <td class="px-5 py-4 text-muted">{row.problem}</td>
+                <td class="px-5 py-4 text-ink">{row.solution}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile cards -->
+    <ul class="mt-8 space-y-3 md:hidden">
+      {
+        WHY_LINE_ROWS.map((row) => (
+          <li class="rounded-2xl border border-line bg-surface p-4 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-muted">ปัญหาที่พบบ่อย</p>
+            <p class="mt-1 text-sm font-medium text-ink">{row.problem}</p>
+            <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-brand">วิธีที่เราแก้ไข</p>
+            <p class="mt-1 text-sm text-muted">{row.solution}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-8 max-w-3xl text-base leading-relaxed text-muted">
+      ร้านประเมินตามข้อมูลที่ได้รับ และยืนยันราคาอีกครั้งหลังตรวจเครื่องจริง
+      หากสภาพตรงตามที่แจ้งไว้ สามารถรับเงินสดหรือโอนเข้าบัญชีได้ตามที่ตกลง
+    </p>
+    <p class="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+      ต้องการขาย{' '}
+      <a href={SERVICE_LINKS.iphone} class="font-medium text-brand hover:underline">iPhone</a>,{' '}
+      <a href={SERVICE_LINKS.ipad} class="font-medium text-brand hover:underline">iPad</a>,{' '}
+      <a href={SERVICE_LINKS.macbook} class="font-medium text-brand hover:underline">MacBook</a>,{' '}
+      <a href={SERVICE_LINKS.notebook} class="font-medium text-brand hover:underline">โน้ตบุ๊ก</a>,{' '}
+      <a href={SERVICE_LINKS.pcGaming} class="font-medium text-brand hover:underline">คอมพิวเตอร์</a>,{' '}
+      <a href={SERVICE_LINKS.pcGaming} class="font-medium text-brand hover:underline">PC Gaming</a>,{' '}
+      <a href={SERVICE_LINKS.camera} class="font-medium text-brand hover:underline">กล้อง</a>{' '}
+      หรือสินค้าไอทีอื่น ๆ ในอุบลราชธานี สามารถแอด LINE @buyhub เพื่อส่งรูปประเมินราคาเบื้องต้นได้ในเวลาทำการ
+    </p>
+
+    <div class="mt-8 text-center">
+      <CTAButton label="แอด LINE @buyhub ส่งรูปประเมินราคา" />
+    </div>
+  </div>
+</section>

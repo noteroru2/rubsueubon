@@ -20,7 +20,7 @@ export function buildLocalBusinessSchema() {
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE.url}/images/logo.webp`,
+    image: [`${SITE.url}/images/logo.webp`, `${SITE.url}/images/winner-it-storefront.png`],
     logo: {
       '@type': 'ImageObject',
       url: `${SITE.url}/images/logo.webp`,
@@ -63,13 +63,6 @@ export function buildLocalBusinessSchema() {
       areaServed: 'TH',
       availableLanguage: 'Thai',
       contactOption: 'TollFree',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '3',
-      bestRating: '5',
-      worstRating: '1',
     },
     sameAs: SITE.sameAs,
     hasOfferCatalog: {
@@ -183,13 +176,6 @@ export function buildDistrictLocalBusinessSchema(district: District) {
       areaServed: 'TH',
       availableLanguage: 'Thai',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '3',
-      bestRating: '5',
-      worstRating: '1',
-    },
     sameAs: SITE.sameAs,
     parentOrganization: {
       '@id': `${SITE.url}/#localbusiness`,
@@ -224,6 +210,33 @@ export function buildDistrictLocalBusinessSchema(district: District) {
         },
       ],
     },
+  };
+}
+
+export function buildPlaceSchema(name: string, pageUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AdministrativeArea',
+    '@id': `${pageUrl}#place`,
+    name: `${name}, อุบลราชธานี`,
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: 'อุบลราชธานี',
+    },
+  };
+}
+
+export function buildItemListSchema(name: string, items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
   };
 }
 

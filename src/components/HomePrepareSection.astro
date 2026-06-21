@@ -1,0 +1,91 @@
+---
+import CTAButton from './CTAButton.astro';
+import { SERVICE_LINKS } from '../config/home-content';
+---
+
+<section id="prepare" class="border-b border-line bg-surface py-14 sm:py-16" aria-labelledby="prepare-heading">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h2 id="prepare-heading" class="text-xl font-bold text-ink sm:text-2xl">
+      ขายสินค้าไอทีในอุบล ต้องเตรียมอะไรบ้าง?
+    </h2>
+    <p class="mt-4 text-base leading-relaxed text-muted">
+      การส่งข้อมูลที่ครบตั้งแต่แรกช่วยให้ประเมินราคาได้ใกล้เคียงขึ้น และลดโอกาสราคาคลาดเคลื่อนเมื่อนำเครื่องมาตรวจจริง
+      ลูกค้าสามารถส่งรูปสินค้า รายละเอียดรุ่น สภาพ และอุปกรณ์ที่มีมาทาง LINE เพื่อประเมินราคาเบื้องต้นก่อนได้
+    </p>
+
+    <div class="mt-8 space-y-8">
+      <article>
+        <h3 class="text-lg font-semibold text-ink">
+          <a href={SERVICE_LINKS.iphone} class="text-brand hover:underline">iPhone</a>
+          {' / '}
+          <a href={SERVICE_LINKS.ipad} class="text-brand hover:underline">iPad</a>
+          {' / '}
+          <a href={SERVICE_LINKS.tablet} class="text-brand hover:underline">แท็บเล็ต Android</a>
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+          ถ่ายรูปด้านหน้า ด้านหลัง ขอบเครื่อง หน้าจอ และตำหนิที่เห็นชัด พร้อมแจ้งรุ่น ความจุ สุขภาพแบตเตอรี่
+          สถานะ iCloud / Find My และอาการใช้งาน หากเป็นเครื่องที่เคยซ่อม เปลี่ยนจอ เปลี่ยนแบต
+          หรือมีรอยตกกระแทก ควรแจ้งตั้งแต่แรกเพื่อให้ประเมินได้ตรงขึ้น
+        </p>
+      </article>
+
+      <article>
+        <h3 class="text-lg font-semibold text-ink">
+          <a href={SERVICE_LINKS.macbook} class="text-brand hover:underline">MacBook</a>
+          {' / '}
+          <a href={SERVICE_LINKS.notebook} class="text-brand hover:underline">โน้ตบุ๊ก</a>
+          {' / '}
+          <a href={SERVICE_LINKS.pcGaming} class="text-brand hover:underline">PC Gaming</a>
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+          แจ้งรุ่น สเปกหลัก เช่น CPU, RAM, SSD, การ์ดจอ สภาพหน้าจอ คีย์บอร์ด แบตเตอรี่ อุปกรณ์ที่มี
+          และอาการผิดปกติถ้ามี เช่น เปิดไม่ติด ชาร์จไม่เข้า จอแตก เครื่องดับเอง หรือพัดลมเสียงดัง
+          ข้อมูลเหล่านี้ช่วยให้ร้านประเมินราคาได้ใกล้เคียงกับสภาพจริงมากขึ้น
+        </p>
+      </article>
+
+      <article>
+        <h3 class="text-lg font-semibold text-ink">
+          <a href={SERVICE_LINKS.camera} class="text-brand hover:underline">กล้อง</a>
+          {'และ'}
+          <a href={SERVICE_LINKS.cameraLens} class="text-brand hover:underline">เลนส์</a>
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+          แจ้งรุ่นกล้อง รุ่นเลนส์ อุปกรณ์ที่มี สภาพบอดี้ สภาพเลนส์ เชื้อรา ฝุ่น รอยขีดข่วน
+          และจำนวนชัตเตอร์ถ้าตรวจได้ หากมีกล่อง ใบรับประกัน แบตเตอรี่แท้ หรืออุปกรณ์เสริม
+          ควรถ่ายรูปส่งมาพร้อมกัน
+        </p>
+      </article>
+
+      <article>
+        <h3 class="text-lg font-semibold text-ink">
+          <a href={SERVICE_LINKS.smartwatch} class="text-brand hover:underline">Apple Watch</a>
+          {' / '}
+          <a href={SERVICE_LINKS.apple} class="text-brand hover:underline">AirPods</a>
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+          ควรนำออกจาก Apple ID หรือ Find My ก่อนนำมาขาย เพื่อให้ตรวจเช็กและรับซื้อได้ง่ายขึ้น
+          หากยังติดบัญชีเจ้าของเดิม อาจไม่สามารถรับซื้อได้จนกว่าจะปลดล็อกเรียบร้อย
+        </p>
+      </article>
+
+      <article>
+        <h3 class="text-lg font-semibold text-ink">กล่อง ใบเสร็จ และอุปกรณ์เสริม</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+          หากมีกล่อง ใบเสร็จ สายชาร์จ อะแดปเตอร์ กระเป๋า เคส เลนส์ อุปกรณ์เสริม หรือใบรับประกัน
+          ควรถ่ายรูปส่งมาพร้อมสินค้า เพราะอุปกรณ์ที่ครบอาจช่วยให้ประเมินราคาได้ดีกว่าสินค้าที่ไม่มีอุปกรณ์ประกอบ
+          ทั้งนี้ขึ้นอยู่กับรุ่น สภาพ และความต้องการของตลาด
+        </p>
+      </article>
+    </div>
+
+    <p class="mt-8 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
+      หมายเหตุ: สินค้าที่ติดล็อก ติดบัญชีเจ้าของเดิม ติด MDM มีที่มาผิดปกติ
+      หรือไม่สามารถยืนยันความเป็นเจ้าของได้ อาจไม่สามารถรับซื้อได้
+    </p>
+
+    <div class="mt-8 text-center">
+      <CTAButton label="ส่งรูปประเมินราคาเบื้องต้น LINE @buyhub" />
+    </div>
+  </div>
+</section>
