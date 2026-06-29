@@ -11,7 +11,7 @@ import { resolveModelPageContext } from '../../../lib/model-pages';
 export async function getStaticPaths() {
   const models = await getCollection('modelServices');
   return models
-    .filter((entry) => entry.data.parentService === 'iphone-ubon')
+    .filter((entry) => entry.data.parentService === 'macbook-ubon')
     .map((entry) => ({
       params: { slug: entry.data.slug },
       props: { entry },
@@ -20,18 +20,18 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, description, category, modelName, areaServed, faqs, parentService } = entry.data;
+const { title, description, category, modelName, areaServed } = entry.data;
 
 const { quickAnswer, acceptedConditions, rejectedConditions, displayFaqs } =
   resolveModelPageContext(entry.data);
 
-const canonical = `/บริการ/รับซื้อ-iphone/${entry.data.slug}/`;
-const ogImage = `${SITE.url}/images/services/smartphone-iphone-android.webp`;
+const canonical = `/บริการ/รับซื้อ-macbook-อุบล/${entry.data.slug}/`;
+const ogImage = `${SITE.url}/images/services/macbook-devices.webp`;
 
 const breadcrumbItems = [
   { label: 'หน้าแรก', href: '/' },
   { label: 'บริการรับซื้อ', href: servicesIndex() },
-  { label: 'รับซื้อ iPhone', href: servicePath('iphone-ubon') },
+  { label: 'รับซื้อ MacBook', href: servicePath('macbook-ubon') },
   { label: modelName },
 ];
 
@@ -64,7 +64,7 @@ const jsonLd = [
   frontmatter={{ title, description, category, faqs: displayFaqs }}
   canonical={canonical}
   ogImage={ogImage}
-  featuredImage="/images/services/smartphone-iphone-android.webp"
+  featuredImage="/images/services/macbook-ubon.webp"
   jsonLd={jsonLd}
   quickAnswer={quickAnswer}
 >
@@ -80,7 +80,7 @@ const jsonLd = [
     slot="after-content"
     accepted={acceptedConditions}
     rejected={rejectedConditions}
-    parentHref={servicePath('iphone-ubon')}
-    parentLabel="หน้าหลักบริการรับซื้อ iPhone อุบลราชธานี"
+    parentHref={servicePath('macbook-ubon')}
+    parentLabel="หน้าหลักบริการรับซื้อ MacBook อุบลราชธานี"
   />
 </ServiceLayout>

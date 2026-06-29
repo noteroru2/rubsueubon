@@ -2,7 +2,7 @@
 title: "รับซื้อ iPad อุบล ประเมินราคาตามสภาพจริง ส่งรูปทาง LINE ได้"
 description: "รับซื้อ iPad มือสองอุบลราชธานี iPad Pro, iPad Air, iPad Gen, iPad mini ประเมินราคาตามสภาพและราคาตลาด มีหน้าร้านในอุบล ส่งรูปทาง LINE ประเมินก่อนได้"
 subheadline: "ประเมินราคาตามสภาพจริงและราคาตลาด ส่งรูปทาง LINE ได้เลย มีหน้าร้านในอุบลราชธานี"
-slug: "ipad-ubon"
+slug: "รับซื้อ-ipad-อุบล"
 category: "tablet"
 navLabel: "รับซื้อ iPad"
 geoLinkLabel: "รับซื้อ iPad"

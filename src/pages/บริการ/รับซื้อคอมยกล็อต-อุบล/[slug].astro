@@ -11,7 +11,7 @@ import { resolveModelPageContext } from '../../../lib/model-pages';
 export async function getStaticPaths() {
   const models = await getCollection('modelServices');
   return models
-    .filter((entry) => entry.data.parentService === 'macbook-ubon')
+    .filter((entry) => entry.data.parentService === 'b2b-lot-ubon')
     .map((entry) => ({
       params: { slug: entry.data.slug },
       props: { entry },
@@ -25,13 +25,13 @@ const { title, description, category, modelName, areaServed } = entry.data;
 const { quickAnswer, acceptedConditions, rejectedConditions, displayFaqs } =
   resolveModelPageContext(entry.data);
 
-const canonical = `/บริการ/รับซื้อ-macbook/${entry.data.slug}/`;
-const ogImage = `${SITE.url}/images/services/macbook-devices.webp`;
+const canonical = `/บริการ/รับซื้อคอมยกล็อต-อุบล/${entry.data.slug}/`;
+const ogImage = `${SITE.url}/images/services/b2b-lot-pc.webp`;
 
 const breadcrumbItems = [
   { label: 'หน้าแรก', href: '/' },
   { label: 'บริการรับซื้อ', href: servicesIndex() },
-  { label: 'รับซื้อ MacBook', href: servicePath('macbook-ubon') },
+  { label: 'รับซื้อคอมบริษัท/ยกล็อต', href: servicePath('b2b-lot-ubon') },
   { label: modelName },
 ];
 
@@ -52,7 +52,7 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${SITE.url}${canonical}#service`,
-    name: `รับซื้อ ${modelName}`,
+    name: title,
     description,
     provider: { '@id': `${SITE.url}/#localbusiness` },
     areaServed: { '@type': 'AdministrativeArea', name: areaServed },
@@ -64,7 +64,7 @@ const jsonLd = [
   frontmatter={{ title, description, category, faqs: displayFaqs }}
   canonical={canonical}
   ogImage={ogImage}
-  featuredImage="/images/services/macbook-ubon.webp"
+  featuredImage="/images/services/pc-gaming-ubon.webp"
   jsonLd={jsonLd}
   quickAnswer={quickAnswer}
 >
@@ -80,7 +80,10 @@ const jsonLd = [
     slot="after-content"
     accepted={acceptedConditions}
     rejected={rejectedConditions}
-    parentHref={servicePath('macbook-ubon')}
-    parentLabel="หน้าหลักบริการรับซื้อ MacBook อุบลราชธานี"
+    parentHref={servicePath('b2b-lot-ubon')}
+    parentLabel="หน้าหลักบริการรับซื้อคอมบริษัท/ยกล็อต"
+    extraLinks={[
+      { href: servicePath('pc-corporate-ubon'), label: 'รับซื้อคอมบริษัท อุบล' },
+    ]}
   />
 </ServiceLayout>

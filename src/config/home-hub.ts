@@ -1,7 +1,7 @@
 import { servicePath } from './urls';
 
 export const MAIN_HUB_SERVICE_SLUGS = [
-  'รับซื้อโทรศัพท์-อุบล',
+  'รับซื้อมือถือ-อุบล',
   'รับซื้อโน้ตบุ๊ก-อุบล',
   'รับซื้อกล้อง-อุบล',
   'รับซื้อ-apple-อุบล',

@@ -41,11 +41,15 @@ export const serviceNav = [
     href: servicePath('speaker-ubon'),
   },
   {
-    label: 'รับซื้อโน้ตบุ๊ก / คอมพิวเตอร์',
+    label: 'รับซื้อโน้ตบุ๊ก',
     href: servicePath('notebook-ubon'),
   },
   {
-    label: 'รับซื้อ PC Gaming / คอมตั้งโต๊ะ',
+    label: 'รับซื้อคอมพิวเตอร์',
+    href: servicePath('pc-ubon'),
+  },
+  {
+    label: 'รับซื้อ PC Gaming / คอมประกอบ',
     href: servicePath('pc-gaming-ubon'),
   },
   {
@@ -61,7 +65,7 @@ export const serviceNav = [
     href: servicePath('camera-ubon'),
   },
   {
-    label: 'รับซื้อทีวี / จอคอม',
+    label: 'รับซื้อทีวี / เครื่องใช้ไฟฟ้า',
     href: servicePath('tv-electronics-ubon'),
   },
   {

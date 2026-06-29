@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/บริการ/รับซื้อโทรศัพท์-อุบล/:path*",
+      "destination": "/บริการ/รับซื้อมือถือ-อุบล/:path*",
+      "permanent": true
+    },
+    {
       "source": "/บริการ/b2b-lot-ubon",
       "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
       "permanent": true
@@ -16,6 +21,16 @@
       "permanent": true
     },
     {
+      "source": "/บริการ/รับซื้อคอมยกล็อต-อุบล/corporate-pc/:path*",
+      "destination": "/บริการ/รับซื้อคอมบริษัท-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/b2b-lot-ubon/:path*",
+      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/:path*",
+      "permanent": true
+    },
+    {
       "source": "/บริการ/camera-lens-ubon/:path*",
       "destination": "/บริการ/รับซื้อเลนส์กล้อง-อุบล/:path*",
       "permanent": true
@@ -23,6 +38,41 @@
     {
       "source": "/บริการ/รับซื้อแท็บเล็ต-ไอแพด-อุบล/:path*",
       "destination": "/บริการ/รับซื้อแท็บเล็ต-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อทีวี-จอคอม-อุบล/:path*",
+      "destination": "/บริการ/รับซื้อทีวี-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อกล้อง/:path*",
+      "destination": "/บริการ/รับซื้อกล้อง-อุบล/:path*",
       "permanent": true
     },
     {

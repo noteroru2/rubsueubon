@@ -17,7 +17,7 @@ export const PATHS = {
 /** slug ภาษาไทยของแต่ละบริการ (key = content id) */
 
 export const SERVICE_SLUGS: Record<string, string> = {
-  'smartphone-ubon': 'รับซื้อโทรศัพท์-อุบล',
+  'smartphone-ubon': 'รับซื้อมือถือ-อุบล',
 
   'notebook-ubon': 'รับซื้อโน้ตบุ๊ก-อุบล',
 
@@ -46,9 +46,9 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'sony-camera-ubon': 'รับซื้อ-กล้อง-sony-อุบล',
 
   'tablet-ubon': 'รับซื้อแท็บเล็ต-อุบล',
-  'ipad-ubon': 'ipad-ubon',
+  'ipad-ubon': 'รับซื้อ-ipad-อุบล',
 
-  'tv-electronics-ubon': 'รับซื้อทีวี-จอคอม-อุบล',
+  'tv-electronics-ubon': 'รับซื้อทีวี-อุบล',
 
   'gadget-ubon': 'รับซื้อสมาร์ทวอทช์-แก็ดเจ็ต-อุบล',
 
@@ -57,6 +57,30 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'camera-lens-ubon': 'รับซื้อเลนส์กล้อง-อุบล',
 
   'imac-ubon': 'รับซื้อ-imac-อุบล',
+
+  // New and missing service mappings
+  'pc-ubon': 'รับซื้อคอมพิวเตอร์-อุบล',
+  'gpu-ubon': 'รับซื้อการ์ดจอ-อุบล',
+  'monitor-ubon': 'รับซื้อจอคอม-อุบล',
+  'notebook-acer-ubon': 'รับซื้อโน้ตบุ๊ก-acer-อุบล',
+  'notebook-asus-ubon': 'รับซื้อโน้ตบุ๊ก-asus-อุบล',
+  'notebook-broken-ubon': 'รับซื้อโน้ตบุ๊กเสีย-อุบล',
+  'notebook-cracked-screen-ubon': 'รับซื้อโน้ตบุ๊กจอแตก-อุบล',
+  'notebook-dell-ubon': 'รับซื้อโน้ตบุ๊ก-dell-อุบล',
+  'notebook-gaming-ubon': 'รับซื้อโน้ตบุ๊ก-gaming-อุบล',
+  'notebook-hp-ubon': 'รับซื้อโน้ตบุ๊ก-hp-อุบล',
+  'notebook-lenovo-ubon': 'รับซื้อโน้ตบุ๊ก-lenovo-อุบล',
+  'notebook-no-power-ubon': 'รับซื้อโน้ตบุ๊กเปิดไม่ติด-อุบล',
+  'pc-corporate-ubon': 'รับซื้อคอมบริษัท-อุบล',
+  'pc-custom-build-ubon': 'รับซื้อคอมประกอบ-อุบล',
+  'pc-office-ubon': 'รับซื้อคอมสำนักงาน-อุบล',
+  'pc-parts-bundle-ubon': 'รับซื้อ-cpu-ram-ssd-อุบล',
+  'pc-school-ubon': 'รับซื้อคอมโรงเรียน-อุบล',
+  'camera-broken-ubon': 'รับซื้อกล้อง-เสีย-อุบล',
+  'camera-canon-ubon': 'รับซื้อกล้อง-canon-อุบล',
+  'camera-fujifilm-ubon': 'รับซื้อกล้อง-fujifilm-อุบล',
+  'camera-nikon-ubon': 'รับซื้อกล้อง-nikon-อุบล',
+  'camera-with-lens-ubon': 'รับซื้อกล้องพร้อมเลนส์-อุบล',
 };
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */
