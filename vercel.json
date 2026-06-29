@@ -1,83 +1,83 @@
 {
   "redirects": [
     {
-      "source": "/บริการ/รับซื้อโทรศัพท์-อุบล/:path*",
-      "destination": "/บริการ/รับซื้อมือถือ-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อเครื่องเสียง-อุบล/:path*",
-      "destination": "/บริการ/รับซื้อ-เครื่องเสียง-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/b2b-lot-ubon",
-      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
-      "source": "/บริการ/b2b-lot-ubon/",
-      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
-      "source": "/บริการ/b2b-lot-ubon/corporate-pc/:path*",
-      "destination": "/บริการ/รับซื้อคอมบริษัท-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon/corporate-pc/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อคอมยกล็อต-อุบล/corporate-pc/:path*",
-      "destination": "/บริการ/รับซื้อคอมบริษัท-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/corporate-pc/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/b2b-lot-ubon/:path*",
-      "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/camera-lens-ubon/:path*",
-      "destination": "/บริการ/รับซื้อเลนส์กล้อง-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/camera-lens-ubon/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%A5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อแท็บเล็ต-ไอแพด-อุบล/:path*",
-      "destination": "/บริการ/รับซื้อแท็บเล็ต-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B9%84%E0%B8%AD%E0%B9%81%E0%B8%9E%E0%B8%94-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อทีวี-จอคอม-อุบล/:path*",
-      "destination": "/บริการ/รับซื้อทีวี-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B8%A7%E0%B8%B5-%E0%B8%88%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B8%A7%E0%B8%B5-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/ipad-ubon",
-      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
-      "source": "/บริการ/ipad-ubon/",
-      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อ-ipad/:path*",
-      "destination": "/บริการ/รับซื้อ-ipad-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อ-iphone/:path*",
-      "destination": "/บริการ/รับซื้อ-iphone-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อ-macbook/:path*",
-      "destination": "/บริการ/รับซื้อ-macbook-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
-      "source": "/บริการ/รับซื้อกล้อง/:path*",
-      "destination": "/บริการ/รับซื้อกล้อง-อุบล/:path*",
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
@@ -86,53 +86,53 @@
       "permanent": true
     },
     {
-      "source": "/พื้นที่/เมืองอุบลราชธานี/:path*",
-      "destination": "/พื้นที่/mueang-ubon-ratchathani/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/mueang-ubon-ratchathani/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/วารินชำราบ/:path*",
-      "destination": "/พื้นที่/warin-chamrap/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%9A/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/warin-chamrap/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/เดชอุดม/:path*",
-      "destination": "/พื้นที่/det-udom/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/det-udom/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/พิบูลมังสาหาร/:path*",
-      "destination": "/พื้นที่/phibun-mangsahan/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9E%E0%B8%B4%E0%B8%9A%E0%B8%B9%E0%B8%A5%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/phibun-mangsahan/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/ตระการพืชผล/:path*",
-      "destination": "/พื้นที่/trakan-phuet-phon/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%9C%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/trakan-phuet-phon/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/ม่วงสามสิบ/:path*",
-      "destination": "/พื้นที่/muang-sam-sip/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B4%E0%B8%9A/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/muang-sam-sip/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/เขื่องใน/:path*",
-      "destination": "/พื้นที่/khueang-nai/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%99/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khueang-nai/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/โขงเจียม/:path*",
-      "destination": "/พื้นที่/khong-chiam/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%82%E0%B8%82%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B8%A1/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khong-chiam/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/น้ำยืน/:path*",
-      "destination": "/พื้นที่/nam-yuen/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A2%E0%B8%B7%E0%B8%99/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/nam-yuen/:path*",
       "permanent": true
     },
     {
-      "source": "/พื้นที่/บุณฑริก/:path*",
-      "destination": "/พื้นที่/buntharik/:path*",
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9A%E0%B8%B8%E0%B8%93%E0%B8%91%E0%B8%A3%E0%B8%B4%E0%B8%81/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/buntharik/:path*",
       "permanent": true
     }
   ]
