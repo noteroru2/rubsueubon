@@ -178,6 +178,7 @@ MacBook ที่ชาร์จมาแล้วเกิน 500 หรือ 
 
 ## หน้ารับซื้อ MacBook และ iMac ตามรุ่น
 
+- [รับซื้อ MacBook มหาวิทยาลัยอุบล](/บริการ/รับซื้อ-macbook-มหาวิทยาลัยอุบล/)
 - [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/)
 - [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/)
 - [รับซื้อ MacBook Air M3 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/)
