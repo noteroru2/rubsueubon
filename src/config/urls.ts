@@ -87,6 +87,11 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'gpu-rtx-ubon': 'รับซื้อการ์ดจอ-rtx-อุบล',
   'cpu-ubon': 'รับซื้อ-cpu-อุบล',
   'ram-ssd-ubon': 'รับซื้อ-ram-ssd-อุบล',
+  'lens-sony-fe-ubon': 'รับซื้อเลนส์-sony-fe-อุบล',
+  'lens-canon-rf-ef-ubon': 'รับซื้อเลนส์-canon-rf-ef-อุบล',
+  'console-ps5-ubon': 'รับซื้อ-ps5-อุบล',
+  'console-nintendo-switch-ubon': 'รับซื้อ-nintendo-switch-อุบล',
+  'speaker-jbl-marshall-ubon': 'รับซื้อลำโพง-jbl-marshall-อุบล',
 };
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */
