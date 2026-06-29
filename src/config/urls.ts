@@ -83,6 +83,10 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'camera-with-lens-ubon': 'รับซื้อกล้องพร้อมเลนส์-อุบล',
   'iphone-broken-screen-ubon': 'รับซื้อ-iphone-จอแตก-อุบล',
   'samsung-galaxy-s-ultra-ubon': 'รับซื้อ-samsung-galaxy-s-ultra-อุบล',
+  'notebook-msi-ubon': 'รับซื้อโน้ตบุ๊ก-msi-อุบล',
+  'gpu-rtx-ubon': 'รับซื้อการ์ดจอ-rtx-อุบล',
+  'cpu-ubon': 'รับซื้อ-cpu-อุบล',
+  'ram-ssd-ubon': 'รับซื้อ-ram-ssd-อุบล',
 };
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */
