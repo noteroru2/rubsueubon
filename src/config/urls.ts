@@ -81,6 +81,8 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'camera-fujifilm-ubon': 'รับซื้อกล้อง-fujifilm-อุบล',
   'camera-nikon-ubon': 'รับซื้อกล้อง-nikon-อุบล',
   'camera-with-lens-ubon': 'รับซื้อกล้องพร้อมเลนส์-อุบล',
+  'iphone-broken-screen-ubon': 'รับซื้อ-iphone-จอแตก-อุบล',
+  'samsung-galaxy-s-ultra-ubon': 'รับซื้อ-samsung-galaxy-s-ultra-อุบล',
 };
 
 /** slug ภาษาไทยของแต่ละอำเภอ (key = district id) */

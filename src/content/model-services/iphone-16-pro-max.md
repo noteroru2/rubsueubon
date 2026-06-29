@@ -103,4 +103,4 @@ iPhone 16 Pro Max ที่ยังมีประกัน Apple หรือ 
 - [รับซื้อ iPhone 15 Pro Max อุบล](/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/)
 - [รับซื้อ iPhone 14 Pro Max อุบล](/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/)
 - [รับซื้อ MacBook อุบล](/บริการ/รับซื้อ-macbook-อุบล/)
-- [เตรียม iPhone ก่อนขาย ควรทำอะไรบ้าง](/prepare-iphone-for-sale/)
+- [เตรียม iPhone ก่อนขาย ควรทำอะไรบ้าง](/บทความ/prepare-iphone-for-sale/)

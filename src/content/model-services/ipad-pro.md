@@ -111,6 +111,6 @@ iPad Pro 11 นิ้ว (M4) และ iPad Pro 12.9 / 13 นิ้ว (M1, M2,
 
 - [รับซื้อ iPad อุบลราชธานี](/บริการ/รับซื้อ-ipad-อุบล/)
 - [รับซื้อ iPad Air อุบล](/บริการ/รับซื้อ-ipad-อุบล/ipad-air/)
-- [รับซื้อ iPad มาตรฐาน อุบล](/บริการ/รับซื้อ-ipad-อุบล/ipad-standard/)
+- [รับซื้อ iPad Gen 9 Gen 10 อุบล](/บริการ/รับซื้อ-ipad-อุบล/ipad-gen-9-10/)
 - [รับซื้อ MacBook อุบล](/บริการ/รับซื้อ-macbook-อุบล/)
-- [เช็ค Battery Health iPad ก่อนขาย](/check-ipad-battery/)
+- [เช็ค Battery Health iPad ก่อนขาย](/บทความ/check-ipad-battery/)
