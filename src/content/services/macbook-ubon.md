@@ -178,13 +178,13 @@ MacBook ที่ชาร์จมาแล้วเกิน 500 หรือ 
 
 ## หน้ารับซื้อ MacBook และ iMac ตามรุ่น
 
-- [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook/macbook-air-m1/)
-- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook/macbook-air-m2/)
-- [รับซื้อ MacBook Air M3 อุบล](/บริการ/รับซื้อ-macbook/macbook-air-m3/)
-- [รับซื้อ MacBook Pro M1 อุบล](/บริการ/รับซื้อ-macbook/macbook-pro-m1/)
-- [รับซื้อ MacBook Pro M2 อุบล](/บริการ/รับซื้อ-macbook/macbook-pro-m2/)
-- [รับซื้อ MacBook Pro M3 อุบล](/บริการ/รับซื้อ-macbook/macbook-pro-m3/)
-- [รับซื้อ MacBook Intel อุบล](/บริการ/รับซื้อ-macbook/macbook-intel/)
+- [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/)
+- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/)
+- [รับซื้อ MacBook Air M3 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/)
+- [รับซื้อ MacBook Pro M1 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/)
+- [รับซื้อ MacBook Pro M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/)
+- [รับซื้อ MacBook Pro M3 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/)
+- [รับซื้อ MacBook Intel อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/)
 - [รับซื้อ iMac อุบล](/บริการ/รับซื้อ-imac-อุบล/)
 - [รับซื้อโน้ตบุ๊ก อุบล](/บริการ/รับซื้อโน้ตบุ๊ก-อุบล/)
 

@@ -22,4 +22,4 @@ faqs:
 ## ลิงก์ที่เกี่ยวข้อง
 
 - [รับซื้อ MacBook อุบล](/บริการ/รับซื้อ-macbook-อุบล/)
-- [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook/macbook-air-m1/)
+- [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/)

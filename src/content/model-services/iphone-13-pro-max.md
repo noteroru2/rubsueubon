@@ -24,4 +24,4 @@ faqs:
 ## ลิงก์ที่เกี่ยวข้อง
 
 - [รับซื้อ iPhone อุบล](/บริการ/รับซื้อ-iphone-อุบล/)
-- [รับซื้อ iPhone 15 Pro Max อุบล](/บริการ/รับซื้อ-iphone/iphone-15-pro-max/)
+- [รับซื้อ iPhone 15 Pro Max อุบล](/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/)
