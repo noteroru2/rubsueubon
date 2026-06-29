@@ -14,22 +14,22 @@ export const MAIN_HUB_SERVICE_SLUGS = [
 export const popularProducts = [
   {
     label: 'iPhone 15 Pro Max',
-    href: '/บริการ/รับซื้อ-iphone/iphone-15-pro-max/',
+    href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/',
     image: '/images/services/smartphone-iphone-android.webp',
   },
   {
     label: 'iPhone 16 Pro Max',
-    href: '/บริการ/รับซื้อ-iphone/iphone-16-pro-max/',
+    href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/',
     image: '/images/services/smartphone-iphone-android.webp',
   },
   {
     label: 'MacBook Air M1',
-    href: '/บริการ/รับซื้อ-macbook/macbook-air-m1/',
+    href: '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/',
     image: '/images/services/apple-devices-macbook-imac.webp',
   },
   {
     label: 'iPad Pro',
-    href: '/บริการ/รับซื้อ-ipad/ipad-pro/',
+    href: '/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/',
     image: '/images/services/ipad-tablet.webp',
   },
   {
@@ -61,9 +61,9 @@ export const serviceClusters = [
       { label: 'รับซื้อ iPhone อุบล', href: servicePath('iphone-ubon') },
       { label: 'รับซื้อ Samsung อุบล', href: servicePath('samsung-ubon') },
       { label: 'รับซื้อมือถือ Android อุบล', href: servicePath('smartphone-ubon') },
-      { label: 'รับซื้อ iPhone 16 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone/iphone-16-pro-max/' },
-      { label: 'รับซื้อ iPhone 15 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone/iphone-15-pro-max/' },
-      { label: 'รับซื้อ iPhone 14 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone/iphone-14-pro-max/' },
+      { label: 'รับซื้อ iPhone 16 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/' },
+      { label: 'รับซื้อ iPhone 15 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/' },
+      { label: 'รับซื้อ iPhone 14 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/' },
     ],
   },
   {
@@ -85,9 +85,9 @@ export const serviceClusters = [
       { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
       { label: 'รับซื้อ iPad อุบล', href: servicePath('ipad-ubon') },
       { label: 'รับซื้อ Apple Watch อุบล', href: servicePath('smartwatch-ubon') },
-      { label: 'รับซื้อ iPad Pro อุบล', href: '/บริการ/รับซื้อ-ipad/ipad-pro/' },
-      { label: 'รับซื้อ MacBook Air M1 อุบล', href: '/บริการ/รับซื้อ-macbook/macbook-air-m1/' },
-      { label: 'รับซื้อ MacBook Air M3 อุบล', href: '/บริการ/รับซื้อ-macbook/macbook-air-m3/' },
+      { label: 'รับซื้อ iPad Pro อุบล', href: '/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/' },
+      { label: 'รับซื้อ MacBook Air M1 อุบล', href: '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/' },
+      { label: 'รับซื้อ MacBook Air M3 อุบล', href: '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/' },
       { label: 'รับซื้อ iMac อุบล', href: servicePath('imac-ubon') },
     ],
   },

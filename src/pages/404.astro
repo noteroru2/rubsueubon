@@ -3,11 +3,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE, getLineOALink } from '../config/site';
 
 const pageTitle = `ไม่พบหน้าที่ต้องการ (404) | ${SITE.name}`;
-const description = 'ขออภัย ไม่พบหน้าที่คุณกำลังค้นหา อาจถูกลบไปแล้วหรือพิมพ์ URL ผิดพลาด';
+const description =
+  'ขออภัย ไม่พบหน้าที่คุณกำลังค้นหา อาจถูกลบ ย้ายที่อยู่ หรือพิมพ์ URL ผิดพลาด';
 const lineLink = getLineOALink();
+const canonical = '/404.html';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: pageTitle,
+    description,
+    url: `${SITE.url}${canonical}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE.name,
+      url: SITE.url,
+    },
+  },
+];
 ---
 
-<BaseLayout title={pageTitle} description={description} noindex={true} showMobileCTA>
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  noindex={true}
+  showMobileCTA
+>
   <section
     class="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-ink px-4 py-20 text-center text-white"
   >
@@ -20,7 +43,8 @@ const lineLink = getLineOALink();
       <p class="mb-4 text-sm font-semibold tracking-widest text-white/70 uppercase">Error 404</p>
       <h1 class="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">ไม่พบหน้าที่ต้องการ</h1>
       <p class="mb-10 text-lg leading-relaxed text-white/80 sm:text-xl">
-        ขออภัยค่ะ หน้าที่คุณกำลังค้นหาอาจถูกลบ ย้ายที่อยู่ หรือไม่มีอยู่บนระบบของเรา<br class="hidden sm:block" />
+        ขออภัยค่ะ หน้าที่คุณกำลังค้นหาอาจถูกลบ ย้ายที่อยู่ หรือไม่มีอยู่บนระบบของเรา
+        <br class="hidden sm:block" />
         หากต้องการประเมินราคาสินค้าไอที สามารถติดต่อเราทาง LINE ได้เลยค่ะ
       </p>
 

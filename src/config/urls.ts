@@ -64,7 +64,7 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'monitor-ubon': 'รับซื้อจอคอม-อุบล',
   'notebook-acer-ubon': 'รับซื้อโน้ตบุ๊ก-acer-อุบล',
   'notebook-asus-ubon': 'รับซื้อโน้ตบุ๊ก-asus-อุบล',
-  'notebook-broken-ubon': 'รับซื้อโน้ตบุ๊กเสีย-อุบล',
+  'notebook-broken-ubon': 'notebook-broken-ubon',
   'notebook-cracked-screen-ubon': 'รับซื้อโน้ตบุ๊กจอแตก-อุบล',
   'notebook-dell-ubon': 'รับซื้อโน้ตบุ๊ก-dell-อุบล',
   'notebook-gaming-ubon': 'รับซื้อโน้ตบุ๊ก-gaming-อุบล',
