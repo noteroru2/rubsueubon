@@ -6,6 +6,11 @@
       "permanent": true
     },
     {
+      "source": "/บริการ/รับซื้อเครื่องเสียง-อุบล/:path*",
+      "destination": "/บริการ/รับซื้อ-เครื่องเสียง-อุบล/:path*",
+      "permanent": true
+    },
+    {
       "source": "/บริการ/b2b-lot-ubon",
       "destination": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
       "permanent": true
