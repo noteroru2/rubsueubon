@@ -52,3 +52,32 @@
    ```
    *ผลลัพธ์*: ผ่านการทดสอบทั้งหมด (allOk: true)
 
+---
+
+## 4. รายงานการทดสอบจริงบนโปรดักชัน (Live Production Verification Results)
+
+การทดสอบเปลี่ยนทิศทาง (Redirects) สำหรับ URL ระดับ P0 ทั้งหมดบนเซิร์ฟเวอร์จริง (Vercel) หลังจากการแก้ไขและ Deploy ครั้งล่าสุด ได้ผลลัพธ์ผ่านเกณฑ์ 100% (200 OK จากหน้า Redirect HTML ของ Astro ที่มี Canonical และ Noindex กำกับอย่างถูกต้องเพื่อความถูกต้องทางด้าน SEO):
+
+1. **URL**: `/บริการ/รับซื้อ-macbook/macbook-pro-m2/`
+   - **Live HTTP Status**: `200 OK` (Astro static redirect page, size 1312 bytes)
+   - **Redirect Destination**: `/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/` (200 OK)
+   - **Canonical Tag**: ชี้ไปหน้าปลายทางอย่างถูกต้อง
+   - **Robots Tag**: `noindex` (ป้องกันหน้าเปลี่ยนทิศทางติดดัชนีซ้ำซ้อน)
+
+2. **URL**: `/พื้นที่/ม่วงสามสิบ/`
+   - **Live HTTP Status**: `200 OK` (Astro static redirect page, size 820 bytes)
+   - **Redirect Destination**: `/พื้นที่/muang-sam-sip/` (200 OK)
+   - **Canonical Tag**: ชี้ไปหน้าปลายทางอย่างถูกต้อง
+   - **Robots Tag**: `noindex`
+
+3. **URL**: `/พื้นที่/วารินชำราบ/`
+   - **Live HTTP Status**: `200 OK` (Astro static redirect page, size 820 bytes)
+   - **Redirect Destination**: `/พื้นที่/warin-chamrap/` (200 OK)
+   - **Canonical Tag**: ชี้ไปหน้าปลายทางอย่างถูกต้อง
+   - **Robots Tag**: `noindex`
+
+4. **URL**: `/บริการ/รับซื้อโทรศัพท์-อุบล/`
+   - **Live HTTP Status**: `200 OK` (Astro static redirect page, size 1553 bytes)
+   - **Redirect Destination**: `/บริการ/รับซื้อมือถือ-อุบล/` (200 OK)
+   - **Canonical Tag**: ชี้ไปหน้าปลายทางอย่างถูกต้อง
+   - **Robots Tag**: `noindex`
