@@ -12,14 +12,23 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.รับซื้ออุบล.com"
-        }
-      ],
-      "destination": "https://xn--c3c3ab7an0ca2a0dm8p.com/:path*",
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m2/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m2/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ม่วงสามสิบ/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/muang-sam-sip/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/วารินชำราบ/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/warin-chamrap/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อโทรศัพท์-อุบล/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
