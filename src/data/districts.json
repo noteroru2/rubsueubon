@@ -15,7 +15,7 @@
   },
   {
     "id": "si-mueang-mai",
-    "slug": "ศรีเมืองใหม่",
+    "slug": "si-mueang-mai",
     "name": "ศรีเมืองใหม่",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -25,7 +25,7 @@
       "author": "คุณลูกค้า",
       "location": "ศรีเมืองใหม่"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "khong-chiam",
@@ -57,7 +57,7 @@
   },
   {
     "id": "khemarat",
-    "slug": "เขมราฐ",
+    "slug": "khemarat",
     "name": "เขมราฐ",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -67,7 +67,7 @@
       "author": "คุณลูกค้า",
       "location": "เขมราฐ"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "det-udom",
@@ -85,7 +85,7 @@
   },
   {
     "id": "na-chaluai",
-    "slug": "นาจะหลวย",
+    "slug": "na-chaluai",
     "name": "นาจะหลวย",
     "latitude": 14.86,
     "longitude": 105.55,
@@ -95,7 +95,7 @@
       "author": "คุณโอ๋",
       "location": "นาจะหลวง"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "nam-yuen",
@@ -141,7 +141,7 @@
   },
   {
     "id": "kut-khaopun",
-    "slug": "กุดข้าวปุ้น",
+    "slug": "kut-khaopun",
     "name": "กุดข้าวปุ้น",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -151,7 +151,7 @@
       "author": "คุณลูกค้า",
       "location": "กุดข้าวปุ้น"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "muang-sam-sip",
@@ -197,7 +197,7 @@
   },
   {
     "id": "tan-sum",
-    "slug": "ตาลสุม",
+    "slug": "tan-sum",
     "name": "ตาลสุม",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -207,11 +207,11 @@
       "author": "คุณลูกค้า",
       "location": "ตาลสุม"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "pho-sai",
-    "slug": "โพธิ์ไทร",
+    "slug": "pho-sai",
     "name": "โพธิ์ไทร",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -221,11 +221,11 @@
       "author": "คุณลูกค้า",
       "location": "โพธิ์ไทร"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "samrong",
-    "slug": "สำโรง",
+    "slug": "samrong",
     "name": "สำโรง",
     "latitude": 15.27,
     "longitude": 104.7833,
@@ -235,11 +235,11 @@
       "author": "คุณเจ",
       "location": "สำโรง"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "don-mot-daeng",
-    "slug": "ดอนมดแดง",
+    "slug": "don-mot-daeng",
     "name": "ดอนมดแดง",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -249,11 +249,11 @@
       "author": "คุณลูกค้า",
       "location": "ดอนมดแดง"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "sirindhorn",
-    "slug": "สิรินธร",
+    "slug": "sirindhorn",
     "name": "สิรินธร",
     "latitude": 15.22,
     "longitude": 104.1,
@@ -263,11 +263,11 @@
       "author": "คุณมิ้นท์",
       "location": "สิรินธร"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "thung-si-udom",
-    "slug": "ทุ่งศรีอุดม",
+    "slug": "thung-si-udom",
     "name": "ทุ่งศรีอุดม",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -277,11 +277,11 @@
       "author": "คุณลูกค้า",
       "location": "ทุ่งศรีอุดม"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "na-tan",
-    "slug": "นาตาล",
+    "slug": "na-tan",
     "name": "นาตาล",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -291,11 +291,11 @@
       "author": "คุณลูกค้า",
       "location": "นาตาล"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "lao-suea-kok",
-    "slug": "เหล่าเสือโก้ก",
+    "slug": "lao-suea-kok",
     "name": "เหล่าเสือโก้ก",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -305,11 +305,11 @@
       "author": "คุณลูกค้า",
       "location": "เหล่าเสือโก้ก"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "sawang-wirawong",
-    "slug": "สว่างวีระวงศ์",
+    "slug": "sawang-wirawong",
     "name": "สว่างวีระวงศ์",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -319,11 +319,11 @@
       "author": "คุณลูกค้า",
       "location": "สว่างวีระวงศ์"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "nam-khun",
-    "slug": "น้ำขุ่น",
+    "slug": "nam-khun",
     "name": "น้ำขุ่น",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -333,11 +333,11 @@
       "author": "คุณลูกค้า",
       "location": "น้ำขุ่น"
     },
-    "active": false
+    "active": true
   },
   {
     "id": "na-yia",
-    "slug": "นาเยีย",
+    "slug": "na-yia",
     "name": "นาเยีย",
     "latitude": 15.228685,
     "longitude": 104.856423,
@@ -347,6 +347,6 @@
       "author": "คุณลูกค้า",
       "location": "นาเยีย"
     },
-    "active": false
+    "active": true
   }
 ]
