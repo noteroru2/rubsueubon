@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import AnswerBox from '../../components/AnswerBox.astro';
 import LocalAuthorityBar from '../../components/LocalAuthorityBar.astro';
+import WhatToSendForEstimate from '../../components/WhatToSendForEstimate.astro';
 import { SITE } from '../../config/site';
 import { getDistrictBySlug } from '../../lib/districts';
 import { areaPath, areasIndex, servicePath } from '../../config/urls';
@@ -160,6 +161,8 @@ if (faqs.length > 0) {
       >
         <Content />
       </article>
+
+      <WhatToSendForEstimate />
     </div>
   </section>
 
