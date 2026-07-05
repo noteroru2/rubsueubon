@@ -83,8 +83,8 @@ relatedServices:
 
 ## กลุ่มสินค้าไอทีหลักที่เรารับซื้อ
 
-1. **iPad**: ทุกรุ่นยอดนิยม เช่น iPad Pro (ชิป M-series), iPad Air, iPad mini และ iPad Gen สำหรับการจดโน้ตในตึกเรียน
-2. **MacBook**: MacBook Air, MacBook Pro (ชิป Intel และ M-series) ที่นักศึกษาใช้เรียนออกแบบ เขียนโปรแกรม หรือทำงานเอกสาร
+1. **iPad**: ทุกรุ่นยอดนิยม เช่น iPad Pro (ชิป M-series) (สามารถดู [รีวิวเคสรับซื้อ iPad Pro ม.อุบล](/ตัวอย่างเคสประเมิน/case-ipad-pro-ubon-university/)), iPad Air, iPad mini และ iPad Gen สำหรับการจดโน้ตในตึกเรียน
+2. **MacBook**: MacBook Air (สามารถดู [รีวิวเคสรับซื้อ MacBook Air ม.อุบล](/ตัวอย่างเคสประเมิน/case-macbook-air-m2-ubon-university/)), MacBook Pro (ชิป Intel และ M-series) ที่นักศึกษาใช้เรียนออกแบบ เขียนโปรแกรม หรือทำงานเอกสาร
 3. **iPhone**: สมาร์ทโฟน iPhone ทุกรุ่นยอดนิยม ทั้งสภาพสวยและสภาพมีรอยการใช้งานทั่วไป
 4. **Notebook**: โน้ตบุ๊กแบรนด์ดัง เช่น ASUS, Acer, Dell, Lenovo, HP, MSI ทั้งรุ่นสเปกทำงานและสเปกเกมมิ่ง
 5. **Android Tablet**: แท็บเล็ตระบบแอนดรอยด์ เช่น Samsung Galaxy Tab, Xiaomi Pad สำหรับเป็นทางเลือกเรียนออนไลน์
