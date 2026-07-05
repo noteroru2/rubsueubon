@@ -3,6 +3,39 @@ import { SITE, getLineOALink } from '../config/site';
 
 const lineUrl = getLineOALink();
 const phoneClean = SITE.phone.replace(/[^0-9]/g, '');
+
+const pathname = Astro.url.pathname;
+let pageType = 'home';
+let productGroup = 'default';
+
+if (pathname === '/') {
+  pageType = 'home';
+} else if (pathname.startsWith('/บริการ/')) {
+  pageType = 'service';
+  if (pathname.includes('iphone') || pathname.includes('smartphone') || pathname.includes('มือถือ')) {
+    productGroup = 'phone';
+  } else if (pathname.includes('ipad') || pathname.includes('แท็บเล็ต') || pathname.includes('tablet')) {
+    productGroup = 'ipad';
+  } else if (pathname.includes('macbook')) {
+    productGroup = 'macbook';
+  } else if (pathname.includes('notebook') || pathname.includes('โน้ตบุ๊ก') || pathname.includes('โน้ตบุ๊ค') || pathname.includes('laptop')) {
+    productGroup = 'notebook';
+  } else if (pathname.includes('camera') || pathname.includes('กล้อง') || pathname.includes('lens') || pathname.includes('เลนส์')) {
+    productGroup = 'camera';
+  } else if (pathname.includes('parts') || pathname.includes('อุปกรณ์คอม') || pathname.includes('gpu') || pathname.includes('cpu')) {
+    productGroup = 'pc_parts';
+  } else if (pathname.includes('console') || pathname.includes('เครื่องเกม') || pathname.includes('ps5') || pathname.includes('switch')) {
+    productGroup = 'game_console';
+  } else if (pathname.includes('b2b') || pathname.includes('lot') || pathname.includes('คอมบริษัท')) {
+    productGroup = 'b2b';
+  }
+} else if (pathname.startsWith('/พื้นที่/')) {
+  pageType = 'area';
+} else if (pathname.startsWith('/บทความ/')) {
+  pageType = 'blog';
+} else if (pathname.startsWith('/ตัวอย่างเคสประเมิน/')) {
+  pageType = 'case';
+}
 ---
 
 <div
@@ -15,6 +48,11 @@ const phoneClean = SITE.phone.replace(/[^0-9]/g, '');
       href={`tel:${phoneClean}`}
       class="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-line bg-surface py-3 text-sm font-bold text-ink shadow-sm transition hover:bg-surface-alt active:scale-[0.98] min-h-[48px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-line"
       aria-label="โทรสอบถาม"
+      data-track-cta="phone_cta_click"
+      data-cta-location="sticky"
+      data-product-group={productGroup}
+      data-page-type={pageType}
+      data-cta-type="phone"
     >
       <svg
         class="h-4.5 w-4.5 shrink-0 text-muted"
@@ -36,6 +74,11 @@ const phoneClean = SITE.phone.replace(/[^0-9]/g, '');
       rel="noopener noreferrer"
       class="flex flex-[2] items-center justify-center gap-1.5 rounded-full bg-[#00B900] py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#009900] active:scale-[0.98] min-h-[48px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00B900]"
       aria-label="ส่งรูปประเมินทาง LINE"
+      data-track-cta="line_cta_click"
+      data-cta-location="sticky"
+      data-product-group={productGroup}
+      data-page-type={pageType}
+      data-cta-type="line"
     >
       <svg class="h-4.5 w-4.5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path

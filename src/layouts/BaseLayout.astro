@@ -62,5 +62,48 @@ const {
     </main>
     <Footer />
     {showMobileCTA ? <MobileStickyCTA /> : <slot name="mobile-cta" />}
+
+    <script is:inline>
+      document.addEventListener('click', function(event) {
+        const cta = event.target.closest('[data-track-cta]');
+        if (!cta) return;
+
+        const eventName = cta.getAttribute('data-track-cta');
+        const ctaLocation = cta.getAttribute('data-cta-location') || '';
+        const productGroup = cta.getAttribute('data-product-group') || '';
+        const pageType = cta.getAttribute('data-page-type') || '';
+        const ctaType = cta.getAttribute('data-cta-type') || '';
+        const pagePath = window.location.pathname;
+
+        const trackingData = {
+          page_path: pagePath,
+          cta_location: ctaLocation,
+          product_group: productGroup,
+          page_type: pageType,
+          cta_type: ctaType
+        };
+
+        // GTM dataLayer
+        if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+          try {
+            window.dataLayer.push({
+              event: eventName,
+              ...trackingData
+            });
+          } catch (e) {
+            console.warn('dataLayer push failed:', e);
+          }
+        }
+
+        // GA4 gtag
+        if (typeof window.gtag === 'function') {
+          try {
+            window.gtag('event', eventName, trackingData);
+          } catch (e) {
+            console.warn('gtag call failed:', e);
+          }
+        }
+      });
+    </script>
   </body>
 </html>

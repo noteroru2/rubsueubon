@@ -6,9 +6,10 @@ interface Props {
   label: string;
   variant?: 'primary' | 'line';
   class?: string;
+  [key: string]: any;
 }
 
-const { href = getLineOALink(), label, variant = 'line', class: className = '' } = Astro.props;
+const { href = getLineOALink(), label, variant = 'line', class: className = '', ...rest } = Astro.props;
 
 const base =
   'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-bold shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2';
@@ -19,7 +20,7 @@ const variants = {
 };
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer" class={`${variants[variant]} ${className}`}>
+<a href={href} target="_blank" rel="noopener noreferrer" class={`${variants[variant]} ${className}`} {...rest}>
   {
     variant === 'line' && (
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
