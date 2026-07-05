@@ -47,6 +47,12 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'iphone-bad-battery-ubon': 'รับซื้อ-iphone-แบตเสื่อม-อุบล',
 
   'samsung-ubon': 'รับซื้อ-samsung-อุบล',
+  'oppo-ubon': 'รับซื้อ-oppo-อุบล',
+  'vivo-ubon': 'รับซื้อ-vivo-อุบล',
+  'xiaomi-ubon': 'รับซื้อ-xiaomi-อุบล',
+  'redmi-ubon': 'รับซื้อ-redmi-อุบล',
+  'poco-ubon': 'รับซื้อ-poco-อุบล',
+  'realme-ubon': 'รับซื้อ-realme-อุบล',
 
   'macbook-ubon': 'รับซื้อ-macbook-อุบล',
   'macbook-air-m2-ubon': 'รับซื้อ-macbook-air-m2-อุบล',
