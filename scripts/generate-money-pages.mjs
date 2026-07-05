@@ -377,16 +377,16 @@ const pcVariants = [
   },
   {
     file: 'pc-parts-bundle-ubon.md',
-    slug: 'รับซื้อ-cpu-ram-ssd-อุบล',
-    navLabel: 'รับซื้อ CPU RAM SSD',
-    title: 'รับซื้อ CPU RAM SSD อุบลราชธานี อะไหล่คอมมือสอง',
-    description: 'รับซื้อ CPU RAM SSD อะไหล่คอม ในอุบล ประเมินตามรุ่นและสภาพ ส่งรูปและสเปกทาง LINE',
-    keywords: ['รับซื้อ CPU อุบล', 'รับซื้อ RAM อุบล', 'รับซื้อ SSD อุบล'],
+    slug: 'รับซื้ออุปกรณ์คอม-อุบล',
+    navLabel: 'รับซื้ออุปกรณ์คอม',
+    title: 'รับซื้ออุปกรณ์คอม อุบล อะไหล่ เมนบอร์ด พาวเวอร์ซัพพลาย เคส พัดลมระบายความร้อน',
+    description: 'รับซื้ออุปกรณ์คอมพิวเตอร์และอะไหล่ไอทีในอุบลราชธานี รับประเมินเมนบอร์ด พาวเวอร์ซัพพลาย เคส ระบบระบายความร้อน และสำรองไฟ UPS ทาง LINE @buyhub',
+    keywords: ['รับซื้ออุปกรณ์คอม อุบล', 'ขายอุปกรณ์คอมมือสอง อุบล'],
     category: 'computer',
     image: '/images/services/pc-parts-gpu-cpu.webp',
     parentSlug: 'pc-parts-ubon',
     parentLabel: 'รับซื้ออะไหล่คอม',
-    accepted: ['CPU Intel/AMD', 'RAM DDR4/DDR5', 'SSD NVMe/SATA'],
+    accepted: ['Motherboards/PSUs', 'Cases/Cooling', 'UPS/Accessories'],
   },
 ];
 
