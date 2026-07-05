@@ -71,6 +71,7 @@ const areas = defineCollection({
     description: z.string(),
     slug: z.string(),
     category: z.string(),
+    areaType: z.enum(['district', 'landmark']).default('district'),
     areaName: z.string(),
     areaServed: z.string(),
     heroTitle: z.string(),

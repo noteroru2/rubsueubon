@@ -19,10 +19,16 @@ import {
 
 export async function getStaticPaths() {
   const areas = await getCollection('areas');
-  return areas.map((area) => ({
+  const paths = areas.map((area) => ({
     params: { district: area.data.slug },
     props: { area },
   }));
+
+  if (!paths.some((path) => path.params.district === 'ubon-university')) {
+    throw new Error('Missing required special area route: /พื้นที่/ubon-university/');
+  }
+
+  return paths;
 }
 
 const { area } = Astro.props;

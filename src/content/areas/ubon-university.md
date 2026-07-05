@@ -3,6 +3,7 @@ title: "รับซื้อ iPad MacBook Notebook iPhone มหาวิทย
 description: "ร้านรับซื้อ iPad, MacBook, iPhone, Notebook และสินค้าไอทีรอบมหาวิทยาลัยอุบลราชธานี (ม.อุบล) ส่งรูปประเมินราคาเบื้องต้นผ่าน LINE นัดตรวจเครื่องตามเงื่อนไขที่ตกลง"
 slug: "ubon-university"
 category: "area"
+areaType: "landmark"
 areaName: "มหาวิทยาลัยอุบลราชธานี"
 areaServed: "อุบลราชธานี"
 heroTitle: "รับซื้อ iPad MacBook Notebook iPhone มหาวิทยาลัยอุบลราชธานี"

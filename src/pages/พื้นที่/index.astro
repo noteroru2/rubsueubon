@@ -8,6 +8,9 @@ import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 import { districts } from '../../lib/districts';
 
 const areas = await getCollection('areas');
+const specialAreas = areas
+  .filter((area) => area.data.areaType === 'landmark')
+  .sort((a, b) => a.data.areaName.localeCompare(b.data.areaName, 'th'));
 
 const pageTitle = 'พื้นที่ให้บริการรับซื้อไอที อุบลราชธานี | รับซื้ออุบล.com';
 const pageDescription =
@@ -93,20 +96,24 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
       <h2 class="mt-12 text-xl font-bold text-ink sm:text-2xl">พื้นที่พิเศษและแลนด์มาร์กสำคัญ</h2>
       <p class="mt-3 text-muted">บริการรับซื้อและนัดรับด่วนบริเวณจุดสำคัญและมหาวิทยาลัยในอุบลราชธานี</p>
       <ul class="mt-6 grid gap-4 sm:grid-cols-2">
-        <li>
-          <a
-            href="/พื้นที่/ubon-university/"
-            class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
-          >
-            <span>
-              <span class="block font-bold text-ink group-hover:text-brand">มหาวิทยาลัยอุบลราชธานี (ม.อุบล)</span>
-              <span class="mt-0.5 block text-sm text-muted">รับซื้อ iPad, MacBook, ไอทีนักศึกษา</span>
-            </span>
-            <span class="text-brand" aria-hidden="true">
-              →
-            </span>
-          </a>
-        </li>
+        {
+          specialAreas.map((area) => (
+            <li>
+              <a
+                href={areaPath(area.data.slug)}
+                class="group flex items-center justify-between rounded-2xl border border-line bg-surface px-5 py-4 shadow-sm transition hover:border-brand/30 hover:bg-brand/5"
+              >
+                <span>
+                  <span class="block font-bold text-ink group-hover:text-brand">{area.data.areaName}</span>
+                  <span class="mt-0.5 block text-sm text-muted">{area.data.heroTitle}</span>
+                </span>
+                <span class="text-brand" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </li>
+          ))
+        }
       </ul>
 
       <div class="mt-10 text-center">
