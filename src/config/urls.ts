@@ -68,6 +68,13 @@ export const SERVICE_SLUGS: Record<string, string> = {
 
   'tablet-ubon': 'รับซื้อแท็บเล็ต-อุบล',
   'ipad-ubon': 'รับซื้อ-ipad-อุบล',
+  'ipad-pro-ubon': 'รับซื้อ-ipad-pro-อุบล',
+  'ipad-air-ubon': 'รับซื้อ-ipad-air-อุบล',
+  'ipad-mini-ubon': 'รับซื้อ-ipad-mini-อุบล',
+  'ipad-gen-9-ubon': 'รับซื้อ-ipad-gen-9-อุบล',
+  'ipad-gen-10-ubon': 'รับซื้อ-ipad-gen-10-อุบล',
+  'apple-pencil-ubon': 'รับซื้อ-apple-pencil-อุบล',
+  'magic-keyboard-ipad-ubon': 'รับซื้อ-magic-keyboard-ipad-อุบล',
 
   'tv-electronics-ubon': 'รับซื้อทีวี-อุบล',
 

@@ -31,6 +31,12 @@ faqs:
 relatedServices:
   - label: "รับซื้อ iPad ม.อุบล"
     href: "/บริการ/รับซื้อ-ipad-มหาวิทยาลัยอุบล/"
+  - label: "รับซื้อ iPad Pro อุบล"
+    href: "/บริการ/รับซื้อ-ipad-pro-อุบล/"
+  - label: "รับซื้อ iPad Air อุบล"
+    href: "/บริการ/รับซื้อ-ipad-air-อุบล/"
+  - label: "รับซื้อ iPad อุบล"
+    href: "/บริการ/รับซื้อ-ipad-อุบล/"
   - label: "รับซื้อ MacBook ม.อุบล"
     href: "/บริการ/รับซื้อ-macbook-มหาวิทยาลัยอุบล/"
   - label: "รับซื้อ MacBook อุบล"
