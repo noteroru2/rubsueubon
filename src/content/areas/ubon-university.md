@@ -33,6 +33,8 @@ relatedServices:
     href: "/บริการ/รับซื้อ-ipad-มหาวิทยาลัยอุบล/"
   - label: "รับซื้อ MacBook ม.อุบล"
     href: "/บริการ/รับซื้อ-macbook-มหาวิทยาลัยอุบล/"
+  - label: "รับซื้อ MacBook อุบล"
+    href: "/บริการ/รับซื้อ-macbook-อุบล/"
   - label: "รับซื้อ iPhone วารินชำราบ"
     href: "/บริการ/รับซื้อ-iphone-วารินชำราบ/"
   - label: "รับซื้อ iPhone อุบล"

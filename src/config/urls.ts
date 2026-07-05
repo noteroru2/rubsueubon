@@ -49,6 +49,14 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'samsung-ubon': 'รับซื้อ-samsung-อุบล',
 
   'macbook-ubon': 'รับซื้อ-macbook-อุบล',
+  'macbook-air-m2-ubon': 'รับซื้อ-macbook-air-m2-อุบล',
+  'macbook-air-m3-ubon': 'รับซื้อ-macbook-air-m3-อุบล',
+  'macbook-air-m4-ubon': 'รับซื้อ-macbook-air-m4-อุบล',
+  'macbook-pro-m2-ubon': 'รับซื้อ-macbook-pro-m2-อุบล',
+  'macbook-pro-m3-ubon': 'รับซื้อ-macbook-pro-m3-อุบล',
+  'macbook-pro-m4-ubon': 'รับซื้อ-macbook-pro-m4-อุบล',
+  'macbook-broken-screen-ubon': 'รับซื้อ-macbook-จอแตก-อุบล',
+  'macbook-bad-battery-ubon': 'รับซื้อ-macbook-แบตเสื่อม-อุบล',
 
   'sony-camera-ubon': 'รับซื้อ-กล้อง-sony-อุบล',
 
