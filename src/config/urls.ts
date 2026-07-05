@@ -38,6 +38,13 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'trade-in-ubon': 'รับเทิร์นไอที-อุบล',
 
   'iphone-ubon': 'รับซื้อ-iphone-อุบล',
+  'iphone-16-pro-max-ubon': 'รับซื้อ-iphone-16-pro-max-อุบล',
+  'iphone-16-pro-ubon': 'รับซื้อ-iphone-16-pro-อุบล',
+  'iphone-15-pro-max-ubon': 'รับซื้อ-iphone-15-pro-max-อุบล',
+  'iphone-15-pro-ubon': 'รับซื้อ-iphone-15-pro-อุบล',
+  'iphone-14-pro-max-ubon': 'รับซื้อ-iphone-14-pro-max-อุบล',
+  'iphone-13-pro-max-ubon': 'รับซื้อ-iphone-13-pro-max-อุบล',
+  'iphone-bad-battery-ubon': 'รับซื้อ-iphone-แบตเสื่อม-อุบล',
 
   'samsung-ubon': 'รับซื้อ-samsung-อุบล',
 

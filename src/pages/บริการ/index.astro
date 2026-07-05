@@ -8,7 +8,13 @@ import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 
 const allServices = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const mainServices = allServices.filter((s) => s.data.tier === 'main');
-const brandServices = allServices.filter((s) => s.data.tier === 'brand');
+const brandServices = allServices.filter(
+  (s) =>
+    s.data.tier === 'brand' &&
+    s.data.parentSlug !== 'iphone-ubon' &&
+    s.data.parentSlug !== 'pc-corporate-ubon' &&
+    s.data.parentSlug !== 'b2b-lot-ubon'
+);
 
 const pageTitle = 'บริการรับซื้อ-รับเทิร์นไอที อุบลราชธานี | รับซื้ออุบล.com';
 const pageDescription =
