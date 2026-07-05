@@ -120,6 +120,11 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
     }
   ]
 }

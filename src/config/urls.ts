@@ -64,7 +64,11 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'macbook-broken-screen-ubon': 'รับซื้อ-macbook-จอแตก-อุบล',
   'macbook-bad-battery-ubon': 'รับซื้อ-macbook-แบตเสื่อม-อุบล',
 
-  'sony-camera-ubon': 'รับซื้อ-กล้อง-sony-อุบล',
+  'sony-camera-ubon': 'รับซื้อกล้อง-sony-อุบล',
+  'gopro-ubon': 'รับซื้อ-gopro-อุบล',
+  'dji-osmo-ubon': 'รับซื้อ-dji-osmo-อุบล',
+  'drone-dji-ubon': 'รับซื้อโดรน-dji-อุบล',
+  'vlog-camera-ubon': 'รับซื้อกล้อง-vlog-อุบล',
 
   'tablet-ubon': 'รับซื้อแท็บเล็ต-อุบล',
   'ipad-ubon': 'รับซื้อ-ipad-อุบล',
@@ -124,6 +128,11 @@ export const SERVICE_SLUGS: Record<string, string> = {
   'lens-canon-rf-ef-ubon': 'รับซื้อเลนส์-canon-rf-ef-อุบล',
   'console-ps5-ubon': 'รับซื้อ-ps5-อุบล',
   'console-nintendo-switch-ubon': 'รับซื้อ-nintendo-switch-อุบล',
+  'console-nintendo-switch-oled-ubon': 'รับซื้อ-nintendo-switch-oled-อุบล',
+  'rog-ally-ubon': 'รับซื้อ-rog-ally-อุบล',
+  'steam-deck-ubon': 'รับซื้อ-steam-deck-อุบล',
+  'xbox-ubon': 'รับซื้อ-xbox-อุบล',
+  'handheld-game-console-ubon': 'รับซื้อเครื่องเกมพกพา-อุบล',
   'speaker-jbl-marshall-ubon': 'รับซื้อลำโพง-jbl-marshall-อุบล',
 };
 
