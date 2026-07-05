@@ -27,7 +27,7 @@ rejectedConditions:
 order: 53
 slug: 'รับซื้อ-ipad-มหาวิทยาลัยอุบล'
 parentService: '/บริการ/รับซื้อ-ipad-อุบล/'
-relatedArea: '/พื้นที่/warin-chamrap/'
+relatedArea: '/พื้นที่/ubon-university/'
 district: 'มหาวิทยาลัยอุบลราชธานี'
 faqs:
   - question: 'นักศึกษา ม.อุบล ส่งรูป iPad ประเมินก่อนได้ไหม'
@@ -107,6 +107,7 @@ iPad ที่ใช้เรียนมักขายพร้อม Apple Pe
 ## หน้าที่เกี่ยวข้อง
 
 - [รับซื้อ iPad อุบล](/บริการ/รับซื้อ-ipad-อุบล/)
+- [พื้นที่มหาวิทยาลัยอุบลราชธานี](/พื้นที่/ubon-university/)
 - [พื้นที่วารินชำราบ](/พื้นที่/warin-chamrap/)
 - [รับซื้อ MacBook ม.อุบล](/บริการ/รับซื้อ-macbook-มหาวิทยาลัยอุบล/)
 - [รับซื้อ iPhone วารินชำราบ](/บริการ/รับซื้อ-iphone-วารินชำราบ/)

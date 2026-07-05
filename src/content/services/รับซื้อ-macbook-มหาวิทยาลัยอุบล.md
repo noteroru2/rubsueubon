@@ -27,7 +27,7 @@ rejectedConditions:
 order: 54
 slug: 'รับซื้อ-macbook-มหาวิทยาลัยอุบล'
 parentService: '/บริการ/รับซื้อ-macbook-อุบล/'
-relatedArea: '/พื้นที่/warin-chamrap/'
+relatedArea: '/พื้นที่/ubon-university/'
 district: 'มหาวิทยาลัยอุบลราชธานี'
 faqs:
   - question: 'นักศึกษา ม.อุบล ส่งรูป MacBook ประเมินก่อนได้ไหม'
@@ -107,6 +107,7 @@ MacBook Air M1/M2 พบมากในกลุ่มเรียนทั่�
 ## หน้าที่เกี่ยวข้อง
 
 - [รับซื้อ MacBook อุบล](/บริการ/รับซื้อ-macbook-อุบล/)
+- [พื้นที่มหาวิทยาลัยอุบลราชธานี](/พื้นที่/ubon-university/)
 - [พื้นที่วารินชำราบ](/พื้นที่/warin-chamrap/)
 - [รับซื้อ iPad ม.อุบล](/บริการ/รับซื้อ-ipad-มหาวิทยาลัยอุบล/)
 - [รับซื้อ iPhone วารินชำราบ](/บริการ/รับซื้อ-iphone-วารินชำราบ/)

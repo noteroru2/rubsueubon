@@ -74,6 +74,7 @@ Apple Pencil, Magic Keyboard, adapter, กล่อง, ใบเสร็จ, �
 - [รับซื้อ MacBook อุบล](/บริการ/รับซื้อ-macbook-อุบล/)
 - [รับซื้อ iPhone อุบล](/บริการ/รับซื้อ-iphone-อุบล/)
 - [พื้นที่วารินชำราบ](/พื้นที่/warin-chamrap/)
+- [พื้นที่มหาวิทยาลัยอุบลราชธานี](/พื้นที่/ubon-university/)
 - [ส่งรูปประเมินเบื้องต้นทาง LINE @buyhub](https://line.me/R/ti/p/@buyhub)
 
 ## คำถามที่พบบ่อย
