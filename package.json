@@ -13,7 +13,8 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "seo:qa": "node scripts/seo-sitemap-qa.mjs",
-    "seo:url-ownership": "node scripts/url-ownership-qa.mjs"
+    "seo:url-ownership": "node scripts/url-ownership-qa.mjs",
+    "seo:local-entity": "node scripts/local-entity-qa.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

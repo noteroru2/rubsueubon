@@ -10,10 +10,8 @@ export type District = {
   id: string;
   slug: string;
   name: string;
-  latitude: number;
-  longitude: number;
-  postalCode: string;
   review?: DistrictReview;
+  active: boolean;
 };
 
 export const districts = districtsData as District[];

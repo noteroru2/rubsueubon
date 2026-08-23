@@ -6,12 +6,10 @@ import CTAButton from '../../components/CTAButton.astro';
 import AnswerBox from '../../components/AnswerBox.astro';
 import LocalAuthorityBar from '../../components/LocalAuthorityBar.astro';
 import WhatToSendForEstimate from '../../components/WhatToSendForEstimate.astro';
-import { SITE } from '../../config/site';
-import { getDistrictBySlug } from '../../lib/districts';
+import { MAIN_LOCAL_BUSINESS_ID, SITE } from '../../config/site';
 import { areaPath, areasIndex, servicePath } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 import {
-  buildDistrictLocalBusinessSchema,
   buildFAQPageSchema,
   buildItemListSchema,
   buildLocalBusinessSchema,
@@ -50,7 +48,6 @@ const {
 
 const h1 = heroTitle;
 const canonical = areaPath(slug);
-const district = getDistrictBySlug(slug);
 const pageUrl = `${SITE.url}${canonical}`;
 
 const breadcrumbItems = [
@@ -96,14 +93,10 @@ const jsonLd: Record<string, unknown>[] = [
     name: h1,
     description,
     url: pageUrl,
-    provider: { '@id': `${SITE.url}/#localbusiness` },
+    provider: { '@id': MAIN_LOCAL_BUSINESS_ID },
     areaServed: { '@id': `${pageUrl}#place` },
   },
 ];
-
-if (district) {
-  jsonLd.push(buildDistrictLocalBusinessSchema(district));
-}
 
 if (serviceLinks.length > 0) {
   jsonLd.push(

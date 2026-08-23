@@ -13,7 +13,8 @@ export const BUSINESS = {
   hours: '09:00–19:30 ทุกวัน',
   hoursShort: '09:00–19:30',
   province: 'อุบลราชธานี',
-  serviceDistricts: [
+  /** Priority areas for expedited pickup; service coverage still includes all 25 Ubon districts. */
+  priorityServiceDistricts: [
     'เมืองอุบลราชธานี',
     'วารินชำราบ',
     'เดชอุดม',
@@ -26,7 +27,6 @@ export const BUSINESS = {
     'ม่วงสามสิบ',
   ],
   address: SITE.address,
-  geo: SITE.geo,
   mapUrl: MAP_URL,
   storefrontImage: '/images/winner-it-storefront.png',
   mapEmbed:

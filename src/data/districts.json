@@ -3,9 +3,6 @@
     "id": "mueang-ubon",
     "slug": "mueang-ubon-ratchathani",
     "name": "เมืองอุบลราชธานี",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "ขายโน้ตบุ๊กในเมืองอุบลได้ราคาดี นัดรับที่หน้า ม.อุบล สะดวกมาก จ่ายเงินสดทันที",
       "author": "คุณบีม",
@@ -17,9 +14,6 @@
     "id": "si-mueang-mai",
     "slug": "si-mueang-mai",
     "name": "ศรีเมืองใหม่",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่ศรีเมืองใหม่ สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -31,9 +25,6 @@
     "id": "khong-chiam",
     "slug": "khong-chiam",
     "name": "โขงเจียม",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่โขงเจียม สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -45,9 +36,6 @@
     "id": "khueang-nai",
     "slug": "khueang-nai",
     "name": "เขื่องใน",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่เขื่องใน สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -59,9 +47,6 @@
     "id": "khemarat",
     "slug": "khemarat",
     "name": "เขมราฐ",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่เขมราฐ สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -73,9 +58,6 @@
     "id": "det-udom",
     "slug": "det-udom",
     "name": "เดชอุดม",
-    "latitude": 14.9073,
-    "longitude": 105.0775,
-    "postalCode": "34160",
     "review": {
       "text": "ขายโน้ตบุ๊กเก่าที่เดชอุดม ได้เงินก้อนดี ไม่ต้องโพสต์ขายเอง",
       "author": "คุณต้น",
@@ -87,13 +69,10 @@
     "id": "na-chaluai",
     "slug": "na-chaluai",
     "name": "นาจะหลวย",
-    "latitude": 14.86,
-    "longitude": 105.55,
-    "postalCode": "34280",
     "review": {
-      "text": "เทิร์นโน้ตบุ๊กที่นาจะหลวง ตอบไว ไม่กดราคาหลังนัดรับ ประทับใจครับ",
+      "text": "เทิร์นโน้ตบุ๊กที่นาจะหลวย ตอบไว ไม่กดราคาหลังนัดรับ ประทับใจครับ",
       "author": "คุณโอ๋",
-      "location": "นาจะหลวง"
+      "location": "นาจะหลวย"
     },
     "active": true
   },
@@ -101,9 +80,6 @@
     "id": "nam-yuen",
     "slug": "nam-yuen",
     "name": "น้ำยืน",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่น้ำยืน สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -115,9 +91,6 @@
     "id": "buntharik",
     "slug": "buntharik",
     "name": "บุณฑริก",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่บุณฑริก สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -129,9 +102,6 @@
     "id": "trakan-phuet-phon",
     "slug": "trakan-phuet-phon",
     "name": "ตระการพืชผล",
-    "latitude": 15.1333,
-    "longitude": 105.0167,
-    "postalCode": "34130",
     "review": {
       "text": "เทิร์นโน้ตบุ๊กเก่าที่ตระการพืชผล ตอบไว ราคาเป็นธรรม แนะนำครับ",
       "author": "คุณปอน",
@@ -143,9 +113,6 @@
     "id": "kut-khaopun",
     "slug": "kut-khaopun",
     "name": "กุดข้าวปุ้น",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่กุดข้าวปุ้น สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -157,9 +124,6 @@
     "id": "muang-sam-sip",
     "slug": "muang-sam-sip",
     "name": "ม่วงสามสิบ",
-    "latitude": 15.0833,
-    "longitude": 104.7167,
-    "postalCode": "34140",
     "review": {
       "text": "รับซื้อกล้องที่ม่วงสามสิบ ประเมินราคาฟรีผ่าน LINE สะดวกมาก",
       "author": "คุณแมน",
@@ -171,9 +135,6 @@
     "id": "warin-chamrap",
     "slug": "warin-chamrap",
     "name": "วารินชำราบ",
-    "latitude": 15.1932,
-    "longitude": 104.8564,
-    "postalCode": "34190",
     "review": {
       "text": "เทิร์น iPhone ที่วารินชำราบ ตอบไว ราคาเป็นธรรม แนะนำครับ",
       "author": "คุณเอ",
@@ -185,9 +146,6 @@
     "id": "phibun-mangsahan",
     "slug": "phibun-mangsahan",
     "name": "พิบูลมังสาหาร",
-    "latitude": 15.2444,
-    "longitude": 105.2292,
-    "postalCode": "34220",
     "review": {
       "text": "ขายมือถือที่พิบูลมังสาหาร ได้ราคาดี นัดรับสะดวก จ่ายเงินสดเลย",
       "author": "คุณนุ้ย",
@@ -199,9 +157,6 @@
     "id": "tan-sum",
     "slug": "tan-sum",
     "name": "ตาลสุม",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่ตาลสุม สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -213,9 +168,6 @@
     "id": "pho-sai",
     "slug": "pho-sai",
     "name": "โพธิ์ไทร",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่โพธิ์ไทร สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -227,9 +179,6 @@
     "id": "samrong",
     "slug": "samrong",
     "name": "สำโรง",
-    "latitude": 15.27,
-    "longitude": 104.7833,
-    "postalCode": "34360",
     "review": {
       "text": "ขาย iPad ที่สำโรง ได้ราคาดีกว่าโพสต์ขายเอง นัดรับหน้าตลาดสะดวกมาก",
       "author": "คุณเจ",
@@ -241,9 +190,6 @@
     "id": "don-mot-daeng",
     "slug": "don-mot-daeng",
     "name": "ดอนมดแดง",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่ดอนมดแดง สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -255,9 +201,6 @@
     "id": "sirindhorn",
     "slug": "sirindhorn",
     "name": "สิรินธร",
-    "latitude": 15.22,
-    "longitude": 104.1,
-    "postalCode": "34350",
     "review": {
       "text": "ขาย Samsung ที่สิรินธร ราคาเป็นธรรม นัดรับใกล้บ้านสะดวกมาก",
       "author": "คุณมิ้นท์",
@@ -269,9 +212,6 @@
     "id": "thung-si-udom",
     "slug": "thung-si-udom",
     "name": "ทุ่งศรีอุดม",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่ทุ่งศรีอุดม สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -283,9 +223,6 @@
     "id": "na-tan",
     "slug": "na-tan",
     "name": "นาตาล",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่นาตาล สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -297,9 +234,6 @@
     "id": "lao-suea-kok",
     "slug": "lao-suea-kok",
     "name": "เหล่าเสือโก้ก",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่เหล่าเสือโก้ก สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -311,9 +245,6 @@
     "id": "sawang-wirawong",
     "slug": "sawang-wirawong",
     "name": "สว่างวีระวงศ์",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่สว่างวีระวงศ์ สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -325,9 +256,6 @@
     "id": "nam-khun",
     "slug": "nam-khun",
     "name": "น้ำขุ่น",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่น้ำขุ่น สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
@@ -339,9 +267,6 @@
     "id": "na-yia",
     "slug": "na-yia",
     "name": "นาเยีย",
-    "latitude": 15.228685,
-    "longitude": 104.856423,
-    "postalCode": "34000",
     "review": {
       "text": "นำมือถือมาขายที่นาเยีย สะดวกมาก ให้ราคาเป็นธรรม แนะนำเลยครับ",
       "author": "คุณลูกค้า",
