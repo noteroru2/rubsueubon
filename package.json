@@ -15,7 +15,8 @@
     "seo:qa": "node scripts/seo-sitemap-qa.mjs",
     "seo:url-ownership": "node scripts/url-ownership-qa.mjs",
     "seo:local-entity": "node scripts/local-entity-qa.mjs",
-    "seo:money-pages": "node scripts/money-page-qa.mjs"
+    "seo:money-pages": "node scripts/money-page-qa.mjs",
+    "seo:local-winners": "node scripts/local-winner-qa.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
