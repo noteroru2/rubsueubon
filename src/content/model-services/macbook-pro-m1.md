@@ -139,7 +139,7 @@ MacBook Pro 14 และ 16 นิ้ว M1 Series มีฟีเจอร์�
 ## หน้าที่เกี่ยวข้อง
 
 - [รับซื้อ MacBook อุบลราชธานี](/บริการ/รับซื้อ-macbook-อุบล/)
-- [รับซื้อ MacBook Pro M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/)
+- [รับซื้อ MacBook Pro M2 อุบล](/บริการ/รับซื้อ-macbook-pro-m2-อุบล/)
 - [รับซื้อ MacBook Air M1 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/)
-- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/)
+- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-air-m2-อุบล/)
 - [เช็ค Cycle Count แบตเตอรี่ MacBook ก่อนขาย](/บทความ/prepare-macbook-trade-in/)

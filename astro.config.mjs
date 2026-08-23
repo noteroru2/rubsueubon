@@ -10,19 +10,9 @@ export default defineConfig({
   compressHTML: true,
   redirects: {
     // P0 Redirects
-    '/บริการ/รับซื้อ-macbook/macbook-pro-m2/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/',
     '/พื้นที่/ม่วงสามสิบ/': '/พื้นที่/muang-sam-sip/',
     '/พื้นที่/วารินชำราบ/': '/พื้นที่/warin-chamrap/',
     '/บริการ/รับซื้อโทรศัพท์-อุบล/': '/บริการ/รับซื้อมือถือ-อุบล/',
-
-    // Other model services under old macbook path
-    '/บริการ/รับซื้อ-macbook/': '/บริการ/รับซื้อ-macbook-อุบล/',
-    '/บริการ/รับซื้อ-macbook/macbook-air-m1/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/',
-    '/บริการ/รับซื้อ-macbook/macbook-air-m2/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/',
-    '/บริการ/รับซื้อ-macbook/macbook-air-m3/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/',
-    '/บริการ/รับซื้อ-macbook/macbook-pro-m1/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/',
-    '/บริการ/รับซื้อ-macbook/macbook-pro-m3/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/',
-    '/บริการ/รับซื้อ-macbook/macbook-intel/': '/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/',
 
     // Old area paths
     '/พื้นที่/เมืองอุบลราชธานี/': '/พื้นที่/mueang-ubon-ratchathani/',

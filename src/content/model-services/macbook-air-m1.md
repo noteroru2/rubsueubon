@@ -102,7 +102,7 @@ MacBook Air M1 มี 3 สีหลัก ได้แก่ Space Gray, Gold �
 ## หน้าที่เกี่ยวข้อง
 
 - [รับซื้อ MacBook อุบลราชธานี](/บริการ/รับซื้อ-macbook-อุบล/)
-- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/)
-- [รับซื้อ MacBook Air M3 อุบล](/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/)
+- [รับซื้อ MacBook Air M2 อุบล](/บริการ/รับซื้อ-macbook-air-m2-อุบล/)
+- [รับซื้อ MacBook Air M3 อุบล](/บริการ/รับซื้อ-macbook-air-m3-อุบล/)
 - [รับซื้อโน้ตบุ๊ก อุบล](/บริการ/รับซื้อโน้ตบุ๊ก-อุบล/)
 - [เช็ค Cycle Count แบตเตอรี่ MacBook ก่อนขาย](/บทความ/check-notebook-before-selling/)

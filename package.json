@@ -12,7 +12,8 @@
     "astro": "astro",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "seo:qa": "node scripts/seo-sitemap-qa.mjs"
+    "seo:qa": "node scripts/seo-sitemap-qa.mjs",
+    "seo:url-ownership": "node scripts/url-ownership-qa.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

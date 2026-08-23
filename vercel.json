@@ -12,6 +12,221 @@
       "permanent": true
     },
     {
+      "source": "/บริการ/ipad-ubon/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-13-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-13-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-14-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m1/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m1/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-intel/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94%E0%B8%88%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
