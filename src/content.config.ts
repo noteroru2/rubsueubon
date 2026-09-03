@@ -25,7 +25,7 @@ const services = defineCollection({
       .optional(),
     order: z.number().default(99),
     slug: z.string(),
-    tier: z.enum(['main', 'brand']).default('main'),
+    tier: z.enum(['main', 'brand', 'series']).default('main'),
     parentSlug: z.string().optional(),
     parentLabel: z.string().optional(),
     quickAnswer: z
@@ -40,6 +40,9 @@ const services = defineCollection({
 const updates = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/updates' }),
   schema: z.object({
+    entryKind: z.enum(['case', 'photo']).default('case'),
+    photos: z.array(z.string()).default([]),
+    topics: z.array(z.string()).default([]),
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),

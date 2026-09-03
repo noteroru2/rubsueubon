@@ -1,0 +1,12 @@
+# Only application source and public assets are needed for the remote build.
+.git/
+.astro/
+.vscode/
+node_modules/
+dist/
+/reports/
+/data/
+/docs/
+.batch0-provenance
+.env*
+*.log

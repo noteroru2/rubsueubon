@@ -7,12 +7,23 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/generate-llms-full.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "seo:qa": "node scripts/seo-sitemap-qa.mjs"
+    "seo:qa": "node scripts/seo-sitemap-qa.mjs",
+    "seo:url-ownership": "node scripts/url-ownership-qa.mjs",
+    "seo:local-entity": "node scripts/local-entity-qa.mjs",
+    "seo:money-pages": "node scripts/money-page-qa.mjs",
+    "seo:local-winners": "node scripts/local-winner-qa.mjs",
+    "seo:architecture": "node scripts/architecture-ownership-qa.mjs",
+    "seo:core-money-lock": "node scripts/core-money-ownership-qa.mjs",
+    "seo:brand-series": "node scripts/brand-series-foundation-qa.mjs",
+    "seo:w2a-release": "node scripts/w2a-production-release-qa.mjs",
+    "seo:w2b-candidates": "node scripts/w2b-release-candidate-quality-qa.mjs",
+    "seo:w2a-observation": "node scripts/w2a-observation-authorization-qa.mjs",
+    "seo:w2a-recheck": "node scripts/w2a-postdeploy-recheck-qa.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

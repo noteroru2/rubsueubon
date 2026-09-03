@@ -33,7 +33,7 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
       <article class="prose prose-lg mt-10 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
         <h2>เราคือใคร?</h2>
         <p>
-          <strong>{SITE.name}</strong> เป็นบริการรับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในจังหวัดอุบลราชธานี เราให้บริการครอบคลุมโทรศัพท์มือถือ
+          <strong>{SITE.name}</strong> ดำเนินการโดย {SITE.businessName} / {SITE.companyName} ให้บริการรับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในจังหวัดอุบลราชธานี เราให้บริการครอบคลุมโทรศัพท์มือถือ
           โน้ตบุ๊ก กล้อง แท็บเล็ต และอุปกรณ์ไอทีอื่นๆ ด้วยกระบวนการที่โปร่งใส รวดเร็ว และจ่ายเงินสดทันที
         </p>
         <p>
@@ -44,12 +44,12 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
         <h2>ทำไมลูกค้าในอุบลเลือกเรา</h2>
         <ul>
           <li><strong>ให้ราคายุติธรรม</strong> — ตีราคาตามสภาพจริงและตลาดอุบลราชธานี ไม่กดราคาหลังนัดรับ</li>
-          <li><strong>ประเมินราคาฟรี</strong> — ส่งรูปมาที่ LINE รับใบเสนอราคาภายใน 5 นาที ไม่มีข้อผูกมัด</li>
+          <li><strong>ประเมินราคาฟรี</strong> — ตอบ LINE {SITE.lineHours} ส่งรูปและรายละเอียดเพื่อรับผลประเมินเบื้องต้น ไม่มีข้อผูกมัด</li>
           <li>
             <strong>จ่ายเงินสดทันที</strong> — เมื่อตกลงราคาและรับสินค้าแล้ว จ่ายเงินสดทันที ไม่มีค่าธรรมเนียมแอบแฝง
           </li>
           <li>
-            <strong>ครอบคลุมทุกอำเภอ</strong> — นัดรับถึงที่ใน <a href={areasIndex()}>10 อำเภอหลัก</a> ทั่วจังหวัดอุบลราชธานี
+            <strong>ครอบคลุมทั้ง 25 อำเภอ</strong> — มี <a href={areasIndex()}>10 พื้นที่นัดรับด่วน</a> และนัดจุดรับร่วมกันได้ทั่วจังหวัดอุบลราชธานี
           </li>
           <li><strong>รับซื้อหลายชิ้นจบในที่เดียว</strong> — มือถือ โน้ตบุ๊ก กล้อง พร้อมกันได้</li>
         </ul>
@@ -69,7 +69,7 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
         <h2>วิธีทำงานของเรา</h2>
         <ol>
           <li>ลูกค้าแอด LINE <strong>@buyhub</strong> และส่งรูปสินค้าพร้อมรายละเอียด</li>
-          <li>ทีมงานประเมินราคาตามสภาพจริงและแจ้งใบเสนอราคาภายใน 5 นาที</li>
+          <li>ทีมงานประเมินราคาเบื้องต้นหลังตรวจรูปและรายละเอียดสินค้า</li>
           <li>เมื่อตกลงราคา นัดรับสินค้าตามจุดที่สะดวกทั้งสองฝ่าย</li>
           <li>ตรวจสอบสินค้าตามที่ตกลง จ่ายเงินสดทันที</li>
         </ol>
@@ -78,17 +78,22 @@ const jsonLd = [buildBreadcrumbSchema(breadcrumbItems)];
           หรือดู <a href={updatesIndex()}>ผลงานรับซื้อล่าสุด</a> จากลูกค้าจริงในอุบลราชธานี
         </p>
 
+        <h2>หน้าร้านอำพล เทรดดิ้ง ในอุบลราชธานี</h2>
+        <p>{SITE.addressText} {SITE.landmark}</p>
+        <p>หน้าร้านเปิด{SITE.storeHoursLabel} ตอบ LINE {SITE.lineHours} {SITE.visitNote}</p>
+        <p><a href={SITE.mapUrl} target="_blank" rel="noopener noreferrer">เปิด Google Maps นำทางมาที่ร้าน</a> · <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook ร้านอำพล เทรดดิ้ง</a></p>
+
         <h2>พื้นที่ให้บริการ</h2>
         <p>
           เราให้บริการรับซื้อและรับเทิร์นไอทีในอุบลราชธานี ครอบคลุมเมืองอุบลราชธานี วารินชำราบ เดชอุดม พิบูลมังสาหาร
-          ตระการพืชผล ม่วงสามสิบ สำโรง ขุนหาญ นาจะหลวง และสิรินธร ดูรายละเอียดทุกอำเภอได้ที่ <a href={areasIndex()}
+          ตระการพืชผล ม่วงสามสิบ สำโรง นาจะหลวย และสิรินธร ดูรายละเอียดทั้ง 25 อำเภอได้ที่ <a href={areasIndex()}
             >พื้นที่ให้บริการ</a
           >
         </p>
       </article>
 
       <div class="mt-10 text-center">
-        <CTAButton label="แอด LINE ประเมินราคาฟรีทันที" />
+        <CTAButton label="แอด LINE ประเมินราคาเบื้องต้นฟรี" />
       </div>
     </div>
   </div>

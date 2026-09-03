@@ -1,4 +1,5 @@
 import type { FAQItem, QuickAnswer } from '../data/business';
+import { SITE } from '../config/site';
 
 /** คำตอบสั้น AEO ตามหมวดบริการ */
 const QUICK_ANSWERS: Record<string, QuickAnswer> = {
@@ -47,6 +48,10 @@ const QUICK_ANSWERS: Record<string, QuickAnswer> = {
 /** FAQ พื้�านที่ใช้ร่วมทุกหมวด — merge กับ FAQ เฉพาะหน้า */
 export const STANDARD_FAQS: FAQItem[] = [
   {
+    question: 'ร้านอยู่ที่ไหน เปิดกี่โมง และติดต่อ LINE ได้เมื่อไร?',
+    answer: `${SITE.storeName} (${SITE.businessName}) อยู่ที่ ${SITE.addressText} ${SITE.landmark} หน้าร้านเปิด${SITE.storeHoursLabel} ตอบ LINE ${SITE.lineOA} ${SITE.lineHours} ${SITE.visitNote}`,
+  },
+  {
     question: 'รับซื้อเครื่องเปิดไม่ติดไหม?',
     answer:
       'รับพิจารณาครับ ขึ้นอยู่กับประเภทสินค้าและมูลค่าชิ้นส่วนที่ยังใช้ได้ แจ้งอาการตรงๆ มาช่วยให้ประเมินแม่นขึ้น',
@@ -72,7 +77,7 @@ export const STANDARD_FAQS: FAQItem[] = [
   {
     question: 'อยู่ต่างอำเภอขายได้ไหม?',
     answer:
-      'ได้ครับ ครอบคลุม 10 อำเภอหลักในอุบลราชธานี ส่งรูปประเมินก่อน แล้วนัดจุดรับหรือเข้าร้านตามความสะดวก',
+      `ได้ครับ ส่งรูปและแจ้งอำเภอในอุบลราชธานีทาง LINE ${SITE.lineOA} เพื่อประเมินเบื้องต้น ${SITE.visitNote}`,
   },
   {
     question: 'จ่ายเงินสดหรือโอน?',

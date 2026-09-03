@@ -1,6 +1,6 @@
 ---
-title: "รับซื้อ Sony A7C มือสอง | ประเมินราคาตามสภาพจริง"
-description: "รับซื้อ Sony A7C มือสอง full-frame ตัวเล็ก น้ำหนักเบา ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip และ body ก่อนตกลงราคา"
+title: "รับซื้อ Sony A7C มือสอง อุบล | ประเมินราคาตามสภาพจริง"
+description: "รับซื้อ Sony A7C มือสอง อุบลราชธานี full-frame ตัวเล็ก น้ำหนักเบา ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip และ body ก่อนตกลงราคา"
 slug: "sony-a7c"
 category: "camera-model"
 brand: "Sony"

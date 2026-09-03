@@ -1,0 +1,67 @@
+[
+  {
+    "id": "storefront",
+    "source": "C:/Users/User/Pictures/638789327_919938743877942_7401119888038902850_n.jpg",
+    "alt": "ป้ายและทางเข้าร้านอำพล เทรดดิ้ง ถนนชยางกูร อุบลราชธานี"
+  },
+  {
+    "id": "notebook-lineup",
+    "source": "C:/Users/User/Pictures/685819243_1284907356966813_599156735911456317_n.jpg",
+    "alt": "โน้ตบุ๊กหลายเครื่องบนโต๊ะภายในร้านอำพล เทรดดิ้ง"
+  },
+  {
+    "id": "pc-white",
+    "source": "C:/Users/User/Pictures/687785232_954483720667378_1288465373043681687_n.jpg",
+    "alt": "คอมพิวเตอร์ประกอบเคสสีขาว พร้อมการ์ดจอและพัดลมภายในเคส"
+  },
+  {
+    "id": "pc-black-side",
+    "source": "C:/Users/User/Pictures/692249065_1325102072812907_6523970223922240639_n.jpg",
+    "alt": "คอมพิวเตอร์เคสสีดำ มุมด้านข้างเห็นการ์ดจอ GeForce RTX"
+  },
+  {
+    "id": "asus-vivobook",
+    "source": "C:/Users/User/Pictures/694409288_959514493538728_7669352494718969449_n.jpg",
+    "alt": "ASUS VivoBook เปิดหน้าจอให้เห็นสภาพจอและแป้นพิมพ์"
+  },
+  {
+    "id": "pc-black-angle",
+    "source": "C:/Users/User/Pictures/695725984_1322230623375989_5402671911893491063_n.jpg",
+    "alt": "คอมพิวเตอร์เคสสีดำ มุมด้านหน้าและด้านข้าง"
+  },
+  {
+    "id": "acer-aspire-lite",
+    "source": "C:/Users/User/Pictures/696252271_953729557635133_6578821592773001663_n.jpg",
+    "alt": "โน้ตบุ๊ก Acer Aspire Lite เปิดหน้าจอบนโต๊ะในร้าน"
+  },
+  {
+    "id": "acer-aspire",
+    "source": "C:/Users/User/Pictures/696359743_1533208004992100_4494293867906699664_n.jpg",
+    "alt": "โน้ตบุ๊ก Acer Aspire พร้อมแป้นพิมพ์และหน้าจอ"
+  },
+  {
+    "id": "macbook-air-silver",
+    "source": "C:/Users/User/Pictures/698647177_990325436794978_1585433180188032558_n.jpg",
+    "alt": "MacBook Air สีเงินวางบนกล่อง เปิดหน้าจอ macOS"
+  },
+  {
+    "id": "asus-vivobook-s413",
+    "source": "C:/Users/User/Downloads/drive-download-20260903T052104Z-1-001/VvoBook, ASUSLaptop X42TEAY S413EA/IMG_20260902_142454.jpg",
+    "alt": "ASUS VivoBook มุมเฉียง เห็นหน้าจอ แป้นพิมพ์ และพอร์ตด้านข้าง"
+  },
+  {
+    "id": "asus-vivobook-s513",
+    "source": "C:/Users/User/Downloads/drive-download-20260903T052104Z-1-001/VivoBook ASUSLaptop X513EAN_S513EA/IMG_20260902_121458.jpg",
+    "alt": "ASUS VivoBook มุมด้านหน้า เห็นหน้าจอและแป้นพิมพ์เต็มเครื่อง"
+  },
+  {
+    "id": "macbook-air-m3",
+    "source": "C:/Users/User/Downloads/drive-download-20260903T052104Z-1-001/macbook air m3 8-256/IMG_20260902_114124.jpg",
+    "alt": "MacBook Air M3 ตามข้อมูลชุดภาพ เปิดหน้าจอและแป้นพิมพ์"
+  },
+  {
+    "id": "insta360-x5",
+    "source": "C:/Users/User/Downloads/drive-download-20260903T052104Z-1-001/Insta360 x5 8k/IMG_20260902_185315.jpg",
+    "alt": "กล้อง Insta360 X5 วางในกล่องพร้อมเอกสารประกอบ"
+  }
+]

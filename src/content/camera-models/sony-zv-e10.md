@@ -1,6 +1,6 @@
 ---
-title: "รับซื้อ Sony ZV-E10 มือสอง | ประเมินราคาตามสภาพจริง"
-description: "รับซื้อ Sony ZV-E10 APS-C vlog camera มือสอง ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip ไมค์ และอุปกรณ์ก่อนตกลงราคา"
+title: "รับซื้อ Sony ZV-E10 มือสอง อุบล | ประเมินราคาตามสภาพจริง"
+description: "รับซื้อ Sony ZV-E10 APS-C vlog camera มือสอง อุบลราชธานี ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip ไมค์ และอุปกรณ์ก่อนตกลงราคา"
 slug: "sony-zv-e10"
 category: "camera-model"
 brand: "Sony"

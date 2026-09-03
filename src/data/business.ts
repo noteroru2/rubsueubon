@@ -10,10 +10,17 @@ export const BUSINESS = {
   email: SITE.email,
   lineOA: SITE.lineOA,
   lineUrl: getLineOALink(),
-  hours: '09:00–19:30 ทุกวัน',
-  hoursShort: '09:00–19:30',
+  hours: SITE.storeHoursLabel,
+  hoursShort: `${SITE.storeHours.opens}–${SITE.storeHours.closes}`,
+  lineHours: SITE.lineHours,
+  storeName: SITE.storeName,
+  addressText: SITE.addressText,
+  landmark: SITE.landmark,
+  facebookUrl: SITE.facebookUrl,
+  visitNote: SITE.visitNote,
   province: 'อุบลราชธานี',
-  serviceDistricts: [
+  /** Priority areas for expedited pickup; service coverage still includes all 25 Ubon districts. */
+  priorityServiceDistricts: [
     'เมืองอุบลราชธานี',
     'วารินชำราบ',
     'เดชอุดม',
@@ -26,7 +33,6 @@ export const BUSINESS = {
     'ม่วงสามสิบ',
   ],
   address: SITE.address,
-  geo: SITE.geo,
   mapUrl: MAP_URL,
   storefrontImage: '/images/winner-it-storefront.png',
   mapEmbed:

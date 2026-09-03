@@ -12,8 +12,888 @@
       "permanent": true
     },
     {
+      "source": "/บริการ/รับซื้อโน้ตบุ๊กเสีย-อุบล/",
+      "destination": "/บริการ/notebook-broken-ubon/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อโน้ตบุ๊กเสีย-อุบล/:path*",
+      "destination": "/บริการ/notebook-broken-ubon/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-pro/",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-air/",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-air/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-air/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-mini/",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-mini/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-mini/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen-9-10/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-gen-9-10/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-gen-9-10/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-gen/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad-ubon/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad-ubon/ipad-gen/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-pro/",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-air/",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-air/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-air/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-mini/",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-mini/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-mini/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen-9-10/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-gen-9-10/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-gen-9-10/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-gen/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/ipad/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/ipad-gen/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-pro/",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-air/",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-air/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-air/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-mini/",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-mini/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-mini/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen-9-10/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-gen-9-10/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-gen-9-10/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-gen/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/ipad-gen/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-13-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-13-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-13-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-13-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-13-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-13-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-14-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-14-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-14-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-14-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro/",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-15-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-15-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-15-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-15-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro/",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-16-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-16-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-16-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/iphone-16-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-air/",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-air/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-air/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-air/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-air-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-mini/",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-mini/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-mini/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-mini/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-mini-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen-9-10/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-gen-9-10/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen-9-10/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-gen-9-10/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen/",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-gen/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen/:path*",
+      "destination": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/ipad-gen/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m2/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m2/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m3/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m3/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m2/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m2/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m3/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m3/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-13-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-13-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-13-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-13-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-13-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-13-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-14-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-14-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-14-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-14-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-14-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-14-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro/",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-15-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-15-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-15-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-15-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-15-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-15-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro/",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-16-pro/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-16-pro/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro-max/",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-16-pro-max/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-iphone/iphone-16-pro-max/:path*",
+      "destination": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/iphone-16-pro-max/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-16-pro-max-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m1/",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m1/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m1/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m1/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-air-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m2/",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m2/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m2/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m3/",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m3/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-air-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-air-m3/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-air-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m1/",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m1/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m1/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m1/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-pro-m1/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m2/",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m2/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m2/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m2/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m3/",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m3/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-pro-m3/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-pro-m3/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-pro-m3-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-intel/",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-intel/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-intel/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อ-macbook/macbook-intel/:path*",
+      "destination": "/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/macbook-intel/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/macbook-intel/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94%E0%B8%88%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94%E0%B8%88%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-rtx-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ram-ssd-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ram-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -22,13 +902,28 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-cpu-ram-ssd-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%84%E0%B8%AD%E0%B8%A1-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-cpu-ram-ssd-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%84%E0%B8%AD%E0%B8%A1-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -47,8 +942,18 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon/corporate-pc/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/b2b-lot-ubon/corporate-pc/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A2%E0%B8%81%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/corporate-pc/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -62,13 +967,28 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/camera-lens-ubon/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%A5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/camera-lens-ubon/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%A5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B9%84%E0%B8%AD%E0%B9%81%E0%B8%9E%E0%B8%94-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B9%84%E0%B8%AD%E0%B9%81%E0%B8%9E%E0%B8%94-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%97%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%95-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B8%A7%E0%B8%B5-%E0%B8%88%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B8%A7%E0%B8%B5-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -92,8 +1012,18 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/ipad/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-ipad-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -102,13 +1032,28 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-iphone-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-macbook-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
       "permanent": true
     },
     {
@@ -122,8 +1067,233 @@
       "permanent": true
     },
     {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "permanent": true
+    },
+    {
       "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
       "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87-sony-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ม่วงสามสิบ/",
+      "destination": "/พื้นที่/muang-sam-sip/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ม่วงสามสิบ/:path*",
+      "destination": "/พื้นที่/muang-sam-sip/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B4%E0%B8%9A/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/muang-sam-sip/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B4%E0%B8%9A/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/muang-sam-sip/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/วารินชำราบ/",
+      "destination": "/พื้นที่/warin-chamrap/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/วารินชำราบ/:path*",
+      "destination": "/พื้นที่/warin-chamrap/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%9A/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/warin-chamrap/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%9A/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/warin-chamrap/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อโทรศัพท์-อุบล/",
+      "destination": "/บริการ/รับซื้อมือถือ-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/บริการ/รับซื้อโทรศัพท์-อุบล/:path*",
+      "destination": "/บริการ/รับซื้อมือถือ-อุบล/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%89%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%81%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/notebook-broken-ubon/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%82%E0%B8%99%E0%B9%89%E0%B8%95%E0%B8%9A%E0%B8%B8%E0%B9%8A%E0%B8%81%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2-%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/notebook-broken-ubon/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เมืองอุบลราชธานี/",
+      "destination": "/พื้นที่/mueang-ubon-ratchathani/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เมืองอุบลราชธานี/:path*",
+      "destination": "/พื้นที่/mueang-ubon-ratchathani/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/mueang-ubon-ratchathani/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/mueang-ubon-ratchathani/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เดชอุดม/",
+      "destination": "/พื้นที่/det-udom/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เดชอุดม/:path*",
+      "destination": "/พื้นที่/det-udom/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/det-udom/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/det-udom/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/พิบูลมังสาหาร/",
+      "destination": "/พื้นที่/phibun-mangsahan/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/พิบูลมังสาหาร/:path*",
+      "destination": "/พื้นที่/phibun-mangsahan/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9E%E0%B8%B4%E0%B8%9A%E0%B8%B9%E0%B8%A5%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/phibun-mangsahan/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9E%E0%B8%B4%E0%B8%9A%E0%B8%B9%E0%B8%A5%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/phibun-mangsahan/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ตระการพืชผล/",
+      "destination": "/พื้นที่/trakan-phuet-phon/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/ตระการพืชผล/:path*",
+      "destination": "/พื้นที่/trakan-phuet-phon/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%9C%E0%B8%A5/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/trakan-phuet-phon/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%95%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%9C%E0%B8%A5/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/trakan-phuet-phon/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เขื่องใน/",
+      "destination": "/พื้นที่/khueang-nai/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/เขื่องใน/:path*",
+      "destination": "/พื้นที่/khueang-nai/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%99/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khueang-nai/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%99/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khueang-nai/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/โขงเจียม/",
+      "destination": "/พื้นที่/khong-chiam/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/โขงเจียม/:path*",
+      "destination": "/พื้นที่/khong-chiam/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%82%E0%B8%82%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B8%A1/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khong-chiam/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B9%82%E0%B8%82%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B8%A1/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/khong-chiam/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/น้ำยืน/",
+      "destination": "/พื้นที่/nam-yuen/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/น้ำยืน/:path*",
+      "destination": "/พื้นที่/nam-yuen/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A2%E0%B8%B7%E0%B8%99/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/nam-yuen/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A2%E0%B8%B7%E0%B8%99/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/nam-yuen/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/บุณฑริก/",
+      "destination": "/พื้นที่/buntharik/",
+      "permanent": true
+    },
+    {
+      "source": "/พื้นที่/บุณฑริก/:path*",
+      "destination": "/พื้นที่/buntharik/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9A%E0%B8%B8%E0%B8%93%E0%B8%91%E0%B8%A3%E0%B8%B4%E0%B8%81/",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/buntharik/",
+      "permanent": true
+    },
+    {
+      "source": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/%E0%B8%9A%E0%B8%B8%E0%B8%93%E0%B8%91%E0%B8%A3%E0%B8%B4%E0%B8%81/:path*",
+      "destination": "/%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/buntharik/",
       "permanent": true
     }
   ]

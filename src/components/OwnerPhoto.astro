@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import { ownerPhotos, type OwnerPhotoId } from '../data/owner-photos';
+interface Props { id: string; thumbnail?: boolean; caption?: boolean; }
+const { id, thumbnail = false, caption = true } = Astro.props;
+const photo = ownerPhotos[id as OwnerPhotoId];
+if (!photo) throw new Error(`Unknown owner photo: ${id}`);
+---
+<figure class="m-0 overflow-hidden rounded-xl border border-line bg-surface">
+  <Image src={photo.image} alt={photo.alt} widths={[480, 960]} sizes={thumbnail ? '(max-width: 640px) 100vw, 400px' : '(max-width: 768px) 100vw, 768px'} width={960} format="webp" quality={80} loading="lazy" decoding="async" class:list={['w-full', thumbnail ? 'aspect-[4/3] object-contain bg-slate-50' : 'h-auto object-contain']} />
+  {caption && <figcaption class="p-3 text-sm leading-relaxed text-muted">{photo.alt}</figcaption>}
+</figure>

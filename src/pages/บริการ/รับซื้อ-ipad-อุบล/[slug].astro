@@ -7,11 +7,16 @@ import { SITE } from '../../../config/site';
 import { servicePath, servicesIndex } from '../../../config/urls';
 import { buildBreadcrumbSchema } from '../../../lib/breadcrumbs';
 import { resolveModelPageContext } from '../../../lib/model-pages';
+import { isNestedModelSlugAllowed } from '../../../config/model-url-ownership';
 
 export async function getStaticPaths() {
   const models = await getCollection('modelServices');
   return models
-    .filter((entry) => entry.data.parentService === 'ipad-ubon')
+    .filter(
+      (entry) =>
+        entry.data.parentService === 'ipad-ubon' &&
+        isNestedModelSlugAllowed('ipad-ubon', entry.data.slug),
+    )
     .map((entry) => ({
       params: { slug: entry.data.slug },
       props: { entry },

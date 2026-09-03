@@ -7,6 +7,9 @@ import { SITE } from '../../config/site';
 import { areaPath, servicePath, updatePath, updatesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 import { districts } from '../../lib/districts';
+import OwnerPhoto from '../../components/OwnerPhoto.astro';
+import { getImage } from 'astro:assets';
+import { ownerPhotos, type OwnerPhotoId } from '../../data/owner-photos';
 
 export async function getStaticPaths() {
   const updates = await getCollection('updates');
@@ -22,6 +25,12 @@ const { title, description, pubDate, relatedServiceSlug, relatedServiceLabel, re
   entry.data;
 
 const canonical = updatePath(entry.data.slug);
+const photoMetadata = await Promise.all(entry.data.photos.map(async (id: string) => {
+  const photo = ownerPhotos[id as OwnerPhotoId];
+  if (!photo) throw new Error(`Unknown photo: ${id}`);
+  const optimized = await getImage({ src: photo.image, width: 960, format: 'webp', quality: 80 });
+  return { '@type': 'ImageObject', contentUrl: new URL(optimized.src, SITE.url).href, caption: photo.alt, creditText: SITE.storeName };
+}));
 
 const breadcrumbItems = [
   { label: 'หน้าแรก', href: '/' },
@@ -40,6 +49,8 @@ const jsonLd = [
     url: `${SITE.url}${canonical}`,
     inLanguage: 'th-TH',
     publisher: { '@id': `${SITE.url}/#localbusiness` },
+    author: { '@id': `${SITE.url}/#localbusiness` },
+    ...(photoMetadata.length ? { image: photoMetadata } : {}),
   },
 ];
 
@@ -53,6 +64,7 @@ function formatDate(date: Date): string {
   description={description}
   canonical={canonical}
   ogType="article"
+  ogImage={photoMetadata[0]?.contentUrl}
   jsonLd={jsonLd}
   showMobileCTA
 >
@@ -62,7 +74,7 @@ function formatDate(date: Date): string {
       <time datetime={pubDate.toISOString()} class="mt-6 block text-sm font-medium text-brand">
         {formatDate(pubDate)}
       </time>
-      <p class="mt-2 inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">เคสจริง</p>
+      <p class="mt-2 inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">{entry.data.entryKind === 'photo' ? 'ภาพสินค้าจริงจากร้าน · วันที่เผยแพร่ภาพ' : 'เคสจริง'}</p>
       <h1 class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">{title}</h1>
 
       <div
@@ -70,6 +82,10 @@ function formatDate(date: Date): string {
       >
         <Content />
       </div>
+
+      {entry.data.photos.length > 0 && <section class="mt-8 space-y-6" aria-label="ภาพสินค้าจริงจากร้าน">
+        {entry.data.photos.map(id => <OwnerPhoto id={id} />)}
+      </section>}
 
       {
         (relatedServiceSlug || relatedAreaSlug) && (
@@ -115,7 +131,7 @@ function formatDate(date: Date): string {
       }
 
       <div class="mt-10 text-center">
-        <CTAButton label="ประเมินราคาฟรีทันที" />
+        <CTAButton label="ประเมินราคาเบื้องต้นฟรี" />
       </div>
     </div>
   </article>

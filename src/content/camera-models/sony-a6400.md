@@ -1,6 +1,6 @@
 ---
-title: "รับซื้อ Sony A6400 มือสอง | ประเมินราคาตามสภาพจริง"
-description: "รับซื้อ Sony A6400 APS-C mirrorless มือสอง ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip shutter count และ kit lens ก่อนตกลงราคา"
+title: "รับซื้อ Sony A6400 มือสอง อุบล | ประเมินราคาตามสภาพจริง"
+description: "รับซื้อ Sony A6400 APS-C mirrorless มือสอง อุบลราชธานี ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็กสภาพจอ flip shutter count และ kit lens ก่อนตกลงราคา"
 slug: "sony-a6400"
 category: "camera-model"
 brand: "Sony"

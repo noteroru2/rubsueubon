@@ -1,0 +1,40 @@
+{
+  "confirmedAt": "2026-09-03",
+  "storeName": "ร้านอำพล เทรดดิ้ง",
+  "operator": "WINNER IT",
+  "companyName": "บริษัท อำพล เทรดดิ้ง จำกัด",
+  "phone": "095-547-9408",
+  "email": "amphontrading@gmail.com",
+  "lineOA": "@buyhub",
+  "address": {
+    "streetAddress": "740/8 ถนนชยางกูร ตำบลในเมือง",
+    "addressLocality": "อำเภอเมืองอุบลราชธานี",
+    "addressRegion": "อุบลราชธานี",
+    "postalCode": "34000",
+    "addressCountry": "TH"
+  },
+  "landmark": "ติดปากซอยชยางกูร 32",
+  "mapUrl": "https://maps.app.goo.gl/pdpEaJRoV9F4bAng9",
+  "facebookUrl": "https://www.facebook.com/Amphontrading",
+  "geo": {
+    "latitude": 15.2664215,
+    "longitude": 104.844358
+  },
+  "storeHours": {
+    "opens": "09:00",
+    "closes": "19:30",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  },
+  "lineHours": "24 ชั่วโมง",
+  "estimateNote": "ระยะเวลาประเมินขึ้นอยู่กับข้อมูลสินค้าและคิวสอบถาม ราคาสุดท้ายยืนยันหลังตรวจสินค้าจริง",
+  "visitNote": "เข้ามาที่ร้านตาม Google Maps ได้ในเวลาเปิดทำการ สำหรับต่างอำเภอ ส่งรูปเพื่อประเมินราคาเบื้องต้น แล้วนัดหมายวัน เวลา และสถานที่รับร่วมกัน",
+  "pickupNote": "นัดรับต่างอำเภอในอุบลราชธานี: ส่งรูปพร้อมรุ่น สภาพสินค้า และอำเภอทาง LINE @buyhub เพื่อประเมินราคาเบื้องต้น จากนั้นตกลงวัน เวลา และสถานที่นัดรับร่วมกัน ตรวจสินค้าจริงและยืนยันราคาก่อนชำระเงิน"
+}

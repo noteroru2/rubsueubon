@@ -1,0 +1,443 @@
+{
+  "checkedAt": "2026-09-03T10:39:44.724Z",
+  "sitemapPages": 229,
+  "w2aPages": 18,
+  "localBusinessPages": 28,
+  "llmsUrls": 229,
+  "redirectsChecked": 72,
+  "redirects": [
+    {
+      "path": "/บริการ/ipad-ubon/ipad-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad-ubon/ipad-air/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad-ubon/ipad-mini/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อโน้ตบุ๊กเสีย-อุบล/",
+      "status": 308,
+      "location": "/บริการ/notebook-broken-ubon/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad-ubon/ipad-gen/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/ipad-mini/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad-ubon/ipad-gen-9-10/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/ipad-gen/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/ipad-air/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/ipad-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/ipad-gen-9-10/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/ipad-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/ipad-air/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/ipad-mini/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/ipad-gen/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/ipad-gen-9-10/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-13-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad-อุบล/ipad-air/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-air-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad-อุบล/ipad-mini/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-mini-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen-9-10/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad-อุบล/ipad-gen/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m2/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m2/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m3/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-13-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-13-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-14-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-15-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-15-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-16-pro/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-16-pro-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-15-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/iphone-16-pro-max/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-air-m2/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-air-m2-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-air-m3/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-air-m3-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-pro-m1/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-อุบล/macbook-pro-m1/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-air-m1/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-pro-m2/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-pro-m2-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-pro-m3/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-pro-m3-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/macbook-intel/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-อุบล/macbook-intel/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อการ์ดจอ-rtx-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-rtx-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-cpu-ram-ssd-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้ออุปกรณ์คอม-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ram-ssd-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ram-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อโทรศัพท์-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อมือถือ-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/b2b-lot-ubon/corporate-pc/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อคอมบริษัท-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อเครื่องเสียง-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-เครื่องเสียง-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/b2b-lot-ubon/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อคอมยกล็อต-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อคอมยกล็อต-อุบล/corporate-pc/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อคอมบริษัท-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/camera-lens-ubon/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อเลนส์กล้อง-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อแท็บเล็ต-ไอแพด-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อแท็บเล็ต-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อทีวี-จอคอม-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อทีวี-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad-ubon/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/ipad/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-ipad/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-ipad-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-iphone/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-iphone-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-macbook/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อ-macbook-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อกล้อง/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อกล้อง-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/ม่วงสามสิบ/",
+      "status": 308,
+      "location": "/พื้นที่/muang-sam-sip/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/วารินชำราบ/",
+      "status": 308,
+      "location": "/พื้นที่/warin-chamrap/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/เมืองอุบลราชธานี/",
+      "status": 308,
+      "location": "/พื้นที่/mueang-ubon-ratchathani/",
+      "ok": true
+    },
+    {
+      "path": "/บริการ/รับซื้อ-กล้อง-sony-อุบล/",
+      "status": 308,
+      "location": "/บริการ/รับซื้อกล้อง-sony-อุบล/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/เดชอุดม/",
+      "status": 308,
+      "location": "/พื้นที่/det-udom/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/พิบูลมังสาหาร/",
+      "status": 308,
+      "location": "/พื้นที่/phibun-mangsahan/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/ตระการพืชผล/",
+      "status": 308,
+      "location": "/พื้นที่/trakan-phuet-phon/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/เขื่องใน/",
+      "status": 308,
+      "location": "/พื้นที่/khueang-nai/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/โขงเจียม/",
+      "status": 308,
+      "location": "/พื้นที่/khong-chiam/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/บุณฑริก/",
+      "status": 308,
+      "location": "/พื้นที่/buntharik/",
+      "ok": true
+    },
+    {
+      "path": "/พื้นที่/น้ำยืน/",
+      "status": 308,
+      "location": "/พื้นที่/nam-yuen/",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

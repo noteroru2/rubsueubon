@@ -40,13 +40,9 @@ const ogImage = featuredImage ? new URL(featuredImage, SITE.url).href : `${SITE.
 const quickAnswer = entry.data.quickAnswer ?? getQuickAnswer(category, entry.id);
 const displayFaqs = mergeFaqs(faqs);
 
-const relatedUpdates = (await getCollection('updates'))
-  .filter((u) => u.data.relatedServiceSlug === entry.id)
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 3);
 
 const breadcrumbItems =
-  tier === 'brand' && parentSlug && parentLabel
+  (tier === 'brand' || tier === 'series') && parentSlug && parentLabel
     ? [
         { label: 'หน้าแรก', href: '/' },
         { label: 'บริการรับซื้อ', href: servicesIndex() },
@@ -103,35 +99,6 @@ const jsonLd = [
     {
       (acceptedConditions.length > 0 || rejectedConditions.length > 0) && (
         <ConditionsScope accepted={acceptedConditions} rejected={rejectedConditions} />
-      )
-    }
-    {
-      relatedUpdates.length > 0 && (
-        <section class="py-12 sm:py-14" aria-labelledby="related-updates-heading">
-          <div class="mx-auto max-w-6xl px-4 sm:px-6">
-            <h2 id="related-updates-heading" class="text-xl font-bold text-ink sm:text-2xl">
-              ผลงานรับซื้อที่เกี่ยวข้อง
-            </h2>
-            <ul class="mt-6 grid gap-4 sm:grid-cols-3">
-              {relatedUpdates.map((post) => (
-                <li>
-                  <a
-                    href={updatePath(post.data.slug)}
-                    class="block rounded-2xl border border-line bg-surface p-4 transition hover:border-brand/30 hover:shadow-md"
-                  >
-                    <p class="font-semibold text-ink hover:text-brand">{post.data.title}</p>
-                    <p class="mt-2 text-sm text-muted line-clamp-2">{post.data.description}</p>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <p class="mt-4 text-sm">
-              <a href={updatesIndex()} class="font-semibold text-brand hover:underline">
-                ดูผลงานทั้งหมด →
-              </a>
-            </p>
-          </div>
-        </section>
       )
     }
     <GeoServiceLinks serviceLabel={geoLinkLabel} />

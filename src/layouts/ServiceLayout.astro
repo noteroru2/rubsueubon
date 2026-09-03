@@ -5,6 +5,9 @@ import LocalAuthorityBar from '../components/LocalAuthorityBar.astro';
 import { buildFAQPageSchema } from '../lib/schema';
 import { BUSINESS } from '../data/business';
 import WhatToSendForEstimate from '../components/WhatToSendForEstimate.astro';
+import { SITE } from '../config/site';
+import { productFaqs } from '../lib/product-faqs';
+import RelatedEvidence from '../components/RelatedEvidence.astro';
 
 export interface Props {
   frontmatter: {
@@ -24,8 +27,10 @@ export interface Props {
 
 const LINE_URL = 'https://line.me/R/ti/p/@buyhub';
 
-const { frontmatter, canonical, ogImage, featuredImage, keywords, jsonLd = [], quickAnswer, slug = '' } = Astro.props;
-const { title, description, faqs } = frontmatter;
+const { frontmatter, canonical, ogImage, featuredImage, keywords, jsonLd = [], quickAnswer: suppliedQuickAnswer, slug = '' } = Astro.props;
+const { title, description } = frontmatter;
+const faqs = productFaqs(frontmatter.faqs ?? [], slug, frontmatter.category);
+const quickAnswer = suppliedQuickAnswer ?? faqs[0];
 
 function getWhatToSendVariant(category: string, slugStr: string): 'default' | 'phone' | 'ipad' | 'macbook' | 'notebook' | 'camera' | 'pc_parts' | 'game_console' | 'b2b' {
   const s = slugStr.toLowerCase();
@@ -67,13 +72,13 @@ if (faqs && faqs.length > 0) {
 const trustSignals = [
   { icon: '💵', label: 'รับซื้อด้วยเงินสด' },
   { icon: '⚖️', label: 'ให้ราคายุติธรรม' },
-  { icon: '⚡', label: 'ประเมินราคาไวใน 5 นาที' },
+  { icon: '⚡', label: 'ตอบ LINE 24 ชั่วโมง' },
 ];
 
 const steps = [
   { number: '1', title: 'ส่งรูปและสเปค', description: 'ถ่ายรูปสินค้า แจ้งรุ่นและสภาพ ส่งมาที่ LINE @buyhub' },
-  { number: '2', title: 'ประเมินราคา', description: 'รับใบเสนอราคาฟรีภายใน 5 นาที ไม่มีข้อผูกมัด' },
-  { number: '3', title: 'นัดรับของและรับเงินสด', description: 'ตกลงราคาแล้วนัดรับในอุบลราชธานี จ่ายเงินสดทันที' },
+  { number: '2', title: 'ประเมินราคา', description: 'ประเมินเบื้องต้นจากรูปและรายละเอียดสินค้า ไม่มีข้อผูกมัด' },
+  { number: '3', title: 'นัดหมายและตรวจสินค้า', description: 'ตกลงวัน เวลา และสถานที่รับร่วมกัน ตรวจสินค้าจริง ยืนยันราคาแล้วจึงชำระเงิน' },
 ];
 ---
 
@@ -121,7 +126,7 @@ const steps = [
                 d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
               ></path>
             </svg>
-            แอด LINE ประเมินราคาฟรีทันที
+            แอด LINE ประเมินราคาเบื้องต้นฟรี
           </a>
         </div>
         {
@@ -188,6 +193,8 @@ const steps = [
           ))
         }
       </ol>
+      <p class="mt-5 text-sm leading-relaxed text-muted">{SITE.estimateNote}</p>
+      <p class="mt-2 text-sm leading-relaxed text-muted">{SITE.pickupNote}</p>
     </div>
   </section>
 
@@ -226,7 +233,7 @@ const steps = [
         พิกัดร้านรับซื้อในจังหวัดอุบลราชธานี
       </h2>
       <p class="mt-2 text-center text-sm text-muted">
-        เดินทางสะดวก มีหน้าร้านชัดเจน หรือจะเรียกใช้บริการรับถึงที่ก็ยินดีครับ
+        {SITE.visitNote}
       </p>
       <div class="mt-8 overflow-hidden rounded-2xl border border-line shadow-sm">
         <iframe
@@ -282,6 +289,8 @@ const steps = [
   }
 
   <LocalAuthorityBar compact />
+
+  <RelatedEvidence slug={slug} category={frontmatter.category} />
 
   <slot name="after-content" />
 

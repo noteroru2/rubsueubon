@@ -1,11 +1,12 @@
 import { servicePath } from './urls';
+import { SITE } from './site';
 
 export const MAIN_HUB_SERVICE_SLUGS = [
   'รับซื้อมือถือ-อุบล',
   'รับซื้อโน้ตบุ๊ก-อุบล',
   'รับซื้อกล้อง-อุบล',
   'รับซื้อ-apple-อุบล',
-  'รับซื้อ-pc-gaming-อุบล',
+  'รับซื้อคอมพิวเตอร์-อุบล',
   'ipad-ubon',
   'รับซื้อ-เครื่องเกม-อุบล',
   'รับเทิร์นไอที-อุบล',
@@ -14,12 +15,12 @@ export const MAIN_HUB_SERVICE_SLUGS = [
 export const popularProducts = [
   {
     label: 'iPhone 15 Pro Max',
-    href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/',
+    href: '/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/',
     image: '/images/services/smartphone-iphone-android.webp',
   },
   {
     label: 'iPhone 16 Pro Max',
-    href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/',
+    href: '/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/',
     image: '/images/services/smartphone-iphone-android.webp',
   },
   {
@@ -29,7 +30,7 @@ export const popularProducts = [
   },
   {
     label: 'iPad Pro',
-    href: '/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/',
+    href: '/บริการ/รับซื้อ-ipad-pro-อุบล/',
     image: '/images/services/ipad-tablet.webp',
   },
   {
@@ -61,9 +62,9 @@ export const serviceClusters = [
       { label: 'รับซื้อ iPhone อุบล', href: servicePath('iphone-ubon') },
       { label: 'รับซื้อ Samsung อุบล', href: servicePath('samsung-ubon') },
       { label: 'รับซื้อมือถือ Android อุบล', href: servicePath('smartphone-ubon') },
-      { label: 'รับซื้อ iPhone 16 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-16-pro-max/' },
-      { label: 'รับซื้อ iPhone 15 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-15-pro-max/' },
-      { label: 'รับซื้อ iPhone 14 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-อุบล/iphone-14-pro-max/' },
+      { label: 'รับซื้อ iPhone 16 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-16-pro-max-อุบล/' },
+      { label: 'รับซื้อ iPhone 15 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-15-pro-max-อุบล/' },
+      { label: 'รับซื้อ iPhone 14 Pro Max อุบล', href: '/บริการ/รับซื้อ-iphone-14-pro-max-อุบล/' },
     ],
   },
   {
@@ -85,9 +86,9 @@ export const serviceClusters = [
       { label: 'รับซื้อ MacBook อุบล', href: servicePath('macbook-ubon') },
       { label: 'รับซื้อ iPad อุบล', href: servicePath('ipad-ubon') },
       { label: 'รับซื้อ Apple Watch อุบล', href: servicePath('smartwatch-ubon') },
-      { label: 'รับซื้อ iPad Pro อุบล', href: '/บริการ/รับซื้อ-ipad-อุบล/ipad-pro/' },
+      { label: 'รับซื้อ iPad Pro อุบล', href: '/บริการ/รับซื้อ-ipad-pro-อุบล/' },
       { label: 'รับซื้อ MacBook Air M1 อุบล', href: '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m1/' },
-      { label: 'รับซื้อ MacBook Air M3 อุบล', href: '/บริการ/รับซื้อ-macbook-อุบล/macbook-air-m3/' },
+      { label: 'รับซื้อ MacBook Air M3 อุบล', href: '/บริการ/รับซื้อ-macbook-air-m3-อุบล/' },
       { label: 'รับซื้อ iMac อุบล', href: servicePath('imac-ubon') },
     ],
   },
@@ -106,4 +107,4 @@ export const serviceClusters = [
 export const MAP_EMBED =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.025200608903!2d104.844358!3d15.266421499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311687b7ef0583c9%3A0x90ad9a37b84af3a!2z4Lit4Liz4Lie4LilIOC5gOC4l-C4o-C4lOC4lOC4tOC5ieC4hyAtIOC4o-C4seC4muC4i-C4t-C5ieC4rSDguILguLLguKIg4LiL4LmI4Lit4LihIOC4hOC4reC4oeC4nuC4tOC4p-C5gOC4leC4reC4o-C5jCDguKHguLfguK3guJbguLfguK0g4LiB4Lil4LmJ4Lit4LiHIOC4peC4s-C5guC4nuC4hyDguKrguLTguJnguITguYnguLLguYTguK3guJfguLXguJfguLjguIHguIrguJnguLTguJQ!5e0!3m2!1sth!2sth!4v1781084191572!5m2!1sth!2sth';
 
-export const MAP_URL = 'https://maps.app.goo.gl/uuwGbjpMeedTC1ik8';
+export const MAP_URL = SITE.mapUrl;

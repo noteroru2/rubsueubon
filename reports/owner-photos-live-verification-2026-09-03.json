@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-09-03T11:20:13.709Z",
+  "deployment": "dpl_3M8ePWpYTwoTZXEBGbKGG3iHU1L5",
+  "pages": 233,
+  "unconfirmedEstimateTimePages": [],
+  "ownerPhotos": 13,
+  "images": [
+    {
+      "src": "/_astro/insta360-x5.C8hqIsbM_2bkiPH.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/macbook-air-silver.Cpt9Ht6q_1uGwMs.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/pc-white.BWZoq7bl_Z2r1ck0.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/notebook-lineup.BcmaFNO5_Z1895EB.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/storefront.DdrVcuEj_Z2bM6UC.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/pc-black-side.BbVssYyk_ZggTkm.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/pc-black-angle.CpXMzY-B_Z2bXCcw.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/asus-vivobook.8xYPvqY5_ZTeCNv.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/acer-aspire-lite.B6uWDdUf_1Cnf6W.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/acer-aspire.DDsM_qZ-_Z1oE9kQ.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/asus-vivobook-s413.9fxWQmhi_Z2rfmfS.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/asus-vivobook-s513.5cDqX9pJ_Ziuh1d.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "src": "/_astro/macbook-air-m3.Cm5FMvt0_1vwWBx.webp",
+      "status": 200,
+      "type": "image/webp"
+    }
+  ],
+  "servicePagesWithProductFaq": 130,
+  "servicePagesWithEvidence": 117,
+  "areaPagesWithPickup": 26,
+  "llmsUrls": 233,
+  "errors": []
+}

@@ -43,14 +43,24 @@ const { compact = false } = Astro.props;
         </dd>
       </div>
       <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
-        <dt class="font-semibold text-ink">เวลาให้บริการ</dt>
+        <dt class="font-semibold text-ink">เวลาเปิดหน้าร้าน</dt>
         <dd class="mt-1 text-muted">{BUSINESS.hours}</dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
+        <dt class="font-semibold text-ink">ที่อยู่หน้าร้าน</dt>
+        <dd class="mt-1 text-muted">{BUSINESS.storeName} · {BUSINESS.addressText}</dd>
+        <dd class="mt-1 text-muted">{BUSINESS.landmark}</dd>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
+        <dt class="font-semibold text-ink">เวลาตอบ LINE</dt>
+        <dd class="mt-1 text-muted">{BUSINESS.lineHours}</dd>
+        <dd class="mt-1 text-muted">{BUSINESS.visitNote}</dd>
       </div>
       {
         !compact && (
           <div class="rounded-xl border border-line bg-surface-alt px-4 py-3 sm:col-span-2">
             <dt class="font-semibold text-ink">พื้นที่ให้บริการ</dt>
-            <dd class="mt-1 text-muted">{BUSINESS.serviceDistricts.join(' · ')}</dd>
+            <dd class="mt-1 text-muted">{BUSINESS.priorityServiceDistricts.join(' · ')}</dd>
           </div>
         )
       }
@@ -65,6 +75,7 @@ const { compact = false } = Astro.props;
       >
         📍 เปิด Google Maps นำทางไปหน้าร้าน
       </a>
+      <a href={BUSINESS.facebookUrl} target="_blank" rel="noopener noreferrer" class="ml-4 inline-flex text-sm font-bold text-brand hover:underline">Facebook ร้านอำพล เทรดดิ้ง</a>
     </p>
   </div>
 </section>

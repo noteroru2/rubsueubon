@@ -1,6 +1,6 @@
 ---
-title: "รับซื้อ Sony A7 IV มือสอง | ประเมินราคาตามสภาพจริง"
-description: "รับซื้อ Sony A7 IV มือสอง full-frame 33MP ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็ก shutter count สภาพ body และอุปกรณ์ครบก่อนตกลงราคา"
+title: "รับซื้อ Sony A7 IV มือสอง อุบล | ประเมินราคาตามสภาพจริง"
+description: "รับซื้อ Sony A7 IV มือสอง อุบลราชธานี full-frame 33MP ประเมินราคาตามสภาพจริง ส่งรูปผ่าน LINE เช็ก shutter count สภาพ body และอุปกรณ์ครบก่อนตกลงราคา"
 slug: "sony-a7-iv"
 category: "camera-model"
 brand: "Sony"

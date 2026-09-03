@@ -4,12 +4,13 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 import { areasIndex, servicesIndex, updatePath, updatesIndex } from '../../config/urls';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import OwnerPhoto from '../../components/OwnerPhoto.astro';
 
 const allUpdates = (await getCollection('updates')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const pageTitle = 'ผลงานรับซื้อล่าสุด | รับซื้ออุบล.com';
 const pageDescription =
-  'รวบรวมเคสรับซื้อ-รับเทิร์นจริงในอุบลราชธานี มีรายละเอียดสินค้า อำเภอ วันที่ และขั้นตอนการรับซื้อ — ไม่ใช่ตัวอย่างสมมติ';
+  'ภาพสินค้าจริงจากร้านอำพล เทรดดิ้ง และผลงานรับซื้อในอุบลราชธานี พร้อมรายละเอียดสินค้าและแนวทางส่งรูปประเมินก่อนนัดรับ';
 
 const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'ผลงานรับซื้อล่าสุด' }];
 
@@ -29,9 +30,7 @@ function formatDate(date: Date): string {
 
       <div class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-headings:text-ink">
         <p>
-          หน้านี้รวบรวม<strong>เคสรับซื้อ-รับเทิร์นจริง</strong>ในอุบลราชธานี เพื่อให้ลูกค้าใหม่เห็นขั้นตอนการทำงาน รายละเอียดสินค้า
-          และพื้นที่ที่เราให้บริการ ทุกเคสเริ่มจากการส่งรูปมาที่ LINE <strong>@buyhub</strong>
-          ประเมินราคาฟรี แล้วนัดรับจ่ายเงินสดทันที
+          หน้านี้รวบรวม<strong>ภาพสินค้าจริงจากร้านและผลงานรับซื้อ</strong>ในอุบลราชธานี ภาพสินค้าช่วยให้เห็นรายละเอียดที่ควรถ่ายก่อนประเมิน ส่วนเคสรับซื้อแสดงข้อมูลตามแต่ละรายการ เริ่มขายสินค้าของคุณได้ด้วยการส่งรูปทาง LINE <strong>@buyhub</strong> ประเมินราคาเบื้องต้น แล้วตกลงวัน เวลา และสถานที่นัดรับร่วมกัน
         </p>
         <p>
           หากต้องการดู<strong>ตัวอย่างสถานการณ์ประเมิน</strong> (case study สมมติเพื่อให้ความรู้) ไปที่
@@ -47,6 +46,8 @@ function formatDate(date: Date): string {
         {
           allUpdates.map((post) => (
             <li class="rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:border-brand/30">
+              {post.data.photos[0] && <div class="mb-4"><OwnerPhoto id={post.data.photos[0]} thumbnail caption={false} /></div>}
+              <p class="mb-2 text-xs font-semibold text-brand">{post.data.entryKind === 'photo' ? 'ภาพสินค้าจริง · วันที่เผยแพร่ภาพ' : 'ผลงานรับซื้อ'}</p>
               <time datetime={post.data.pubDate.toISOString()} class="text-xs font-medium text-brand">
                 {formatDate(post.data.pubDate)}
               </time>
