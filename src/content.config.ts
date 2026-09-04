@@ -67,6 +67,33 @@ const blog = defineCollection({
   }),
 });
 
+const repairs = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/repairs' }),
+  schema: z.object({
+    title: z.string(),
+    seoTitle: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    navLabel: z.string(),
+    category: z.enum(['mobile', 'computer']),
+    keywords: z.array(z.string()).default([]),
+    deviceTypes: z.array(z.string()).default([]),
+    commonSymptoms: z.array(z.string()).default([]),
+    quickAnswer: z.object({
+      question: z.string(),
+      answer: z.string(),
+    }),
+    faqs: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        }),
+      )
+      .default([]),
+  }),
+});
+
 const areas = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/areas' }),
   schema: z.object({
@@ -186,4 +213,4 @@ const modelServices = defineCollection({
   }),
 });
 
-export const collections = { services, updates, blog, areas, examples, cameraModels, modelServices };
+export const collections = { services, updates, blog, repairs, areas, examples, cameraModels, modelServices };

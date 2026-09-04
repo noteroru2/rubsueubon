@@ -1,0 +1,41 @@
+---
+import { SITE, getLineOALink } from '../config/site';
+
+const phone = SITE.phone.replace(/[^0-9]/g, '');
+const pathname = Astro.url.pathname;
+const productGroup =
+  pathname.includes('มือถือ') || pathname.includes('iphone') || pathname.includes('ipad')
+    ? 'repair_mobile'
+    : pathname.includes('คอม') || pathname.includes('โน้ตบุ๊ก')
+      ? 'repair_computer'
+      : 'repair';
+---
+
+<div
+  class="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-surface/95 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur-md md:hidden print:hidden"
+  role="complementary"
+  aria-label="ติดต่อสอบถามบริการซ่อม"
+>
+  <div class="mx-auto flex w-full max-w-lg gap-2.5">
+    <a
+      href={`tel:${phone}`}
+      class="flex min-h-12 flex-1 items-center justify-center rounded-full border border-line bg-surface px-3 py-3 text-sm font-bold text-ink"
+      data-track-cta="repair_phone_cta_click"
+      data-cta-location="sticky"
+      data-product-group={productGroup}
+      data-page-type="repair"
+      data-cta-type="phone">โทรสอบถาม</a
+    >
+    <a
+      href={getLineOALink()}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex min-h-12 flex-[2] items-center justify-center rounded-full bg-line px-3 py-3 text-sm font-bold text-white"
+      data-track-cta="repair_line_cta_click"
+      data-cta-location="sticky"
+      data-product-group={productGroup}
+      data-page-type="repair"
+      data-cta-type="line">ส่งอาการทาง LINE</a
+    >
+  </div>
+</div>

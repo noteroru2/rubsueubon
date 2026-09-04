@@ -1,0 +1,184 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AnswerBox from '../components/AnswerBox.astro';
+import RepairMap from '../components/RepairMap.astro';
+import RepairMobileCTA from '../components/RepairMobileCTA.astro';
+import { SITE, getLineOALink } from '../config/site';
+import { servicePath } from '../config/urls';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  title: string;
+  seoTitle: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  keywords: string[];
+  category: 'mobile' | 'computer';
+  deviceTypes: string[];
+  commonSymptoms: string[];
+  quickAnswer: { question: string; answer: string };
+  faqs: FAQItem[];
+  jsonLd: Record<string, unknown>[];
+}
+
+const {
+  title,
+  seoTitle,
+  description,
+  canonical,
+  ogImage,
+  keywords,
+  category,
+  deviceTypes,
+  commonSymptoms,
+  quickAnswer,
+  faqs,
+  jsonLd,
+} = Astro.props;
+
+const lineUrl = getLineOALink();
+const productGroup = category === 'mobile' ? 'repair_mobile' : 'repair_computer';
+const buybackHref = category === 'mobile' ? servicePath('smartphone-ubon') : servicePath('notebook-ubon');
+const buybackLabel = category === 'mobile' ? 'บริการรับซื้อมือถือเครื่องเสีย' : 'บริการรับซื้อคอมและโน้ตบุ๊กตามสภาพ';
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  keywords={keywords}
+  jsonLd={jsonLd}
+>
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-800 to-blue-950 text-white">
+    <div class="pointer-events-none absolute inset-0 opacity-30" aria-hidden="true">
+      <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-blue-400/30 blur-3xl"></div>
+    </div>
+    <div class="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
+      <slot name="breadcrumbs" />
+      <p class="mt-7 inline-flex rounded-full bg-white/10 px-3 py-1 text-sm font-semibold ring-1 ring-white/20">
+        ร้านอำพล เทรดดิ้ง · อุบลราชธานี · เปิด 09:00–19:00 น.
+      </p>
+      <h1 class="mt-5 max-w-4xl text-3xl font-extrabold leading-tight sm:text-4xl">{title}</h1>
+      <p class="mt-5 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">{description}</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href={lineUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-h-12 items-center justify-center rounded-full bg-line px-6 py-3 font-bold text-white transition hover:bg-line-dark"
+          data-track-cta="repair_line_cta_click"
+          data-cta-location="hero"
+          data-product-group={productGroup}
+          data-page-type="repair"
+          data-cta-type="line">ส่งรุ่นและอาการทาง LINE</a
+        >
+        <a
+          href="#repair-map-heading"
+          class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
+          >ดูพิกัดหน้าร้าน</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <AnswerBox question={quickAnswer.question} answer={quickAnswer.answer} />
+
+  <section class="border-y border-line bg-surface-alt py-10" aria-labelledby="repair-scope-heading">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <h2 id="repair-scope-heading" class="text-2xl font-extrabold text-ink">เครื่องและอาการที่สอบถามได้</h2>
+      <div class="mt-6 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-2xl border border-line bg-surface p-6">
+          <h3 class="font-bold text-ink">ประเภทอุปกรณ์</h3>
+          <ul class="mt-4 grid gap-2 text-sm text-muted sm:grid-cols-2">
+            {
+              deviceTypes.map((item) => (
+                <li class="flex gap-2">
+                  <>
+                    <span class="text-line">✓</span>
+                    <span>{item}</span>
+                  </>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-line bg-surface p-6">
+          <h3 class="font-bold text-ink">อาการที่พบบ่อย</h3>
+          <ul class="mt-4 grid gap-2 text-sm text-muted sm:grid-cols-2">
+            {
+              commonSymptoms.map((item) => (
+                <li class="flex gap-2">
+                  <>
+                    <span class="text-brand">•</span>
+                    <span>{item}</span>
+                  </>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed text-muted">
+        รายการนี้เป็นตัวอย่าง อาการและค่าใช้จ่ายจริงต้องตรวจจากรุ่น สภาพเครื่อง และชิ้นส่วนที่เกี่ยวข้องก่อนดำเนินงาน
+      </p>
+    </div>
+  </section>
+
+  <slot name="evidence" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <article
+        class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-ink prose-p:text-muted prose-strong:text-ink prose-a:text-brand prose-li:text-muted"
+      >
+        <slot />
+      </article>
+
+      <aside class="mt-10 rounded-2xl border border-line bg-surface-alt p-6">
+        <h2 class="text-xl font-bold text-ink">ซ่อมต่อหรือขายตามสภาพ?</h2>
+        <p class="mt-3 text-sm leading-relaxed text-muted">
+          หากตรวจแล้วค่าซ่อมไม่เหมาะกับมูลค่าเครื่อง คุณสามารถแยกพิจารณาอีกทางได้
+          โดยบริการรับซื้อจะประเมินตามสภาพจริงและไม่ผูกกับการตัดสินใจซ่อม
+        </p>
+        <a class="mt-4 inline-block text-sm font-bold text-brand hover:underline" href={buybackHref}>{buybackLabel} →</a
+        >
+      </aside>
+    </div>
+  </section>
+
+  {
+    faqs.length > 0 && (
+      <section class="border-t border-line bg-surface-alt py-12 sm:py-16" aria-labelledby="repair-faq-heading">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 id="repair-faq-heading" class="text-2xl font-extrabold text-ink">
+            คำถามที่พบบ่อยเกี่ยวกับงานซ่อม
+          </h2>
+          <div class="mt-7 space-y-3">
+            {faqs.map((faq) => (
+              <details class="group rounded-2xl border border-line bg-surface open:border-brand/30 open:shadow-sm">
+                <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
+                  <span class="flex items-center justify-between gap-4">
+                    {faq.question}
+                    <span class="text-brand group-open:rotate-180" aria-hidden="true">
+                      ▼
+                    </span>
+                  </span>
+                </summary>
+                <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <RepairMap />
+  <RepairMobileCTA slot="mobile-cta" />
+</BaseLayout>

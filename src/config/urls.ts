@@ -12,6 +12,7 @@ export const PATHS = {
   faq: '/คำถามที่พบบ่อย',
   privacy: '/นโยบายความเป็นส่วนตัว',
   blog: '/บทความ',
+  repairs: '/ซ่อม',
 } as const;
 
 /** slug ภาษาไทยของแต่ละบริการ (key = content id) */
@@ -252,6 +253,14 @@ export function blogIndex(): string {
 
 export function blogPath(slug: string): string {
   return `${PATHS.blog}/${slug}/`;
+}
+
+export function repairsIndex(): string {
+  return `${PATHS.repairs}/`;
+}
+
+export function repairPath(slug: string): string {
+  return `${PATHS.repairs}/${slug}/`;
 }
 
 export function examplesIndex(): string {

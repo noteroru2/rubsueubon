@@ -1,0 +1,63 @@
+---
+import { BUSINESS } from '../data/business';
+import { MAP_EMBED } from '../config/home-hub';
+
+interface Props {
+  heading?: string;
+}
+
+const { heading = 'พิกัดร้านซ่อมอำพล เทรดดิ้ง อุบลราชธานี' } = Astro.props;
+---
+
+<section class="border-t border-line bg-surface py-12 sm:py-16" aria-labelledby="repair-map-heading">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+      <div>
+        <p class="text-sm font-bold text-brand">หน้าร้านในเมืองอุบลราชธานี</p>
+        <h2 id="repair-map-heading" class="mt-2 text-2xl font-extrabold text-ink">{heading}</h2>
+        <dl class="mt-6 space-y-4 text-sm leading-relaxed">
+          <div>
+            <dt class="font-bold text-ink">ที่อยู่</dt>
+            <dd class="mt-1 text-muted">{BUSINESS.addressText} — {BUSINESS.landmark}</dd>
+          </div>
+          <div>
+            <dt class="font-bold text-ink">เวลาเปิดร้าน</dt>
+            <dd class="mt-1 text-muted">ทุกวัน {BUSINESS.hoursShort} น.</dd>
+          </div>
+          <div>
+            <dt class="font-bold text-ink">โทรศัพท์</dt>
+            <dd class="mt-1">
+              <a class="font-semibold text-brand hover:underline" href={`tel:${BUSINESS.phone.replace(/[^0-9]/g, '')}`}
+                >{BUSINESS.phone}</a>
+            </dd>
+          </div>
+        </dl>
+        <a
+          href={BUSINESS.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-dark"
+          data-track-cta="repair_map_click"
+          data-cta-location="map"
+          data-product-group="repair"
+          data-page-type="repair"
+          data-cta-type="map"
+        >
+          เปิด Google Maps และนำทาง →
+        </a>
+      </div>
+
+      <div class="overflow-hidden rounded-2xl border border-line bg-surface shadow-sm">
+        <iframe
+          src={MAP_EMBED}
+          title="แผนที่ร้านอำพล เทรดดิ้ง อุบลราชธานี"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

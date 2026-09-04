@@ -1,5 +1,5 @@
 {
-  "confirmedAt": "2026-09-03",
+  "confirmedAt": "2026-09-04",
   "storeName": "ร้านอำพล เทรดดิ้ง",
   "operator": "WINNER IT",
   "companyName": "บริษัท อำพล เทรดดิ้ง จำกัด",
@@ -14,7 +14,7 @@
     "addressCountry": "TH"
   },
   "landmark": "ติดปากซอยชยางกูร 32",
-  "mapUrl": "https://maps.app.goo.gl/pdpEaJRoV9F4bAng9",
+  "mapUrl": "https://maps.app.goo.gl/ywhS1mVHKVHYxp198",
   "facebookUrl": "https://www.facebook.com/Amphontrading",
   "geo": {
     "latitude": 15.2664215,
@@ -22,7 +22,7 @@
   },
   "storeHours": {
     "opens": "09:00",
-    "closes": "19:30",
+    "closes": "19:00",
     "days": [
       "Monday",
       "Tuesday",

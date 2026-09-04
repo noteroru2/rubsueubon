@@ -150,7 +150,7 @@ let sitemapCount = 0;
 for (const file of sitemapFiles) {
   sitemapCount += [...fs.readFileSync(path.join(dist, file), 'utf8').matchAll(/<loc>/g)].length;
 }
-assert(sitemapCount === 233, `Sitemap regression: expected 233 URLs (229 existing + 4 owner photo articles), found ${sitemapCount}`);
+assert(sitemapCount === 236, `Sitemap regression: expected 236 URLs (233 existing + 3 repair pages), found ${sitemapCount}`);
 
 console.log(`Official district records: ${districts.length}`);
 console.log(`District pages checked: ${checked}/25`);

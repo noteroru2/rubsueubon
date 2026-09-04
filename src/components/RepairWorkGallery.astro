@@ -1,0 +1,118 @@
+---
+const repairCases = [
+  {
+    title: 'เคสตัวอย่างที่ 1: ตรวจเครื่องจอแตกและภาพเป็นเส้น',
+    description:
+      'ชุดภาพบันทึกตั้งแต่สภาพหน้าจอก่อนเริ่มงาน การเปิดเครื่องเข้าตรวจชุดประกอบภายใน ไปจนถึงการประกอบตัวเครื่องกลับ โดยการหาสาเหตุและรายการซ่อมจริงของแต่ละเครื่องต้องอ้างอิงผลตรวจหน้างาน',
+    images: [
+      {
+        src: '/images/repairs/mobile-broken-screen-before.webp',
+        width: 442,
+        height: 590,
+        alt: 'มือถือจอแตกและภาพเป็นเส้นก่อนตรวจซ่อมที่ร้านอำพล เทรดดิ้ง อุบล',
+        caption: 'ก่อนตรวจ: กระจกแตกร้าวบริเวณด้านล่างและหน้าจอแสดงเส้นสี บันทึกสภาพไว้ก่อนเริ่มงาน',
+      },
+      {
+        src: '/images/repairs/mobile-open-frame-inspection.webp',
+        width: 442,
+        height: 590,
+        alt: 'มือถือเปิดฝาหลังเพื่อตรวจชุดประกอบภายในระหว่างงานซ่อม',
+        caption: 'ระหว่างตรวจ: เปิดฝาหลังเพื่อเข้าถึงชุดประกอบภายในและตรวจจุดที่เกี่ยวข้องกับอาการ',
+      },
+      {
+        src: '/images/repairs/mobile-internal-repair-process.webp',
+        width: 442,
+        height: 590,
+        alt: 'ช่างเปิดมือถือและแยกชุดประกอบภายในเพื่อตรวจอาการ',
+        caption: 'ระหว่างงาน: แยกชุดประกอบอย่างเป็นขั้นตอนเพื่อให้ตรวจส่วนภายในได้ชัดเจนขึ้น',
+      },
+      {
+        src: '/images/repairs/mobile-reassembled-back.webp',
+        width: 442,
+        height: 590,
+        alt: 'ด้านหลังมือถือหลังประกอบตัวเครื่องกลับที่ร้านอำพล เทรดดิ้ง',
+        caption: 'หลังประกอบ: ตรวจแนวฝาหลัง ขอบเครื่อง และความเรียบร้อยภายนอกก่อนส่งมอบ',
+      },
+    ],
+  },
+  {
+    title: 'เคสตัวอย่างที่ 2: ตรวจอาการจอ iPhone และทดสอบหลังประกอบ',
+    description:
+      'ภาพชุดนี้แสดงอาการสีหน้าจอผิดปกติก่อนงาน ภายในตัวเครื่องระหว่างถอดประกอบ และการเปิดเครื่องทดสอบหลายหน้าจอหลังดำเนินงาน เพื่อดูการบูตและการแสดงผลในสภาพใช้งานจริง',
+    images: [
+      {
+        src: '/images/repairs/iphone-display-lock-screen-test.webp',
+        width: 900,
+        height: 1202,
+        alt: 'หน้าจอ iPhone สีเขียวและมีเส้นก่อนตรวจซ่อม',
+        caption: 'ก่อนตรวจ: หน้าจอมีสีเขียวผิดปกติและเห็นเส้นแนวตั้ง จึงต้องตรวจแยกอาการก่อนสรุปแนวทาง',
+      },
+      {
+        src: '/images/repairs/iphone-open-housing-inspection.webp',
+        width: 442,
+        height: 590,
+        alt: 'ตัวเครื่อง iPhone เปิดชุดประกอบภายในระหว่างงานซ่อม',
+        caption: 'ระหว่างงาน: เปิดตัวเครื่องเพื่อเข้าตรวจและดำเนินงานกับชุดประกอบที่เกี่ยวข้อง',
+      },
+      {
+        src: '/images/repairs/iphone-powered-on-after-service.webp',
+        width: 442,
+        height: 590,
+        alt: 'iPhone เปิดใช้งานหน้าโฮมหลังประกอบและทดสอบเครื่อง',
+        caption: 'หลังประกอบ: เปิดหน้าโฮมเพื่อตรวจการแสดงผลและการตอบสนองของเครื่องในเบื้องต้น',
+      },
+      {
+        src: '/images/repairs/iphone-passcode-screen-test.webp',
+        width: 900,
+        height: 1202,
+        alt: 'iPhone แสดงหน้าป้อนรหัสหลังเปิดเครื่องเพื่อทดสอบหน้าจอ',
+        caption: 'ทดสอบซ้ำ: เครื่องบูตถึงหน้าป้อนรหัสและแสดงองค์ประกอบทั่วทั้งหน้าจอได้',
+      },
+    ],
+  },
+] as const;
+---
+
+<section class="border-y border-line bg-surface py-12 sm:py-16" aria-labelledby="real-repair-work-heading">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-bold text-brand">ภาพจากงานที่หน้าร้าน</p>
+      <h2 id="real-repair-work-heading" class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">
+        ตัวอย่างขั้นตอนงานซ่อมมือถือจริง
+      </h2>
+      <p class="mt-4 leading-relaxed text-muted">
+        ภาพถ่ายแสดงสภาพเครื่องในแต่ละช่วงของงาน เพื่อให้เห็นการตรวจ ถอดประกอบ และทดสอบหลังงานอย่างเป็นลำดับ ผลตรวจ
+        ค่าใช้จ่าย และรายการซ่อมของเครื่องแต่ละเครื่องอาจแตกต่างกัน
+      </p>
+    </div>
+
+    <div class="mt-10 space-y-12">
+      {
+        repairCases.map((repairCase) => (
+          <section aria-label={repairCase.title}>
+            <div class="max-w-3xl">
+              <h3 class="text-xl font-bold text-ink">{repairCase.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{repairCase.description}</p>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+              {repairCase.images.map((item) => (
+                <figure class="overflow-hidden rounded-2xl border border-line bg-surface-alt shadow-sm">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[3/4] w-full object-cover"
+                  />
+                  <figcaption class="p-3 text-xs leading-relaxed text-muted sm:p-4">{item.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</section>

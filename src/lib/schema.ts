@@ -14,7 +14,7 @@ export function buildLocalBusinessSchema() {
     alternateName: [SITE.businessName, SITE.storeName],
     legalName: SITE.companyName,
     description:
-      'รับซื้อและรับเทิร์นสินค้าไอทีมือหนึ่งและมือสองในอุบลราชธานี โทรศัพท์มือถือ โน้ตบุ๊ก กล้อง และอุปกรณ์ไอทีอื่นๆ ส่งรูปประเมินราคาเบื้องต้นทาง LINE @buyhub',
+      'ร้านอำพล เทรดดิ้ง อุบลราชธานี ให้บริการรับซื้อ รับเทิร์น และรับตรวจซ่อมโทรศัพท์มือถือ iPhone iPad คอมพิวเตอร์ และโน้ตบุ๊ก ติดต่อสอบถามอาการเบื้องต้นทาง LINE @buyhub',
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
@@ -60,7 +60,7 @@ export function buildLocalBusinessSchema() {
     sameAs: SITE.sameAs,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'บริการรับซื้อ-รับเทิร์นไอที',
+      name: 'บริการรับซื้อ รับเทิร์น และซ่อมสินค้าไอที',
       itemListElement: [
         {
           '@type': 'Offer',
@@ -107,6 +107,22 @@ export function buildLocalBusinessSchema() {
           itemOffered: {
             '@type': 'Service',
             name: 'รับเทิร์นสินค้าไอที อุบลราชธานี',
+            areaServed: 'อุบลราชธานี',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'ซ่อมโทรศัพท์มือถือ iPhone และ iPad',
+            areaServed: 'อุบลราชธานี',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'ซ่อมคอมพิวเตอร์และโน้ตบุ๊ก',
             areaServed: 'อุบลราชธานี',
           },
         },
@@ -218,13 +234,11 @@ export function buildOrganizationSchema() {
 export const homepageFAQs: FAQItem[] = [
   {
     question: 'ร้านรับเทิร์นไอที อุบล อยู่ที่ไหน?',
-    answer:
-      `${SITE.storeName} (${SITE.businessName}) อยู่ที่ ${SITE.addressText} ${SITE.landmark} เข้ามาที่ร้านได้${SITE.storeHoursLabel} หรือติดต่อ LINE ${SITE.lineOA} ได้ ${SITE.lineHours}`,
+    answer: `${SITE.storeName} (${SITE.businessName}) อยู่ที่ ${SITE.addressText} ${SITE.landmark} เข้ามาที่ร้านได้${SITE.storeHoursLabel} หรือติดต่อ LINE ${SITE.lineOA} ได้ ${SITE.lineHours}`,
   },
   {
     question: 'รับซื้อโทรศัพท์มือถือมือสอง อุบลราชธานี ราคาเท่าไหร่?',
-    answer:
-      `ราคารับซื้อขึ้นอยู่กับรุ่น สภาพ และอุปกรณ์ที่มาพร้อมเครื่อง ส่งรูปและรายละเอียดมาที่ LINE ${SITE.lineOA} ได้ ${SITE.lineHours} ประเมินราคาเบื้องต้นฟรี ${SITE.estimateNote}`,
+    answer: `ราคารับซื้อขึ้นอยู่กับรุ่น สภาพ และอุปกรณ์ที่มาพร้อมเครื่อง ส่งรูปและรายละเอียดมาที่ LINE ${SITE.lineOA} ได้ ${SITE.lineHours} ประเมินราคาเบื้องต้นฟรี ${SITE.estimateNote}`,
   },
   {
     question: 'รับเทิร์นโน้ตบุ๊ก อุบล ต้องเตรียมอะไรบ้าง?',

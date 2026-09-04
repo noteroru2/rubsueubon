@@ -14,6 +14,7 @@ import HomeWhyLineSection from '../components/HomeWhyLineSection.astro';
 import FAQSection from '../components/FAQSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import ServiceClustersSection from '../components/ServiceClustersSection.astro';
+import HomeRepairSection from '../components/HomeRepairSection.astro';
 import { getCollection } from 'astro:content';
 import { districts } from '../lib/districts';
 import {
@@ -48,6 +49,7 @@ const jsonLd = [
   <Hero />
   <HomeIntroSection />
   <ServicesSection services={services} />
+  <HomeRepairSection />
   <HowItWorks />
   <HomePrepareSection />
   <PopularProductsSection />

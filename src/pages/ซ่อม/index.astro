@@ -1,0 +1,248 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AnswerBox from '../../components/AnswerBox.astro';
+import RepairMap from '../../components/RepairMap.astro';
+import RepairMobileCTA from '../../components/RepairMobileCTA.astro';
+import RepairHeroProof from '../../components/RepairHeroProof.astro';
+import { SITE, getLineOALink } from '../../config/site';
+import { repairPath, repairsIndex } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import { buildFAQPageSchema, buildItemListSchema, buildLocalBusinessSchema } from '../../lib/schema';
+
+const repairs = await getCollection('repairs');
+const canonical = repairsIndex();
+const pageTitle = 'ร้านซ่อมมือถือ คอม โน้ตบุ๊ก อุบล | อำพล';
+const pageDescription =
+  'ร้านอำพล เทรดดิ้ง ให้บริการตรวจเช็กและซ่อมมือถือ iPhone iPad คอมพิวเตอร์ และโน้ตบุ๊กในอุบลราชธานี ส่งรุ่นและอาการสอบถามก่อนเข้าร้านได้ เปิด 09:00–19:00 น.';
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บริการซ่อม' }];
+const faqs = [
+  {
+    question: 'ร้านซ่อมอำพล เทรดดิ้งอยู่ที่ไหน?',
+    answer:
+      'ร้านอยู่เลขที่ 740/8 ถนนชยางกูร ตำบลในเมือง อำเภอเมืองอุบลราชธานี ติดปากซอยชยางกูร 32 สามารถเปิด Google Maps จากหน้านี้เพื่อนำทางได้',
+  },
+  {
+    question: 'ร้านเปิดกี่โมง?',
+    answer:
+      'ร้านเปิดทุกวันเวลา 09:00–19:00 น. หากต้องนำเครื่องจากต่างอำเภอหรือมีอาการเฉพาะ แนะนำให้ส่งรุ่นและอาการสอบถามก่อนเดินทาง',
+  },
+  {
+    question: 'ต้องนัดก่อนนำเครื่องมาซ่อมหรือไม่?',
+    answer:
+      'สามารถเข้ามาที่ร้านในเวลาเปิดทำการได้ แต่การติดต่อก่อนช่วยให้ร้านตรวจสอบคิวงานและข้อมูลรุ่นเบื้องต้น โดยเฉพาะงานที่อาจต้องใช้ชิ้นส่วนเฉพาะรุ่น',
+  },
+  {
+    question: 'ร้านแจ้งราคาก่อนซ่อมหรือไม่?',
+    answer:
+      'ร้านจะตรวจอาการและแจ้งแนวทางพร้อมค่าใช้จ่ายที่เกี่ยวข้องก่อนดำเนินงานที่มีค่าใช้จ่าย ราคาจากข้อความหรือรูปเป็นข้อมูลคัดกรองเบื้องต้นและอาจเปลี่ยนหลังตรวจเครื่องจริง',
+  },
+  {
+    question: 'ควรสำรองข้อมูลก่อนส่งซ่อมหรือไม่?',
+    answer:
+      'ควรสำรองข้อมูลสำคัญก่อนทุกครั้งหากเครื่องยังใช้งานได้ และแจ้งร้านว่ามีข้อมูลใดที่ต้องระวังเป็นพิเศษ ไม่ควรส่งรหัสผ่าน รหัส OTP หรือข้อมูลลับผ่านแชท',
+  },
+];
+
+const jsonLd = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildLocalBusinessSchema(),
+  buildItemListSchema(
+    'บริการซ่อมอุปกรณ์ไอที อุบลราชธานี',
+    repairs.map((entry) => ({ name: entry.data.title, url: `${SITE.url}${repairPath(entry.data.slug)}` })),
+  ),
+  buildFAQPageSchema(faqs),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}${canonical}#webpage`,
+    url: `${SITE.url}${canonical}`,
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: 'th-TH',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}/#localbusiness` },
+  },
+];
+
+const lineUrl = getLineOALink();
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonical}
+  ogImage={`${SITE.url}/images/repairs/mobile-broken-screen-before.webp`}
+  keywords={[
+    'ร้านซ่อม อุบล',
+    'ซ่อมมือถือ อุบล',
+    'ซ่อม iPhone อุบล',
+    'ซ่อม iPad อุบล',
+    'ซ่อมคอม อุบล',
+    'ซ่อมโน้ตบุ๊ก อุบล',
+  ]}
+  jsonLd={jsonLd}
+>
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-800 to-blue-950 text-white">
+    <div class="pointer-events-none absolute inset-0 opacity-30" aria-hidden="true">
+      <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-blue-400/30 blur-3xl"></div>
+    </div>
+    <div class="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
+      <div class="text-white/70 [&_a:hover]:text-white [&_span]:text-white/70">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      <p class="mt-7 inline-flex rounded-full bg-white/10 px-3 py-1 text-sm font-semibold ring-1 ring-white/20">
+        ร้านอำพล เทรดดิ้ง · เปิด 09:00–19:00 น.
+      </p>
+      <h1 class="mt-5 max-w-4xl text-3xl font-extrabold leading-tight sm:text-4xl">
+        ร้านซ่อมมือถือ iPhone iPad คอม โน้ตบุ๊ก อุบลราชธานี
+      </h1>
+      <p class="mt-5 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
+        ตรวจอาการก่อนแจ้งแนวทางและค่าใช้จ่าย ส่งยี่ห้อ รุ่น รูปเครื่อง
+        และอาการที่พบมาสอบถามเบื้องต้นก่อนนำอุปกรณ์เข้าร้านได้
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href={lineUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-h-12 items-center justify-center rounded-full bg-line px-6 py-3 font-bold text-white transition hover:bg-line-dark"
+          data-track-cta="repair_line_cta_click"
+          data-cta-location="hero"
+          data-product-group="repair"
+          data-page-type="repair"
+          data-cta-type="line">ส่งรุ่นและอาการทาง LINE</a
+        >
+        <a
+          href="#repair-map-heading"
+          class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10"
+          >ดูแผนที่ร้าน</a
+        >
+      </div>
+      <RepairHeroProof />
+    </div>
+  </section>
+
+  <AnswerBox
+    question="อำพล เทรดดิ้งรับซ่อมอุปกรณ์อะไรในอุบล?"
+    answer="รับตรวจเช็กมือถือ Android, iPhone, iPad, คอมพิวเตอร์ตั้งโต๊ะ และโน้ตบุ๊ก โดยต้องตรวจรุ่น อาการ และสภาพเครื่องก่อนยืนยันแนวทาง ค่าใช้จ่าย และระยะเวลา ร้านอยู่ถนนชยางกูร อำเภอเมืองอุบลราชธานี เปิด 09:00–19:00 น."
+  />
+
+  <section class="border-y border-line bg-surface-alt py-12 sm:py-16" aria-labelledby="repair-services-heading">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <p class="text-sm font-bold text-brand">เลือกตามประเภทอุปกรณ์</p>
+      <h2 id="repair-services-heading" class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">
+        บริการตรวจซ่อมที่หน้าร้าน
+      </h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {
+          repairs.map((entry) => (
+            <a
+              href={repairPath(entry.data.slug)}
+              class="group rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:border-brand/30 hover:shadow-md"
+            >
+              <p class="text-xs font-bold uppercase tracking-wide text-brand">
+                {entry.data.category === 'mobile' ? 'Mobile & Tablet' : 'Computer & Notebook'}
+              </p>
+              <h3 class="mt-2 text-xl font-bold text-ink group-hover:text-brand">{entry.data.navLabel}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">{entry.data.description}</p>
+              <span class="mt-5 inline-block text-sm font-bold text-brand">
+                ดูอาการที่รับตรวจและวิธีเตรียมเครื่อง →
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 sm:py-16" aria-labelledby="repair-process-heading">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 id="repair-process-heading" class="text-2xl font-extrabold text-ink sm:text-3xl">
+          ขั้นตอนที่ช่วยให้รู้ข้อมูลก่อนตัดสินใจ
+        </h2>
+        <p class="mt-4 leading-relaxed text-muted">
+          อาการเดียวกันอาจเกิดจากหลายจุด การตรวจเครื่องก่อนช่วยลดการเปลี่ยนชิ้นส่วนที่ไม่จำเป็น
+          และทำให้แจ้งค่าใช้จ่ายได้ใกล้เคียงงานจริงกว่า
+        </p>
+      </div>
+      <ol class="mt-9 grid gap-5 md:grid-cols-3">
+        <li class="rounded-2xl border border-line p-6">
+          <span class="text-sm font-extrabold text-brand">01</span><h3 class="mt-2 font-bold text-ink">
+            แจ้งรุ่นและอาการ
+          </h3><p class="mt-2 text-sm leading-relaxed text-muted">
+            บอกเหตุการณ์ก่อนเสีย ประวัติตก โดนน้ำ หรือเคยซ่อม พร้อมรูปหรือวิดีโอเมื่อมี
+          </p>
+        </li>
+        <li class="rounded-2xl border border-line p-6">
+          <span class="text-sm font-extrabold text-brand">02</span><h3 class="mt-2 font-bold text-ink">
+            ตรวจเครื่องจริง
+          </h3><p class="mt-2 text-sm leading-relaxed text-muted">
+            ตรวจจุดที่เกี่ยวข้อง แยกอาการ และพิจารณาชิ้นส่วนที่ต้องใช้ตามรุ่น
+          </p>
+        </li>
+        <li class="rounded-2xl border border-line p-6">
+          <span class="text-sm font-extrabold text-brand">03</span><h3 class="mt-2 font-bold text-ink">
+            แจ้งก่อนดำเนินงาน
+          </h3><p class="mt-2 text-sm leading-relaxed text-muted">
+            แจ้งแนวทาง ค่าใช้จ่าย เวลาโดยประมาณ และเงื่อนไขของงานให้ลูกค้าพิจารณา
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-y border-line bg-surface-alt py-12 sm:py-16">
+    <div class="mx-auto grid max-w-5xl gap-8 px-4 sm:px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-extrabold text-ink">ข้อมูลที่ควรส่งก่อนเข้าร้าน</h2>
+        <ul class="mt-5 space-y-3 text-sm leading-relaxed text-muted">
+          <li><strong class="text-ink">รุ่น:</strong> ชื่อรุ่นเต็มหรือรหัสรุ่นจากสติกเกอร์ใต้เครื่อง</li>
+          <li><strong class="text-ink">อาการ:</strong> เกิดเมื่อใด เกิดทุกครั้งหรือเป็นบางครั้ง</li>
+          <li><strong class="text-ink">เหตุการณ์ก่อนเสีย:</strong> ตก กระแทก โดนน้ำ ไฟดับ หรืออัปเดตระบบ</li>
+          <li><strong class="text-ink">ประวัติ:</strong> เคยเปลี่ยนชิ้นส่วนหรือซ่อมจุดใดมาก่อน</li>
+          <li><strong class="text-ink">หลักฐานอาการ:</strong> รูปหน้าจอ ข้อความแจ้งเตือน หรือวิดีโอสั้น ๆ</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-extrabold text-ink">ดูแลข้อมูลก่อนส่งซ่อม</h2>
+        <p class="mt-5 text-sm leading-relaxed text-muted">
+          สำรองข้อมูลสำคัญก่อนเมื่อเครื่องยังใช้งานได้ ถอดซิม การ์ดความจำ และอุปกรณ์ที่ไม่เกี่ยวข้อง
+          ไม่ควรส่งรหัสผ่านหรือ OTP ผ่าน LINE หากต้องปลดล็อกเพื่อทดสอบ ให้ตกลงวิธีดำเนินการกับร้านโดยตรง
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-muted">
+          กรณีอุปกรณ์จัดเก็บข้อมูลมีเสียงผิดปกติ เครื่องโดนน้ำ หรือแบตเตอรี่บวม ควรหยุดใช้งานและไม่นำไปชาร์จซ้ำ
+          เพราะอาจทำให้ความเสียหายเพิ่มขึ้น
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 sm:py-16" aria-labelledby="repair-faq-heading">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h2 id="repair-faq-heading" class="text-2xl font-extrabold text-ink">คำถามที่พบบ่อย</h2>
+      <div class="mt-7 space-y-3">
+        {
+          faqs.map((faq) => (
+            <details class="group rounded-2xl border border-line bg-surface open:border-brand/30 open:shadow-sm">
+              <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-ink marker:content-none [&::-webkit-details-marker]:hidden">
+                <span class="flex items-center justify-between gap-4">
+                  {faq.question}
+                  <span class="text-brand group-open:rotate-180" aria-hidden="true">
+                    ▼
+                  </span>
+                </span>
+              </summary>
+              <div class="border-t border-line px-5 py-4 text-sm leading-relaxed text-muted">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <RepairMap />
+  <RepairMobileCTA slot="mobile-cta" />
+</BaseLayout>

@@ -13,7 +13,14 @@ import {
   servicesIndex,
   updatesIndex,
   blogIndex,
+  repairPath,
+  repairsIndex,
 } from './urls';
+
+export const repairNav = [
+  { label: 'ซ่อมมือถือ iPhone iPad อุบล', href: repairPath('มือถือ-iphone-ipad-อุบล') },
+  { label: 'ซ่อมคอม โน้ตบุ๊ก อุบล', href: repairPath('คอม-โน้ตบุ๊ก-อุบล') },
+] as const;
 
 export const serviceNav = [
   {
@@ -84,14 +91,18 @@ export const brandServiceNav = [
   { label: 'รับซื้อกล้อง Sony อุบล', href: servicePath('sony-camera-ubon') },
 ] as const;
 
-export const areaNav = districts.filter(d => d.active).map((d) => ({
-  label: `อ.${d.name}`,
+export const areaNav = districts
+  .filter((d) => d.active)
+  .map((d) => ({
+    label: `อ.${d.name}`,
 
-  href: areaPath(d.slug),
-}));
+    href: areaPath(d.slug),
+  }));
 
 export const mainNav = [
   { label: 'หน้าแรก', href: '/' },
+
+  { label: 'บริการซ่อม', href: repairsIndex() },
 
   { label: 'บทความ', href: blogIndex() },
 
@@ -121,4 +132,5 @@ export {
   servicesIndex,
   updatesIndex,
   blogIndex,
+  repairsIndex,
 };

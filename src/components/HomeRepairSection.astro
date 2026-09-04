@@ -1,0 +1,33 @@
+---
+import { repairPath, repairsIndex } from '../config/urls';
+---
+
+<section class="border-y border-line bg-surface-alt py-12 sm:py-16" aria-labelledby="home-repair-heading">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid gap-8 rounded-3xl bg-ink p-7 text-white sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div>
+        <p class="text-sm font-bold text-line-light">บริการเพิ่มเติมที่หน้าร้าน</p>
+        <h2 id="home-repair-heading" class="mt-2 text-2xl font-extrabold sm:text-3xl">
+          ซ่อมมือถือ iPhone iPad คอม และโน้ตบุ๊กในอุบล
+        </h2>
+        <p class="mt-4 max-w-3xl leading-relaxed text-white/75">
+          ร้านอำพล เทรดดิ้งรับตรวจอาการก่อนแจ้งแนวทางและค่าใช้จ่าย ส่งรุ่นพร้อมอาการสอบถามก่อนเข้าร้านได้ เปิด
+          09:00–19:00 น.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <a class="font-semibold text-line-light hover:underline" href={repairPath('มือถือ-iphone-ipad-อุบล')}
+            >ซ่อมมือถือ iPhone iPad →</a
+          >
+          <a class="font-semibold text-line-light hover:underline" href={repairPath('คอม-โน้ตบุ๊ก-อุบล')}
+            >ซ่อมคอม โน้ตบุ๊ก →</a
+          >
+        </div>
+      </div>
+      <a
+        href={repairsIndex()}
+        class="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-ink transition hover:bg-slate-100"
+        >ดูบริการซ่อมทั้งหมด</a
+      >
+    </div>
+  </div>
+</section>

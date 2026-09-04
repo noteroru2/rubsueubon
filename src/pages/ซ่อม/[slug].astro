@@ -1,0 +1,114 @@
+---
+import { getCollection, render } from 'astro:content';
+import RepairLayout from '../../layouts/RepairLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RepairWorkGallery from '../../components/RepairWorkGallery.astro';
+import ComputerRepairWorkGallery from '../../components/ComputerRepairWorkGallery.astro';
+import { SITE } from '../../config/site';
+import { repairPath, repairsIndex } from '../../config/urls';
+import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
+import { buildFAQPageSchema, buildLocalBusinessSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const repairs = await getCollection('repairs');
+  return repairs.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const {
+  title,
+  seoTitle,
+  description,
+  slug,
+  navLabel,
+  category,
+  keywords,
+  deviceTypes,
+  commonSymptoms,
+  quickAnswer,
+  faqs,
+} = entry.data;
+const canonical = repairPath(slug);
+const ogImage =
+  category === 'mobile'
+    ? `${SITE.url}/images/repairs/mobile-broken-screen-before.webp`
+    : `${SITE.url}/images/repairs/notebook-display-panel-before.webp`;
+const breadcrumbItems = [
+  { label: 'หน้าแรก', href: '/' },
+  { label: 'บริการซ่อม', href: repairsIndex() },
+  { label: navLabel },
+];
+
+const jsonLd: Record<string, unknown>[] = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildLocalBusinessSchema(),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE.url}${canonical}#webpage`,
+    url: `${SITE.url}${canonical}`,
+    name: title,
+    description,
+    inLanguage: 'th-TH',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}${canonical}#service` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE.url}${canonical}#service`,
+    name: title,
+    description,
+    serviceType: category === 'mobile' ? 'ซ่อมโทรศัพท์มือถือและแท็บเล็ต' : 'ซ่อมคอมพิวเตอร์และโน้ตบุ๊ก',
+    provider: { '@id': `${SITE.url}/#localbusiness` },
+    areaServed: { '@type': 'AdministrativeArea', name: 'อุบลราชธานี' },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: `${SITE.url}${canonical}`,
+      servicePhone: { '@type': 'ContactPoint', telephone: SITE.phone, contactType: 'customer service' },
+    },
+    image:
+      category === 'mobile'
+        ? [
+            `${SITE.url}/images/repairs/mobile-broken-screen-before.webp`,
+            `${SITE.url}/images/repairs/mobile-internal-repair-process.webp`,
+            `${SITE.url}/images/repairs/iphone-display-lock-screen-test.webp`,
+            `${SITE.url}/images/repairs/iphone-powered-on-after-service.webp`,
+          ]
+        : [
+            `${SITE.url}/images/repairs/notebook-display-panel-before.webp`,
+            `${SITE.url}/images/repairs/notebook-screen-repair-finished.webp`,
+            `${SITE.url}/images/repairs/notebook-ssd-upgrade-open.webp`,
+            `${SITE.url}/images/repairs/notebook-storage-performance-test.webp`,
+          ],
+  },
+];
+
+if (faqs.length > 0) jsonLd.push(buildFAQPageSchema(faqs));
+---
+
+<RepairLayout
+  title={title}
+  seoTitle={seoTitle}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  keywords={keywords}
+  category={category}
+  deviceTypes={deviceTypes}
+  commonSymptoms={commonSymptoms}
+  quickAnswer={quickAnswer}
+  faqs={faqs}
+  jsonLd={jsonLd}
+>
+  <div slot="breadcrumbs" class="text-white/70 [&_a:hover]:text-white [&_span]:text-white/70">
+    <Breadcrumbs items={breadcrumbItems} />
+  </div>
+  {category === 'mobile' && <RepairWorkGallery slot="evidence" />}
+  {category === 'computer' && <ComputerRepairWorkGallery slot="evidence" />}
+  <Content />
+</RepairLayout>
