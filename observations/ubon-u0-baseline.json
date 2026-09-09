@@ -1,0 +1,64 @@
+{
+  "gate": "UBON_U0",
+  "date": "2026-09-09",
+  "timezone": "Asia/Bangkok",
+  "baseMainSha": "6711321e3e1f471410c8e21a7c5ff527b4452b48",
+  "latestFinalizedGscDate": "2026-09-06",
+  "current28d": {
+    "dateFrom": "2026-08-10",
+    "dateTo": "2026-09-06",
+    "clicks": 192,
+    "impressions": 2397,
+    "ctr": 0.0801,
+    "position": 7.1264
+  },
+  "previous28d": {
+    "dateFrom": "2026-07-13",
+    "dateTo": "2026-08-09",
+    "clicks": 133,
+    "impressions": 1907,
+    "ctr": 0.069743,
+    "position": 7.3277
+  },
+  "classifications": {
+    "homepage": "PROTECT_NEAR_ME_OWNER",
+    "detUdom": "PUSH_CTR",
+    "warinChamrap": "PROTECT",
+    "mueangUbon": "PROTECT",
+    "pcUbon": "PROTECT_AND_PUSH",
+    "cameraUbon": "PROTECT",
+    "smartphoneUbon": "PROTECT_AND_PUSH",
+    "icloudArticle": "PUSH_CTR",
+    "pcGamingUbon": "PUSH_CTR",
+    "iphone16ProMaxUbon": "PUSH_CTR",
+    "iphone15ProMaxUbon": "PUSH_CTR",
+    "thungSiUdom": "PUSH_CTR",
+    "notebookOwnership": "OWNERSHIP_DRIFT_BUT_CURRENT_WINNER_HOLD_NO_FORCED_TRANSFER",
+    "cannibalization": "NO_CONFIRMED_DESTRUCTIVE_CANNIBALIZATION"
+  },
+  "notebookQueryOwnership": [
+    {
+      "query": "รับซื้อโน้ตบุ๊กอุบล",
+      "owner": "/",
+      "impressions": 13,
+      "clicks": 0,
+      "position": 3.9231
+    },
+    {
+      "query": "รับซื้อโน๊ตบุ๊ค อุบล",
+      "owner": "/",
+      "impressions": 12,
+      "clicks": 0,
+      "position": 3.0833
+    },
+    {
+      "query": "ร้านรับซื้อโน๊ตบุ๊คใกล้ฉัน",
+      "owner": "/",
+      "impressions": 10,
+      "clicks": 1,
+      "position": 6.4
+    }
+  ],
+  "productionChanged": false,
+  "recommendedNextBatch": "UBON_U1_PAGE_ONE_CTR_OWNERSHIP_SAFE_PUSH"
+}
