@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { SITE } from '../../config/site';
 import { blogIndex, blogPath } from '../../config/urls';
+import { BLOG_META_OVERRIDES } from '../../config/u1-seo-overrides';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 
 export async function getStaticPaths() {
@@ -17,18 +18,21 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, description, pubDate, keywords } = entry.data;
+const { title: displayTitle, description: sourceDescription, pubDate, keywords } = entry.data;
+const metaOverride = BLOG_META_OVERRIDES[entry.data.slug];
+const metaTitle = metaOverride?.title ?? displayTitle;
+const description = metaOverride?.description ?? sourceDescription;
 
 const canonical = blogPath(entry.data.slug);
 
-const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บทความ', href: blogIndex() }, { label: title }];
+const breadcrumbItems = [{ label: 'หน้าแรก', href: '/' }, { label: 'บทความ', href: blogIndex() }, { label: displayTitle }];
 
 const jsonLd = [
   buildBreadcrumbSchema(breadcrumbItems),
   {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: title,
+    headline: displayTitle,
     description,
     datePublished: pubDate.toISOString(),
     url: `${SITE.url}${canonical}`,
@@ -44,7 +48,7 @@ function formatDate(date: Date): string {
 ---
 
 <BaseLayout
-  title={title}
+  title={metaTitle}
   description={description}
   canonical={canonical}
   keywords={keywords}
@@ -58,7 +62,7 @@ function formatDate(date: Date): string {
       <time datetime={pubDate.toISOString()} class="mt-6 block text-sm font-medium text-brand">
         {formatDate(pubDate)}
       </time>
-      <h1 class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">{title}</h1>
+      <h1 class="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">{displayTitle}</h1>
 
       <div
         class="prose prose-lg mt-8 max-w-none prose-p:text-muted prose-a:text-brand prose-a:no-underline hover:prose-a:underline"

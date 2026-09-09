@@ -1,0 +1,32 @@
+{
+  "gate": "UBON_U1",
+  "date": "2026-09-09",
+  "timezone": "Asia/Bangkok",
+  "parentMainSha": "f4105fbe0c6646f2db762760d17fedb173d486c0",
+  "latestFinalizedGscDate": "2026-09-06",
+  "evidenceWindow": {
+    "dateFrom": "2026-08-31",
+    "dateTo": "2026-09-06"
+  },
+  "targets": {
+    "smartphoneUbon": { "clicks": 4, "impressions": 93, "ctr": 0.043, "position": 8.1398, "action": "DESCRIPTION_CTR_PUSH" },
+    "icloudArticle": { "clicks": 1, "impressions": 59, "ctr": 0.0169, "position": 8.4576, "action": "SERP_TITLE_DESCRIPTION_PUSH" },
+    "pcUbon": { "clicks": 0, "impressions": 25, "ctr": 0, "position": 9.64, "action": "DESCRIPTION_CTR_PUSH" },
+    "detUdom": { "clicks": 0, "impressions": 24, "ctr": 0, "position": 6.875, "action": "LOCAL_TITLE_DESCRIPTION_PUSH" },
+    "muangSamSip": { "clicks": 0, "impressions": 15, "ctr": 0, "position": 4.6, "action": "LOCAL_CTR_AND_COPY_HYGIENE" }
+  },
+  "protected": {
+    "homepage": { "clicks": 8, "impressions": 167, "ctr": 0.0479, "position": 6.3713, "action": "PROTECT_GENERIC_NEAR_ME_OWNER" },
+    "pcGamingThaiCanonical": { "clicks": 1, "impressions": 3, "ctr": 0.3333, "position": 4.6667, "action": "PROTECT_NO_U1_EDIT" },
+    "notebookOwnership": "HOLD_NO_FORCED_TRANSFER"
+  },
+  "routeObservation": "Latest 7-day page rows show current Thai service canonicals, including /บริการ/รับซื้อ-pc-gaming-อุบล/. U1 does not create or alter route ownership.",
+  "guardrails": [
+    "NO_HOMEPAGE_EDIT",
+    "NO_CANONICAL_EDIT",
+    "NO_REDIRECT_EDIT",
+    "NO_NOTEBOOK_OWNER_TRANSFER",
+    "NO_NEW_INDEXABLE_PAGE",
+    "NO_PC_GAMING_EDIT"
+  ]
+}

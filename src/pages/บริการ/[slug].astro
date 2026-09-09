@@ -6,6 +6,7 @@ import ConditionsScope from '../../components/ConditionsScope.astro';
 import GeoServiceLinks from '../../components/GeoServiceLinks.astro';
 import { SITE } from '../../config/site';
 import { servicePath, servicesIndex, updatePath, updatesIndex } from '../../config/urls';
+import { SERVICE_META_OVERRIDES } from '../../config/u1-seo-overrides';
 import { buildBreadcrumbSchema } from '../../lib/breadcrumbs';
 import { getQuickAnswer, mergeFaqs } from '../../lib/service-aeo';
 
@@ -21,7 +22,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const {
   title,
-  description,
+  description: sourceDescription,
   category,
   navLabel,
   geoLinkLabel,
@@ -35,11 +36,12 @@ const {
   parentLabel,
 } = entry.data;
 
+const metaOverride = SERVICE_META_OVERRIDES[entry.data.slug];
+const description = metaOverride?.description ?? sourceDescription;
 const canonical = servicePath(entry.data.slug);
 const ogImage = featuredImage ? new URL(featuredImage, SITE.url).href : `${SITE.url}/og-default.svg`;
 const quickAnswer = entry.data.quickAnswer ?? getQuickAnswer(category, entry.id);
 const displayFaqs = mergeFaqs(faqs);
-
 
 const breadcrumbItems =
   (tier === 'brand' || tier === 'series') && parentSlug && parentLabel
