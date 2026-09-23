@@ -21,8 +21,8 @@ export const SERVICE_META_OVERRIDES: Record<string, SeoMetaOverride> = {
 
 export const BLOG_META_OVERRIDES: Record<string, SeoMetaOverride> = {
   'iphone-icloud-before-selling': {
-    title: 'iPhone ติด iCloud ขายได้ไหม? วิธีปลด Find My ก่อนขาย',
+    title: 'iPhone ติด iCloud ขายได้ไหม? เช็ก Find My ก่อนขาย',
     description:
-      'iPhone ยังติด iCloud หรือ Find My ขายได้ไหม? เช็ก Activation Lock วิธี Sign Out Apple ID สำรองข้อมูล และล้างเครื่องให้พร้อมก่อนขายอย่างปลอดภัย',
+      'ยังติด Apple ID หรือ Find My อยู่ขายได้ไหม? เช็ก Activation Lock วิธี Sign Out และล้างข้อมูลก่อนขาย iPhone อย่างปลอดภัย พร้อมเงื่อนไขการรับซื้อ',
   },
 };
