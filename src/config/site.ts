@@ -27,7 +27,7 @@ export const SITE = {
   pickupNote: businessProfile.pickupNote,
   openingHours: [`Mo-Su ${businessProfile.storeHours.opens}-${businessProfile.storeHours.closes}`],
   priceRange: '฿฿',
-  sameAs: [`https://line.me/R/ti/p/${businessProfile.lineOA}`, businessProfile.mapUrl, businessProfile.facebookUrl],
+  sameAs: [`https://line.me/R/ti/p/${businessProfile.lineOA}`, businessProfile.mapUrl, businessProfile.facebookUrl, 'https://amphon.co.th/', 'https://amphontd.com/', 'https://webuy.in.th/'],
 } as const;
 
 /** Canonical entity ID for the single verified business entity used across the site. */
